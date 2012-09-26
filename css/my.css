@@ -1,0 +1,45 @@
+.extra {
+border-top: 1px solid #585858;
+border-bottom: 1px solid black;
+}
+.extra-inner {
+padding: 20px 0;
+font-size: 11px;
+color: #BBB;
+background: #111;
+}
+.footer {
+margin-top: 0;
+border-top: 1px solid #292929;
+}
+.footer-inner {
+padding: 15px 0;
+font-size: 12px;
+background: #000;
+color: #999;
+}
+.widget-header {
+position: relative;
+height: 40px;
+line-height: 40px;border: 1px solid #D5D5D5;
+background: #E9E9E9;
+
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+-webkit-background-clip: padding-box;
+}
+user agent stylesheetdiv {
+display: block;}
+.widget {
+position: relative;
+clear: both;
+
+overflow: hidden;}
+.widget-content {
+padding: 20px 15px 15px;
+background: white;
+border: 1px solid #D5D5D5;
+-moz-border-bottom-radius: 5px;
+-webkit-border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+}

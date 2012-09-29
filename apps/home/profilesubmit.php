@@ -18,9 +18,9 @@
 	
 	$sql = "UPDATE users SET nick='$nick', contact = '$contact', email = '$email' WHERE username='$uname'";
 	
-	mysql_query($sql);
+	mysql_query($sql) or die(mysql_error($con));
 	
-	echo $sql;
+	//echo $sql;
 	
 	header('Location: ../../index.php');
 	

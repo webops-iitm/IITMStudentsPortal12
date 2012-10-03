@@ -1,7 +1,7 @@
 
 	
 		<?php if(!$rated){ ?>
-			<form name="messrating" action="apps/caterer_rating/rate.php" method="get">
+			<form name="messrating" action="javascript:mess_rating_url();">
 					<table rules="all">
 						<tr>
 							<td style="width:80px;"><b>Caterer</b></td>
@@ -12,7 +12,7 @@
 						</tr>
 						<tr>
 							<td>
-								<select name="cat" style="width:110px;">
+								<select name="cat" id="cat" style="width:110px;">
 									<option value="-1" selected>Select</option>
 									<option value="1">HM Cauvery</option>
 									<option value="2">HM Krishna</option>
@@ -24,7 +24,7 @@
 								</select>
 							</td>
 							<td>
-								<select name="hyg" style="width:110px;">
+								<select name="hyg" id="hyg" style="width:110px;">
 									<option value="-1" selected>Select</option>
 									<option value="5">5</option>
 									<option value="4">4</option>
@@ -35,7 +35,7 @@
 								</select>
 							</td>
 							<td>
-								<select name="qtn" style="width:110px;">
+								<select name="qtn" id="qtn" style="width:110px;">
 									<option value="-1" selected>Select</option>
 									<option value="5">5</option>
 									<option value="4">4</option>
@@ -46,7 +46,7 @@
 								</select>
 							</td>
 							<td>
-								<select name="qlt" style="width:110px;">
+								<select name="qlt" id="qlt" style="width:110px;">
 									<option value="-1" selected>Select</option>
 									<option value="10">10</option>
 									<option value="9">9</option>
@@ -62,7 +62,7 @@
 								</select>
 							</td>
 							<td>
-								<select name="csm" style="width:110px;">
+								<select name="csm" id="csm" style="width:110px;">
 									<option value="-1" selected>Select</option>
 									<option value="5">5</option>
 									<option value="4">4</option>
@@ -74,10 +74,9 @@
 							</td>
 							</tr>
 							<tr><td colspan="5"><strong>Points Scale</strong><br>Excellent - 5 Points, Very Good - 4 Points, Good - 3 Points, Average - 2 Points, Poor - 1 Point, Very Poor - 0 Point</td></tr>
-									<?php if(isset($_GET['error'])){ ?>
-									<tr><td colspan="5"><? echo $_GET['error']; ?></td></tr>
-									<?php } ?>
 					</table>
+						<?php if(isset($_GET['mess_rating'])) echo "<br> {$_GET['mess_rating']} </br>";  ?>
+						
 								<input type="hidden" value="<?php echo date("Y-m-d"); ?>" name="date" />
 								<br><input type="submit" class="btn btn-primary" value="Submit" name="rate" />
 			</form>

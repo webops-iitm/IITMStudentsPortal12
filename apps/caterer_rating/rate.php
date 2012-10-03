@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	include_once("../../db.php");
-	include("caterer.php");
+	//include_once("caterer.php");
 	$date = date('Y-m-d');
 	
 	if(isset($_SESSION['uname']))
@@ -21,7 +21,7 @@
 				if(mysql_num_rows($res))
 					{
 					$error = "Allowed to rate only once per month";
-					header('Location: ../../index.php?mess_rating='.$error);
+					header('Location: rating.php?mess_rating='.$error);
 					}
 				else
 					{
@@ -30,14 +30,13 @@
 								$query = "INSERT INTO mess_rating(user_id, caterer, hyg, qtn, qlt, csm, date) VALUES ('$uid', '$cat', '$hyg', '$qtn', '$qlt', '$csm', '$date')";
 								$result = mysql_query($query);
 								$error = "Successfully submitted your rating";
-								header('Location: ../../index.php?mess_rating='.$error);
+								header('Location: rating.php?mess_rating='.$error);
 							}
 						else
 							{
 								$error = "One or more fields are empty. Please select the mess and ratings";
-								header('Location: ../../index.php?mess_rating='.$error);
+								header('Location: rating.php?mess_rating='.$error);
 							}
 					}
 			}
 	}
-	include("rating.php");

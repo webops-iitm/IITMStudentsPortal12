@@ -38,6 +38,19 @@
 			xmlhttp.send();
 		}
 	</script>
+		<script>
+		function mess_rating_url()
+			{
+				//document.write("dfhbdf");
+				var cat = document.getElementById('cat').value;
+				var hyg = document.getElementById('hyg').value;
+				var qtn = document.getElementById('qtn').value;
+				var qlt = document.getElementById('qlt').value;
+				var csm = document.getElementById('csm').value;
+				mess_url = "apps/caterer_rating/rate.php?cat=" + cat + "&hyg=" + hyg + "&qtn=" + qtn + "&qlt=" + qlt + "&csm=" + csm;
+				update(mess_url, 'widget');
+			}
+		</script>
 	</head>
 <body>
 <div class="navbar navbar-fixed-top" >

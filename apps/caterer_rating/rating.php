@@ -1,6 +1,6 @@
 <?php
 	include("../../db.php");
-	include("caterer.php");
+	include_once("caterer.php");
 
 	session_start();
 	

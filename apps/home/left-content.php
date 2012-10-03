@@ -11,8 +11,8 @@
 			<br><br>
 			
 				
-				<?php	if(isset($_GET['ratingerror'])){ ?>
-					<a onClick="javascript:update('apps/caterer_rating/rating.php', 'widget');" href="#" > <?php echo $_GET['ratingerror']; ?></a>
+				<?php	if(isset($_GET['mess_rating'])){ ?>
+					<a onClick="javascript:update('apps/caterer_rating/rating.php', 'widget');" href="#" > <?php echo $_GET['mess_rating']; ?></a>
 				<?php } ?>
 			</div>	
 		</div>

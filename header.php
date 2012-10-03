@@ -60,7 +60,7 @@
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 														<li><a href="index.php">Students Portal</a></li>
-														<li><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');">Mess rating</a></li>
+														<!--<li><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');">Mess rating</a></li>-->
 														<!--<li><a href="javascript:;">forums</a></li>-->
 						</ul>
 				</li>			
@@ -119,7 +119,7 @@
 	<div class="navbar-inner">		
 		<div class="container-fluid">	
 			<ul class="nav nav-pills">
-				<li ><a href="" rel="tooltip" title="Mess registration will start soon"><i class="icon-list "></i> Mess Registration</a></li>
+				<li ><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');"><i class="icon-list "></i> Mess Rating</a></li>
 				
 				<!-- <li><a href="#"><i class="icon-search "></i> Student Search</a></li> -->
 				<li><a href="http://t5e.iitm.ac.in/"><i class="icon-edit "></i> The Fifth Estate</a></li> <li><a href="http://cfi.iitm.ac.in/"><i class="icon-hand-up "></i> CFI</a></li>

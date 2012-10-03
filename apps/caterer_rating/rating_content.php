@@ -48,6 +48,11 @@
 							<td>
 								<select name="qlt" style="width:110px;">
 									<option value="-1" selected>Select</option>
+									<option value="10">10</option>
+									<option value="9">9</option>
+									<option value="8">8</option>
+									<option value="7">7</option>
+									<option value="6">6</option>
 									<option value="5">5</option>
 									<option value="4">4</option>
 									<option value="3">3</option>
@@ -77,7 +82,7 @@
 								<br><input type="submit" class="btn btn-primary" value="Submit" name="rate" />
 			</form>
 		<?php } else { ?>
-					Thank you for the ratings.<br><br>
+					Thank you for the ratings. You can submit mess rating once per day<br><br>
 					<b><?php echo cat($cat); ?></b><br>
 					&emsp;Hygiene  - <?php echo $hyg; ?><br>
 					&emsp;Quantity - <?php echo $qtn; ?><br>

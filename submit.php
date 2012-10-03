@@ -34,6 +34,7 @@
 				setcookie("user", $uname, $expire);
 			}
 		$_SESSION['uname'] = $uname;
+		$_SESSION['uid'] = $row['id'];
 		header("location:index.php");
 		
 		}

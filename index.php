@@ -13,4 +13,6 @@
 	include("header.php");
 	include("apps/home/content.php");
 	include("footer.php");
+	
+	
 ?>

@@ -73,7 +73,7 @@
 									<tr><td colspan="5"><? echo $_GET['error']; ?></td></tr>
 									<?php } ?>
 					</table>
-								<!--<input type="hidden" value="<? echo date("Y-m-d"); ?>" name="date" />-->
+								<input type="hidden" value="<?php echo date("Y-m-d"); ?>" name="date" />
 								<br><input type="submit" class="btn btn-primary" value="Submit" name="rate" />
 			</form>
 		<?php } else { ?>

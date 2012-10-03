@@ -9,6 +9,11 @@
 			Welcome to the new Students Portal<br><br>
             October Mess Allocation Results <a onClick="javascript:messlist();" href="#" >Here</a>
 			<br><br>
+			
+				
+				<?php	if(isset($_GET['ratingerror'])){ ?>
+					<a onClick="javascript:update('apps/caterer_rating/rating.php', 'widget');" href="#" > <?php echo $_GET['ratingerror']; ?></a>
+				<?php } ?>
 			</div>	
 		</div>
 	</div>

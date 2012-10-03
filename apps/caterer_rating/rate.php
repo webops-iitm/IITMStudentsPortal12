@@ -2,7 +2,7 @@
 	session_start();
 	include_once("../../db.php");
 	include("caterer.php");
-	
+	$date = date('Y-m-d');
 	
 	if(isset($_SESSION['uname']))
 	{
@@ -15,7 +15,7 @@
 				$csm = $_GET['csm'];
 				$uid = $_SESSION['uid'];
 
-				$q = "SELECT * FROM mess_rating WHERE user_id = '$uid' AND mess_instance_id = '$mess_instance_id'";
+				$q = "SELECT * FROM mess_rating WHERE user_id = '$uid' AND date='$date'";
 				$res = mysql_query($q);
 			
 				if(mysql_num_rows($res))
@@ -27,13 +27,14 @@
 					{
 						if($cat!='-1' && $hyg!='-1' && $qtn!='-1' && $qlt!='-1' && $csm != '-1')
 							{
-								$query = "INSERT INTO mess_rating(mess_instance_id, user_id, caterer, hyg, qtn, qlt, csm) VALUES ('$mess_instance_id', '$uid', '$cat', '$hyg', '$qtn', '$qlt', '$csm')";
+								$query = "INSERT INTO mess_rating(user_id, caterer, hyg, qtn, qlt, csm, date) VALUES ('$uid', '$cat', '$hyg', '$qtn', '$qlt', '$csm', '$date')";
 								$result = mysql_query($query);
-								header('Location: ../../index.php?ratingerror=0');
+								$error = "Successfully submitted your rating";
+								header('Location: ../../index.php?ratingerror='.$error);
 							}
 						else
 							{
-								$error = "Please select the mess and ratings";
+								$error = "One or more fields are empty. Please select the mess and ratings";
 								header('Location: ../../index.php?ratingerror='.$error);
 							}
 					}

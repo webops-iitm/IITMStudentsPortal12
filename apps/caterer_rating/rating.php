@@ -9,8 +9,9 @@
 		{
 		
 			$loggedin=1;
-		
-			$query="SELECT * FROM mess_rating WHERE user_id='{$_SESSION['uid']}' AND mess_instance_id='$mess_instance_id'";
+			$date = date('Y-m-d');
+			
+			$query="SELECT * FROM mess_rating WHERE user_id='{$_SESSION['uid']}' AND date = '$date'";
 			$result = @mysql_query($query);
 		
 			$count = @mysql_num_rows($result);
@@ -20,7 +21,7 @@
 					$row = mysql_fetch_array($result);
 					
 					$rated = 1;
-	
+				
 					$cat = $row['caterer'];
 					$hyg = $row['hyg'];
 					$qtn = $row['qtn'];
@@ -37,7 +38,7 @@
 
 		<div class="widget-header">
 			<i class="icon-comment"></i>
-			<h3>Submit caterer rating</h3>
+			<h3>Submit caterer rating  <?php echo date("d/m/y"); ?></h3>
 		</div> <!-- /widget-header -->
 		<div class="widget-content">						
 		

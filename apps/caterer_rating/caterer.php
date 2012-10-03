@@ -1,5 +1,4 @@
 <?php
-	$mess_instance_id = 12;					// September mess
 	
 	
 	

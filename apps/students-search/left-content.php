@@ -10,7 +10,7 @@
 		</div> <!-- /widget-header -->
 		<div class="widget-content">						
 			<div class="shortcuts">
-Enter 'Name' or 'Nick' or 'Rollno' or 'Room' or 'Hostel'
+Enter 'Name' or 'Nick' or 'Roll number' or 'Room number' or 'Hostel'
 <br/>	<br/>  
 <form name="form1" action="student-search.php" method="get">
   <table><tr><td><input type="text"  name="q" /></td><td><input style="position:relative;top:-4px;"class="btn btn-primary" type="submit" name="Submit" value="Search" /></td></tr>
@@ -151,9 +151,11 @@ if(a==0)
 </script>
 
 
-
+<h4 style="text-shadow:none;">Results</h4>
 
 <?php
+
+
 
 // if (isset($_SESSION['uname']))
 
@@ -181,7 +183,7 @@ if(a==0)
   // check for an empty string and display a message.
 if ($trimmed == "")
   {
-  echo "<p style='color:red;'>Please enter a search...</p>";
+  echo "<p style='color:red;'>Please enter a search hint...</p>";
   exit;
   }
   
@@ -204,15 +206,15 @@ mysql_select_db($dbname) or DIE('Database name is not available!');
   order by fullname"; 
   $numresults=mysql_query($query);
  $numrows=mysql_num_rows($numresults);
- echo "<h3>Results</h3>";
+ echo "<h4 style='text-shadow:none;' >Results</h4>";
  if ($numrows == 0)
   {
   
-  echo "<p style='color:red;'>Sorry, your search: &quot;" . $trimmed . "&quot; returned zero results</p>";
+  echo "<p style='color:red;'>Sorry, your search &quot;" . $trimmed . "&quot; returned no results</p>";
   exit;
   }
   
-  echo "<table border='1' style='background:white;border:10px solid #E9E9E9 ;' align='center' >
+  echo "<table border='1' cellpadding="5" style='background:white;border:10px solid #E9E9E9 ;' align='center' >
 <tr>
 <th>Name</th>
 <th>Nick</th>
@@ -314,16 +316,16 @@ mysql_select_db($dbname) or DIE('Database name is not available!');
  $numrows=mysql_num_rows($numresults);
  
  
- echo "<h3>Results</h3>";
+ echo "<h4 style='text-shadow:none;'>Results</h4>";
  
  if ($numrows == 0)
   {
   
-  echo "<p style='color:red;'>Sorry, your search returned zero results</p>";
+  echo "<p style='color:red;'>Sorry, your search returned no results</p>";
   exit;
   }
   
-  echo "<table border='1' style='background:white;border:10px solid #E9E9E9 ;' align='center'>
+  echo "<table border='1' cellpadding="5" style='background:white;border:10px solid #E9E9E9 ;' align='center'>
 <tr>
 <th>Name</th>
 <th>Nick</th>

@@ -120,7 +120,7 @@ Room No:
 <input type="hidden" name="searching" value="yes" />
 </form>
 
-<script src="apps/students-search/jquery.js"></script>
+<script src="js/jquery-1.js"></script>
 <script> 
 $(document).ready(function(){
 

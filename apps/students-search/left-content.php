@@ -186,7 +186,17 @@ if ($trimmed == "")
   }
   
   // Include database connection settings
-include('config.inc');
+// include('config.inc');
+
+$hostname = 'students2.iitm.ac.in';         
+$dbname   = 'students'; 
+$username = 'root';             
+$password = 'yousuckballs';                 
+
+$con=mysql_connect($hostname, $username, $password) or DIE('Connection to host is failed, perhaps the service is down!');
+
+mysql_select_db($dbname) or DIE('Database name is not available!');
+
 
 
  $query = "select * from users where upper(fullname) like \"%$trimmed%\" OR upper(nick) like \"%$trimmed%\" OR upper(username) like \"%$trimmed%\" OR upper(hostel) like \"%$trimmed%\" OR upper(room) like \"%$trimmed%\" 
@@ -282,7 +292,19 @@ if ($trimmed1 == "" && $trimmed2 == "" && $trimmed3 == "" && $trimmed4 == "" && 
   }
   
   // Include database connection settings
-include('config.inc');
+// include('config.inc');
+
+$hostname = 'students2.iitm.ac.in';         
+$dbname   = 'students'; 
+$username = 'root';             
+$password = 'yousuckballs';                 
+
+$con=mysql_connect($hostname, $username, $password) or DIE('Connection to host is failed, perhaps the service is down!');
+
+mysql_select_db($dbname) or DIE('Database name is not available!');
+
+
+
 
 
  $query = "select * from users where upper(fullname) like \"%$trimmed1%\" AND upper(nick) like \"%$trimmed2%\" AND upper(username) like \"%$trimmed3%\" AND upper(hostel) like \"%$trimmed4%\" AND upper(room) like \"%$trimmed5%\" 

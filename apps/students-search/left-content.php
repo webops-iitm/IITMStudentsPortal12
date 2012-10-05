@@ -214,7 +214,7 @@ mysql_select_db($dbname) or DIE('Database name is not available!');
   exit;
   }
   
-  echo "<table border='1' cellpadding="5" style='background:white;border:10px solid #E9E9E9 ;' align='center' >
+  echo "<table border='1' cellpadding='5' style='background:white;border:10px solid #E9E9E9 ;' align='center' >
 <tr>
 <th>Name</th>
 <th>Nick</th>
@@ -325,7 +325,7 @@ mysql_select_db($dbname) or DIE('Database name is not available!');
   exit;
   }
   
-  echo "<table border='1' cellpadding="5" style='background:white;border:10px solid #E9E9E9 ;' align='center'>
+  echo "<table border='1' cellpadding='5' style='background:white;border:10px solid #E9E9E9 ;' align='center'>
 <tr>
 <th>Name</th>
 <th>Nick</th>

@@ -151,7 +151,6 @@ if(a==0)
 </script>
 
 
-<h4 style="text-shadow:none;">Results</h4>
 
 <?php
 
@@ -206,7 +205,7 @@ mysql_select_db($dbname) or DIE('Database name is not available!');
   order by fullname"; 
   $numresults=mysql_query($query);
  $numrows=mysql_num_rows($numresults);
- echo "<h4 style='text-shadow:none;' >Results</h4>";
+ echo "<h4 style='text-shadow:none;' >Search results</h4>";
  if ($numrows == 0)
   {
   
@@ -316,7 +315,7 @@ mysql_select_db($dbname) or DIE('Database name is not available!');
  $numrows=mysql_num_rows($numresults);
  
  
- echo "<h4 style='text-shadow:none;'>Results</h4>";
+ echo "<h4 style='text-shadow:none;'>Search results</h4>";
  
  if ($numrows == 0)
   {

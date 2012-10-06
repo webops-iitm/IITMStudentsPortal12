@@ -1,0 +1,22 @@
+Release Changes :
+
+{
+Date : 6 Oct 2012
+Sub : Creation of secretary pages
+Changes :
+	SQLdatabase - new table called student_secretary with info for each secretary.
+
+	config.php - added checker for secretary and info about secretary
+
+	profile.php - added checker to add profile_sec if secretary user
+
+	apps/home/profile_secretary.php - Profile page for secretary, with 3 tabs, etc.
+
+	apps/home/updateprofile.php - added checker to add updateprofile_sec if secretary user
+
+	apps/home/updateprofile_secretary.php - UpdateProfile page for secretary, with 3 tabs, etc.
+
+	apps/home/profilesubmit.php - added checkers for secretary to add extra info for them
+
+
+}

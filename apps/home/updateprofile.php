@@ -13,6 +13,13 @@
 	if($loggedin == 0)
 		
 		die("Please Login to continue");
+		
+	if( $secretary == 1 )
+	
+		include( "updatesecretary_page.php" );
+	
+	else {
+
 ?>
 <center>
 <div class="span3 offset1">
@@ -72,3 +79,7 @@
 				</div> <!-- /widget -->	
 </div>
 </center>
+
+<?php
+	} // end of the if-else to check for secretary
+?>

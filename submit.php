@@ -30,12 +30,10 @@
 		if(crypt($pass.$pepper, $row['encrypted_password']) == $row['encrypted_password'])
 		{
 			if($_POST['remember']==true)
-			{
 				setcookie("user", $uname, $expire);
-			}
-		$_SESSION['uname'] = $uname;
-		$_SESSION['uid'] = $row['id'];
-		header("location:index.php");
+			$_SESSION['uname'] = $uname;
+			$_SESSION['uid'] = $row['id'];
+			header("location:index.php");
 		
 		}
 	

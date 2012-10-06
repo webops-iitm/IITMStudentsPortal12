@@ -11,6 +11,22 @@
 		$room = $row['room'];
 		$email = $row['email'];
 		$contact = $row['contact'];
+		
+		// Check if the user is in the student secretary database
+		$result_sec = mysql_query("SELECT * FROM stu_sec WHERE username = '$user' ");
+		$sec_count = mysql_num_rows($result_sec);
+		$secretary = 0;
+		
+		if( $sec_count >= 1 ) 
+		{
+			$secretary = 1;
+			$sec_row = mysql_fetch_array($result_sec);
+			$post = $sec_row['post'];
+			$tenure = $sec_row['tenure'];
+			$hobbies = $sec_row['hobbies'];
+			$form_email = $sec_row['form_email'];
+		}
+		
 	}
 	else
 	{

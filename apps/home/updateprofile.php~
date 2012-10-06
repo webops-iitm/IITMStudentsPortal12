@@ -16,7 +16,7 @@
 		
 	if( $secretary == 1 )
 	
-		include( "updateprofile_secretary.php" );
+		include( "updatesecretary_page.php" );
 	
 	else {
 

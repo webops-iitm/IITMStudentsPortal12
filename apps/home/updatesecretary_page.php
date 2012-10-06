@@ -1,5 +1,5 @@
-<center>
-<div class="span3 offset1">
+
+<div class="span3 offset2">
 	<div class="widget" style="float:right;width:400px; margin:10px;">
 		<div class="widget-header">
 			<ul class="nav nav-pills">
@@ -14,10 +14,10 @@
 		</div> <!-- /widget-header -->
 
 		<div class="widget-content" id="inner_body_sec">
-			<?php include("secretary/updateteams_sec.php"); ?>
+			<?php include("secretary/updateprofile_sec.php"); ?>
 		</div> <!-- /widget-content -->
 						
 	</div> <!-- /widget -->	
 </div>
-</center>
+
 

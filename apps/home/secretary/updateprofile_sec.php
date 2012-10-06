@@ -1,6 +1,12 @@
-<form id="form" name="regform" action="updateprofilesubmit_sec.php" method="post">
+<form id="form" name="regform" action="apps/home/secretary/updateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
 	<table>
 		<tr>
+			<td style="width:100px;"><a href="#">Display Picture</a></td>
+			<td>
+				<input type="hidden" name="MAX_FILE_SIZE" value="50000" />
+				<input type="file" name="dpic" id="dpic" />
+			</td>
+		</tr><tr>
 			<td style="width:100px;"><a href="#">FullName</a></td>
 			<td><input style="color:#fff;" id="name" type="text" name="name" value="<?php echo $name; ?>" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td>
 		</tr><tr>

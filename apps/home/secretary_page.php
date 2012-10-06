@@ -14,7 +14,7 @@
 			</div> <!-- /widget-header -->
 						
 			<div class="widget-content" id="inner_body_sec">
-				<?php include( "secretary/teams_sec.php" ); ?>
+				<?php include( "secretary/profile_sec.php" ); ?>
 			</div> <!-- /widget-content -->
 						
 		</div> <!-- /widget -->	

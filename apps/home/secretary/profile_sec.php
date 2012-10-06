@@ -1,6 +1,4 @@
-<script>
-	document.getElementById("profile_sec_page").className = "active";
-</script>
+
 <table>
 	<tr>
 		<td style="width:100px;"><a href="#">Name</a></td>

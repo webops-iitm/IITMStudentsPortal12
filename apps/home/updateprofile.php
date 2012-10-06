@@ -22,7 +22,7 @@
 
 ?>
 <center>
-<div class="span3 offset1">
+<div class="span3 offset2">
 				<div class="widget"  style="float:right;width:400px; margin:10px;">
 					<div class="widget-header">
 						<i class="icon-star"></i>

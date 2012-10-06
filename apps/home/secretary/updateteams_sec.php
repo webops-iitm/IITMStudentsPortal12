@@ -1,5 +1,10 @@
 <?php
-	
+	session_start();
+	include ('../../../db.php');
+		
+	$sql = "SELECT * FROM stu_sec_teams WHERE secretary_username='$user'";
+	$result = mysql_query($sql);
+			
 ?>
 <style>
 	.dropdown-menu li a {
@@ -17,21 +22,14 @@
 
 <div class="dropdown clearfix" >
 	<ul class="muted dropdown-menu" style="display: block; position: static; min-width: 100%; ">
-		<li>
-			<a href="#" tabindex="-1">Add a new Team</a>
-		</li>
+		<li><a href="javascript:update('apps/home/secretary/addteam_sec.php', 'inner_body_sec');" id="add">Add a new Team</a></li>
+		<li><a href="javascript:update('apps/home/secretary/deleteteam_sec.php', 'inner_body_sec');" id="delete">Delete a Team</a></li>
 		<li class="divider"></li>
-		<li>
-			<a href="#">Another action</a>
-			<a class="close" href="javascript:deleteTeam(this);">&times;</a>
-		</li>
-		<li>
-			<a href="#">Something else here</a>
-			<a class="close" href="#">&times;</a>
-		</li>
-		<li>
-			<a href="#">Separated link</a>
-			<a class="close" href="#">&times;</a>
-		</li>
+		<?php
+			while ($row = mysql_fetch_row($result, MYSQL_ASSOC)) {
+    			echo( "<li><a href=\"javascript:update('apps/home/secretary/updateshowteam_sec.php?team_id=".$row["team_id"]."', 'inner_body_sec');\" id='".$row['team_id']."'> ".$row['team_name'] ." </a></li>");
+    		}
+		?>
 	</ul>
 </div>
+

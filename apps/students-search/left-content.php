@@ -3,7 +3,7 @@
 
 
 <div class="span8">
-	<div class="widget" style="width:800px; margin:10px; position:relative; top:0px; right:0px;">
+	<div id="widget" class="widget" style="width:800px; margin:10px; position:relative; top:0px; right:0px;">
 		<div class="widget-header">
 			<i class="icon-search"></i>
 			<h3>Student search</h3>

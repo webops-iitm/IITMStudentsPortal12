@@ -187,17 +187,9 @@ if ($trimmed == "")
   exit;
   }
   
-  // Include database connection settings
-// include('config.inc');
 
-$hostname = 'students2.iitm.ac.in';         
-$dbname   = 'students'; 
-$username = 'root';             
-$password = 'yousuckballs';                 
 
-$con=mysql_connect($hostname, $username, $password) or DIE('Connection to host is failed, perhaps the service is down!');
 
-mysql_select_db($dbname) or DIE('Database name is not available!');
 
 
 
@@ -242,7 +234,7 @@ mysql_close($con);
 }
 
 
-
+include("db.php");
 
 
 

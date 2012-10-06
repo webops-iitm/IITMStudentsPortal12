@@ -198,7 +198,7 @@ if ($trimmed == "")
   order by fullname"; 
   $numresults=mysql_query($query);
  $numrows=mysql_num_rows($numresults);
- echo "<h4 style='text-shadow:none;' >Results</h4>";
+ echo "<h4 style='text-shadow:none;' >Search results</h4>";
  if ($numrows == 0)
   {
   
@@ -299,7 +299,7 @@ if ($trimmed1 == "" && $trimmed2 == "" && $trimmed3 == "" && $trimmed4 == "" && 
  $numrows=mysql_num_rows($numresults);
  
  
- echo "<h4 style='text-shadow:none;'>Results</h4>";
+ echo "<h4 style='text-shadow:none;'>Search results</h4>";
  
  if ($numrows == 0)
   {

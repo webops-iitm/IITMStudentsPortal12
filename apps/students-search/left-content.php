@@ -285,14 +285,8 @@ if ($trimmed1 == "" && $trimmed2 == "" && $trimmed3 == "" && $trimmed4 == "" && 
   exit;
   }
   
-  // Include database connection settings
+  
 
-
-include("db.php");                
-
-$con=mysql_connect($hostname, $username, $password) or DIE('Connection to host is failed, perhaps the service is down!');
-
-mysql_select_db($dbname) or DIE('Database name is not available!');
 
 
 

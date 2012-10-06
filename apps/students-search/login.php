@@ -5,7 +5,7 @@
 				<h3>Login <!--<a href="#"> (Forgot Password?)</a>--></h3>
 			</div> <!-- /widget-header -->					
 			<div class="widget-content">
-				<form action="apps/students-search/submit.php" method="POST">
+				<form action="submit.php" method="POST">
 				<table>
 					<tbody>
 						<tr>

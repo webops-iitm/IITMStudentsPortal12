@@ -336,7 +336,7 @@ mysql_close($con);
 }
 
  }
-   else {echo "Please login to search" ;}
+   else {echo "<p style='color:red;'>Please login to search</p>";}
 
 
 ?>

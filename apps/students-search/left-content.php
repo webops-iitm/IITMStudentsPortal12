@@ -155,7 +155,7 @@ if(a==0)
 
 <?php
 
-
+session_start();
 
 if (isset($_SESSION['uname']))
 

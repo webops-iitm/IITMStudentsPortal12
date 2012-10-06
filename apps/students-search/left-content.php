@@ -151,7 +151,7 @@ if(a==0)
 </script>
 
 
-<h4 style="text-shadow:none;">Results</h4>
+
 
 <?php
 
@@ -286,12 +286,9 @@ if ($trimmed1 == "" && $trimmed2 == "" && $trimmed3 == "" && $trimmed4 == "" && 
   }
   
   // Include database connection settings
-// include('config.inc');
 
-$hostname = 'students2.iitm.ac.in';         
-$dbname   = 'students'; 
-$username = 'root';             
-$password = 'yousuckballs';                 
+
+include("db.php");                
 
 $con=mysql_connect($hostname, $username, $password) or DIE('Connection to host is failed, perhaps the service is down!');
 

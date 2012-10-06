@@ -1,6 +1,4 @@
-<center>
-<div class="span3 offset1">
-				<div class="widget"  style="float:right;width:400px; margin:10px;">
+
 					<div class="widget-header">
 						<i class="icon-star"></i>
 						<h3>Contact information</h3>
@@ -20,7 +18,3 @@
 									</tr>
 								</table>
 				</div> <!-- /widget-content -->
-						
-				</div> <!-- /widget -->	
-</div>
-</center>

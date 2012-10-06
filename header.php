@@ -86,8 +86,28 @@
 														<li><a href="javascript:;">litsoc</a></li>
 														<li><a href="javascript:;">schroeter</a></li>
 						</ul>
-				</li>				
-				<li ><a href="javascript:update('apps/home/contactinfo.php','profile');"><i class="icon-envelope "></i> Contact us</a></li>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Executive Wing
+						<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+														<li><a href="javascript:update('apps/home/secretary-manifesto.php', 'widget');">Secretary Manifesto</a></li>
+						</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						SAC
+						<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+														<li><a href="javascript:update('apps/home/sac-meeting.php', 'widget');">SAC Meetings</a></li>
+														<li><a href="javascript:;">SAC Members</a></li>
+														<li><a href="files/sac-files/Constitution_revised.pdf" target="_blank">Revised constitution</a></li>
+														<li><a href="files/sac-files/Constitution_Amendments.pdf" target="_blank">Constitution Amendments</a></li>
+														<li><a href="javascript:;">Film club</a></li>
+						</ul>
+				</li>
+				<li ><a href="javascript:update('apps/home/contactinfo.php','widget');"><i class="icon-envelope "></i> Contact us</a></li>
 			</ul>
 			<ul class="nav pull-right">					
 				<li class="dropdown ">

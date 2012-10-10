@@ -25,6 +25,7 @@
 			$tenure = $sec_row['tenure'];
 			$hobbies = $sec_row['hobbies'];
 			$form_email = $sec_row['form_email'];
+			$disp_pic = $sec_row['pic'];
 		}
 		
 	}

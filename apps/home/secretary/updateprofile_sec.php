@@ -1,3 +1,19 @@
+<?php
+	include("../../../db.php");
+	
+
+	session_start();
+	
+	if (isset($_COOKIE["user"]))
+		$_SESSION['uname'] = $_COOKIE["user"];
+		
+	include("../../../config.php");
+	
+	if($loggedin == 0)		
+		die("Please Login to continue");
+
+
+?>
 <form id="form" name="regform" action="apps/home/secretary/updateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
 	<table>
 		<tr>
@@ -14,7 +30,7 @@
 			<td><input id="nick" type="text" name="nick" value="<?php echo $nick; ?>" /></td>
 		</tr><tr>
 			<td style="width:100px;"><a href="#">Roll No.</a></td>
-			<td><input style="color:#fff;" id="roll" type="text" name="roll" value="<?php echo $uname; ?>" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td>
+			<td><input style="color:#fff;" id="roll" type="text" name="roll" value="<?php echo $user; ?>" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td>
 		</tr><tr>
 		 	<td style="width:100px;"><a href="#">Room No.</a></td>
 			<td><input style="color:#fff;" id="room" type="text" name="room" value="<?php echo $room; ?>" maxlength="4" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td>

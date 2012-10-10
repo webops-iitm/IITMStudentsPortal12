@@ -1,6 +1,26 @@
+<?php
+	include("../../../db.php");
+	
 
+	session_start();
+	
+	if (isset($_COOKIE["user"]))
+		$_SESSION['uname'] = $_COOKIE["user"];
+		
+	include("../../../config.php");
+	
+	if($loggedin == 0)		
+		die("Please Login to continue");
+
+
+?>
 <table>
 	<tr>
+		<td style="width:100px;"><a href="#">Display Picture</a></td>
+		<td>
+			<img src="files/secretary/<?php echo $disp_pic; ?>" width="150" height="150" />
+		</td>
+	</tr><tr>
 		<td style="width:100px;"><a href="#">Name</a></td>
 		<td><?php echo $name; ?></td>
 	</tr><tr>

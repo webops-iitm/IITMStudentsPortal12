@@ -13,10 +13,18 @@
 	$hostel = $_POST['hostel'];
 	$contact = $_POST['contact'];
 	$email = $_POST['email'];
-	$dpic = $_FILES['dpic'];
-	$fname = $user.$dpic["name"];
+	if( isset($_FILES['dpic']) ) {
+		$dpic = $_FILES['dpic'];
+		$disp_pic = $user.$dpic["name"];
+	} else
+		$dpic = 0;
+	//echo substr(sprintf('%o', fileperms("files")), -4) == "0774" ? "true" : "false";
+	//die(fileperms("../../../files"));
+	if ( ! is_writable("../../../files/secretary/") )
+		die("Folder is not writable : files/secretary/ ");
 	// upload pic first
-	move_uploaded_file($dpic["tmp_name"], "files/secretary/".$fname);
+	if( $dpic != 0 )
+		move_uploaded_file($dpic["tmp_name"], "../../../files/secretary/".$disp_pic);
 
 	$sql = "UPDATE users SET nick='$nick', contact = '$contact', email = '$email' WHERE username='$uname'";
 	
@@ -26,7 +34,10 @@
 	$post = $_POST['post'];
 	$tenure = $_POST['tenure'];
 	$hobbies = $_POST['hobbies'];
-	$sql = "UPDATE stu_sec SET post='$post', tenure='$tenure', hobbies='$hobbies', pic='$fname' WHERE username='$uname'";
+	if( $dpic == 0 )
+		$sql = "UPDATE stu_sec SET post='$post', tenure='$tenure', hobbies='$hobbies', pic='$disp_pic' WHERE username='$uname'";
+	else
+		$sql = "UPDATE stu_sec SET post='$post', tenure='$tenure', hobbies='$hobbies' WHERE username='$uname'";
 	mysql_query($sql) or die(mysql_error($con));
 		
 	//echo $sql;

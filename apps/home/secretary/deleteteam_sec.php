@@ -1,6 +1,16 @@
 <?php
+	include("../../../db.php");
+	
+
 	session_start();
-	include ('../../../db.php');
+	
+	if (isset($_COOKIE["user"]))
+		$_SESSION['uname'] = $_COOKIE["user"];
+		
+	include("../../../config.php");
+	
+	if($loggedin == 0)		
+		die("Please Login to continue");
 		
 	$sql = "SELECT team_id, team_name FROM stu_sec_teams WHERE secretary_username='$user'";
 	$result = mysql_query($sql);

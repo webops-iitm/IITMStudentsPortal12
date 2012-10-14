@@ -4,7 +4,7 @@
 			<i class="icon-comment"></i>
 			<h3>News</h3>
 		</div> <!-- /widget-header -->
-		<div class="widget-content">						
+		<div class="widget-content" id="widget-content">						
 			<div class="shortcuts">	
 			Welcome to the new Students Portal<br><br>
             October Mess Allocation Results <a onClick="javascript:messlist();" href="#" >Here</a>

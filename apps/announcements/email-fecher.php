@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
 require_once("../../db.php");
 // configure your imap mailboxes
 $mailbox = array(
@@ -18,39 +20,39 @@ function ReplaceImap($txt) {
   return $txt;
 }
 
+
 				// Open an IMAP stream to our mailbox
-				$stream = @imap_open($mailbox['mailbox'], $mailbox['username'], $mailbox['password']);
-				
-				if (!$stream) { 
-				
+				$stream = @imap_open($mailbox['mailbox'], $mailbox['username'], $mailbox['password']);				
+				if (!$stream){ 				
 				} 
 				else {
 					$emails = imap_search($stream,'UNSEEN');
-					if (!count($emails)){
-						
+					if (!count($emails)){						
 					} 
-					else {
-					foreach ($emails as $mail_number) 
-					{
-						$mail_header = imap_fetch_overview($stream,"{$mail_number}:{$mail_number}",0);
-						$text = imap_fetchbody($stream, $num, 1);
-						$text = imap_utf8($text);
-						$text = ReplaceImap($text);
-						//variable which should be updated to Database
-						$subject=$mail_header['subject'];
-						$from=$mail_header['from'];
-						$date=$mail_header['date'];
-						$body=nl2br($text);
-						$query="INSERT INTO news SET email='$from', subject='$subject', body='$body', time=NOW(), date='$date'";	
-						$result=mysql_query($query) or die(mysql_error()); 
-					}
-						
-				
-					} 
-					 
+					else{
+						foreach ($emails as $email){
+							$mail_header = imap_fetch_overview($stream,"{$email}:{$email}",0);
+							//var_dump($mail_header);
+							$text = imap_fetchbody($stream, $email, 1);
+							$text = imap_utf8($text);
+							$text = ReplaceImap($text);
+							//variable which should be updated to Database
+							$subject = $mail_header[0]->subject;						
+							$from = $mail_header[0]->from;
+							$date = $mail_header[0]->date;
+							$body=nl2br($text);
+							$body = addslashes($body);
+							$from = addslashes($from);
+							$subject = addslashes($subject);
+							$date = addslashes($date);
+							$query="INSERT INTO news SET email='$from', subject='$subject', body='$body', date='$date'";	
+							$result=mysql_query($query) or die(mysql_error()); 
+						}		
+					} 					 
 				}
-				mysql_close($connection);
+				mysql_close($con);
 				imap_close($stream);
-			?>
+?>
+
 
 	

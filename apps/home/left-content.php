@@ -4,6 +4,7 @@ require_once("db.php");
 
 $query = "SELECT * FROM news ORDER BY id DESC LIMIT 28";
 $result=mysql_query($query)or die ("Error in query: $query " . mysql_error()); 
+$noOfAnn = mysql_num_rows($result);
 
 ?>
 <div class="span8 ">
@@ -19,8 +20,9 @@ $result=mysql_query($query)or die ("Error in query: $query " . mysql_error());
 			<div class="tabbable">
   
   <div class="tab-content">
-  
-	<?php
+  	<?php
+	if($noOfAnn){
+
 	$counter=1;
 		while ($news=mysql_fetch_assoc($result))
 	{
@@ -39,7 +41,7 @@ $result=mysql_query($query)or die ("Error in query: $query " . mysql_error());
 		print '<div class="accordion" id="accordion'.$counter.'"><div class="accordion-group"><div class="accordion-heading">';
 		print '<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion'.$counter.'" href="#collapse'.$counter.'">
 					<strong>'.$subject.'</strong></a> <div class="row" ><div class="span4 offset1">From:'.$email.'</div>
-										  <div class="span3 offset2">Date:'.$date.'</div></div>	</div>';
+										  <div class="span4 offset2">Date:'.$date.'</div></div>	</div>';
 		print '<div id="collapse'.$counter.'" class="accordion-body collapse">
 								  <div class="accordion-inner"><p>'.$body.'</p></div></div></div></div>';	
 		
@@ -60,6 +62,13 @@ $result=mysql_query($query)or die ("Error in query: $query " . mysql_error());
     <li><a href="#pane3" data-toggle="tab">3</a></li>
     <li><a href="#pane4" data-toggle="tab">4</a></li>
   </ul>
+  <?
+	}
+	else{
+		echo "There are no new announcements";
+	}
+  ?>
+
   </div><!-- /.tab-content -->
 </div><!-- /.tabbable -->
 			

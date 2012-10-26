@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once("../../db.php");
+
 // configure your imap mailboxes
 $mailbox = array(
 		'label' 	=> 'Gmail',

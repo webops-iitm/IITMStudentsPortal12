@@ -1,6 +1,10 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
 
 require_once("db.php");
+require_once("secretaries.php");
+require_once("strings.php");
 
 $query = "SELECT * FROM news ORDER BY id DESC LIMIT 28";
 $result=mysql_query($query)or die ("Error in query: $query " . mysql_error()); 
@@ -26,10 +30,12 @@ $noOfAnn = mysql_num_rows($result);
 	$counter=1;
 		while ($news=mysql_fetch_assoc($result))
 	{
-		$email=$news['email'];
+		$email= trim(getSubstring($news['email'],'<','>'));
 		$subject=$news['subject'];
 		$body=$news['body'];
 		$date=$news['date'];
+		$from = $secretaries[$email];
+
 		if($counter==1)
 		{
 		print '<div id="pane'.$counter.'" class="tab-pane active">';
@@ -40,7 +46,7 @@ $noOfAnn = mysql_num_rows($result);
 		}
 		print '<div class="accordion" id="accordion'.$counter.'"><div class="accordion-group"><div class="accordion-heading">';
 		print '<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion'.$counter.'" href="#collapse'.$counter.'">
-					<strong>'.$subject.'</strong></a> <div class="row" ><div class="span4 offset1">From:'.$email.'</div>
+					<strong>'.$subject.'</strong></a> <div class="row" ><div class="span4 offset1">From: <a href="viewprofile.php?id='.$from['user_id'].'">'.$from['post_name'].'</a></div>
 										  <div class="span4 offset2">Date:'.$date.'</div></div>	</div>';
 		print '<div id="collapse'.$counter.'" class="accordion-body collapse">
 								  <div class="accordion-inner"><p>'.$body.'</p></div></div></div></div>';	

@@ -1,4 +1,5 @@
 <?php 
+
 	if( $secretary == 1 )
 		include( "secretary_page.php" );
 	else {

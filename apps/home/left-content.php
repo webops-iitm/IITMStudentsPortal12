@@ -2,9 +2,9 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
-require_once("db.php");
-require_once("secretaries.php");
-require_once("strings.php");
+include("db.php");
+include("secretaries.php");
+include("strings.php");
 
 $query = "SELECT * FROM news ORDER BY id DESC LIMIT 28";
 $result=mysql_query($query)or die ("Error in query: $query " . mysql_error()); 
@@ -30,11 +30,11 @@ $noOfAnn = mysql_num_rows($result);
 	$counter=1;
 		while ($news=mysql_fetch_assoc($result))
 	{
-		$email= trim(getSubstring($news['email'],'<','>'));
+		$news_email= trim(getSubstring($news['email'],'<','>'));
 		$subject=$news['subject'];
 		$body=$news['body'];
 		$date=$news['date'];
-		$from = $secretaries[$email];
+		$from = $secretaries[$news_email];
 
 		if($counter==1)
 		{

@@ -1,17 +1,21 @@
 <?php
-	include("db.php");
-	
 
+	include("db.php");
 	//session_start();
-	
 	if (isset($_COOKIE["user"]))
 		$_SESSION['uname'] = $_COOKIE["user"];
-		
-	include("config.php");
 	
-	if($loggedin == 0)		
-		die("Please Login to continue");
-
+	include("config.php");
+	if($loggedin == 0)	{	
+		include("../../../db.php");
+		session_start();
+		if (isset($_COOKIE["user"]))
+			$_SESSION['uname'] = $_COOKIE["user"];
+		include("../../../config.php");
+		if( $loggedin == 0)
+			die("Please Login to continue");
+	}
+	
 
 ?>
 <table>

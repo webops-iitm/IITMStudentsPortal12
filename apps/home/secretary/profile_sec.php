@@ -1,13 +1,13 @@
 <?php
-	include("../../../db.php");
+	include("db.php");
 	
 
-	session_start();
+	//session_start();
 	
 	if (isset($_COOKIE["user"]))
 		$_SESSION['uname'] = $_COOKIE["user"];
 		
-	include("../../../config.php");
+	include("config.php");
 	
 	if($loggedin == 0)		
 		die("Please Login to continue");

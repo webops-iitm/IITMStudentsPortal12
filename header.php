@@ -33,6 +33,10 @@
 			    {
 			    document.getElementById(target).innerHTML=xmlhttp.responseText;
 			    }
+			  else 
+				{
+				document.getElementById("widget-content").innerHTML = '<center><img src="img/ajax-loading.gif"> Loading ...</center>';
+				}
 			  }
 			xmlhttp.open("GET",datasource,true);
 			xmlhttp.send();
@@ -41,7 +45,6 @@
 		<script>
 		function mess_rating_url()
 			{
-				//document.write("dfhbdf");
 				var cat = document.getElementById('cat').value;
 				var hyg = document.getElementById('hyg').value;
 				var qtn = document.getElementById('qtn').value;

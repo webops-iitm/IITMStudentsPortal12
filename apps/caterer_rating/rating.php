@@ -40,7 +40,7 @@
 			<i class="icon-comment"></i>
 			<h3>Submit caterer rating  <?php echo date("d/m/y"); ?></h3>
 		</div> <!-- /widget-header -->
-		<div class="widget-content">						
+		<div class="widget-content"  id= "widget-content">						
 		
 					<?php
 							if(!$loggedin) echo"Please login to continue";

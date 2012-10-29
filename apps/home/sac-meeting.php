@@ -82,6 +82,7 @@ MINUTES:<br>
 </div>
 </div>
 </div>
+<br>
 <div class="widget-header" id="accordion2">
 <div class="accordion-group">
 <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsemaintwo">

@@ -32,7 +32,7 @@
 		</center></h2></td>
 	</tr><tr>
 		<td>Team Desc</td>
-		<td style="color:#000;"><center><h5><input id="team_desc" type="text" name="team_desc" value="<?php echo $team_desc; ?>"/></h5></center></td>
+		<td style="color:#000;"><center><h5><textarea id="team_desc" name="team_desc"><?php echo $team_desc; ?></textarea></h5></center></td>
 	</tr><tr>
 		<td>&nbsp;</td>
 		<td><input class="btn btn-warning" type="submit" value="Save Team Info" name="Save" /></td>

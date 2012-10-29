@@ -3,7 +3,7 @@
 
 	if(isset($_SESSION['uname']))
 	{
-		include("profile.php");
+		include("../home/profile.php");
 	}
 	else
 	{

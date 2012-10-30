@@ -3,6 +3,7 @@ require_once dirname(__FILE__).'/plugins/jsConnectPHP/functions.jsconnect.php';;
 $clientID = "2011690642";
 $secret = "84b2303731d32e7de798f39ffaff8f89";
 
+session_start();
 include_once("db.php");
 include_once("config.php");
 

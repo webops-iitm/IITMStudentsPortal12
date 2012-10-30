@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once("../../db.php");
+include_once("/var/sites/IITMStudentsPortal12/test/db.php");
 
 // configure your imap mailboxes
 $mailbox = array(
@@ -53,6 +53,7 @@ function ReplaceImap($txt) {
 				}
 				mysql_close($con);
 				imap_close($stream);
+	mail('vineet.1991.483@gmail.com', 'cronjob executed', 'the message', null,'noreply@students2.iitm.ac.in');
 ?>
 
 

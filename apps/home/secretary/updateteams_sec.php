@@ -30,7 +30,7 @@
 	
 </style>
 
-<div class="dropdown clearfix" >
+<div class="dropdown clearfix">
 	<ul class="muted dropdown-menu" style="display: block; position: static; min-width: 100%; ">
 		<li><a href="javascript:update('apps/home/secretary/addteam_sec.php', 'inner_body_sec');" id="add">Add a new Team</a></li>
 		<li><a href="javascript:update('apps/home/secretary/deleteteam_sec.php', 'inner_body_sec');" id="delete">Delete a Team</a></li>

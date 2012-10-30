@@ -1,6 +1,7 @@
 <?php
 	error_reporting(0);
-
+	$loggedin = 0;
+	
 	if(isset($_SESSION['uname']))
 	{
 		$loggedin=1;

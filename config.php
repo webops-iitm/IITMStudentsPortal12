@@ -13,6 +13,7 @@
 		$room = $row['room'];
 		$email = $row['email'];
 		$contact = $row['contact'];
+		$id = $row['id'];
 		
 		// Check if the user is in the student secretary database
 		$result_sec = mysql_query("SELECT * FROM stu_sec WHERE username = '$user' ");

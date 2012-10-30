@@ -22,7 +22,7 @@
 								<td><?php echo $nick; ?></td>
 							</tr><tr>
 								<td style="width:100px;"><a href="#">Roll Number</a></td>
-								<td><?php echo $uname; ?></td>
+								<td><?php echo $user; ?></td>
 							</tr><tr>
 								<td style="width:100px;"><a href="#">Room No.</a></td>
 								<td><?php echo $room; ?></td>

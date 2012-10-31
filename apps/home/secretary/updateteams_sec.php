@@ -16,6 +16,7 @@
 	$result = mysql_query($sql);
 			
 ?>
+
 <style>
 	.dropdown-menu li a {
 		color: #ccc;
@@ -29,7 +30,7 @@
 	}
 	
 </style>
-
+<div style="float:left; margin-left:10px;  min-height:270px; width:340px;" class="widget-contentsec" id="inner_body_sec">
 <div class="dropdown clearfix">
 	<ul class="muted dropdown-menu" style="display: block; position: static; min-width: 100%; ">
 		<li><a href="javascript:update('apps/home/secretary/addteam_sec.php', 'inner_body_sec');" id="add">Add a new Team</a></li>
@@ -42,4 +43,4 @@
 		?>
 	</ul>
 </div>
-
+</div>

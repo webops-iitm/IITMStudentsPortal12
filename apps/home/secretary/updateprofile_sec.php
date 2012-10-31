@@ -14,20 +14,42 @@
 
 
 ?>
+
+<div style="float:left; margin-left:10px;  height:270px; width:340px;" class="widget-contentsec" id="inner_body_sec">
 <form id="form" name="regform" action="apps/home/secretary/updateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
 	<table>
 		<tr>
-			<td style="width:100px;"><a href="#">Display Picture</a></td>
-			<td>
-				<input type="hidden" name="MAX_FILE_SIZE" value="50000" />
-				<input type="file" name="dpic" id="dpic" />
-			</td>
-		</tr><tr>
-			<td style="width:100px;"><a href="#">FullName</a></td>
-			<td><input style="color:#fff;" id="name" type="text" name="name" value="<?php echo $name; ?>" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td>
-		</tr><tr>
 			<td style="width:100px;"><a href="#">Nickname</a></td>
 			<td><input id="nick" type="text" name="nick" value="<?php echo $nick; ?>" /></td>
+		</tr><tr>
+			<td style="width:100px;"><a href="#">Post</a></td>
+			<td><input id="post" type="text" name="post" value="<?php echo $post; ?>"/></td>
+		</tr><tr>
+			<td style="width:100px;"><a href="#">Tenure</a></td>
+			<td><input id="tenure" type="text" name="tenure" maxlength="7" value="<?php echo $tenure; ?>"/></td>
+		</tr><tr>
+			<td style="width:100px;"><a href="#">Contact No.</a></td>
+			<td><input id="contact" type="text" name="contact" value="<?php echo $contact; ?>" maxlength="10" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();"/></td>
+		</tr><tr>
+			<td style="width:100px;"><a href="#">E-Mail ID</a></td>
+			<td><input id="email" type="text" name="email" value="<?php echo $email; ?>" /></td>
+		</tr><tr>
+			<td style="width:100px;"><a href="#">Hobbies</a></td>
+			<td><input id="hobbies" type="text" name="hobbies" value="<?php echo $hobbies; ?>"/></td>
+		</tr><tr>
+			<center>
+				<td colspan="2"><a href="#"><input class="btn btn-warning" type="submit" value="Update" name="Update" /></a></td>
+			</center>
+		</tr>
+	</table>
+</form>
+</div>
+<div style="float:left; margin-left:15px; height:270px; width:340px; " class="widget-contentsec" id="inner_body_sec">
+<form id="form" name="regform" action="apps/home/secretary/updateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
+	<table>
+		<tr>
+			<td style="width:100px;"><a href="#">FullName</a></td>
+			<td><input style="color:#fff;" id="name" type="text" name="name" value="<?php echo $name; ?>" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td>
 		</tr><tr>
 			<td style="width:100px;"><a href="#">Roll No.</a></td>
 			<td><input style="color:#fff;" id="roll" type="text" name="roll" value="<?php echo $user; ?>" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td>
@@ -57,26 +79,25 @@
 		   		  	<option <?php if($hostel == "Mahanadhi") echo "selected=\"selected\"" ?> value="Mahanadhi">Mahanadhi</option>
 				</select>
 			</td>
-		</tr><tr>
-			<td style="width:100px;"><a href="#">Post</a></td>
-			<td><input id="post" type="text" name="post" value="<?php echo $post; ?>"/></td>
-		</tr><tr>
-			<td style="width:100px;"><a href="#">Tenure</a></td>
-			<td><input id="tenure" type="text" name="tenure" maxlength="7" value="<?php echo $tenure; ?>"/></td>
-		</tr><tr>
-			<td style="width:100px;"><a href="#">Contact No.</a></td>
-			<td><input id="contact" type="text" name="contact" value="<?php echo $contact; ?>" maxlength="10" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();"/></td>
-		</tr><tr>
-			<td style="width:100px;"><a href="#">E-Mail ID</a></td>
-			<td><input id="email" type="text" name="email" value="<?php echo $email; ?>" /></td>
-		</tr><tr>
-			<td style="width:100px;"><a href="#">Hobbies</a></td>
-			<td><input id="hobbies" type="text" name="hobbies" value="<?php echo $hobbies; ?>"/></td>
-		</tr><tr>
+		</tr>
+	</table>
+</form>
+</div>
+<div style="float:left; margin-left:15px; height:270px; width:340px;" class="widget-contentsec" id="inner_body_sec">
+<form id="form" name="regform" action="apps/home/secretary/updateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
+	<table>
+		<tr>
+			<td style="width:100px;"><a href="#">Display Picture</a></td>
+			<td>
+				<input type="hidden" name="MAX_FILE_SIZE" value="50000" />
+				<input type="file" name="dpic" id="dpic" />
+			</td>
+		</tr>
 			<center>
 				<td colspan="2"><a href="#"><input class="btn btn-warning" type="submit" value="Update" name="Update" /></a></td>
 			</center>
 		</tr>
 	</table>
 </form>
+</div>
 

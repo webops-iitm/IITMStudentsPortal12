@@ -14,6 +14,7 @@
 
 
 ?>
+<div style="float:left; margin-left:10px;  height:270px; width:340px;" class="widget-contentsec" id="inner_body_sec">
 <form id="form" name="regform" action="apps/home/secretary/addteamsubmit_sec.php" method="post">
 	<table>
 		<tr>
@@ -34,4 +35,4 @@
 		</tr>
 	</table>
 </form>
-
+</div>

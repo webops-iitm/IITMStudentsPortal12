@@ -91,7 +91,7 @@
 			<td style="width:100px;"><a href="#">Display Picture</a></td>
 			<td>
 
-			<img style="margin-left:25px;" src="./apps/home/secretary/nouser150.png<?php //echo $disp_pic; ?>" width="150" height="150" />
+			<img style="margin-left:25px;" src="files/secretary/<?php echo $disp_pic; ?>" width="150" height="150" />
 			</td>
 			</tr><tr>
 			<td></td>

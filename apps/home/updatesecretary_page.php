@@ -1,5 +1,5 @@
 
-<div class=" offset1">
+<div style="margin-left:20px;">
 	<div class="widget" style="float:left; width:450px; margin:10px; align:center;">
 
 		<div class="widget-header" style="-moz-border-radius: 4px;

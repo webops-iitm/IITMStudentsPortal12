@@ -1,7 +1,7 @@
 <?php $from_main_var =1; ?>
 <div class="span3 offset1">
 	<center>
-		<div class="widget"  style="float:right;width:400px; margin:10px;">
+		<div class="widget"  style="float:right;width:415px; margin:10px;">
 			<div class="widget-header">	
 			<div class="navbar navbar-inverse ">
 				<ul class="nav nav-tabs">

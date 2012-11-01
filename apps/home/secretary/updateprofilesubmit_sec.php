@@ -18,6 +18,8 @@
 		$disp_pic = $user.$dpic["name"];
 	} else
 		$dpic = 0;
+	echo $disp_pic;
+	
 	//echo substr(sprintf('%o', fileperms("files")), -4) == "0774" ? "true" : "false";
 	//die(fileperms("../../../files"));
 	// upload pic first
@@ -34,7 +36,7 @@
 	$post = $_POST['post'];
 	$tenure = $_POST['tenure'];
 	$hobbies = $_POST['hobbies'];
-	if( $dpic == 0 )
+	if( $dpic != 0 )
 		$sql = "UPDATE stu_sec SET post='$post', tenure='$tenure', hobbies='$hobbies', pic='$disp_pic' WHERE username='$uname'";
 	else
 		$sql = "UPDATE stu_sec SET post='$post', tenure='$tenure', hobbies='$hobbies' WHERE username='$uname'";

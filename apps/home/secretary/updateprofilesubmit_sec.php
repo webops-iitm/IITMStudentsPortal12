@@ -28,21 +28,27 @@
 		move_uploaded_file($dpic["tmp_name"], "../../../files/secretary/".$disp_pic);
 	}
 
-	$sql = "UPDATE users SET nick='$nick', contact = '$contact', email = '$email' WHERE username='$uname'";
-	
-	mysql_query($sql) or die(mysql_error($con));
+	if(isset($_POST['update_profile'])){
+		$post = $_POST['post'];
+		$tenure = $_POST['tenure'];
+		$hobbies = $_POST['hobbies'];
+		
+		$sql = "UPDATE users SET nick='$nick', contact = '$contact', email = '$email' WHERE username='$uname'";
+		mysql_query($sql) or die(mysql_error($con));
+		
+		$sql = "UPDATE stu_sec SET post='$post', tenure='$tenure', hobbies='$hobbies' WHERE username='$uname'";
+		mysql_query($sql) or die(mysql_error($con));
+	}
 	
 	// echo $sql
-	$post = $_POST['post'];
-	$tenure = $_POST['tenure'];
-	$hobbies = $_POST['hobbies'];
-	if( $dpic != 0 )
-		$sql = "UPDATE stu_sec SET post='$post', tenure='$tenure', hobbies='$hobbies', pic='$disp_pic' WHERE username='$uname'";
-	else
-		$sql = "UPDATE stu_sec SET post='$post', tenure='$tenure', hobbies='$hobbies' WHERE username='$uname'";
-	mysql_query($sql) or die(mysql_error($con));
-		
-	//echo $sql;
+	if(isset($_POST['update_dpic'])){
+		if( $dpic != 0 ){
+			$sql = "UPDATE stu_sec SET pic='$disp_pic' WHERE username='$uname'";
+			mysql_query($sql) or die(mysql_error($con));
+		}
+			
+		//echo $sql;
+	}
 	header('Location: ../../../index.php');
 	
 	mysql_close($con);	

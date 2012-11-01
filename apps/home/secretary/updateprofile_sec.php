@@ -38,7 +38,7 @@
 			<td><input id="hobbies" type="text" name="hobbies" value="<?php echo $hobbies; ?>"/></td>
 		</tr><tr>
 			<center>
-				<td colspan="2"><a href="#"><input class="btn btn-warning" type="submit" value="Update" name="Update" /></a></td>
+				<td colspan="2"><a href="#"><input class="btn btn-warning" type="submit" value="Update" name="update_profile" /></a></td>
 			</center>
 		</tr>
 	</table>
@@ -94,7 +94,7 @@
 			</td>
 		</tr>
 			<center>
-				<td colspan="2"><a href="#"><input class="btn btn-warning" type="submit" value="Update" name="Update" /></a></td>
+				<td colspan="2"><a href="#"><input class="btn btn-warning" type="submit" value="Update" name="update_dpic" /></a></td>
 			</center>
 		</tr>
 	</table>

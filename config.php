@@ -20,7 +20,7 @@
 		$result_sec = mysql_query("SELECT * FROM stu_sec WHERE username = '$user' ");
 		$sec_count = mysql_num_rows($result_sec);
 		$secretary = 0;
-		
+		$disp_pic=0;
 		if( $sec_count >= 1 ) 
 		{
 			$secretary = 1;

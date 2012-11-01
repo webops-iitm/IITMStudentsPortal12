@@ -1,6 +1,6 @@
 
 <div class=" offset1">
-	<div class="widget" style="float:left; margin:10px; align:center;">
+	<div class="widget" style="float:left; width:450px; margin:10px; align:center;">
 
 		<div class="widget-header" style="-moz-border-radius: 4px;
 -webkit-border-radius: 4px;
@@ -15,7 +15,7 @@ border-radius: 4px;">
 				</li>
 				<li class="" id="profile_sec_page"><a style=" text-shadow:none;" href="javascript:update('apps/home/secretary/updateprofile_sec.php', 'inner_body_sec'); ">Profile</a></li>
 				<li id="teams_sec_page"><a style="text-shadow:none;" href="javascript:update('apps/home/secretary/updateteams_sec.php', 'inner_body_sec');">Teams</a></li>
-				<li id="contacts_sec_page"><a style="text-shadow:none;" href="javascript:update('apps/home/secretary/updatecontact_sec.php', 'inner_body_sec');">Contact</a></li>
+				<li id="contacts_sec_page"><a style="text-shadow:none; border-right:none;" href="javascript:update('apps/home/secretary/updatecontact_sec.php', 'inner_body_sec');">Contact</a></li>
 			</ul>
 		</div></div>
 		</div>

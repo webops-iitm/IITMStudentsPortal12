@@ -89,7 +89,7 @@
 		<tr>
 			<td style="width:100px;"><a href="#">Display Picture</a></td>
 			<td>
-				<input type="hidden" name="MAX_FILE_SIZE" value="50000" />
+				<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
 				<input type="file" name="dpic" id="dpic" />
 			</td>
 		</tr>

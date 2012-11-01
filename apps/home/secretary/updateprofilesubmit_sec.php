@@ -18,15 +18,15 @@
 		$disp_pic = $user.$dpic["name"];
 	} else
 		$dpic = 0;
-	echo $disp_pic;
 	
 	//echo substr(sprintf('%o', fileperms("files")), -4) == "0774" ? "true" : "false";
 	//die(fileperms("../../../files"));
 	// upload pic first
 	if ( ! is_writable("../../../files/secretary/") )
 		die("Folder is not writable : files/secretary/ ");
-	if( $dpic != 0 )
+	if( $dpic != 0 ){
 		move_uploaded_file($dpic["tmp_name"], "../../../files/secretary/".$disp_pic);
+	}
 
 	$sql = "UPDATE users SET nick='$nick', contact = '$contact', email = '$email' WHERE username='$uname'";
 	

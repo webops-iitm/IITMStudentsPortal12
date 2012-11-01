@@ -217,7 +217,7 @@ if ($trimmed == "")
 
 while($row = mysql_fetch_array($numresults))
   {
-  echo "<tr>";
+  echo "<tr onclick=function() {window.location.assign('http://http://students2.iitm.ac.in/test/apps/students-search/show_profile.php?user=".$row['username']."')}>";
   echo "<td>" . $row['fullname'] . "</td>";
   echo "<td>" . $row['nick'] . "</td>";
   echo "<td>" . $row['username'] . "</td>";

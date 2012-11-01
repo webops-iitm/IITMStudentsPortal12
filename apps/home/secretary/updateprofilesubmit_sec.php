@@ -16,6 +16,7 @@
 	if( isset($_FILES['dpic']) ) {
 		$dpic = $_FILES['dpic'];
 		$disp_pic = $user.$dpic["name"];
+		if($dpic["name"]=='') $dpic = 0;
 	} else
 		$dpic = 0;
 	

@@ -10,10 +10,19 @@
 
 	include("header.php");
 
-    
-	include("apps/students-search/content.php");
 
-   
+       if (isset($_GET['userd']))
+    {
+	include("apps/students-search/show_profile.php");
+
+   }
+       else
+    {
+         include("apps/students-search/content.php");
+
+        
+    }
+
 
 	include("footer.php");
 ?>

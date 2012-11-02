@@ -2,7 +2,9 @@
 
 
 include("db.php");
-$var= $_GET['user'];
+
+
+$var= $_GET['userd'];
 
 session_start();
 

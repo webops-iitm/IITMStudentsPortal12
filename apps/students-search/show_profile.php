@@ -74,3 +74,4 @@ $contact=$row['contact'];
 				</div> <!-- /widget -->	
 </center>
 </div>
+<br/>

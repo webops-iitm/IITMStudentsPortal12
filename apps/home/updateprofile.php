@@ -72,7 +72,7 @@
                                         <tr>
                                         <td style="width:100px;"><a href="#">Blood Group</a></td>
                                         <td>
-                                        <select id="bgroup" name="bgroup" style="width:195px; color:#fff;">
+                                        <select id="bgroup" name="bgroup" style="width:195px;">
 
 
           <option value="" selected="selected" >Select</option>

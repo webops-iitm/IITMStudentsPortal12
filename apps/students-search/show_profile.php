@@ -23,7 +23,7 @@ $hostel=$row['hostel'];
 $room=$row['room'];
 $email=$row['email'];
 $contact=$row['contact'];
-
+$bgroup=$row['bgroup'];
 
  
 
@@ -66,6 +66,9 @@ $contact=$row['contact'];
 							</tr><tr>
 								<td style="width:100px;"><a href="#">E-Mail ID</a></td>
 								<td><?php echo $email; ?></td>
+							</tr><tr>
+								<td style="width:100px;"><a href="#">Blood Group</a></td>
+								<td><?php echo $bgroup; ?></td>
 							</tr>
 						</table>
 				</div> <!-- /widget-content -->

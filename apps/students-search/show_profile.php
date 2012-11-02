@@ -32,7 +32,9 @@ $contact=$row['contact'];
 ?>
 
 
-
+<div class="span3 offset1">
+<center>
+				<div class="widget"  style="float:right;width:400px; margin:10px;">
 
 
 
@@ -67,3 +69,8 @@ $contact=$row['contact'];
 							</tr>
 						</table>
 				</div> <!-- /widget-content -->
+
+						
+				</div> <!-- /widget -->	
+</center>
+</div>

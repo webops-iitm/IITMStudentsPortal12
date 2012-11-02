@@ -217,7 +217,7 @@ if ($trimmed == "")
 
 while($row = mysql_fetch_array($numresults))
   {
-  echo "<tr";
+  echo "<tr>";
   echo "<td> <a href='apps/students-search/showprofile.php' >"  . $row['fullname'] . "</a> </td>";
   echo "<td>" . $row['nick'] . "</td>";
   echo "<td>" . $row['username'] . "</td>";

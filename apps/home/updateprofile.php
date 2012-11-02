@@ -64,7 +64,33 @@
 		   		  							  <option <?php if($hostel == "Mahanadhi") echo "selected=\"selected\"" ?>value="Mahanadhi">Mahanadhi</option>                                        
                                         </select>
                                         </td>
-									</tr><tr>
+									</tr>
+
+
+
+
+                                        <tr>
+                                        <td style="width:100px;"><a href="#">Blood Group</a></td>
+                                        <td>
+                                        <select id="bgroup" name="bgroup" style="width:195px; color:#fff;">
+
+
+          <option value="" selected="selected" >Select</option>
+          <option value="A-">A-</option>
+          <option value="B-">B-</option>
+          <option value="AB-">AB-</option>
+          <option value="A+">A+</option>
+          <option value="B+">B+</option>
+          <option value="AB+">AB+</option>
+                                       </select>
+                                        </td>
+									</tr>
+
+
+
+
+
+<tr>
 										<td style="width:100px;"><a href="#">Contact No.</a></td>
 										<td><input id="contact" type="text" name="contact" value="<?php echo $contact; ?>" maxlength="10" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();"/></td>
 									</tr><tr>

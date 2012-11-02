@@ -75,13 +75,15 @@
                                         <select id="bgroup" name="bgroup" style="width:195px;">
 
 
-          <option value="" selected="selected" >Select</option>
-          <option value="A-">A-</option>
-          <option value="B-">B-</option>
-          <option value="AB-">AB-</option>
-          <option value="A+">A+</option>
-          <option value="B+">B+</option>
-          <option value="AB+">AB+</option>
+          <option <?php if($bgroup == "") echo "selected=\"selected\"" ?> value="" >Select</option>
+          <option <?php if($bgroup == "An") echo "selected=\"selected\"" ?> value="An">A-</option>
+          <option <?php if($bgroup == "Bn") echo "selected=\"selected\"" ?> value="Bn">B-</option>
+          <option <?php if($bgroup == "On") echo "selected=\"selected\"" ?> value="On">O-</option>
+          <option <?php if($bgroup == "ABn") echo "selected=\"selected\"" ?> value="ABn">AB-</option>
+          <option <?php if($bgroup == "Ap") echo "selected=\"selected\"" ?> value="Ap">A+</option>
+          <option <?php if($bgroup == "Bp") echo "selected=\"selected\"" ?> value="Bp">B+</option>
+          <option <?php if($bgroup == "Op") echo "selected=\"selected\"" ?> value="Op">O+</option>
+          <option <?php if($bgroup == "ABp") echo "selected=\"selected\"" ?> value="ABp">AB+</option>
                                        </select>
                                         </td>
 									</tr>

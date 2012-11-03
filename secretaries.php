@@ -1,4 +1,4 @@
-<?
+<?php
 	$secretaries = array(
 		'sgs@smail.iitm.ac.in' => array(
 			'post_name' => 'Students General Secretary',

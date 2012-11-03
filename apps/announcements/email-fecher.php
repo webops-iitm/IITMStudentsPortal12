@@ -32,16 +32,18 @@ function ReplaceImap($txt) {
 					} 
 					else{
 						foreach ($emails as $email){
-							$mail_header = imap_fetch_overview($stream,"{$email}:{$email}",0);
+							$mail_header=imap_header($stream, $email);
 							//var_dump($mail_header);
 							$text = imap_fetchbody($stream, $email, 1);
 							$text = imap_utf8($text);
 							$text = ReplaceImap($text);
-							//variable which should be updated to Database
-							$subject = $mail_header[0]->subject;						
-							$from = $mail_header[0]->from;
-							$date = $mail_header[0]->date;
+							
+							$subject=$mail_header->subject;
+							$from=$mail_header->fromaddress;
+							$date=strtotime($mail_header->date);
 							$body=nl2br($text);
+							
+							
 							$body = addslashes($body);
 							$from = addslashes($from);
 							$subject = addslashes($subject);

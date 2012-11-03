@@ -11,6 +11,7 @@
 		<link href="css/bootstrap-responsive.css" rel="stylesheet">
 		<link href="css/bootstrap.css" rel="stylesheet"><script src="js/bootstrap.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-1.js"></script>
 		<link href="img/glyphicons-halfings.png"> <link href="img/glyphicons-halfings-white.png">    
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>

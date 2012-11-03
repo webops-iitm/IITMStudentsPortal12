@@ -104,7 +104,7 @@
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 														<li><a href="javascript:update('apps/home/sac-meeting.php', 'widget');">SAC Meetings</a></li>
-														<li><a href="javascript:update('apps/home/sac-members.php', 'widget');">SAC Members</a></li>
+														<li><a href="javascript:acupdate('apps/home/sac-members.php', 'widget');">SAC Members</a></li>
 														<li><a href="files/sac-files/Constitution_revised.pdf" target="_blank">Revised constitution</a></li>
 														<li><a href="files/sac-files/Constitution_Amendments.pdf" target="_blank">Constitution Amendments</a></li>
 														<li><a href="javascript:;">Film club</a></li>

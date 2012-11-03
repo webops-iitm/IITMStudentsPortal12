@@ -5,7 +5,7 @@ $noOfAnn=4;   //This variable can be changed to obtain variable number of news p
 
 ?>
 
-<div class="span7 ">
+<div class="span8 ">
 	<div id="widget" class="widget" style="width:800px; margin:10px; position:relative; top:0px; right:0px; left:20px;">
 		<div class="widget-header">
 			<i class="icon-comment"></i>

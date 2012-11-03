@@ -32,7 +32,7 @@ $bgroup=$row['bgroup'];
 ?>
 
 
-<div class="span3 offset1">
+
 <center>
 				<div class="widget"  style="width:400px; margin:10px;">
 
@@ -76,5 +76,4 @@ $bgroup=$row['bgroup'];
 						
 				</div> <!-- /widget -->	
 </center>
-</div>
-<br/>
+

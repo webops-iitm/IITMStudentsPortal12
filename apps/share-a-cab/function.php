@@ -16,7 +16,7 @@ class ShareACab
 	function add_new($bookedby, $origin, $destination, $date, $time, $numseats, $numvacancy, $cabtype, $comment)
 		{
 			$query = "INSERT INTO share_a_cab (bookedby, origin, destination, date, time, numseats, numvacancy, cabtype, comment) VALUES ('$bookedby', '$origin', '$destination', '$date', '$time', '$numseats', '$numvacancy', '$cabtype', '$comment')";
-			$result= mysql_query($query) or die('Couldnt process');
+			$result= mysql_query($query) or die(mysql_error());
 			return $result;
 		}
 	function validate_new()
@@ -45,9 +45,23 @@ class ShareACab
 			$result = mysql_query($query) or die("Couldnt process your request");
 			return $result;
 		}
-	function add_request()
+	function add_request($rid, $numrequired, $requestby, $comment)
 		{
-			
+			$query = "INSERT INTO share_a_cab_requests (rid, numrequired, requestby, comment) VALUES ('$rid', '$numrequired', '$requestby', '$comment')";
+			$result = mysql_query($query) or die("Couldnt process your request");
+			return $result;
+		}
+	function my_bookings($uname)
+		{
+			$query = "SELECT * FROM share_a_cab WHERE bookedby LIKE '%$uname%'";
+			$result = mysql_query($query) or die(mysql_error());
+			return $result;
+		}
+	function my_booking_requests($uname)
+		{
+			$query = "SELECT * FROM share_a_cab_requests WHERE requestby LIKE '%$uname%'";
+			$result = mysql_query($query) or die(mysql_error());
+			return $result;
 		}
 	
 

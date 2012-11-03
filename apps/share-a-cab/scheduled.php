@@ -22,11 +22,6 @@ if($result)
 												<a class='accordion-toggle' data-toggle='collapse' data-parent='#accordion$rid' href='#collapse$rid'>
 													<strong>From: $origin   &nbsp;  To: $destination   &nbsp;  On: $date  &nbsp; $time</strong>
 												</a> 
-												<div class='row'>
-													<div class='span4 offset1'>
-														<a href='#'>Number of vacancies: $numvacancy</a>
-													</div>
-												</div>
 											</div>
 											<div id='collapse$rid' class='accordion-body collapse'>
 													<div class='accordion-inner'>
@@ -38,7 +33,7 @@ if($result)
 								echo"						</div>
 															<div class='span4 offset2'>";
 ?>
-																<a href="javascript:ajaxcontent('apps/share-a-cab/requestform.php?rid=<?php echo"$rid";?>', 'widget-subcontent');">Request to share</a>
+																<a href="javascript:ajaxcontent('apps/share-a-cab/requestform.php?rid=<?php echo"$rid";?>', 'widget-subcontent');">Request a Seat</a>
 <?php
 								echo"						</div>
 														</div>

@@ -41,7 +41,7 @@ while ($news=mysql_fetch_assoc($result))
 							  </a>
 							  <div class="row" >
 								<div class="span4 offset1">
-								From: <a href="viewprofile.php?id=<?php echo $user; ?>"><?php echo $name; ?></a>
+								From: <a href="student-search.php?userd=<?php echo $user; ?>"><?php echo $name; ?></a>
 								</div>
 								<div class="span4 offset2">Date:
 								<?php 

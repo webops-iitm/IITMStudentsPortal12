@@ -33,7 +33,7 @@ if($result)
 								echo"						</div>
 															<div class='span4 offset2'>";
 ?>
-																<a href="javascript:ajaxcontent('apps/share-a-cab/requestform.php?rid=<?php echo"$rid";?>', 'widget-subcontent');">Request to share</a>
+																<a href="javascript:ajaxcontent('apps/share-a-cab/requestform.php?rid=<?php echo"$rid";?>', 'widget-subcontent');">Request a Seat</a>
 <?php
 								echo"						</div>
 														</div>

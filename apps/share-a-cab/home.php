@@ -11,7 +11,17 @@
 				</li>
 				<li><a href="javascript:ajaxcontent('apps/share-a-cab/departed.php', 'widget-subcontent');">Departed</a></li>
 				<li><a href="javascript:ajaxcontent('apps/share-a-cab/addnew.php', 'widget-subcontent');">Add new</a></li>
-				<li><a href="javascript:ajaxcontent('apps/share-a-cab/requestnew.php', 'widget-subcontent');">Request new</a></li>
+				<li><a href="javascript:ajaxcontent('apps/share-a-cab/requestnew.php', 'widget-subcontent');">Search a cab</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						My requests
+						<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+														<li><a href="javascript:ajaxcontent('apps/share-a-cab/my_bookings.php', 'widget-subcontent');">My bookings</a></li>
+														<li><a href="javascript:ajaxcontent('apps/share-a-cab/my_seatrequests.php', 'widget-subcontent');">My seat requests</a></li>
+														<li><a href="javascript:ajaxcontent('apps/share-a-cab/my_req4booking.php', 'widget-subcontent');">Seat requests for my bookings</a></li>
+						</ul>
+				</li>
 			</ul>
 			<div id="widget-subcontent">
 			</div>
@@ -74,5 +84,15 @@
 			var cabtype = document.getElementById('cabtype').value;
 			s_url = "apps/share-a-cab/requestnew.php?origin=" + origin + "&destination=" + destination + "&date=" + date + "&numrequired=" + numrequired + "&cabtype=" + cabtype;
 			ajaxcontent(s_url,'widget-subcontent');
+		}
+		
+		function requestcab_url()
+		{
+			var rid = document.getElementById('rid').value;
+			var numrequired = document.getElementById('numrequired').value;
+			var requestby = document.getElementById('requestby').value;
+			var comment = document.getElementById('comment').value;
+			r_url = "apps/share-a-cab/requestform.php?rid=" +  rid + "&numrequired=" + numrequired + "&requestby=" + requestby + "&comment=" + comment;
+			ajaxcontent(r_url,'widget-subcontent');
 		}
 	</script>

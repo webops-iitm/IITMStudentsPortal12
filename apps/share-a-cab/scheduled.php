@@ -22,11 +22,6 @@ if($result)
 												<a class='accordion-toggle' data-toggle='collapse' data-parent='#accordion$rid' href='#collapse$rid'>
 													<strong>From: $origin   &nbsp;  To: $destination   &nbsp;  On: $date  &nbsp; $time</strong>
 												</a> 
-												<div class='row'>
-													<div class='span4 offset1'>
-														<a href='#'>Number of vacancies: $numvacancy</a>
-													</div>
-												</div>
 											</div>
 											<div id='collapse$rid' class='accordion-body collapse'>
 													<div class='accordion-inner'>

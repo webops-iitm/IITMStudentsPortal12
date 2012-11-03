@@ -45,9 +45,17 @@ class ShareACab
 			$result = mysql_query($query) or die("Couldnt process your request");
 			return $result;
 		}
-	function add_request()
+	function add_request($rid, $numrequired, $requestby, $comment)
 		{
-			
+			$query = "INSERT INTO share_a_cab_requests (rid, numrequired, requestby, comment) VALUES ('$rid', '$numrequired', '$requestby', '$comment')";
+			$result = mysql_query($query) or die("Couldnt process your request");
+			return $result;
+		}
+	function my_bookings($uname)
+		{
+			$query = "SELECT * FROM share_a_cab WHERE uname = '$uname'";
+			$result = mysql_query($query) or die("Couldnot process Your request");
+			return $result;
 		}
 	
 

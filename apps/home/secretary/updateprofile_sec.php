@@ -16,7 +16,7 @@
 ?>
 
 
-<div style="float:left; margin-left:10px;  height:290px; width:1070px;" class="widget-contentsec" id="inner_body_sec">
+<div style="float:left; margin-left:10px; height:340px; width:1070px;" class="widget-contentsec" id="inner_body_sec">
 
 <form id="form" style="float:left;margin-left:10px;" name="regform" action="apps/home/secretary/updateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
 	<table>

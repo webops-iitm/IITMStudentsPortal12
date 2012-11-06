@@ -22,7 +22,7 @@
 	$sql = "SELECT * FROM stu_sec_files WHERE team_id=$team_id;";	
 	$result = mysql_query($sql);
 ?>
-<div style="float:left; margin-left:10px;  min-height:270px; width:420px;" class="widget-contentsec" id="inner_body_sec">
+<div style="float:left; margin-left:10px;  min-height:340px; width:520px;" class="widget-contentsec" id="inner_body_sec">
 <form id="form1" name="teamform" action="apps/home/secretary/editteamsubmit_sec.php" method="post">
 <table style="min-width:100%;">
 	<tr style="min-width:100%;">

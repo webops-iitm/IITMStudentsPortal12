@@ -1,8 +1,11 @@
 
-	<center>
-		<div class="widget"  style="width:520px; height:520px; margin:10px;">
-			<div class="widget-header">	
+<div class="offset2">
+		<div class="widget"  style="width:520px; margin:10px;">
+			<div class="widget-header" style="-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;">	
 			<div class="navbar navbar-inverse ">
+				<div class="container-fluid">
 				<ul class="nav nav-tabs">
 					<li>
 						<i class="icon-star"></i>
@@ -14,14 +17,16 @@
 
 				</ul>
 			</div>
+			</div>
 			</div> <!-- /widget-header -->
+			</div><!-- /widget -->
 						
-			<div class="widget-content" style="height:430px;" id="inner_body_sec">
+			<div class="widget" style="height:390px;" id="inner_body_sec">
 				<?php include( "secretary/profile_sec.php" ); ?>
 			</div> <!-- /widget-content -->
 						
-		</div> <!-- /widget -->	
-	</center>
+			
+</div>
 
 <script>
 		function update(datasource, target)

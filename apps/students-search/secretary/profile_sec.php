@@ -39,32 +39,44 @@
     $_SESSION['uname'] = $_COOKIE["user"];
  
 ?>
-<table>
+<div style="float:left; margin-left:10px; height:260px; width:970px;" class="widget-contentsec" id="inner_body_sec">
+
+<table style="float:left; margin-left:20px; height:220px; width:220px;">
 	<tr>
-		<td style="width:100px;"><a href="#">Display Picture</a></td>
+		<td style="width:100px; left:20px;"><a href="#">Display Picture</a></td>
+	</tr><tr>
 		<td>
-			<img src="files/secretary/<?php echo $show_disp_pic; ?>" width="150" height="150" />
+			<img src="files/secretary/<?php echo $show_disp_pic; ?>" style="width:175px; height:175px;" />
 		</td>
+	</tr>
+
+</table>
+
+<table style="float:left; margin-left:10px; height:200px; margin-left:30px;">
+	<tr class="navbar">
+		<td style="width:90px;"><a href="#">Name</a></td>
+		<td style="border:1px; border-type:solid;" ><?php echo $show_name; ?></td>
 	</tr><tr>
-		<td style="width:100px;"><a href="#">Name</a></td>
-		<td><?php echo $show_name; ?></td>
-	</tr><tr>
-		<td style="width:100px;"><a href="#">Nickname</a></td>
+		<td style="width:90px;"><a href="#">Nickname</a></td>
 		<td><?php echo $show_nick; ?></td>
 	</tr><tr>
-		<td style="width:100px;"><a href="#">Roll No.</a></td>
+		<td style="width:90px;"><a href="#">Roll No.</a></td>
 		<td><?php echo $show_user; ?></td>
 	</tr><tr>
-		<td style="width:100px;"><a href="#">Room No.</a></td>
+		<td style="width:90px;"><a href="#">Room No.</a></td>
 		<td><?php echo $show_room; ?></td>
 	</tr><tr>
-		<td style="width:100px;"><a href="#">Hostel</a></td>
+		<td style="width:90px;"><a href="#">Hostel</a></td>
 		<td><?php echo $show_hostel; ?></td>
-	</tr><tr>
+	</tr>
+</table>
+
+<table style="float:left; margin-left:10px; height:250px; margin-left:100px;"/>
+	<tr>
      <td style="width:100px;"><a href="#">Post</a></td>
      <td><?php echo $show_post; ?></td>
 	</tr><tr>
-		<td style="width:100px;"><a href="#">Tenure</a></td>
+		<td style="width:10 0px;"><a href="#">Tenure</a></td>
 		<td><?php echo $show_tenure; ?></td>
 	</tr><tr>
 		<td style="width:100px;"><a href="#">Contact No.</a></td>
@@ -80,3 +92,4 @@
 		<td><?php echo $show_bgroup; ?></td>
 	</tr>									
 </table>
+</div>

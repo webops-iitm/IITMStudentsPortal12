@@ -24,7 +24,8 @@
 	}
 	
 </style>
-
+<div style="float:left; margin-left:10px; height:260px; width:490px;" class="widget-contentsec" id="inner_body_sec">
+<center>
 <div class="dropdown clearfix" >
 	<ul class="muted dropdown-menu" style="display: block; position: static; min-width: 100%; ">
 		<?php
@@ -34,4 +35,5 @@
 		?>
 	</ul>
 </div>
-
+</center>
+</div>

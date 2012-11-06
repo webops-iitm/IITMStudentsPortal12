@@ -1,6 +1,6 @@
 
 	<center>
-		<div class="widget"  style="width:415px; margin:10px;">
+		<div class="widget"  style="width:520px; height:520px; margin:10px;">
 			<div class="widget-header">	
 			<div class="navbar navbar-inverse ">
 				<ul class="nav nav-tabs">
@@ -16,7 +16,7 @@
 			</div>
 			</div> <!-- /widget-header -->
 						
-			<div class="widget-content" id="inner_body_sec">
+			<div class="widget-content" style="height:430px;" id="inner_body_sec">
 				<?php include( "secretary/profile_sec.php" ); ?>
 			</div> <!-- /widget-content -->
 						

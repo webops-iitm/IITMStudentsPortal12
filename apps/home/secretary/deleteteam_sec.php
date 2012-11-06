@@ -31,7 +31,7 @@
 			</td>
 		</tr><tr>
 			<center>
-				<td><a href="#"><input class="btn btn-warning" type="submit" value="Send" name="Send" /></a></td>
+				<td><a href="#"><input class="btn btn-warning" type="submit" value="Delete" name="Send" /></a></td>
 			</center>
 		</tr>
 	</table>

@@ -78,6 +78,9 @@
 			<td style="width:100px;"><a href="#">Hobbies</a></td>
 			<td><input id="hobbies" type="text" name="hobbies" value="<?php echo $hobbies; ?>"/></td>
 		</tr><tr>
+			<td style="width:100px;"><a href="#">Blood Group</a></td>
+			<td><input id="bgroup" type="text" name="bgroup" value="<?php echo $bgroup; ?>"/></td>
+		</tr><tr>
 			<center>
 				<td colspan="2"><a href="#"><input style="margin-top:20px;" class="btn btn-warning btn-large" type="submit" value="Update" name="update_profile" /></a></td>
 			</center>

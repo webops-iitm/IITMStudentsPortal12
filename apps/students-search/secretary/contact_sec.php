@@ -1,7 +1,7 @@
 <?php
 	include("../../../db.php");
 	
-
+  $var = $_GET['userid'];
 	session_start();
 	
 	if (isset($_COOKIE["user"]))
@@ -9,25 +9,22 @@
 		
 	include("../../../config.php");
 	
-	if($loggedin == 0)		
-		die("Please Login to continue");
-
+	if($loggedin == 0) 
+		die("Please Login to send emails");
+  
   
 
 ?>
-	<table>
-		<tr>
-			<td style="width:100px;"><a href="#">Email to send forms to</a></td>
-			<td><?php echo $form_email; ?></td>
-		</tr>
-	</table>
-
-<!--
+&nbsp; <!-- hack : it doesn't show without some thing here ... -->
 <form id="form" name="regform" action="apps/home/secretary/contactsubmit_sec.php" method="post">
 	<table>
 		<tr>
 			<td style="width:100px;"><a href="#">Nick</a></td>
-			<td><input style="color:#fff;" id="nick" type="text" name="nick" value="<?php if( $nick == '' ) echo $name; else echo $nick; ?>" readonly='readonly' maxlength="255" /></td>
+			<td>
+        <input style="color:#fff;" id="nick" type="text" name="nick" value="<?php if( $nick == '' ) echo $name; else echo $nick; ?>" readonly='readonly' maxlength="255" />
+          <input id="userid" type="hidden" name="userid" value="<?php echo $var ?>"  />
+      </td>
+        
 		</tr><tr>
 			<td style="width:100px;"><a href="#">Roll No.</a></td>
 			<td><input style="color:#fff;" id="roll" type="text" name="roll" value="<?php echo $user; ?>" readonly='readonly' maxlength="8" /></td>
@@ -60,4 +57,3 @@
 		document.getElementById("email").value = "Anon";
 	}
 </script>
--->

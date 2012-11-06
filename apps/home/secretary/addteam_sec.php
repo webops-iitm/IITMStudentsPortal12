@@ -30,7 +30,7 @@
 			</tr>
 		</tr><tr>
 			<center>
-				<td><a href="#"><input class="btn btn-warning" type="submit" value="Send" name="Send" /></a></td>
+				<td><a href="#"><input class="btn btn-warning" type="submit" value="Create" name="Send" /></a></td>
 			</center>
 		</tr>
 	</table>

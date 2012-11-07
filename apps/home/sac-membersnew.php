@@ -181,12 +181,6 @@ $sacmem = array( array( roll => "CS12M032",
                     )
              );
 ?>
-<script>
-function stuprof()
-{
-alert("working");
-}
-</script>
 <div class="widget-header">
 	<i class="icon-star"></i>
 	<h3>Contact information</h3>
@@ -200,7 +194,7 @@ alert("working");
 	<td><b>Contact</b></td>
 	</tr>
 <?php
-	include("../../db.php");
+	include("db.php");
 	for($i=0;$i<59;$i++)
 	{
 	$name = "Vacant";

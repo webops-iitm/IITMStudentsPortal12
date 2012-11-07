@@ -909,3 +909,4 @@ legend,label{text-shadow:-1px -1px 0 rgba(0, 0, 0, 0.3);}
 			vertical-align: middle;			
 		}
 .widget a{ color: #08C; }
+#news-body {max-height:200px; overflow-y:scroll;}

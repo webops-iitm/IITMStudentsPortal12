@@ -64,7 +64,35 @@
 		   		  							  <option <?php if($hostel == "Mahanadhi") echo "selected=\"selected\"" ?>value="Mahanadhi">Mahanadhi</option>                                        
                                         </select>
                                         </td>
-									</tr><tr>
+									</tr>
+
+
+
+
+                                        <tr>
+                                        <td style="width:100px;"><a href="#">Blood Group</a></td>
+                                        <td>
+                                        <select id="bgroup" name="bgroup" style="width:195px;">
+
+
+          <option <?php if($bgroup == "") echo "selected=\"selected\"" ?> value="" >Select</option>
+          <option <?php if($bgroup == "A-") echo "selected=\"selected\"" ?> value="A-">A-</option>
+          <option <?php if($bgroup == "B-") echo "selected=\"selected\"" ?> value="B-">B-</option>
+          <option <?php if($bgroup == "O-") echo "selected=\"selected\"" ?> value="O-">O-</option>
+          <option <?php if($bgroup == "AB-") echo "selected=\"selected\"" ?> value="AB-">AB-</option>
+          <option <?php if($bgroup == "A+") echo "selected=\"selected\"" ?> value="A+">A+</option>
+          <option <?php if($bgroup == "B+") echo "selected=\"selected\"" ?> value="B+">B+</option>
+          <option <?php if($bgroup == "O+") echo "selected=\"selected\"" ?> value="O+">O+</option>
+          <option <?php if($bgroup == "AB+") echo "selected=\"selected\"" ?> value="AB+">AB+</option>
+                                       </select>
+                                        </td>
+									</tr>
+
+
+
+
+
+<tr>
 										<td style="width:100px;"><a href="#">Contact No.</a></td>
 										<td><input id="contact" type="text" name="contact" value="<?php echo $contact; ?>" maxlength="10" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();"/></td>
 									</tr><tr>

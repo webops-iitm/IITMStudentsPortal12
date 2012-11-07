@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<style>body {padding-top:40px;}</style>
+		<style>
+		body {padding-top:40px;}
+		.hidden{visibility:hidden;}
+                .unhidden{visibility:visible;}
+                </style>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -11,11 +15,83 @@
 		<link href="css/bootstrap-responsive.css" rel="stylesheet">
 		<link href="css/bootstrap.css" rel="stylesheet"><script src="js/bootstrap.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<link href="img/glyphicons-halfings.png"> <link href="img/glyphicons-halfings-white.png">    
+		<script src="js/jquery-1.js"></script>
+		<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script class="jsbin" src="http://datatables.net/download/build/jquery.dataTables.nightly.js"></script>
+		<script class="jsbin" src="http://live.datatables.net/media/js/jquery.js"></script>
+		<link href="img/glyphicons-halfings.png"> <link href="img/glyphicons-halfings-white.png"> 
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                <style type="text/css">
+                         @import "/media/css/demo_page.css";
+                         @import "/media/css/demo_table.css";
+                </style>
+                <script type="text/javascript" language="javascript" src="http://live.datatables.net/media/js/jquery.js"></script>
+                <script class="jsbin" src="http://datatables.net/download/build/jquery.dataTables.nightly.js"></script>   
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		<script>
+                $(document).ready(function(){
+	                $('#example').dataTable();
+                });
+
+                </script>
+                <script type="text/javascript">
+                function hide()
+                {
+                        document.getElementById("message").style.visibility = 'hidden';
+                }
+
+                </script>
+	        <script type="text/javascript" charset="utf-8" language="javascript">
+                function showmessage(str)
+                {
+                        var xmlhttp;
+                        if (window.XMLHttpRequest)
+                        {// code for IE7+, Firefox, Chrome, Opera, Safari
+                                xmlhttp=new XMLHttpRequest();
+                        }
+                        else
+                        {// code for IE6, IE5
+                                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        xmlhttp.onreadystatechange=function()
+			{
+			        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			        {
+			                document.getElementById(str).style.visibility='visible'	;
+			                document.getElementById(str).style.display='block';
+			        }
+
+                        }
+                        xmlhttp.open("GET","complaint.php",true)
+                        xmlhttp.send(null);
+                }
+
+                function hidemessage(str)
+                {
+                        var xmlhttp;
+                        if (window.XMLHttpRequest)
+                        {// code for IE7+, Firefox, Chrome, Opera, Safari
+                                xmlhttp=new XMLHttpRequest();
+                        }
+                        else
+                        {// code for IE6, IE5
+                                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        xmlhttp.onreadystatechange=function()
+	                {
+		        	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		        	  {
+	                               document.getElementById(str).style.visibility='hidden';
+		        	        document.getElementById(str).style.display='none';
+		        	  }
+                        }
+                        xmlhttp.open("GET","complaint.php",true)
+                        xmlhttp.send(null);
+                }
+                </script>
         <script>
 		function update(datasource, target)
 		{
@@ -79,15 +155,27 @@
 														<!--<li><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');">Mess rating</a></li>-->
 														<!--<li><a href="javascript:;">forums</a></li>-->
 						</ul>
-				</li>			
+				</li>	
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Mess Operations
+						<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="javascript:;">Mess Registration</a></li>
+							<li><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');">Mess Rating</a></li>
+							<li><a href="javascript:;">Feedback</a></li>
+							<li><a href="javascript:;">New Extras Cards</a></li>
+							<li><a href="javascript:;">New Pin Request</a></li>
+						</ul>
+				</li>				
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						Activities
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-														<li><a href="javascript:;">techsoc</a></li>
-														<li><a href="javascript:;">litsoc</a></li>
-														<li><a href="javascript:;">schroeter</a></li>
+														<li><a href="http://www.shaastra.org/techsoc/" target="_blank" >TechSoc</a></li>
+														<li><a href="javascript:;">LitSoc</a></li>
+														<li><a href="http://www.sports.iitm.ac.in" target="_blank" >Schroeter</a></li>
 						</ul>
 				</li>
 				<li class="dropdown">

@@ -22,7 +22,7 @@
 								<td><?php echo $nick; ?></td>
 							</tr><tr>
 								<td style="width:100px;"><a href="#">Roll Number</a></td>
-								<td><?php echo $uname; ?></td>
+								<td><?php echo $user; ?></td>
 							</tr><tr>
 								<td style="width:100px;"><a href="#">Room No.</a></td>
 								<td><?php echo $room; ?></td>
@@ -35,6 +35,9 @@
 							</tr><tr>
 								<td style="width:100px;"><a href="#">E-Mail ID</a></td>
 								<td><?php echo $email; ?></td>
+							</tr><tr>
+								<td style="width:100px;"><a href="#">Blood Group</a></td>
+								<td><?php echo $bgroup; ?></td>
 							</tr>
 						</table>
 				</div> <!-- /widget-content -->

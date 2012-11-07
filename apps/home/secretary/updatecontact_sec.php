@@ -14,11 +14,11 @@
 
 
 ?>
-
+<div style="float:left; margin-left:10px;  height:340px; width:520px;" class="widget-contentsec" id="inner_body_sec">
 <form id="form" name="regform" action="apps/home/secretary/updatecontactsubmit_sec.php" method="post">
 	<table>
 		<tr>
-			<td style="width:100px;"><a href="#">Email to send forms to</a></td>
+			<td style="width:150px;"><a href="#">Email to send forms to</a></td>
 			<td><input id="form_email" type="text" name="form_email" value="<?php echo $form_email; ?>" maxlength="255" /></td>
 		</tr><tr>
 			<center>
@@ -27,3 +27,4 @@
 		</tr>
 	</table>
 </form>
+</div>

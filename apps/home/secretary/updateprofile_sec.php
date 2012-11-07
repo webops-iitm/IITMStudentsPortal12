@@ -14,20 +14,15 @@
 
 
 ?>
-<form id="form" name="regform" action="apps/home/secretary/updateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
+
+
+<div style="float:left; margin-left:10px; height:340px; width:1070px;" class="widget-contentsec" id="inner_body_sec">
+
+<form id="form" style="float:left;margin-left:10px;" name="regform" action="apps/home/secretary/updateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
 	<table>
 		<tr>
-			<td style="width:100px;"><a href="#">Display Picture</a></td>
-			<td>
-				<input type="hidden" name="MAX_FILE_SIZE" value="50000" />
-				<input type="file" name="dpic" id="dpic" />
-			</td>
-		</tr><tr>
 			<td style="width:100px;"><a href="#">FullName</a></td>
 			<td><input style="color:#fff;" id="name" type="text" name="name" value="<?php echo $name; ?>" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td>
-		</tr><tr>
-			<td style="width:100px;"><a href="#">Nickname</a></td>
-			<td><input id="nick" type="text" name="nick" value="<?php echo $nick; ?>" /></td>
 		</tr><tr>
 			<td style="width:100px;"><a href="#">Roll No.</a></td>
 			<td><input style="color:#fff;" id="roll" type="text" name="roll" value="<?php echo $user; ?>" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td>
@@ -57,6 +52,16 @@
 		   		  	<option <?php if($hostel == "Mahanadhi") echo "selected=\"selected\"" ?> value="Mahanadhi">Mahanadhi</option>
 				</select>
 			</td>
+		</tr>
+	</table>
+</form>
+
+
+<form id="form" style="float:left; margin-left:60px;" name="regform" action="apps/home/secretary/updateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
+	<table>
+		<tr>
+			<td style="width:100px;"><a href="#">Nickname</a></td>
+			<td><input id="nick" type="text" name="nick" value="<?php echo $nick; ?>" /></td>
 		</tr><tr>
 			<td style="width:100px;"><a href="#">Post</a></td>
 			<td><input id="post" type="text" name="post" value="<?php echo $post; ?>"/></td>
@@ -73,9 +78,36 @@
 			<td style="width:100px;"><a href="#">Hobbies</a></td>
 			<td><input id="hobbies" type="text" name="hobbies" value="<?php echo $hobbies; ?>"/></td>
 		</tr><tr>
+			<td style="width:100px;"><a href="#">Blood Group</a></td>
+			<td><input id="bgroup" type="text" name="bgroup" value="<?php echo $bgroup; ?>"/></td>
+		</tr><tr>
 			<center>
-				<td colspan="2"><a href="#"><input class="btn btn-warning" type="submit" value="Update" name="Update" /></a></td>
+				<td colspan="2"><a href="#"><input style="margin-top:20px;" class="btn btn-warning btn-large" type="submit" value="Update" name="update_profile" /></a></td>
 			</center>
 		</tr>
 	</table>
 </form>
+
+<form id="form" style="float:left; margin-left:60px;" name="regform" action="apps/home/secretary/updateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
+	<table>
+			<tr>
+				<td style="width:100px;"><a href="#">Display Picture</a></td>
+				<td><img style="margin-left:25px;" src="files/secretary/<?php echo $disp_pic; ?>" width="150" height="150" /></td>
+			</tr>
+			<tr>
+			<td></td>
+			<td>
+				<input type="hidden" name="MAX_FILE_SIZE" value="50000" />
+				<input class="btn btn-info btn-small" style="width:180px;" type="file" name="dpic" id="dpic" />
+			</td>
+			</tr>
+			<tr>
+				<td colspan='2' style="text-align:center;"><input style="margin-top:20px;" class="btn btn-warning btn-large" type="submit" value="Update" name="update_dpic" /></td>
+			</tr>
+			
+			
+	</table>
+</form>
+<hr style="position:absolute; bottom:10px;">
+</div>
+

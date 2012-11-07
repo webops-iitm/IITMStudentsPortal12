@@ -83,7 +83,7 @@ Hostel
 <option value="Sharavati">Sharavati</option>
 <option value="Sindhu">Sindhu</option>
 <option value="Tapti">Tapti</option>
-
+<option value="Tamraparani">Tamraparani</option>
 
 
 
@@ -218,7 +218,7 @@ if ($trimmed == "")
 while($row = mysql_fetch_array($numresults))
   {
   echo "<tr>";
-  echo "<td>" . $row['fullname'] . "</td>";
+  echo "<td> <a href='student-search.php?userd=".$row['username']."' >"  . $row['fullname'] . "</a> </td>";
   echo "<td>" . $row['nick'] . "</td>";
   echo "<td>" . $row['username'] . "</td>";
   echo "<td>" . $row['hostel'] . "</td>";
@@ -320,7 +320,7 @@ if ($trimmed1 == "" && $trimmed2 == "" && $trimmed3 == "" && $trimmed4 == "" && 
 while($row = mysql_fetch_array($numresults))
   {
   echo "<tr>";
-  echo "<td>" . $row['fullname'] . "</td>";
+  echo "<td> <a href='student-search.php?userd=".$row['username']."' >"  . $row['fullname'] . "</a> </td>";
   echo "<td>" . $row['nick'] . "</td>";
   echo "<td>" . $row['username'] . "</td>";
   echo "<td>" . $row['hostel'] . "</td>";

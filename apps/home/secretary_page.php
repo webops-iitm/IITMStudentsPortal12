@@ -1,17 +1,20 @@
 <?php $from_main_var =1; ?>
 <div class="span3 offset1">
 	<center>
-		<div class="widget"  style="float:right;width:400px; margin:10px;">
+		<div class="widget"  style="float:right;width:415px; margin:10px;">
 			<div class="widget-header">	
-				<ul class="nav nav-pills">
+			<div class="navbar navbar-inverse ">
+				<ul class="nav nav-tabs">
 					<li>
 						<i class="icon-star"></i>
 						<h3><?php if($nick!="") echo $nick."'s"; ?></h3>
 					</li>
-					<li class="" id="profile_sec_page"><a href="javascript:update('apps/home/secretary/profile_sec.php', 'inner_body_sec'); ">Profile</a></li>
-					<li id="teams_sec_page"><a href="javascript:update('apps/home/secretary/teams_sec.php', 'inner_body_sec');">Teams</a></li>
-					<li id="contacts_sec_page"><a href="javascript:update('apps/home/secretary/contact_sec.php', 'inner_body_sec');">Contact</a></li>
+					<li class="" id="profile_sec_page"><a style=" text-shadow:none;" href="javascript:update('apps/home/secretary/profile_sec.php', 'inner_body_sec'); ">Profile</a></li>
+					<li id="teams_sec_page"><a style=" text-shadow:none;" href="javascript:update('apps/home/secretary/teams_sec.php', 'inner_body_sec');">Teams</a></li>
+					<li id="contacts_sec_page"><a style=" text-shadow:none; border-right:none" href="javascript:update('apps/home/secretary/contact_sec.php', 'inner_body_sec');">Contact</a></li>
+
 				</ul>
+			</div>
 			</div> <!-- /widget-header -->
 						
 			<div class="widget-content" id="inner_body_sec">

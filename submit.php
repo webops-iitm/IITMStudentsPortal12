@@ -1,7 +1,6 @@
 <?php
 
-	session_start();
-	
+	session_start();	
 	include ('db.php');
 	
 	$uname = $_POST['uname'];
@@ -13,38 +12,40 @@
 	$uname = strtolower($uname);
 	
 	$expire=time()+120;
-
 	setcookie("user", "", $expire);
 
-	$sql="SELECT * FROM $tbl_name WHERE username='$uname'";
-	$login = mysql_query($sql);
-	
-	$count = mysql_num_rows($login);
-	
-	$pepper = "";
+	if(!$ldapLogin){
+		$sql="SELECT * FROM $tbl_name WHERE username='$uname'";
+		$login = mysql_query($sql);	
+		$count = mysql_num_rows($login);	
+		$pepper = "";
 
-	if($count>=1)
-	{
-		$row = mysql_fetch_array($login);
-
-		if(crypt($pass.$pepper, $row['encrypted_password']) == $row['encrypted_password'])
+		if($count>=1)
 		{
-			if($_POST['remember']==true)
-				setcookie("user", $uname, $expire);
-			$_SESSION['uname'] = $uname;
-			$_SESSION['uid'] = $row['id'];
-			header("location:index.php");
+			$row = mysql_fetch_array($login);
+
+			if(crypt($pass.$pepper, $row['encrypted_password']) == $row['encrypted_password'])
+			{
+				if($_POST['remember']==true)
+					setcookie("user", $uname, $expire);
+				$_SESSION['uname'] = $uname;
+				$_SESSION['uid'] = $row['id'];
+				header("location:index.php");
+			
+			}
 		
+			else
+			{
+				header('Location: index.php?error=1');
+			}
 		}
-	
+		
 		else
 		{
 			header('Location: index.php?error=1');
 		}
 	}
-	
-	else
-	{
-		header('Location: index.php?error=1');
+	else{
+		include("ldaplogin.php");
 	}
 ?>

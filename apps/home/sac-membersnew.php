@@ -190,26 +190,37 @@ alert("working");
 <div class="widget-header">
 	<i class="icon-star"></i>
 	<h3>Contact information</h3>
-</div> <!-- /widget-header -->
-<style>
-table tr td
-{
-	text-align:center;
-	padding-right:15px;
-	font-family: lucida sans-serif;
-}
-</style>	
+</div> <!-- /widget-header -->	
 <div class="widget-content">
 <table>
 <?php
+	include("../../db.php");
 	for($i=0;$i<59;$i++)
 	{
+	$secroll=$sacmem[$i][roll];
+	 $qcontact = "SELECT contact FROM $tbl_name WHERE 	username='$secroll'";
+	  $qres=mysql_query($qcontact);
+	while($qrow = mysql_fetch_array($qres))
+	  {
+		if($qrow['contact']!=0)$contact = $qrow['contact'];
+	}
+
 	echo "<tr>
 		<td>".(1+$i)."</td>
 		<td><a href=\"student-search.php?userd=".$sacmem[$i][roll]."\">".$sacmem[$i][roll]."</a></td>
 		<td>".$sacmem[$i][post]."</td>
+		<td>".$contact."</td>
 	</tr>";
 	}
 ?>
 </div> <!-- /widget-content -->
-
+<style>
+table tr td
+{
+	text-align:center;
+	padding-top:10px;
+	padding-right:80px;
+	font-family: lucida sans-serif;
+	font-size:15px;
+}
+</style>

@@ -39,6 +39,14 @@
     $_SESSION['uname'] = $_COOKIE["user"];
  
 ?>
+<style>
+.table2 th, .table td
+{
+	border-top:1px solid rgb(200,200,200);
+}	
+</style>
+
+
 <div style="float:left; margin-left:10px; height:260px; width:1000px;" class="widget-contentsec" id="inner_body_sec">
 
 <table style="float:left; margin-left:20px; margin-top:10px; height:220px; width:220px;">
@@ -46,13 +54,13 @@
 		<td style="width:100px; left:20px;"><a href="#">Display Picture</a></td>
 	</tr><tr>
 		<td>
-			<img src="files/secretary/<?php echo $show_disp_pic; ?>" style="width:175px; height:175px; border:3px solid #08C;" />
+			<img src="files/secretary/<?php echo $show_disp_pic; ?>" style="width:175px; height:175px; border:1px solid #08C;" />
 		</td>
 	</tr>
 
 </table>
 
-<table class="table" style="float:left; margin-left:10px; margin-top:25px; width:300px; margin-left:30px;">
+<table class="table table2" style="float:left; margin-left:10px; margin-top:25px; width:300px; margin-left:30px;">
 	<thead>
 	<tr>
 		<th style="width:90px;"><a href="#">Name</a></th>
@@ -74,8 +82,8 @@
 		<td style="width:90px;"><a href="#">Room No.</a></td>
 		<td><?php echo $show_room; ?></td>
 	</tr><tr>
-		<td style="width:90px; border-bottom:1px solid #000;"><a href="#">Hostel</a></td>
-		<td style="border-bottom:1px solid #000;"><?php echo $show_hostel; ?></td>
+		<td style="width:90px; border-bottom:1px solid rgb(200,200,200);"><a href="#">Hostel</a></td>
+		<td style="border-bottom:1px solid rgb(200,200,200);"><?php echo $show_hostel; ?></td>
 	</tr>
 	</tbody>
 </table>
@@ -99,8 +107,8 @@
 		<td style="width:100px;"><a href="#">Hobbies</a></td>
 		<td><?php echo $show_hobbies; ?></td>
 	</tr><tr>
-		<td style="width:100px; border-bottom:1px solid #000;"><a href="#">Blood Group</a></td>
-		<td style="border-bottom:1px solid #000;"><?php echo $show_bgroup; ?></td>
+		<td style="width:100px; border-bottom:1px solid rgb(200,200,200);"><a href="#">Blood Group</a></td>
+		<td style="border-bottom:1px solid rgb(200,200,200);"><?php echo $show_bgroup; ?></td>
 	</tr>			
 	</tbody>						
 </table>

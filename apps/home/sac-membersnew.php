@@ -204,7 +204,7 @@ $sacmem = array( array( roll => "CS12M032",
 	while($qrow = mysql_fetch_array($qres))
 	  {
 		if($qrow['contact']!=0)$contact = $qrow['contact'];
-		if($sacmem[$i].[roll]!="Vacant")$name = $qrow['fullname'];
+		if($sacmem[$i][roll]!="Vacant")$name = $qrow['fullname'];
 		if($name=="")$name = $sacmem[$i][roll];
 	}
 

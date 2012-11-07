@@ -7,6 +7,7 @@ table tr td
 {
 	text-align:center;
 	padding-right:15px;
+	font-family: lucida sans-serif;
 }
 </style>	
 <div class="widget-content">

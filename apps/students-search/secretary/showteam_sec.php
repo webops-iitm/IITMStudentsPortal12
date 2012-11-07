@@ -17,11 +17,13 @@
 	$sql = "SELECT * FROM stu_sec_files WHERE team_id=$team_id;";	
 	$result = mysql_query($sql);
 ?>
+<div style="float:left; margin-left:10px; height:260px; width:490px;" class="widget-contentsec" id="inner_body_sec">
+
 <table style="min-width:100%;">
 	<tr style="min-width:100%;">
-		<td colspan="3"><h2><center><?php echo $team_name; ?></center></h2></td>
+		<td colspan="3"><h2><center><//?php echo $team_name; ?> Test</center></h2></td>
 	</tr><tr>
-		<td colspan="3" style="color:#000; background-color:#ddd;"><center><h5><?php echo $team_desc; ?></h5></center></td>
+		<td colspan="3" style="color:#000; background-color:#ddd;"><center><h5><//?php echo $team_desc; ?> Test 2</h5></center></td>
 	</tr><tr>
 		<td colspan="3"><hr /></td>
 	</tr>
@@ -36,3 +38,4 @@
 		}
 	?>
 </table>
+</div>

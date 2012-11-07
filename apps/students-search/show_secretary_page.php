@@ -21,7 +21,7 @@ border-radius: 4px;">
 			</div> <!-- /widget-header -->
 			</div><!-- /widget -->
 						
-			<div class="widget" style="height:390px;" id="inner_body_sec">
+			<div class="widget" style="height:310px;" id="inner_body_sec">
 				<?php include( "secretary/profile_sec.php" ); ?>
 			</div> <!-- /widget-content -->
 						

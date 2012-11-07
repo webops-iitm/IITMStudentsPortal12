@@ -39,24 +39,32 @@
     $_SESSION['uname'] = $_COOKIE["user"];
  
 ?>
-<div style="float:left; margin-left:10px; height:260px; width:970px;" class="widget-contentsec" id="inner_body_sec">
+<div style="float:left; margin-left:10px; height:260px; width:1000px;" class="widget-contentsec" id="inner_body_sec">
 
-<table style="float:left; margin-left:20px; height:220px; width:220px;">
+<table style="float:left; margin-left:20px; margin-top:10px; height:220px; width:220px;">
 	<tr>
 		<td style="width:100px; left:20px;"><a href="#">Display Picture</a></td>
 	</tr><tr>
 		<td>
-			<img src="files/secretary/<?php echo $show_disp_pic; ?>" style="width:175px; height:175px;" />
+			<img src="files/secretary/<?php echo $show_disp_pic; ?>" style="width:175px; height:175px; border:3px solid #08C;" />
 		</td>
 	</tr>
 
 </table>
 
-<table style="float:left; margin-left:10px; height:200px; margin-left:30px;">
-	<tr class="navbar">
-		<td style="width:90px;"><a href="#">Name</a></td>
-		<td style="border:1px; border-type:solid;" ><?php echo $show_name; ?></td>
-	</tr><tr>
+<table class="table" style="float:left; margin-left:10px; margin-top:25px; width:300px; margin-left:30px;">
+	<thead>
+	<tr>
+		<th style="width:90px;"><a href="#">Name</a></th>
+		<th><?php echo $show_name; ?></th>
+	</tr>
+	<tr>
+		<td style="width:90px; height:20px; border-top:none "></td>
+		<td style="border-top:none"></td>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
 		<td style="width:90px;"><a href="#">Nickname</a></td>
 		<td><?php echo $show_nick; ?></td>
 	</tr><tr>
@@ -66,15 +74,18 @@
 		<td style="width:90px;"><a href="#">Room No.</a></td>
 		<td><?php echo $show_room; ?></td>
 	</tr><tr>
-		<td style="width:90px;"><a href="#">Hostel</a></td>
-		<td><?php echo $show_hostel; ?></td>
+		<td style="width:90px; border-bottom:1px solid #000;"><a href="#">Hostel</a></td>
+		<td style="border-bottom:1px solid #000;"><?php echo $show_hostel; ?></td>
 	</tr>
+	</tbody>
 </table>
 
-<table style="float:left; margin-left:10px; height:250px; margin-left:100px;"/>
+<table class="table" style="float:left; margin-left:10px; margin-top:25px; width:310px; border:red; margin-left:80px;"/>
+	
+	<tbody>	
 	<tr>
-     <td style="width:100px;"><a href="#">Post</a></td>
-     <td><?php echo $show_post; ?></td>
+	     <td style="width:100px;"><a href="#">Post</a></td>
+	     <td><?php echo $show_post; ?></td>
 	</tr><tr>
 		<td style="width:10 0px;"><a href="#">Tenure</a></td>
 		<td><?php echo $show_tenure; ?></td>
@@ -88,8 +99,9 @@
 		<td style="width:100px;"><a href="#">Hobbies</a></td>
 		<td><?php echo $show_hobbies; ?></td>
 	</tr><tr>
-		<td style="width:100px;"><a href="#">Blood Group</a></td>
-		<td><?php echo $show_bgroup; ?></td>
-	</tr>									
+		<td style="width:100px; border-bottom:1px solid #000;"><a href="#">Blood Group</a></td>
+		<td style="border-bottom:1px solid #000;"><?php echo $show_bgroup; ?></td>
+	</tr>			
+	</tbody>						
 </table>
 </div>

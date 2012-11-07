@@ -16,10 +16,10 @@
 
 ?>
 &nbsp; <!-- hack : it doesn't show without some thing here ... -->
-<div style="float:left; margin-left:10px; height:340px; width:790px;" class="widget-contentsec" id="inner_body_sec">
+<div style="float:left; margin-left:10px; height:280px; width:790px; padding-top:0px; " class="widget-contentsec" id="inner_body_sec">
 <center>
 <form id="form" name="regform" action="apps/home/secretary/contactsubmit_sec.php" method="post">
-	<table style="float:left; margin-left:30px;">
+	<table style="float:left; margin-left:30px; margin-top:5px;">
 		<tr>
 			<td style="width:100px;"><a href="#">Nick</a></td>
 			<td>
@@ -34,9 +34,18 @@
 			<td style="width:100px;"><a href="#">Contact No.</a></td>
 			<td><input id="contact" type="text" name="contact" value="<?php echo $contact; ?>" maxlength="10" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();"/></td>
 		</tr>
+		<tr>
+		<td  style="height:100px;"></td>
+		</tr>
+		<tr>
+			<center>
+				<td><a href="#"><input class="btn btn-warning btn-large" type="submit" value="Send" name="Send" /></a></td>
+				<td style="width:100px;"><a href="javascript:makeAnon();">Make me anonymous</a></td>
+			</center>
+		</tr>
 	</table>
 
-	<table style="float:left; margin-left:60px;">
+	<table style="float:left; margin-left:60px; margin-top:5px;">
 		<tr>
 			<td style="width:100px;"><a href="#">E-Mail ID</a></td>
 			<td><input id="email" style="width:240px;" type="text" name="email" value="<?php echo $email; ?>" maxlength="255" /></td>
@@ -45,12 +54,7 @@
 			<td><input id="subj" style="width:240px;" type="text" name="subj" value="" maxlength="255" /></td>
 		</tr><tr>
 			<td style="width:100px;"><a href="#">Description</a></td>
-			<td><textarea name="desc" style="width:240px;" id="desc" rows="10" cols="60"></textarea></td>
-		</tr><tr>
-			<center>
-				<td><a href="#"><input class="btn btn-warning" type="submit" value="Send" name="Send" /></a></td>
-				<td style="width:100px;"><a href="javascript:makeAnon();">Make me anonymous</a></td>
-			</center>
+			<td><textarea name="desc" style="width:240px;" id="desc" rows="9" cols="60"></textarea></td>
 		</tr>
 	</table>
 </form>

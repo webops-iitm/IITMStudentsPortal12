@@ -194,7 +194,7 @@ $sacmem = array( array( roll => "CS12M032",
 	<td><b>Contact</b></td>
 	</tr>
 <?php
-	include("db.php");
+	include("../../db.php");
 	for($i=0;$i<59;$i++)
 	{
 	$name = "Vacant";

@@ -193,21 +193,30 @@ alert("working");
 </div> <!-- /widget-header -->	
 <div class="widget-content">
 <table>
+	<tr>
+	<td><b>No</b></td>
+	<td><b>Name</b></td>
+	<td><b>Post</b></td>
+	<td><b>Contact</b></td>
+	</tr>
 <?php
 	include("../../db.php");
 	for($i=0;$i<59;$i++)
 	{
+	$name = "Vacant";
 	$secroll=$sacmem[$i][roll];
-	 $qcontact = "SELECT contact FROM $tbl_name WHERE 	username='$secroll'";
+	 $qcontact = "SELECT fullname, contact FROM $tbl_name WHERE 	username='$secroll'";
 	  $qres=mysql_query($qcontact);
 	while($qrow = mysql_fetch_array($qres))
 	  {
 		if($qrow['contact']!=0)$contact = $qrow['contact'];
+		if($sacmem[$i].[roll]!="Vacant")$name = $qrow['fullname'];
+		if($name=="")$name = $sacmem[$i][roll];
 	}
 
 	echo "<tr>
 		<td>".(1+$i)."</td>
-		<td><a href=\"student-search.php?userd=".$sacmem[$i][roll]."\">".$sacmem[$i][roll]."</a></td>
+		<td><a href=\"student-search.php?userd=".$sacmem[$i][roll]."\">".$name."</a></td>
 		<td>".$sacmem[$i][post]."</td>
 		<td>".$contact."</td>
 	</tr>";
@@ -217,7 +226,6 @@ alert("working");
 <style>
 table tr td
 {
-	text-align:center;
 	padding-top:10px;
 	padding-right:80px;
 	font-family: lucida sans-serif;

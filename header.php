@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<style>
-		body {padding-top:40px;}
-		.hidden{visibility:hidden;}
-                .unhidden{visibility:visible;}
-                </style>
+		<style>body {padding-top:40px;}</style>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -16,82 +12,11 @@
 		<link href="css/bootstrap.css" rel="stylesheet"><script src="js/bootstrap.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery-1.js"></script>
-		<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script class="jsbin" src="http://datatables.net/download/build/jquery.dataTables.nightly.js"></script>
-		<script class="jsbin" src="http://live.datatables.net/media/js/jquery.js"></script>
-		<link href="img/glyphicons-halfings.png"> <link href="img/glyphicons-halfings-white.png"> 
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-                <style type="text/css">
-                         @import "/media/css/demo_page.css";
-                         @import "/media/css/demo_table.css";
-                </style>
-                <script type="text/javascript" language="javascript" src="http://live.datatables.net/media/js/jquery.js"></script>
-                <script class="jsbin" src="http://datatables.net/download/build/jquery.dataTables.nightly.js"></script>   
+		<link href="img/glyphicons-halfings.png"> <link href="img/glyphicons-halfings-white.png">    
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<script>
-                $(document).ready(function(){
-	                $('#example').dataTable();
-                });
-
-                </script>
-                <script type="text/javascript">
-                function hide()
-                {
-                        document.getElementById("message").style.visibility = 'hidden';
-                }
-
-                </script>
-	        <script type="text/javascript" charset="utf-8" language="javascript">
-                function showmessage(str)
-                {
-                        var xmlhttp;
-                        if (window.XMLHttpRequest)
-                        {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                xmlhttp=new XMLHttpRequest();
-                        }
-                        else
-                        {// code for IE6, IE5
-                                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                        }
-                        xmlhttp.onreadystatechange=function()
-			{
-			        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-			        {
-			                document.getElementById(str).style.visibility='visible'	;
-			                document.getElementById(str).style.display='block';
-			        }
-
-                        }
-                        xmlhttp.open("GET","complaint.php",true)
-                        xmlhttp.send(null);
-                }
-
-                function hidemessage(str)
-                {
-                        var xmlhttp;
-                        if (window.XMLHttpRequest)
-                        {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                xmlhttp=new XMLHttpRequest();
-                        }
-                        else
-                        {// code for IE6, IE5
-                                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                        }
-                        xmlhttp.onreadystatechange=function()
-	                {
-		        	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-		        	  {
-	                               document.getElementById(str).style.visibility='hidden';
-		        	        document.getElementById(str).style.display='none';
-		        	  }
-                        }
-                        xmlhttp.open("GET","complaint.php",true)
-                        xmlhttp.send(null);
-                }
-                </script>
         <script>
 		function update(datasource, target)
 		{
@@ -109,16 +34,58 @@
 			    {
 			    document.getElementById(target).innerHTML=xmlhttp.responseText;
 			    }
-			  else 
-				{
-				document.getElementById("widget-content").innerHTML = '<center><img src="img/ajax-loading.gif"> Loading ...</center>';
+			  else{
+				document.getElementById(target).innerHTML = '<img src="img/load.gif"> Loading ...';
 				}
 			  }
 			xmlhttp.open("GET",datasource,true);
 			xmlhttp.send();
 		}
-	</script>
-		<script>
+	function formdetails(type){
+	var type=type;
+		var nameid=type+'_username';
+		var rollid=type+'_rollnum';
+		var hostelid=type+'_hostel';
+		var roomid=type+'_roomnumber';
+
+		var name=document.getElementById(nameid).value;
+		var rollnum=document.getElementById(rollid).value;
+		var hostel=document.getElementById(hostelid).value;
+		var room=document.getElementById(roomid).value;
+		if(name.length!=0 && rollnum.length!=0 && hostel.length!=0 && room.length!=0){
+			var content="username="+name+"&rollnum="+rollnum+"&hostel="+hostel+"&room="+room;
+			if(type=="pinform"){
+			var cardid=type+'_cardnum';
+			var cardnum=document.getElementById(cardid).value;
+			num= /^[0-9]+$/;	
+				if(cardnum.length!=0 && cardnum.match(num)){
+					content+="&cardnum="+cardnum+"&formtype=pin";
+					update('formquery.php?'+content,'response');	
+				}
+				else{
+					document.getElementById('response').innerHTML="please check your details";
+				}
+			}
+			if(type=="cardform"){
+				content+="&formtype=card";
+				update('formquery.php?'+content,'response');
+			}
+		}
+		else{
+			document.getElementById('response').innerHTML="please specify all the details";
+		}
+	}
+	function changestyle(type){
+		document.getElementById('widget-content').className='widget-content';
+		document.getElementById('pagination').innerHTML="";
+		var type=type;
+		if(type="card"){
+			document.getElementById('header').innerHTML="New Extras Card Form";
+		};
+		if(type="pin"){
+			document.getElementById('header').innerHTML="New Pin Number Form";
+		};
+	}
 		function mess_rating_url()
 			{
 				var cat = document.getElementById('cat').value;
@@ -164,8 +131,8 @@
 							<li><a href="javascript:;">Mess Registration</a></li>
 							<li><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');">Mess Rating</a></li>
 							<li><a href="javascript:;">Feedback</a></li>
-							<li><a href="javascript:;">New Extras Cards</a></li>
-							<li><a href="javascript:;">New Pin Request</a></li>
+							<li><a href="javascript:update('cardform.php','widget-content');changestyle('card');">New Extras Cards</a></li>
+							<li><a href="javascript:update('pinform.php','widget-content');changestyle('pin')">New Pin Request</a></li>
 						</ul>
 				</li>				
 				<li class="dropdown">
@@ -192,10 +159,10 @@
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 														<li><a href="javascript:update('apps/home/sac-meeting.php', 'widget');">SAC Meetings</a></li>
-														<li><a href="javascript:update('apps/home/sac-membersnew.php', 'widget');">SAC Members</a></li>
+														<li><a href="javascript:update('apps/home/sac-members.php', 'widget');">SAC Members</a></li>
 														<li><a href="files/sac-files/Constitution_revised.pdf" target="_blank">Revised constitution</a></li>
 														<li><a href="files/sac-files/Constitution_Amendments.pdf" target="_blank">Constitution Amendments</a></li>
-														<li><a href="javascript:update('apps/home/film-members.php','widget');">Film club</a></li>
+														<li><a href="javascript:;">Film club</a></li>
 						</ul>
 				</li>
 				<li ><a href="javascript:update('apps/home/contactinfo.php','widget');"><i class="icon-envelope "></i> Contact us</a></li>
@@ -255,3 +222,5 @@
 		</div>
 	</div>
 </div>
+</body>
+</html>

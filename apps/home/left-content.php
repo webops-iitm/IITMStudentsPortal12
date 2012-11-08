@@ -4,22 +4,21 @@ ini_set('display_errors', 'On');
 $noOfAnn=4;   //This variable can be changed to obtain variable number of news per page.
 
 ?>
-
-<div class="span8 ">
+<div class="span8" >
 	<div id="widget" class="widget" style="width:800px; margin:10px; position:relative; top:0px; right:0px; left:20px;">
 		<div class="widget-header">
 			<i class="icon-comment"></i>
-			<h3>News</h3>
+			<h3 id="header">News</h3>
 
 		</div> <!-- /widget-header -->
 		<div class="widget-content" id="widget-content">	
 		<!-- /collapse -->
 		<div class="accordion" id="accordion2">
-						  
+
 </div>
 
 </div>
-<div class="pagination">
+<div class="pagination" id="pagination">
   <ul>
     <li><a id="Prev">Prev</a></li>
     <li class="active"><a id="1" >1</a></li>
@@ -29,10 +28,10 @@ $noOfAnn=4;   //This variable can be changed to obtain variable number of news p
     <li><a id="Next">Next</a></li>
   </ul>
 </div>
-</div>
 
 </div>
 
+</div>
 <script type="text/javascript">
 CurrentPage=1;
 Pagination=0;    //is 0 if its from 0-4 will be set to 1 if its from 5-8 so on

@@ -26,15 +26,11 @@
 
 <div style="float:left; margin-left:10px; min-height:260px; width:490px;" class="widget-contentsec" id="inner_body_sec">
 
-<div class="widget-header" style="text-shadow:none; color:rgb(80,80,80); font-size:17px;"><center><?php echo $team_name; ?></center></div>
+<div class="widget-header" style="text-shadow:none; color:rgb(80,80,80); font-size:17px; font-weight:600;"><center><?php echo $team_name; ?></center></div>
+	
+	<center style="color:rgb(80,80,80); margin:10px;"><?php echo $team_desc; ?></center>
 
 <table class="table table2">
-
-	<thead>
-	<tr>
-		<td style=" color:rgb(80,80,80); "><center><?php echo $team_desc; ?></center></td>
-	</tr>
-	</thead>
 	<tbody>
 	<tr>
 		<td colspan="3"></td>

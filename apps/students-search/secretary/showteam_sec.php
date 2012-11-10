@@ -17,15 +17,27 @@
 	$sql = "SELECT * FROM stu_sec_files WHERE team_id=$team_id;";	
 	$result = mysql_query($sql);
 ?>
-<div style="float:left; margin-left:10px; height:260px; width:490px;" class="widget-contentsec" id="inner_body_sec">
+<style>
+.table2 th, .table td
+{
+	border-top:1px solid rgb(200,200,200);
+}	
+</style>
 
-<table style="min-width:100%;">
-	<tr style="min-width:100%;">
-		<td colspan="3"><h2><center><//?php echo $team_name; ?> Test</center></h2></td>
-	</tr><tr>
-		<td colspan="3" style="color:#000; background-color:#ddd;"><center><h5><//?php echo $team_desc; ?> Test 2</h5></center></td>
-	</tr><tr>
-		<td colspan="3"><hr /></td>
+<div style="float:left; margin-left:10px; min-height:260px; width:490px;" class="widget-contentsec" id="inner_body_sec">
+
+<div class="widget-header" style="text-shadow:none; color:rgb(80,80,80); font-size:17px;"><center><?php echo $team_name; ?></center></div>
+
+<table class="table table2">
+
+	<thead>
+	<tr>
+		<td style=" color:rgb(80,80,80); "><center><?php echo $team_desc; ?></center></td>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td colspan="3"></td>
 	</tr>
 	<?php 
 		while ($row = mysql_fetch_row($result, MYSQL_ASSOC)) {
@@ -37,5 +49,7 @@
 			</tr>";
 		}
 	?>
+
+	</tbody>
 </table>
 </div>

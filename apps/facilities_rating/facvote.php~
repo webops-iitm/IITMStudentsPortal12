@@ -39,6 +39,6 @@ if($checkcount==0)
 
 <div class="widget-content"  id= "widget-content">						
 	<?php if($checkcount!=0) { echo "Only One vote per day<br>"; echo "Click <a href=\"javascript:update('apps/facilities_rating/facility.php?fac=".$fac."','widget');\">here</a> to go back."; }
-		else { echo "Thank You! Your response has been recorded.";}
+		else { echo "Thank You! Your response has been recorded."; echo "Click <a href=\"javascript:update('apps/facilities_rating/facility.php?fac=".$fac."','widget');\">here</a> to go back."; }
 ?>
 </div>

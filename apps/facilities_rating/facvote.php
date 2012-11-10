@@ -10,7 +10,6 @@ $uid = $_SESSION['uid'];
 $checkquery="SELECT * FROM facilities_rating WHERE facility='$fac'AND userid='$uid'AND Date='$date'";
 $checkresult = mysql_query($checkquery);		
 $checkcount = mysql_num_rows($checkresult);
-//if($checkcount=="")$checkcount=1;
 if($checkcount==0)
 {
 	$facquery="SELECT * FROM facilities WHERE name='$fac'";

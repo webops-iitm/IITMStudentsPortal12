@@ -96,6 +96,13 @@ $facquery="SELECT * FROM facilities WHERE name='$fac'";
 					$facrow = mysql_fetch_array($facresult);
 				}
 	$stars=25*$facrow['rating'];
+
+$date = date('Y-m-d');
+$uid = $_SESSION['uid'];
+$checkquery="SELECT * FROM facilities_rating WHERE facility='$fac'AND userid='$uid'AND Date='$date'";
+$checkresult = mysql_query($checkquery);		
+$checkcount = mysql_num_rows($checkresult);
+
 ?>
 <div class="widget-content"  id= "widget-content">
 <div>
@@ -105,7 +112,8 @@ $facquery="SELECT * FROM facilities WHERE name='$fac'";
 <?php
 	if (isset($_SESSION['uname']))
 	{
-		echo "<br><b>Please rate this Facility</b>";
+		if($checkcount==0) echo "<br><b>Please rate this Facility</b>";
+		else echo "<b>Thank You for Rating</b>";
 		echo "<ul class='star-rating'>
 	<li class='current-rating' id='current-rating' style=\"width: ".$stars."px\"></li>
 	<li><a href=\"#\" onclick=\"facvote(1,'".$fac."'); return false;\" 

@@ -41,6 +41,7 @@
 			xmlhttp.open("GET",datasource,true);
 			xmlhttp.send();
 		}
+
 	function formdetails(type){
 	var type=type;
 		var nameid=type+'_username';
@@ -96,6 +97,10 @@
 				mess_url = "apps/caterer_rating/rate.php?cat=" + cat + "&hyg=" + hyg + "&qtn=" + qtn + "&qlt=" + qlt + "&csm=" + csm;
 				update(mess_url, 'widget');
 			}
+		function facvote(amnt, fac){
+			fac_url = "apps/facilities_rating/facvote.php?amnt=" + amnt + "&fac=" + fac;
+			update(fac_url,'widget');
+		}
 		</script>
 	</head>
 <body>
@@ -213,6 +218,7 @@
 				<li ><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');"><i class="icon-list "></i> Mess Rating</a></li>
 				
 				<li><a href="student-search.php"><i class="icon-search "></i> Student Search</a></li>
+				<li><a href="javascript:update('apps/facilities_rating/index.php','widget');"><i class="icon-list "></i> Facilities</a></li>
 				<li><a href="/forum"><i class="icon-comment "></i> Forum</a></li>
 				<li><a href="http://t5e.iitm.ac.in/"><i class="icon-edit "></i> The Fifth Estate</a></li> <li><a href="http://cfi.iitm.ac.in/"><i class="icon-hand-up "></i> CFI</a></li>
 			</ul>

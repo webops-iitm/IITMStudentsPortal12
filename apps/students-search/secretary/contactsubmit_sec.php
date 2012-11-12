@@ -1,5 +1,5 @@
 <?php
-  $send_mail = 0;
+  $send_mail = 1;
 
 	session_start();
 	include ('../../../db.php');
@@ -15,7 +15,7 @@
 	$con_ip = $_SERVER['REMOTE_ADDR'];
 	
 	// info of secretary to send to
-	query = "select * from users where username = \"$var\" order by fullname";
+	$query = "select * from users where username = \"$var\" order by fullname";
   $numresults=mysql_query($query);
   $row = mysql_fetch_array($numresults);
   $con_sec_nick=$row['nick'];
@@ -32,9 +32,7 @@
       // body of mail to send
       $con_body = "Message for $con_sec_nick ($con_sec_uname) at the email id $con_sec_email.\r\n";
       $con_body .= "Message sent by $con_nick ($con_roll) from $con_email. Contact No. : $con_contact\r\n\r\n";
-      $con_body .= $con_desc;
-    }
-  }
+      $con_body .= "<br><br>".$con_desc;
 	
     // header for mail to send
     $con_header .= "From: \"".$con_nick."\" <".$con_email.">\n";
@@ -45,21 +43,29 @@
 
     // send mail
     $con_sent = mail( "$con_sec_nick <$con_sec_email>", // to
-						"StudentPortal Form : " . $con_subj, //subj
+						"Students Portal Form : " . $con_subj, //subj
 						$con_body, // body
 						$con_header // header
 					);
+    }
+
   } else {
     $con_sent = '2'; // you asked me not to send
   }
-	if($con_sent) 
+	if($con_sent){ 
 		$con_sent = '1'; // send successfully
-	else 
+		$message = "Your message was sent successfully, please wait for the secretary's reply!";
+	}
+	else{ 
 		$con_sent = '0'; // error, not sent
+		$message = "Error sending message, please notify the problem to webops.iitm@gmail.com!";
+	}
 		
 	$sql = "INSERT INTO stu_sec_contact (username, nick, contact, email, secretary_name, secretary_username, secretary_email, subject, description, time_sent, sent_success, ip) VALUES ('$con_roll', '$con_nick', '$con_contact', '$con_email', '$con_sec_nick', '$con_sec_uname', '$con_sec_email', '$con_subj', '$con_desc', '$con_time', '$con_sent', '$con_ip');";
 	
 	mysql_query($sql) or die(mysql_error($con));
-	header('Location: ../../../index.php');
+	header('Location: ../../../index.php?message='.$message);
 	mysql_close($con);	
+
+
 ?>

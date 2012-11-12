@@ -220,9 +220,8 @@ $sacmem = array( array( roll => "CS12M032",
 <style>
 table tr td
 {
-	padding-top:10px;
+	padding-top:2px;
 	padding-right:80px;
-	font-family: lucida sans-serif;
-	font-size:15px;
+	font-family: century gothic;
 }
 </style>

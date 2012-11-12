@@ -5,7 +5,7 @@
 		<td><input type="text"  id="cardform_username"/></td>
 	</tr>
 	<tr>
-		<td style="width:80px;"><b>RollNumber:</b></td>
+		<td style="width:80px;"><b>Roll No.:</b></td>
 		<td><input type="text"  id="cardform_rollnum"/></td>
 	</tr>
 	<tr>
@@ -13,7 +13,7 @@
 		<td><input type="text"  id="cardform_hostel"/></td>
 	</tr>
 	<tr>
-		<td style="width:80px;"><b>RoomNumber:</b></td>
+		<td style="width:80px;"><b>Room No.:</b></td>
 		<td><input type="text"  id="cardform_roomnumber"/></td>
 	</tr>
 	<tr>
@@ -21,4 +21,4 @@
 	</tr>
 	</table>
 </form>
-<button onclick="formdetails('cardform')">submit</button>
+<button onclick="formdetails('cardform')" class="btn btn-warning">Submit</button>

@@ -1,5 +1,5 @@
 <?php
-  $send_mail = 0;
+  $send_mail = 1;
 
 	session_start();
 	include ('../../../db.php');

@@ -18,7 +18,7 @@
 &nbsp; <!-- hack : it doesn't show without some thing here ... -->
 <div style="float:left; margin-left:10px; height:280px; width:790px; padding-top:0px; " class="widget-contentsec" id="inner_body_sec">
 <center>
-<form id="form" name="regform" action="apps/home/secretary/contactsubmit_sec.php" method="post">
+<form id="form" name="regform" action="apps/students-search/secretary/contactsubmit_sec.php" method="post">
 	<table style="float:left; margin-left:30px; margin-top:5px;">
     <tr>
       <td colspan="2">

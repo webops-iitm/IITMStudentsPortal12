@@ -80,7 +80,7 @@
 								<input type="hidden" value="<?php echo date("Y-m-d"); ?>" name="date" />
 								<br><input type="submit" class="btn btn-primary" value="Submit" name="rate" />
 			</form>
-		<?php } else { echo $_SESSION['uid'];?>
+		<?php } else { ?>
 					Thank you for the ratings. You can submit mess rating once per day<br><br>
 					<b><?php echo cat($cat); ?></b><br>
 					&emsp;Hygiene  - <?php echo $hyg; ?><br>

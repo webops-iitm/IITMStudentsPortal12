@@ -106,3 +106,10 @@ $(".pagination a").click(function() {
 });
 LoadNews(1);
 </script>
+<?
+	if(isset($_GET['message'])){
+?>
+	<div class="span8 offset1" style="padding:5px; border:solid 1px red; background:rgba(8, 8, 8, 0.5); width:300px; color:#fff;">
+		<? echo $_GET['message']; ?>
+	</div>
+<? } ?>

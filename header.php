@@ -155,7 +155,7 @@
 						Executive Wing
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-														<li><a href="javascript:update('apps/home/secretary-manifesto.php', 'widget');">Secretary Manifesto</a></li>
+														<li><a href="javascript:update('apps/home/secretary-manifesto.php', 'widget');">Secretaries Manifesto</a></li>
 						</ul>
 				</li>
 				<li class="dropdown">

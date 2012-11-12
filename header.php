@@ -78,13 +78,13 @@
 	}
 	function changestyle(type){
 		document.getElementById('widget-content').className='widget-content';
-		document.getElementById('pagination').innerHTML="";
+		//document.getElementById('pagination').innerHTML="";
 		var type=type;
-		if(type="card"){
-			document.getElementById('header').innerHTML="New Extras Card Form";
+		if(type=="card"){
+			$("#widget .widget-header h3").html("Request New Mess Extras Card");		
 		};
-		if(type="pin"){
-			document.getElementById('header').innerHTML="New Pin Number Form";
+		if(type=="pin"){
+			$("#widget .widget-header h3").html("Request New Pin for you Mess Extras Card");
 		};
 	}
 		function mess_rating_url()

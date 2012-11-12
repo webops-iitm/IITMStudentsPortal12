@@ -30,7 +30,7 @@
 	<ul class="muted dropdown-menu" style="display: block; position: static; min-width: 100%; ">
 		<?php
 			while ($row = mysql_fetch_row($team_result, MYSQL_ASSOC)) {
-    			echo( "<li><a href=\"javascript:update('apps/home/secretary/showteam_sec.php?team_id=".$row['team_id']."', 'inner_body_sec');\" id='".$row['team_id']."'> ".$row['team_name'] ." </a></li>");
+    			echo( "<li><a href=\"javascript:update('apps/students-search/secretary/showteam_sec.php?team_id=".$row['team_id']."', 'inner_body_sec');\" id='".$row['team_id']."'> ".$row['team_name'] ." </a></li>");
     		}
 		?>
 	</ul>

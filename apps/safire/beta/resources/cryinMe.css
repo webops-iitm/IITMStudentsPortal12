@@ -1,0 +1,153 @@
+#mainPage {
+    background-color: white;
+    margin-left: 200px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #666666;
+}
+
+#mainPageOverlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url('websiteImgs/3.png');
+    z-index: 1;
+}
+
+body {
+    background-image: url('websiteImgs/leftBar_4.png');
+    background-repeat: repeat-y;
+    margin: 0px;
+    font-family: verdana,arial,sans-serif;
+}
+
+#logo{
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 185px;
+    cursor: pointer;
+    border: none;
+}
+
+#leftBar {
+    float: left;
+    width: 200px;
+    padding-top: 100px;
+    color: #ffffff; 
+}
+
+p.leftBar{
+    margin-left: 10px;
+    padding-left: 5px;
+    font-size: medium;
+    font-weight: bold;
+}
+
+#options{
+    position: absolute;
+    left: -5px;
+    top: 250px;
+    width: 199px;
+    border-bottom: #01872d solid 1px;
+}
+
+a.options{
+    padding: 10px;
+    padding-left: 20px;
+    display: block;
+    font-size: small;
+    font-weight: bold;
+    text-decoration: none;
+    border-top: #01872d solid 1px;
+    color: #ffffff;
+}
+
+a.options:hover{
+    border-left: #207720 solid 8px;
+    padding-left: 12px;
+}
+
+#footer{
+    padding: 10px;
+    width: 180px;
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    font-size: 50%;
+    color: #ffffff;
+}
+
+#footer a{
+    color: #ffffff;
+}
+
+#footer a:hover{
+    font-size: 110%;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#help{
+    padding: 3px;
+    position: absolute;
+    top: -1px;
+    left: 200px;
+    border-right: #d8d9d8 solid 1px;
+    border-bottom: #d8d9d8 solid 1px;
+    z-index: 9;
+    text-decoration: none;
+    font-size: 60%;
+    border-radius: 2px;
+}
+
+#betaNotice{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 28px;
+    width: 330px;
+    padding: 3px;
+    margin: 5px;
+    margin-right: 30px;
+    font-size: 70%;
+    background-color: #ffffff;
+    border: #ba0d0d solid 1px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.71);
+    overflow: hidden;
+    z-index: 99;
+}
+
+#betaNotice:hover{
+    height: 75px;
+}
+
+input.defInput{
+    width: 147px;
+}
+
+div.alertBox{
+    position: absolute;
+    font-size: 80%;
+    font-weight: normal;
+    color: #ba0d0d;
+    background-color: white;
+    display: none;
+    text-align: left;
+}
+
+div.dropdownBox{
+    display: none;
+    position: absolute;
+    padding: 5px;
+    background-color: white;
+    border: #b8b7b7 solid 1px;
+    border-top: none;
+    border-radius: 0px 0px 3px 3px;
+    box-shadow:         0px 1px 5px rgba(50, 50, 50, 0.3);
+    z-index: 999;
+}

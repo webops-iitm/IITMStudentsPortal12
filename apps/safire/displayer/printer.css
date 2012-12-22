@@ -1,0 +1,80 @@
+
+#mainContent{
+    width: 1200px;
+    margin: auto;
+}
+
+table.gridtable{
+    display: inline-table;
+    margin: 15px;
+    margin-bottom: 0px;
+    font-size: 15.05px;
+    color: #3e3e3e;
+    border-width: 1px;
+    border-color: #999999;
+    border-collapse: collapse;
+    text-align: center;
+}
+table.gridtable th{
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #999999;
+    background-color: #d9d8d8;
+}
+table.gridtable td{
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #999999;
+    background-color: #ffffff;
+    white-space: nowrap;
+}
+#lunchIcon{
+    height: 25px;
+    margin-top: 4px;
+}
+p.locationSlot{
+    margin: 0px;
+    color: #999999;
+    font-size: 85%;
+}
+
+body{
+    font-family: verdana,arial,sans-serif;
+    text-align:center;
+}
+#printNote{
+    position: relative;
+    top: 0px;
+    font-size: 80%;
+    text-align: left; 
+    padding: 10px;
+    padding-top: 0px; 
+    border: #cccccc solid thin;
+    border-top: none;
+}
+#printButton{
+    position: absolute;
+    top: 5px;
+    left: 30px;
+}
+#content{
+    display:inline-block;
+    margin-top: 25px;
+}
+#usersName{
+    text-align: left;
+    font-size: 18.61px; 
+    margin-left: 20px;
+}
+#footer{
+    font-size: 70%;
+    color: #999999;
+    text-align: center;
+    margin: 10px;
+    margin-top: 45px;
+}
+#printOpts{
+    margin-left: 90px;
+}

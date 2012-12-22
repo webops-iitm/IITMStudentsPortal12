@@ -1,0 +1,67 @@
+#content{
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+}
+
+#frontLogo{
+    margin-top: 70px;
+    width: 500px;
+}
+
+#welcome{
+    display: inline-block;
+    margin: 0px;
+    width: 550px;
+    font-size: 200%;
+}
+
+td{
+    padding: 10px;
+    margin: 0px;
+}
+
+#loginInfo{
+    padding: 20px;
+}
+
+#aContainer{
+    display: inline-block;
+    margin: 20px;
+    margin-top: 0px;
+    border: #d8d9d8 solid 1px;
+    border-radius: 3px;
+    width: 320px;
+}
+
+#aContainer p{
+    display: inline-block;
+    margin: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: normal;
+    font-size: 80%;
+    border-top: #d9d8d8 solid 1px;
+    width: 100%;
+}
+
+#invLogin{
+    margin: 0px;
+    margin-bottom: 9px;
+    margin-top: 5px;
+    font-size: 80%;
+    color: white;
+}
+
+#logOn{
+    position: relative;
+    top: -2px;
+    margin-right: 60px;
+}
+
+#rembPass{
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    margin-left: 10px;
+}

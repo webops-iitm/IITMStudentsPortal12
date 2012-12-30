@@ -55,7 +55,7 @@ function ReplaceImap($txt) {
 				}
 				mysql_close($con);
 				imap_close($stream);
-	mail('vineet.1991.483@gmail.com', 'cronjob executed', 'the message', null,'noreply@students2.iitm.ac.in');
+	//mail('vineet.1991.483@gmail.com', 'cronjob executed', 'the message', null,'noreply@students2.iitm.ac.in');
 ?>
 
 

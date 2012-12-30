@@ -46,7 +46,7 @@
                                         <td>
                                         <select id="hostel" name="hostel" style="width:195px; color:#fff;" disabled>
 						 					  <option <?php if($hostel == "Saraswathi") echo "selected=\"selected\"" ?> value="Saraswathi">Saraswathi</option>
-											  <option <?php if($hostel == "Tamraparani") echo "selected=\"selected\"" ?> value="Tamraparani">Tamraparani</option>
+											  <option <?php if($hostel == "Tamiraparani") echo "selected=\"selected\"" ?> value="Tamiraparani">Tamraparani</option>
 											  <option <?php if($hostel == "Ganga") echo "selected=\"selected\"" ?> value="Ganga">Ganga</option>
 											  <option <?php if($hostel == "Tapti") echo "selected=\"selected\"" ?> value="Tapti">Tapti</option>
                                               <option <?php if($hostel == "Jamuna") echo "selected=\"selected\"" ?> value="Jamuna">Jamuna</option>

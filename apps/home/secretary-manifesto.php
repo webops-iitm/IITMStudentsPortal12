@@ -37,10 +37,10 @@
 							<tbody>
 								<tr>
 									<td>
-										Nikhal Bharat Agarwal
+										<a href="student-search.php?userd=CE08B055">Nikhal Bharat Agarwal</a>
 									</td>
 									<td>
-										Students General Secretary
+										<a href="#">Students General Secretary</a>
 									</td>
 									<td>
 										<a href="files/Manifesto/StudentsGeneralSecretary.pdf" target="_blank" >General Secretary</a>
@@ -48,10 +48,10 @@
 								</tr>
 								<tr>
 									<td>
-										P. Raaj Rohan Reddy
+										<a href="student-search.php?userd=EE08B045">P. Raaj Rohan Reddy</a>
 									</td>
 									<td>
-										Academic Affairs Secretary
+										<a href="#">Academic Affairs Secretary</a>
 									</td>
 									<td>
 										<a href="files/Manifesto/AcademicAffairsSecretary.pdf" target="_blank">Academic Affairs Secretary</a>
@@ -59,10 +59,10 @@
 								</tr>
 								<tr>
 									<td>
-										M N Ravichandra
+										<a href="student-search.php?userd=CE09B033">M N Ravichandra</a>
 									</td>
 									<td>
-										Cultural Affairs Secretary(Arts)
+										<a href="#">Cultural Affairs Secretary(Arts)</a>
 									</td>
 									<td>
 										<a href="files/Manifesto/CulturalAffairsSecretaryArts.pdf" target="_blank" >Cultural Affairs Secretary(arts)</a>
@@ -70,10 +70,10 @@
 								</tr>
 								<tr>
 									<td>
-										Ashwin S Kalkar
+										<a href="student-search.php?userd=MM09B003">Ashwin S Kalkar</a>
 									</td>
 									<td>
-										Cultural Affairs Secretary (Literary)
+										<a href="#">Cultural Affairs Secretary (Literary)</a>
 									</td>
 									<td>
 										<a href="files/Manifesto/Cul_Lit_Manifesto.pdf" target="_blank" >Cultural Affairs Secretary(Literary)</a>
@@ -81,10 +81,10 @@
 								</tr>
 								<tr>
 									<td>
-										Adapa Praveen Surendra
+										<a href="student-search.php?userd=NA09B001">Adapa Praveen Surendra</a>
 									</td>
 									<td>
-										Hostel Affairs Secretary
+										<a href="#">Hostel Affairs Secretary</a>
 									</td>
 									<td>
 										<a href="files/Manifesto/HostelAffairsSecretary.pdf" target="_blank" >Hostel Affairs Secretary</a>
@@ -92,10 +92,10 @@
 								</tr>
 								<tr>
 									<td>
-										Sohan Jawale
+										<a href="student-search.php?userd=ME08B076">Sohan Jawale</a>
 									</td>
 									<td>
-										Co-Curricular Affairs Secretary
+										<a href="#">Co-Curricular Affairs Secretary</a>
 									</td>
 									<td>
 										<a href="files/Manifesto/CO-CURRICULARAFFAIRSSECRETARY.pdf" target="_blank" >Co-Curricular Affairs Secretary</a>
@@ -103,10 +103,10 @@
 								</tr>
 								<tr>
 									<td>
-										K. Ishitha
+										<a href="student-search.php?userd=AE08D019">K. Ishitha</a>
 									</td>
 									<td>
-										Research Affairs Secretary
+										<a href="#">Research Affairs Secretary</a>
 									</td>
 									<td>
 										<a href="files/Manifesto/ResearchAffairsSecretary.pdf" target="_blank" >Research Affairs Secretary</a>
@@ -114,10 +114,10 @@
 								</tr>
 								<tr>
 									<td>
-										Snehil Pandey
+										<a href="student-search.php?userd=ME09B054">Snehil Pandey</a>
 									</td>
 									<td>
-										Sports Secretary
+										<a href="#">Sports Secretary</a>
 									</td>
 									<td>
 										<a href="files/Manifesto/SportsSecretary.pdf" target="_blank" >Sports Secretary</a>
@@ -125,10 +125,10 @@
 								</tr>
 								<tr>
 									<td>
-										S Chandrasekhar
+										<a href="student-search.php?userd=ME08B087">S Chandrasekhar</a>
 									</td>
 									<td>
-										SAC Speaker
+										<a href="#">SAC Speaker</a>
 									</td>
 									<td>
 										<a href="http://students.iitm.ac.in/thefifthestate/" target="_blank" >SAC Speaker</a>

@@ -1,0 +1,1 @@
+document.getElementById("help").innerHTML="Welcome to the Help Section!";resizes(1075,0);window.onresize=function(evt){resizes(1075,0);};

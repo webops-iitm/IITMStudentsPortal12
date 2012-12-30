@@ -1,0 +1,50 @@
+body{
+    position: relative;
+}
+
+#mainPage{
+    font-size: 95%;
+}
+
+#mainPage p{
+    font-size: 85%;
+}
+
+#helpContent{
+    padding: 40px;
+    padding-top: 30px;
+}
+
+#helpContent h2,h3{
+    border-bottom: #c3c3c3 solid 1px;
+}
+
+#helpContent p{
+    font-size: 80%;
+}
+
+span{
+    font-size: 95%;
+    padding-left: 20px;
+    color: #ba0d0d;
+    font-weight: bold;
+}
+
+img.helpImg{
+    margin: 20px;
+    margin-left: 40px;
+    padding: 5px;
+    border: #cccccc solid 1px;
+}
+
+#help{
+    width: 500px;
+    text-align: center;
+    font-size: 140%;
+    font-weight: bold;
+}
+
+#footer{
+    position: absolute;
+    bottom: 0px;
+}

@@ -1,2 +1,7 @@
 <?
-	//mail('na10b036@smail.iitm.ac.in', 'the subject', 'the message', null,'noreply@students2.iitm.ac.in');
+	
+
+
+
+
+//mail('g.prasanthsai@gmail.com', 'the subject', 'the message', null,'-f noreply@students2.iitm.ac.in');

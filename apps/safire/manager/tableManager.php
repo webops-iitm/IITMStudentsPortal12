@@ -1,13 +1,5 @@
 <?php
-include_once '../resources/nDBfunct.php';
-include_once '../resources/DBfunct.php';
-///////////// end of file includes
-
-session_start();
-///////////started the session
-
-authUserIllegal();
-?>
+include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php'; session_start(); authUserIllegal(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,9 +10,7 @@ authUserIllegal();
     </head>
     <body>
         <?php
-        include_once "../resources/googleAnalytics.php"; 
-        pageInit(); 
-        ?>
+ include_once "../resources/googleAnalytics.php"; pageInit(); ?>
         <div id="mainPage">
             <span id="whose">Your Table:</span>
             <div id="controlPanel">
@@ -54,21 +44,13 @@ authUserIllegal();
             </div>
             <div id="tableCont">
                 <?php
-                $table = getTable("");
-                echo $table;
-                ?>
+ $table = getTable(""); echo $table; ?>
             </div>
             <div id="lBlock">
                 <div id="couOpts">
                     <div id="couOnly">
                         <div id="lunch" class="option">Lunch</div>
-                        <?
-                        $i = getNumbCourses($_SESSION['membInfo'][0]);
-                        while ($i > 0) {
-                            echo "<div class=\"option\"><img id=\"delCourse\" alt=\"\" title=\"Delete this Course\" src=\"../resources/websiteImgs/Delete-icon.png\" style=\"float: right; width: 10px; height: 0px; margin-top: 2px; margin-right: 30px; cursor: pointer;\"><div id=\"opt" . ($i - 1) . "\"></div></div>";
-                            $i--;
-                        }
-                        ?>
+                        <? $i = getNumbCourses($_SESSION['membInfo'][0]); while ($i > 0) { echo "<div class=\"option\"><img id=\"delCourse\" alt=\"\" title=\"Delete this Course\" src=\"../resources/websiteImgs/Delete-icon.png\" style=\"float: right; width: 10px; height: 0px; margin-top: 2px; margin-right: 30px; cursor: pointer;\"><div id=\"opt" . ($i - 1) . "\"></div></div>"; $i--; } ?>
                     </div>
                     <div id="ender">+ Add a Course</div>
                 </div>

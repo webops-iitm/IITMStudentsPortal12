@@ -1,11 +1,5 @@
 <?php
-include_once '../resources/nDBfunct.php';
-include_once '../resources/DBfunct.php';
-///////////// end of file includes
-
-session_start();
-///////////started the session
-?>
+include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php'; session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,14 +10,12 @@ session_start();
     </head>
     <body>
         <?php
-        include_once "../resources/googleAnalytics.php"; 
-        pageInit(); 
-        ?>
+ include_once "../resources/googleAnalytics.php"; pageInit(); ?>
         <div id="mainPage">
             <h1>Contact Me</h1>
             <p>You can contact me at msneddyhudson@me.com.</p>
             <h1>Privacy</h1>
-            <p>I use Google Analytics to keep track of the usage of the site. Here is the <a href="http://www.google.com/analytics/learn/privacy.html">privacy related page</a> from Google Analytics. As of now, the data you are sharing with Safire(about your courses) is just used to display your timetables on the Displayer for you. This data is stored in the same server housing the student's portal.</p>
+            <p>I use Google Analytics to keep track of the usage of the site. Here is the <a href="http://www.google.com/analytics/learn/privacy.html">privacy related page</a> from Google Analytics. As of now, the data you are sharing with Safire(about your courses) is just used to display your timetables on the Displayer for you and for letting you use the Notice Board. This data is stored in the same server housing the student's portal.</p>
         </div>
     </body>
     <script type="text/javascript" src="../resources/cryinMe.js"></script>

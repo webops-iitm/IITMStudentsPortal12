@@ -170,6 +170,14 @@
 														<li><a href="javascript:;">Film club</a></li>
 						</ul>
 				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Applications
+						<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="student-search.php">Student Search</a></li>
+						</ul>
+				</li>
 				<li ><a href="javascript:update('apps/home/contactinfo.php','widget');"><i class="icon-envelope "></i> Contact us</a></li>
 			</ul>
 			<ul class="nav pull-right">					

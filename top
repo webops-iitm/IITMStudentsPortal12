@@ -1,0 +1,968 @@
+[33mcommit a2ac58bd4ef87851d9d26d2cf3967ad28f0c1a44[m
+Merge: 155f9e9 20255bd
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Sun Dec 30 17:51:06 2012 +0530
+
+    Updating the site erge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+
+[33mcommit 155f9e9df12c668f21c9462edf1768c3ad49cc47[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Sun Dec 30 17:50:56 2012 +0530
+
+    Unknown
+
+[33mcommit 20255bd79d20e96bef99f0b6d319cced4dfd8acb[m
+Author: eddy <msneddyhudson@hotmail.com>
+Date:   Sun Dec 23 04:03:11 2012 +0530
+
+    added the first version of safire, the trial version
+
+[33mcommit 547afc72e72235fdcc93b0963f935715c4ffc0e9[m
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Sun Nov 11 23:38:06 2012 -0800
+
+    link to profile in secretary page
+
+[33mcommit cb142929bdfffb44b3e15aa556cd4bab983fe5b8[m
+Merge: 57b1e7d 6d78ce8
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Sun Nov 11 23:05:46 2012 -0800
+
+    Merge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+
+[33mcommit 6d78ce8fdcf333bfc19a279ad523489561dfdefa[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Mon Nov 12 23:15:40 2012 +0530
+
+    message
+
+[33mcommit 6fa912ed7e1a35c71e49cb0d43830a143ebfdc4b[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Mon Nov 12 22:55:34 2012 +0530
+
+    sac mem
+
+[33mcommit 89e9cc85fa2341860828e8ce435a4c4a1465c825[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Mon Nov 12 22:23:12 2012 +0530
+
+    sac mem
+
+[33mcommit 5373556d084dc9c8d6c65c3256633e95cb0aa9cb[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Mon Nov 12 22:07:44 2012 +0530
+
+    sac mem
+
+[33mcommit b9f416700f43f4d0595f9e400b188b2b48e253e7[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Mon Nov 12 21:40:01 2012 +0530
+
+    mess opern
+
+[33mcommit 4bdbbd9d94c12920b1ad7af1ab2d646039d1060e[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Mon Nov 12 20:42:18 2012 +0530
+
+    bug fix
+
+[33mcommit 0d07ec0cede31247645e5699b9ba192015667cab[m
+Merge: 1049d11 4655a00
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Mon Nov 12 20:36:04 2012 +0530
+
+    Merge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+
+[33mcommit 4655a004e2d0dd4100a585baf4c9deb3b06ccf38[m
+Author: Abdeali J K <abdealikothari@gmail.com>
+Date:   Mon Nov 12 20:14:43 2012 -0800
+
+    Bugs fixed in student search
+
+[33mcommit 1049d11e387185801de830760f1421212b98b0ce[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Mon Nov 12 20:33:31 2012 +0530
+
+    bug fix
+
+[33mcommit 57b1e7d0c5752062e804ebfd38cbf0d1b57e5c92[m
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Sun Nov 11 23:05:32 2012 -0800
+
+    manifestos n array in secretaries page
+
+[33mcommit 7d131d0355f02cebe222824801f9425b7db09c50[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Sun Nov 11 02:30:05 2012 +0530
+
+    facilities fix
+
+[33mcommit f8a64a559e7ec32fb1d684bc00ad6f703aa91983[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Sun Nov 11 02:13:06 2012 +0530
+
+    facilities rating
+
+[33mcommit 40256170bdf969412ce0f7357350179e205439e6[m
+Merge: 8646fd3 a0c88a6
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Sun Nov 11 02:12:38 2012 +0530
+
+    facilities rating
+    Merge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+
+[33mcommit 8646fd30b9ba6d0587ade96c5785749c25f8bdde[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Sun Nov 11 02:12:19 2012 +0530
+
+    facilities rating
+
+[33mcommit c6ce4ecd879aa9866db10cb5b7d94ee0117be0c5[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Sun Nov 11 02:11:59 2012 +0530
+
+    facilities rating
+
+[33mcommit a0c88a64f1ab95aeb1a1fb10e8c7ad4d8f03819d[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Sat Nov 10 19:06:37 2012 +0530
+
+    Sec Team Display
+
+[33mcommit 6c0a82e17da8b8c957a55de3538495a7ca062af2[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Sat Nov 10 18:36:29 2012 +0530
+
+    Sec Team Display
+
+[33mcommit 501a01f31f017615ea75627a280f80cf51c5afc8[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Fri Nov 9 00:01:23 2012 +0530
+
+    sac mem new
+
+[33mcommit 2b7893592e0b123df77e9201dbfb5149c6f6d8b9[m
+Author: madhav <madhavpro3@gmail.com>
+Date:   Thu Nov 8 23:15:57 2012 +0530
+
+    added 4 new files
+
+[33mcommit e0cee39e091a6dff46ab834c40c2794bfd6379b0[m
+Author: madhav <madhavpro3@gmail.com>
+Date:   Thu Nov 8 22:42:14 2012 +0530
+
+    added pages pinform,cardform,form query,create for macreating requests table
+
+[33mcommit 735a3a88685db7b59e7491d9b7e60097a9c589be[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Wed Nov 7 19:16:28 2012 +0530
+
+    san new mem bug fix
+
+[33mcommit 35dc01904e8b52f4f19e2318b3abe4854a293a3c[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Wed Nov 7 19:06:02 2012 +0530
+
+    sec mem rollback
+
+[33mcommit 1dc56b02fabe143544111c8053f4e7ce168a37a2[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Wed Nov 7 19:02:46 2012 +0530
+
+    sacmem updadate
+
+[33mcommit 0f9f610880ff4cce848b9c1bfdc0fba2f0f44ab4[m
+Merge: 1c1c4d3 d6aa5c4
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Wed Nov 7 18:28:29 2012 +0530
+
+    Merge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+
+[33mcommit 1c1c4d3572fb6380412af37f10f3fc43bd714e38[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Wed Nov 7 18:28:21 2012 +0530
+
+    sacmem update
+
+[33mcommit 7a0e62e12e3782347152879ec2d6e004e58d18fb[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Wed Nov 7 18:14:21 2012 +0530
+
+    sacmem updpdate
+
+[33mcommit d6aa5c491efda7832f6dba323299ec5b43637e4a[m
+Merge: 3935240 b6911ec
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Wed Nov 7 18:04:57 2012 +0530
+
+    Merge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+
+[33mcommit 3935240f8178607d004d7cd9b4e90853f189c6aa[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Wed Nov 7 18:04:00 2012 +0530
+
+    Student Search
+
+[33mcommit b6911ec9894fddfc951ec0f66c9e68cd908108e5[m
+Merge: b03474d 1c6aa79
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Wed Nov 7 17:40:42 2012 +0530
+
+    Merge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+
+[33mcommit b03474d1749e31d45c3285d25547b3aa3bd58b3f[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Wed Nov 7 17:40:35 2012 +0530
+
+    new sacmembers
+
+[33mcommit 47687bbabaf0bc899f221d42958cd79c80f16878[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Wed Nov 7 17:38:48 2012 +0530
+
+    sacmembers uupdate
+
+[33mcommit b836de7befbb4d0fc6fad41fdf5d206b17fa581e[m
+Merge: 875306e 1e292a2
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Wed Nov 7 17:35:57 2012 +0530
+
+    Merge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+
+[33mcommit 1c6aa792b04c96ebf7a6b360f3efb862409f1b4e[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Wed Nov 7 17:34:39 2012 +0530
+
+    Student Search
+
+[33mcommit 1e292a2ab4a3cafb2a21f79b00b3ab4c181b653a[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Wed Nov 7 02:44:42 2012 +0530
+
+    Student Search
+
+[33mcommit b66f781a92b0bec7a344e5c6224d0cbd5c3701ae[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Tue Nov 6 20:15:20 2012 +0530
+
+    Student Search
+
+[33mcommit 31a75651d3366a5b860708c19ecffcd508b57ede[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Tue Nov 6 18:15:12 2012 +0530
+
+    Sec Update Page
+
+[33mcommit 3670f8408fcd907e9577a12ea3d38690d727af1c[m
+Author: PARTH <parth@ubuntu.ubuntu-domain>
+Date:   Tue Nov 6 09:44:26 2012 +0530
+
+    complaint app is made both user and admin profiles working properly
+    afrt user files complaint he can see all the complaints in previouscomplaint button
+    the admin can see all the complaints
+    the error with datables is caused mostly due to overlap of something header.php
+    prashant told front end ppl will be better to figure that out
+    admin can change the status of all the complaints
+    mostly everthing is being called through ajax
+    sorry fr the late submission
+    tried my best my first git commit ever
+    sorry again
+
+[33mcommit 06a5fcfc25396e6629dcbe602ec09b0658e0f36a[m
+Author: Abdeali J K <abdealikothari@gmail.com>
+Date:   Mon Nov 5 17:26:32 2012 -0800
+
+    Student Search complete
+
+[33mcommit 772825315314f7437dec7dcfd1e7a3d79f21a330[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sun Nov 4 03:10:27 2012 +0530
+
+    mess operations
+
+[33mcommit f7919db72480b038f9b445ecf23477c635eabaf5[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sun Nov 4 00:30:32 2012 +0530
+
+    news & profile linkiing
+
+[33mcommit a65122091a80b6d9c6f43ab1fd4df8cac724f5f2[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sun Nov 4 00:21:24 2012 +0530
+
+    span 7->8
+
+[33mcommit b8526eecb9135be1c947562211664283114a798b[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Nov 3 22:23:33 2012 +0530
+
+    announcement bug fix
+
+[33mcommit 0b3a76355a681a0dbd2069f8acd5d403975394c9[m
+Merge: f5dd2e5 389137d
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Nov 3 21:46:33 2012 +0530
+
+    Merge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+
+[33mcommit f5dd2e5f77ad4f09797bc0dcb476086c54f4f003[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Nov 3 21:45:39 2012 +0530
+
+    announcement bug fix
+
+[33mcommit 389137d6161729945b17c336ba81fabf75e9da51[m
+Merge: ddd8bce 66b30c3
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Nov 3 21:22:05 2012 +0530
+
+    Merge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+
+[33mcommit ddd8bce2a9643daa5c27c86015a48be426da904e[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Nov 3 21:20:47 2012 +0530
+
+    cab & update sec profile
+
+[33mcommit 265ca640241a0f041959d057cb303610594ca4ba[m
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Sat Nov 3 01:32:47 2012 -0700
+
+    share-a-cab
+
+[33mcommit 8fcb1785587341b1acfe98c6deb5343f6e77a5f9[m
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Sat Nov 3 01:27:14 2012 -0700
+
+    share-a-cab
+
+[33mcommit 66b30c31017938903a65e029f550dc8b4f9694be[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Nov 3 13:46:47 2012 +0530
+
+    frontend debugging in showprofile
+
+[33mcommit 7b6f4f351f12c19100fdf3d4dc7a68aea2e8d256[m
+Author: AbdealiJK <abdealikothari@gmail.com>
+Date:   Sat Nov 3 11:08:42 2012 +0530
+
+    Small problem with the list
+
+[33mcommit deee05bfd800667fac67cf67b0a3353ca8bfc9f8[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 23:13:46 2012 +0530
+
+    Adding tamraparani in hostels dropdown in student search
+
+[33mcommit 1dec47e58b2608766ab5f56eaebc7ded278c129d[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 21:10:49 2012 +0530
+
+    including bgroup in showprofile
+
+[33mcommit acb7825164313a8043b1856c57311494d1b8d396[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 21:01:21 2012 +0530
+
+    Including bgroup in profilesubmit
+
+[33mcommit 896edeeb702c25521f67319610b80d36e6df7f27[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 20:43:43 2012 +0530
+
+    Changing values for blood group dropdown
+
+[33mcommit 53cba6f3ad054a060d3432fbc4793eb139f5d159[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 20:28:41 2012 +0530
+
+    front end debugging of blood group dropdown
+
+[33mcommit 7184adf3a154fc17c8fe8bb66cb56c8a4ac98eaa[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 20:18:46 2012 +0530
+
+    including blood group in profile page and profile edit page
+
+[33mcommit f5ba70e315d632ac916fb9bbf4aaf1ff63a8c1fe[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 19:33:38 2012 +0530
+
+    frontend debugging
+
+[33mcommit 35eed8a08348ac9ec69e2ddff60d6207bcf2990d[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 19:22:44 2012 +0530
+
+    frontend debugging and linking the advanced search
+
+[33mcommit 481ede6c4d077d788c2b94d74e633df76be6ee95[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 19:14:56 2012 +0530
+
+    frontend debugging in show profile
+
+[33mcommit 8b71fb85c36a23cb614692cf7600ff460539932a[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 18:57:30 2012 +0530
+
+    including footer and header to showprofile
+
+[33mcommit 481d5c99c1da78f7dc434f0eee8d585ab73f2ca4[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 18:17:27 2012 +0530
+
+    debugging showprofile
+
+[33mcommit 0f26a5cc90c4a57f6de806e421c3aec06f19e216[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 17:57:47 2012 +0530
+
+    content of showprofile
+
+[33mcommit d5bd77953dc6835cc8c16c0afaacdc5cc1958ef7[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 17:08:45 2012 +0530
+
+    Providing username to showprofile
+
+[33mcommit 102cc4fcec2a1f4c0ae988d6a3cf719a948d3595[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 17:00:23 2012 +0530
+
+    debugging small error
+
+[33mcommit 06c1f6dcb93002e2b35f36ba6569084a34b6cd24[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Nov 2 16:52:49 2012 +0530
+
+    linking students search to profiles
+
+[33mcommit ab6743a522182096ffc4ba92d81c73c577dbfee6[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Thu Nov 1 21:14:51 2012 +0530
+
+    linking search to show profile
+
+[33mcommit e3ee3b8e62da4a4dcd8dc6b671bb0bf3664168dc[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Thu Nov 1 20:35:58 2012 +0530
+
+    Secretary Page
+
+[33mcommit 59fbd8348c012c355b3220055dfca917c9c0b75e[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Thu Nov 1 20:31:25 2012 +0530
+
+    Secretary Page
+
+[33mcommit deeab55f32a5d6eb2af1b8566ef1f8ab43e4125e[m
+Merge: 234b788 f0b83e5
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Thu Nov 1 20:18:25 2012 +0530
+
+    Merge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+    
+    Conflicts:
+    	apps/home/secretary/updateprofile_sec.php
+
+[33mcommit 234b7887feacdffa53749e9930abb8f06396e323[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Thu Nov 1 20:03:09 2012 +0530
+
+    Secretary Page
+
+[33mcommit f0b83e57c895ca7fd20634f18f4fe74876167749[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Thu Nov 1 19:33:49 2012 +0530
+
+    sec profile
+
+[33mcommit bcde983882ff1428e5a2da6c48dac55df1adf586[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Thu Nov 1 19:15:29 2012 +0530
+
+    sec profile
+
+[33mcommit 4b910e99f51eeb7774c2a5855d01adbf610aa61a[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Thu Nov 1 18:49:54 2012 +0530
+
+    dpic fix
+
+[33mcommit f088d1dae617753e64924db2e3ef730a4bcb9de3[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Thu Nov 1 18:18:25 2012 +0530
+
+    fix profile pic bug
+
+[33mcommit 801f87ea4baf51c81b9e15be7eafba5065693cab[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Thu Nov 1 17:17:35 2012 +0530
+
+    Secretary Page
+
+[33mcommit 61dfc5492866811d33c32672816d582660de4dce[m
+Merge: a031731 22f8992
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Thu Nov 1 16:55:49 2012 +0530
+
+    Merge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+
+[33mcommit 22f8992b416d0490068a07f9dcb10da3bfc8920c[m
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Thu Nov 1 09:14:58 2012 -0700
+
+    Share a cab
+
+[33mcommit a0317317c11d380b196ce3df511ed2d68f8207b1[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Thu Nov 1 16:55:15 2012 +0530
+
+    Secretary Page
+
+[33mcommit 0cd79f2a95579c3e5f133c87a01e839a0fd41db1[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Wed Oct 31 21:13:41 2012 +0530
+
+    Secretary Page
+
+[33mcommit afd89e34bd363d6def30d8e5abb4d342feb3f6d8[m
+Author: yashmurty <yashmurty@gmail.com>
+Date:   Tue Oct 30 23:36:27 2012 +0530
+
+    Secretary Page
+
+[33mcommit 2eca8604eef05488f8e93f4f7c7b05626020d553[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Tue Oct 30 16:50:55 2012 +0530
+
+    profile.php uname
+
+[33mcommit fb9619a86f4b78a8ac401f4c62c5968016434982[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Tue Oct 30 16:44:41 2012 +0530
+
+    LDAP Integration
+
+[33mcommit 8d5af962135321babd99aa549567de7ff4feaa2d[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Tue Oct 30 16:11:27 2012 +0530
+
+    SSO Optimize
+
+[33mcommit 21a3afd23f8a219c14b47dafcafdb8deb8f2d9de[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Tue Oct 30 16:09:13 2012 +0530
+
+    SSO Optimize
+
+[33mcommit 0193a469aa014a42cf17de5ea6905d814236a23e[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Tue Oct 30 16:06:52 2012 +0530
+
+    SSO Optimize
+
+[33mcommit 2987a12991126324add6cd4d7658a9fc54a29b44[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Tue Oct 30 15:49:12 2012 +0530
+
+    SSO Optimize
+
+[33mcommit 510c37e01c0eddfb0e138bccdeb152cb840721b4[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Tue Oct 30 15:45:49 2012 +0530
+
+    SSO Optimize
+
+[33mcommit fd7af9c3880766a0df4bf627dbbb42432a5263ba[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Tue Oct 30 15:41:02 2012 +0530
+
+    SSO Reverting Back
+
+[33mcommit a191b8e4ffdc0d75b21c6789b1a3a567aa9a20b7[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Tue Oct 30 14:53:09 2012 +0530
+
+    SSO
+
+[33mcommit 63f1b24fe6c9fe933199e735bccd25d3e246da58[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Tue Oct 30 14:17:53 2012 +0530
+
+    SSO Integration
+
+[33mcommit 77fa9b00fd3db331176e42fe941b86fabd4f6fc3[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Tue Oct 30 07:44:08 2012 +0530
+
+    announcements db.php location
+
+[33mcommit 875306ef9951a64083ece36c936280244d045323[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Tue Oct 30 00:11:57 2012 +0530
+
+    updates
+
+[33mcommit c5cf90a353b1a9baf5b06d2fbdcea83a6d4c127f[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Mon Oct 29 20:41:16 2012 +0530
+
+    sac members
+
+[33mcommit 4abce71183a605b7b161a539d2b9da450ce456a0[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Mon Oct 29 20:40:22 2012 +0530
+
+    sac members
+
+[33mcommit 26bbbe257d532255bc0b10403b7a450541537291[m
+Merge: a432f55 32622a1
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Mon Oct 29 19:06:35 2012 +0530
+
+    Merge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+
+[33mcommit a432f55ee7572c655b2b3754a4b94e2738a66275[m
+Author: vsvrp-1995 <vsvrp.1995@gmail.com>
+Date:   Mon Oct 29 19:06:19 2012 +0530
+
+    SAC meetings updated
+
+[33mcommit 32622a1f6030374de2a712e6c436b6cfede9b68d[m
+Author: AbdealiJK <abdealikothari@gmail.com>
+Date:   Mon Oct 29 19:01:57 2012 +0530
+
+    bug fixes
+
+[33mcommit fff12c3bf90fc32092b5eb72f5412c7c5736daa9[m
+Merge: 1567141 313fb0a
+Author: AbdealiJK <abdealikothari@gmail.com>
+Date:   Mon Oct 29 17:09:10 2012 +0530
+
+    Merge branch 'master' of https://github.com/webops-iitm/IITMStudentsPortal12
+
+[33mcommit 1567141b84143639fc595d03fc089f28116ece8f[m
+Author: AbdealiJK <abdealikothari@gmail.com>
+Date:   Mon Oct 29 17:08:22 2012 +0530
+
+    bug fixes
+
+[33mcommit 313fb0a017750f416396dd6e055cc37f254f45a2[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Mon Oct 29 06:05:36 2012 +0530
+
+    november mess endorsement publish
+
+[33mcommit 4103700ba42c79e2bdd6a1af7f2d5fc4aeec10a4[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Sun Oct 28 14:57:16 2012 +0530
+
+    scey app bug fix
+
+[33mcommit 6dddba877ed51923f9a596d63cef3447eba8af76[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Fri Oct 26 20:10:38 2012 +0530
+
+    secretaries.php
+
+[33mcommit d8d1088be453aab5a5312d02682e76479df4a3fc[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Fri Oct 26 19:16:43 2012 +0530
+
+    announcements
+
+[33mcommit 9bfa2f2f5c37b7e0c902834fae1df23537959df0[m
+Author: subramanya92 <subramanyath@gmail.com>
+Date:   Tue Oct 23 14:57:46 2012 -0700
+
+    mail-fetcher added
+
+[33mcommit ae5acbe9dfbbc7f67b2f1d30f279c1b295e24023[m
+Author: subramanya92 <subramanyath@gmail.com>
+Date:   Tue Oct 23 14:51:34 2012 -0700
+
+    news app added, file mail-fetcher inside announcement should be associated with cronjob to fetch email and store in db
+
+[33mcommit 828e28cbbb99586dccff5c6143097214174b5df9[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Oct 20 18:14:23 2012 +0530
+
+    Support Portal
+
+[33mcommit aaa5c3f0b073cd3cae7f967b71c5a916345304f6[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Sat Oct 20 18:29:07 2012 +0530
+
+    MCFL
+
+[33mcommit a6bc7e682ed553f72c8e8eed1876f447f180ddd3[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Oct 20 17:48:01 2012 +0530
+
+    Support Portal
+
+[33mcommit 33b7f91561bafe38256028ea6416008c584a6caf[m
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Sun Oct 14 12:00:40 2012 +0530
+
+    Adding Ajax loader gif image and script
+
+[33mcommit 2477c99ff9a6c195dce5642b4a28694f5bce9db0[m
+Author: AbdealiJK <abdealikothari@gmail.com>
+Date:   Wed Oct 10 18:40:15 2012 +0530
+
+    Added files
+
+[33mcommit 3386d59208d1407ceec86d614bf4850f6e2d972b[m
+Author: AbdealiJK <abdealikothari@gmail.com>
+Date:   Wed Oct 10 17:47:25 2012 +0530
+
+    Profile for Secretaries completed
+
+[33mcommit a3feeed9cdb834e3ca3bd31efc66d6e0dedb0314[m
+Author: AbdealiJK <abdealikothari@gmail.com>
+Date:   Sun Oct 7 03:08:23 2012 +0530
+
+    Bug fixes for profile and contact pages
+
+[33mcommit 367123c2911326daeeff52356a00d96954514801[m
+Author: AbdealiJK <abdealikothari@gmail.com>
+Date:   Sun Oct 7 03:05:25 2012 +0530
+
+    Fixed some bugs in secretary pages
+
+[33mcommit 1e1a009379dfa8674ad422a9775064f894cdf57b[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sun Oct 7 01:13:01 2012 +0530
+
+    Changing the form action of login box in student search page
+
+[33mcommit a23f515a9933096246d0031f8da45216020e0423[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sun Oct 7 00:44:00 2012 +0530
+
+    Changing the form action of login box in students search page
+
+[33mcommit 92f5be4d804d38a225dfb215170d643a62e6fb9f[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sun Oct 7 00:34:33 2012 +0530
+
+    Commiting the file submit.php
+
+[33mcommit 238a03d324ecebdc918ecd7ac11628b03daebc17[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sun Oct 7 00:32:47 2012 +0530
+
+    Fixing error with login box of student search page
+
+[33mcommit 9ca2f77914ef6e8fdb4f0eb8f070ad80bcfc077b[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Oct 6 23:30:19 2012 +0530
+
+    Commiting files login.php and profile.php
+
+[33mcommit ad10a1744212f91f5e28ad8a4687e3a4de89adb3[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Oct 6 23:20:33 2012 +0530
+
+    Fixing error with login box
+
+[33mcommit 7b443133a4ae614e3b7478d5b13ab558ac0c665c[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Oct 6 22:23:32 2012 +0530
+
+    Fixing Error in Advanced search database connection settings
+
+[33mcommit c676ec17234331ffe59d3fcfcb6486209820b0c0[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Oct 6 22:14:50 2012 +0530
+
+    Fixing error in making student search private
+
+[33mcommit fb07f801908ec4724e3f0c2ad74073793cdff490[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Oct 6 19:54:55 2012 +0530
+
+    Making the search available only for logged in users and fixing database connection error for advanced search
+
+[33mcommit 58f430c68f20acfe7f3e4f8e6cd155a339a75dcc[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Oct 6 19:39:35 2012 +0530
+
+    Fixing database connection error for advanced search
+
+[33mcommit 89fa21651e51bdc4c0948f54ff2727fe2b26aa4c[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Oct 6 18:58:24 2012 +0530
+
+    Front end Change
+
+[33mcommit 70478c986dee154316a73a526d06004b0af04828[m
+Author: AbdealiJK <abdealikothari@gmail.com>
+Date:   Sat Oct 6 17:49:46 2012 +0530
+
+    Secretary profile pages added
+
+[33mcommit d70d15edbd5df00a02374a998bcfef3f40b74a1c[m
+Author: AbdealiJK <abdealikothari@gmail.com>
+Date:   Sat Oct 6 17:13:51 2012 +0530
+
+    Modified existing profile pages to redirect to secretary pages if user is secretary, and added profile and contact page for secretary.
+
+[33mcommit 961aa1e606abe7d478c24cbd969efb8efeb642d4[m
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Sat Oct 6 16:50:13 2012 +0530
+
+    linking student search and forum
+
+[33mcommit 2f9ee2f7310802749f695500ed90538422837e6e[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Oct 6 16:43:48 2012 +0530
+
+    fixed stu search id
+
+[33mcommit 2b6ac9c939494db9b06e3d61086a09f9bca107f6[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Oct 6 16:22:31 2012 +0530
+
+    stu search no db details in file
+
+[33mcommit 354c67f008d3bbc278217facddaa142d1e01aea2[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Oct 6 16:14:41 2012 +0530
+
+    fixed stu search
+
+[33mcommit a5caad9580123885187360e01943868b75f6664b[m
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Sat Oct 6 15:40:20 2012 +0530
+
+    sac and ewing update2
+
+[33mcommit b45d41ef00ffb84f1a0af0e4e81c4527c0e8c31e[m
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Sat Oct 6 15:23:38 2012 +0530
+
+    sac and ewing update
+
+[33mcommit a3ea864fd8cfb137f09afcb50b461acba7c76559[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Oct 6 03:21:18 2012 +0530
+
+    Small front-end change
+
+[33mcommit 9988f032b54865a685568222ad50963e6f0d743e[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Oct 6 03:12:49 2012 +0530
+
+    removing parse error in left-content.php
+
+[33mcommit b6b6fbb8fbd4c11193840be53a5af4a8ad89db2c[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Oct 6 02:59:29 2012 +0530
+
+    Small Front end changes
+
+[33mcommit 868ecd992fb5d2bee640312400612986a22b25ff[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Oct 6 02:25:35 2012 +0530
+
+    Including jquery
+
+[33mcommit e3277df45f6954f47bbb67de3d0594c830e62837[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Oct 6 02:09:09 2012 +0530
+
+    Included database connection settings in left-content.php
+
+[33mcommit 1a6c1a858450042abf08828fc0c80b542260a83a[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Sat Oct 6 01:51:34 2012 +0530
+
+    Hosting code for student search
+
+[33mcommit 20f1b4f89a6c408b1f53c368ebac3b19c89b65b0[m
+Author: ravikanthuppuluri <ravikanthuppuluri@gmail.com>
+Date:   Fri Oct 5 21:48:05 2012 +0530
+
+    Learning Git
+
+[33mcommit 2b2d1f22e4cec219a28196a0f6f0f139ee123078[m
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Thu Oct 4 02:57:41 2012 +0530
+
+    mess rating update3
+
+[33mcommit 988cb3eeeadfc8f7ef694de3ca4dd32211781b62[m
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Thu Oct 4 01:15:25 2012 +0530
+
+    mess rating update2
+
+[33mcommit 44d3193a33165854fedef61bee4545a72264d66c[m
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Thu Oct 4 00:27:45 2012 +0530
+
+    mess rating changes
+
+[33mcommit c3afeb94eaaf109c1541c8c407d99c280d970c2f[m
+Author: prasanthsai <g.prasanthsai@gmail.com>
+Date:   Wed Oct 3 23:26:06 2012 +0530
+
+    mess rating
+
+[33mcommit 6aae3609bdb7f889457810c958d92e1f73b58fa0[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Sep 29 22:29:38 2012 +0530
+
+    students search include correction
+
+[33mcommit 83d2dd156f3f3fb536cc9a9b1a71c7ad462f4259[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Sep 29 13:24:42 2012 +0530
+
+    added messlist
+
+[33mcommit eb3e9394db858a659cd72f70bfa31efefd605202[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Sep 29 12:58:17 2012 +0530
+
+    ignore /files, mess allocation list october
+
+[33mcommit 5b8a184114025d8fb03b0d81cdc209345adddbab[m
+Author: Vineet Upadhyay <vineet.1991.483@gmail.com>
+Date:   Sat Sep 29 12:45:49 2012 +0530
+
+    removed echo query from profilesubmit.php
+
+[33mcommit bf62b7abe126e71ef6a33e08c6a68ecb91ba5ccb[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Sat Sep 29 12:45:38 2012 +0530
+
+    delected db.php
+
+[33mcommit 182bf87f60b4a3dad178ea890a3de1bb9906e966[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Wed Sep 26 19:31:57 2012 +0530
+
+    gitignore test folder contents
+
+[33mcommit 419ac1b01fbba211d9b390a3b68e24a0d957de01[m
+Author: Webops - IITM <webops.iitm@gmail.com>
+Date:   Wed Sep 26 19:16:36 2012 +0530
+
+    Files Added
+
+[33mcommit e1e49660bfc52905beabf06b36ab06621e123c14[m
+Author: Pavan Kumar Sunkara <pavan.sss1991@gmail.com>
+Date:   Wed Sep 26 19:12:05 2012 +0530
+
+    gitignore db.php
+
+[33mcommit 2d7bf70b79426567f787e3ba3a5771f93c160ead[m
+Author: webops-iitm <webops.iitm@gmail.com>
+Date:   Wed Sep 26 06:17:09 2012 -0700
+
+    Initial commit

@@ -1,5 +1,11 @@
 <?php
-include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php'; session_start(); ?>
+include_once '../resources/nDBfunct.php';
+include_once '../resources/DBfunct.php';
+///////////// end of file includes
+
+session_start();
+///////////started the session
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +16,9 @@ include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php
     </head>
     <body>
         <?php
- include_once "../resources/googleAnalytics.php"; pageInit(); ?>
+        include_once "../resources/googleAnalytics.php"; 
+        pageInit(); 
+        ?>
         <div id="mainPage">
             <h1>Contact Me</h1>
             <p>You can contact me at msneddyhudson@me.com.</p>

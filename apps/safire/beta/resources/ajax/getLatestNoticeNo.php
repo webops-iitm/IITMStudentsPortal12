@@ -7,5 +7,8 @@ include_once '../nDBfunct.php';
 session_start();
 ///////////started the session
 
-getCou4displayer($_SESSION['membInfo'][0]);
+if (isset($_POST['ownerCourse'])) {
+    getLatestNoticeNo(parseCSV($_POST['ownerCourse']));
+}
+
 ?>

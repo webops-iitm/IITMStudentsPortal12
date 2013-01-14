@@ -17,6 +17,7 @@ include_once 'resources/DBfunct.php'; include_once 'resources/nDBfunct.php'; ses
                 <p id="welcome">Welcome to Safire, a place where you can store your timetable and even print it!</p>
                 <p id="invLogin" style="<?php
  global $isLoginValid; if (!$isLoginValid) echo "color: #ba0d0d;"; ?>">The login credentials that you have provided are incorrect</p>
+                <p>Please login from the student's portal(the link is on the left) and then access this site again.</p>
                 <form action="" method="POST">
                     <div id="aContainer">
                         <table id="loginInfo">

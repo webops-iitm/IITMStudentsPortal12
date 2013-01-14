@@ -1,22 +1,5 @@
 <?php
-include_once '../resources/nDBfunct.php';
-include_once '../resources/DBfunct.php';
-///////////// end of file includes
-
-session_start();
-///////////started the session
-
-authUserIllegal();
-
-//include the function to change a user's id and find out that the user is a new one here.
-$isFirstTime = false;
-if ($_SESSION['membInfo'][3] == "newUser==") {
-    $_SESSION['membInfo'][3] = str_replace("newUser==", "", $_SESSION['membInfo'][3]);
-    changeUserMetaData($_SESSION['membInfo'][0], $_SESSION['membInfo'][3]);
-
-    $isFirstTime = true;
-}
-?>
+include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php'; session_start(); authUserIllegal(); $isFirstTime = false; if ($_SESSION['membInfo'][3] == "newUser==") { $_SESSION['membInfo'][3] = str_replace("newUser==", "", $_SESSION['membInfo'][3]); changeUserMetaData($_SESSION['membInfo'][0], $_SESSION['membInfo'][3]); $isFirstTime = true; } ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,22 +10,11 @@ if ($_SESSION['membInfo'][3] == "newUser==") {
     </head>
     <body>
         <?php
-        include_once "../resources/googleAnalytics.php";
-        pageInit();
-        ?>
+ include_once "../resources/googleAnalytics.php"; pageInit(); ?>
         <div id="mainPageNoticeBoard"></div>
         <div id="mainPage">
             <?php
-            if ($GLOBALS['isFirstTime']) {
-                echo "<div id=\"mainPageOverlay\" class=\"overlayTranslucent\">";
-                echo "<div id=\"welcomeNotice\">";
-                echo "<p>Hi " . $_SESSION['membInfo'][1] . ", looks like it's your first time here. How about diving into the help section? You can access the help section anytime you're logged in by clicking the icon on the top left hand corner of the page you're in.</p>";
-                echo "<input id=\"helpMeLater\" type=\"button\" value=\"I'll do it later\">";
-                echo "<input id=\"helpMeNow\" type=\"button\" value=\"Go to the help section now\">";
-                echo "</div>";
-                echo "</div>";
-            }
-            ?>
+ if ($GLOBALS['isFirstTime']) { echo "<div id=\"mainPageOverlay\" class=\"overlayTranslucent\">"; echo "<div id=\"welcomeNotice\">"; echo "<p>Hi " . $_SESSION['membInfo'][1] . ", looks like it's your first time here. How about diving into the help section? You can access the help section anytime you're logged in by clicking the icon on the top left hand corner of the page you're in.</p>"; echo "<input id=\"helpMeLater\" type=\"button\" value=\"I'll do it later\">"; echo "<input id=\"helpMeNow\" type=\"button\" value=\"Go to the help section now\">"; echo "</div>"; echo "</div>"; } ?>
             <div id="couInfVie"><div></div></div>
             <span id="whose">Your Table:</span>
             <div id="controlPanel"> 
@@ -50,15 +22,9 @@ if ($_SESSION['membInfo'][3] == "newUser==") {
             </div>
             <div id="tableCont">
                 <?php
-                $table = getTable("");
-                echo $table;
-                ?>
+ $table = getTable(""); echo $table; ?>
             </div>
             <div id="lBlock">
-                <input id="selector" type="text" name="selector">
-                <button id="selectBut" type="button">Select!</button>
-                <br>
-                <a href="../chooser/chooser.html">Create a New Table</a>
             </div>
             <div id="rBlock">
                 <span id="noticeHead">Notice Board</span>

@@ -1,11 +1,5 @@
 <?php
-include_once '../resources/nDBfunct.php';
-include_once '../resources/DBfunct.php';
-///////////// end of file includes
-
-session_start();
-///////////started the session
-?>
+include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php'; session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,9 +10,7 @@ session_start();
     </head>
     <body>
         <?php
-        include_once "../resources/googleAnalytics.php";
-        pageInit();
-        ?>
+ include_once "../resources/googleAnalytics.php"; pageInit(); ?>
         <div id="mainPage">
             <div id="helpContent">
                 <h2>The Displayer</h2>
@@ -65,6 +57,8 @@ session_start();
                         </tr>
                     </tbody>
                 </table>
+                <h2>Miscellaneous</h2>
+                Safire works best in the latest versions of FireFox, Safari and Chrome and Internet Explorer 9. It doesn't work in Internet Explorer 8.
             </div>
         </div>
     </body>

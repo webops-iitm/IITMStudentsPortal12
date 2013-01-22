@@ -52,6 +52,11 @@
 		<td style="width:100px;"><a href="#">E-Mail ID</a></td>
 		<td><?php echo $email; ?></td>
 	</tr><tr>
+		<td style="width:100px;"><a href="#">Manifesto</a></td>
+		<td>
+			<a href="files/secretary/<?php echo $manifesto; ?>">Download</a>
+		</td>
+	</tr><tr>
 		<td style="width:100px;"><a href="#">Hobbies</a></td>
 		<td><?php echo $hobbies; ?></td>
 	</tr><tr>

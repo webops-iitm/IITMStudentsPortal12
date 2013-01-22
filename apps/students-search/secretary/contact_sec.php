@@ -1,7 +1,7 @@
 <?php
 	include("../../../db.php");
 	
-  $var = $_GET['userid'];
+  $var = $_GET['userd'];
 	session_start();
 	
 	if (isset($_COOKIE["user"]))
@@ -11,14 +11,22 @@
 	
 	if($loggedin == 0) 
 		die("Please Login to send emails");
-  
-  
 
 ?>
+
+<script>
+	function makeAnon() {
+		document.getElementById("nick").value = "Anon";
+		document.getElementById("roll").value = "Anon";
+		document.getElementById("contact").value = "Anon";
+		document.getElementById("email").value = "Anon";
+	}
+</script>
+
 &nbsp; <!-- hack : it doesn't show without some thing here ... -->
 <div style="float:left; margin-left:10px; height:280px; width:790px; padding-top:0px; " class="widget-contentsec" id="inner_body_sec">
 <center>
-<form id="form" name="regform" action="apps/students-search/secretary/contactsubmit_sec.php" method="post">
+<form id="contact_form" name="regform" action="apps/students-search/secretary/contactsubmit_sec.php" method="post">
 	<table style="float:left; margin-left:30px; margin-top:5px;">
     <tr>
       <td colspan="2">
@@ -43,7 +51,7 @@
 		<tr>
 			<center>
 				<td><a href="#"><input class="btn btn-warning btn-large" type="submit" value="Send" name="Send" /></a></td>
-				<td style="width:100px;"><a href="javascript:makeAnon();">Make me anonymous</a></td>
+				<!--<td style="width:100px;"><a href="javascript:makeAnon();">Make me anonymous</a></td>-->
 			</center>
 		</tr>
 	</table>
@@ -63,11 +71,3 @@
 </form>
 </center>
 </div>
-<script>
-	function makeAnon() {
-		document.getElementById("nick").value = "Anon";
-		document.getElementById("roll").value = "Anon";
-		document.getElementById("contact").value = "Anon";
-		document.getElementById("email").value = "Anon";
-	}
-</script>

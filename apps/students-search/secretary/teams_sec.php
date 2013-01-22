@@ -2,7 +2,7 @@
 	include("../../../db.php");
 	
 	session_start();
-    $var = $_GET['userid'];
+    $var = $_GET['userd'];
 	
 	if (isset($_COOKIE["user"]))
 		$_SESSION['uname'] = $_COOKIE["user"];

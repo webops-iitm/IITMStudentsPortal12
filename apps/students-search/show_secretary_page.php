@@ -46,9 +46,9 @@ border-radius: 4px;">
 						<i class="icon-star"></i>
 						<h3><?php if($show_nick!="") echo $show_nick."'s"; ?> Profile</h3>
 					</li>
-					<li class="" id="profile_sec_page"><a style=" text-shadow:none;" href="javascript:update('apps/students-search/secretary/profile_sec.php?userid=<?php echo $var ?>', 'inner_body_sec'); ">Profile</a></li>
-					<li id="teams_sec_page"><a style=" text-shadow:none;" href="javascript:update('apps/students-search/secretary/teams_sec.php?userid=<?php echo $var ?>', 'inner_body_sec');">Teams</a></li>
-					<li id="contacts_sec_page"><a style=" text-shadow:none; border-right:none" href="javascript:update('apps/students-search/secretary/contact_sec.php?userid=<?php echo $var ?>', 'inner_body_sec');">Contact</a></li>
+					<li class="" id="profile_sec_page"><a style=" text-shadow:none;" href="javascript:update('apps/students-search/secretary/profile_sec.php?userd=<?php echo $var ?>', 'inner_body_sec'); ">Profile</a></li>
+					<li id="teams_sec_page"><a style=" text-shadow:none;" href="javascript:update('apps/students-search/secretary/teams_sec.php?userd=<?php echo $var ?>', 'inner_body_sec');">Teams</a></li>
+					<li id="contacts_sec_page"><a style=" text-shadow:none; border-right:none" href="javascript:update('apps/students-search/secretary/contact_sec.php?userd=<?php echo $var ?>', 'inner_body_sec');">Contact</a></li>
 
 				</ul>
 			</div>

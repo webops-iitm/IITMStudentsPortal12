@@ -1,5 +1,5 @@
 <?php
-include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php'; session_start(); authUserIllegal(); $isFirstTime = false; if ($_SESSION['membInfo'][3] == "newUser==") { $_SESSION['membInfo'][3] = str_replace("newUser==", "", $_SESSION['membInfo'][3]); changeUserMetaData($_SESSION['membInfo'][0], $_SESSION['membInfo'][3]); $isFirstTime = true; } ?>
+include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php'; session_start(); authUserIllegal(); $isFirstTime = false; if (strpos($_SESSION['membInfo'][3], "newUser==") !== false) { $_SESSION['membInfo'][3] = str_replace("newUser==", "", $_SESSION['membInfo'][3]); changeUserMetaData($_SESSION['membInfo'][0], $_SESSION['membInfo'][3]); $isFirstTime = true; } ?>
 <!DOCTYPE html>
 <html>
     <head>

@@ -56,7 +56,6 @@ div.option{
     cursor: default;
     font-size: 80%;
 }
-
 div.option:hover{
     background-color: #E5FFE5;
 }
@@ -70,7 +69,6 @@ div.option:hover{
     cursor: default;
     font-size: 80%;
 }
-
 #ender:hover{
     background-color: #E5FFE5;
 }

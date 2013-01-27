@@ -78,7 +78,8 @@
 			<a href="#">Manifesto</a>
 		</td>
 		<td style="border-top:none">
-			<a href="files/secretary/<?php echo $show_manifesto; ?>"> Download </a>
+			<?php if(strlen($show_manifesto) > 8) echo '<a href="files/secretary/'.$show_manifesto.'">Download</a>';
+				else echo 'Not uploaded'; ?>
 		</td>
 	</tr>
 	</thead>

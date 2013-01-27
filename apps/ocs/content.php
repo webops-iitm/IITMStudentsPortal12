@@ -17,7 +17,7 @@
 		$ocs_pref_sms = $result_ocs_row['sms_notify'];
 		$result_ocs = 1;
 		//die("EXISTING USER");
-		include("show.php");
+		include("new.php");
 	} else {
 		$result_ocs = 0;
 		include("prefs.php");

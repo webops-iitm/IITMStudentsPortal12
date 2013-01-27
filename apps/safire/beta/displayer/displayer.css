@@ -369,6 +369,14 @@ div.nbSettingsPart{
     border-radius: 5px;
 }
 
+div.noticeBoardHeaders{
+    padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    font-weight: bold;
+    font-size: 80%;
+}
+
 #inBox{
     margin: 0px;
     margin-right: 440px;
@@ -378,11 +386,6 @@ div.nbSettingsPart{
 
 #inBoxHeader{
     height: 43px;
-    padding: 20px;
-    padding-top: 15px;
-    padding-bottom: 25px;
-    font-weight: bold;
-    font-size: 80%;
     border-bottom: #d8d9d8 solid 1px;
 }
 
@@ -464,39 +467,69 @@ div.inBoxNotice{
     border-bottom: #999999 solid 1px;
 }
 
+#recpListHeader{
+    border-top: #d8d9d8 solid 1px;
+    border-bottom: #d8d9d8 solid 1px;
+    height: 25px;
+}
+#recpListCont{
+    overflow-y: auto;
+}
+#recipients{
+    border-collapse: collapse;
+}
+#recpBody td{
+    text-align: center;
+    padding: 10px;
+    width: 144px;
+    color: #0b481f;
+    font-size: 70%;
+    font-weight: bold;
+    border: #eeeded solid 1px;
+    border-top: none;
+    border-right: none;
+}
+#recpListLoading{
+    text-align: center;
+    font-size: 70%;
+    padding: 10px;
+}
+#recpListLoading img{
+    display: block;
+    width: 40px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
 #sender{
     float: right;
     margin: 0px;
     width: 440px;
     height: 100%;
 }
-
 #senderCont{
+    height: 166px;
     padding: 30px;
-}
-
-#senderHeader{
-    padding: 20px;
-    padding-top: 15px;
     padding-bottom: 25px;
-    font-weight: bold;
-    font-size: 80%;
+}
+#senderHeader{
     border-bottom: #d8d9d8 solid 1px;
 }
-
 #poster{
+    margin: 0px;
     width: 375px;
     height: 100px;
     overflow: auto;
     font-family: Verdana,Arial,Helvetica,sans-serif;
     font-size: 80%;
 }
-
+#posterButt{
+   margin: 0px; 
+}
 #lengthPost{
     color: #999999;
     font-size: 70%;
 }
-
 #sendingMessage{
     display: none;
     position: absolute;
@@ -504,7 +537,6 @@ div.inBoxNotice{
     right: 320px;
     width: 35px;
 }
-
 #sendingMessageText{
     display: inline-block;
     margin-left: 53px;
@@ -519,7 +551,6 @@ div.noticeFooter{
     width: 100%;
     border-top: #eeeded solid 1px;
 }
-
 div.smallOptCouDT{
     text-align: center;
     position: absolute;
@@ -528,7 +559,6 @@ div.smallOptCouDT{
     width: 100%;
     border-bottom: #eeeded solid 1px;
 }
-
 div.smallOptCouDT p{
     display: inline-block;
     margin: 2px;
@@ -536,7 +566,6 @@ div.smallOptCouDT p{
     color: #3e3e3e;
     font-weight: bold;
 }
-
 p.smallOptPosterName{
     float: left;
     display: inline-block;
@@ -545,7 +574,6 @@ p.smallOptPosterName{
     color: #0b481f;
     font-weight: bold;
 }
-
 p.smallOptTime{
     float: right;
     display: inline-block;
@@ -563,21 +591,18 @@ div.noticeRightBar{
     margin-right: 5px;
     border-left: #eeeded solid 1px;
 }
-
 p.bigOptCouDT{
     margin: 4px;
     margin-left: 10px;
     color: #3e3e3e;
     font-weight: bold;
 }
-
 p.bigOptPosterName{
     margin: 4px;
     margin-left: 10px;
     color: #0b481f;
     font-weight: bold;
 }
-
 p.bigOptTime{
     margin: 2px;
     margin-left: 10px;
@@ -589,7 +614,6 @@ p.bigOptTime{
     font-size: 70%;
     padding: 10px;
 }
-
 #noticesLoading img{
     display: block;
     width: 40px;

@@ -1,5 +1,5 @@
 <?php
-include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php'; session_start(); ?>
+include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php'; session_start(); authUserIllegal(); ?>
 <!DOCTYPE html>
 <html>
     <head>

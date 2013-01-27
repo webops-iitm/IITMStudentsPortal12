@@ -124,12 +124,10 @@
 				</select>
 			</td>
 			<td>
-				<a href="#" rel="tooltip" 
+				<a href="#modal_comp_<?php echo $row['id']; ?>" rel="tooltip" 
+					data-placement="left" data-html="true" data-toggle="modal"
 					title="Subject : <?php echo $row['complaint_sub']; ?> <br />
-					Description : <?php echo $row['complaint_desc']; ?> <br />
-					Contact : <?php echo $usr_row['contact']; ?> <br />
-					Email : <?php echo $usr_row['email']; ?>" 
-					data-placement="left" data-html="true">
+					Description : <?php echo $row['complaint_desc']; ?>" >
 					<?php 
 						if( strlen($row['complaint_sub']) > 50)
 							echo substr($row['complaint_sub'], 0, 50)."..." ;
@@ -139,6 +137,36 @@
 				</a>		
 			</td>		
 		</tr>
+		<!-- Modal -->
+		<div style="color:#ffffff;" id="modal_comp_<?php echo $row['id']; ?>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button style="color:#ffffff;" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="myModalLabel"><?php echo $row['current_status']; ?> complaint. ID : <?php echo $row['id'] ?></h3>
+			</div>
+			<div class="modal-body">
+				<p>Status : 
+					<?php if($row['current_status'] == "Completed") { ?>
+						<span class="label label-success"> <?php echo $row['current_status']; ?> </span>
+					<?php } else { ?>
+						<span class="label label-important"> <?php echo $row['current_status']; ?> </span>
+					<?php } ?>
+				</p>
+				<p><strong>Name</strong> : <?php echo $usr_row['fullname']; ?></p>
+				<p><strong>Roll</strong> : <?php echo $usr_row['username']; ?></p>
+				<p><strong>Room</strong> : <?php echo $usr_row['room']; ?></p>
+				<p><strong>Hostel</strong> : <?php echo $usr_row['hostel']; ?></p>
+				<p><strong>Contact</strong> : <?php echo $row['user_contact']; ?></p>
+				<p><strong>Email</strong> : <?php echo $row['user_email']; ?></p>
+				<p><strong>Ticket Created on</strong> : <?php echo $row['regn_datetime']; ?></p>
+				<p><strong>Last Updated on</strong> : <?php if($row['status_update_datetime'] == 0 ) echo "Never"; else echo $row['status_update_datetime']; ?></p>
+				<p><br /></p>
+				<p><strong>Subject</strong> : <?php echo $row['complaint_sub']; ?></p>
+				<p><strong>Description</strong> : <?php echo $row['complaint_desc']; ?></p>
+			</div>
+			<div class="modal-footer">
+				<a class="btn" data-dismiss="modal" aria-hidden="true">Close</a>
+			</div>
+		</div>
 <?php
 	}
 ?>

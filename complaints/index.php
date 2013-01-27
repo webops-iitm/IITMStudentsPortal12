@@ -165,18 +165,20 @@
 			} else { // wrong password
 				// debug: echo "PASSWORD ENTERED IS WRONG";
 ?>
-        <div class="alert">
+        <div class="alert alert-error">
+			<span class="label label-inverse">Success</span>
 			<button type="button" class="close" data-dismiss="alert">&times;</button>
-			<strong>Error!</strong> This password doesn't match the username entered.
+			This password doesn't match the username entered.
         </div>
 <?php
 			} 
 		} else { // username doesn't exist
 			// debug: echo "WRONG USERNAME";
 ?>
-        <div class="alert">
+        <div class="alert alert-error">
+			<span class="label">Error</span>
 			<button type="button" class="close" data-dismiss="alert">&times;</button>
-			<strong>Error!</strong> Username doesn't exist !
+			Username doesn't exist !
         </div>
 <?php
 		}

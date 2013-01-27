@@ -13,16 +13,19 @@
 	$res = mysql_query($sql) or die("ERROR : ".mysql_error());
 	if ($res) {
 ?>
-<div class="alert">
+
+<div class="alert alert-success">
+	<span class="label label-inverse">Success</span>
 	<button type="button" class="close" data-dismiss="alert">&times;</button>
-	<strong>Success!</strong> Changed status of complaint ID : <?php echo $complaint_id; ?> to <?php echo $stat; ?>
+	 Changed status of complaint ID : <?php echo $complaint_id; ?> to <?php echo $stat; ?>
 </div>
 <?php
 	} else {
 ?>
-<div class="alert">
+<div class="alert alert-error">
+	<span class="label">Error</span>
 	<button type="button" class="close" data-dismiss="alert">&times;</button>
-	<strong>Error!</strong> Coundn't change status of complaint ID : <?php echo $complaint_id; ?> to <?php echo $stat; ?>
+	Coundn't change status of complaint ID : <?php echo $complaint_id; ?> to <?php echo $stat; ?>
 </div>
 <?php		
 	}

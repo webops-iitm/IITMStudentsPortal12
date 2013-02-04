@@ -17,7 +17,7 @@ $result=mysql_query($query)or die ("Error in query: $query " . mysql_error());
 $check = mysql_num_rows($result);
 if($check)
 {
-$counter=1;
+$counter=$start;
 while ($news=mysql_fetch_assoc($result))
 {
 		$news_email= getSubstring($news['email'],'<','>');

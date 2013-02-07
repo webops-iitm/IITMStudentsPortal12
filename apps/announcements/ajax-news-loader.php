@@ -11,12 +11,13 @@ $page=$_POST['page'];
 $noOfAnn=$_POST['annno'];
 $start=($page-1)*$noOfAnn;
 $end=$start+$noOfAnn;
+
 $query = "SELECT * FROM news ORDER BY id DESC LIMIT $noOfAnn OFFSET $start";
 $result=mysql_query($query)or die ("Error in query: $query " . mysql_error()); 
 $check = mysql_num_rows($result);
 if($check)
 {
-$counter=1;
+$counter=$start;
 while ($news=mysql_fetch_assoc($result))
 {
 		$news_email= getSubstring($news['email'],'<','>');
@@ -24,14 +25,23 @@ while ($news=mysql_fetch_assoc($result))
 		$subject=$news['subject'];
 		$body=$news['body'];
 		$date=$news['date'];
-		$from =$secretaries[$news_email];
+		
+		if (array_key_exists($news_email, $secretaries)) 
+		{
+			$from =$secretaries[$news_email];
+		}
+		else 
+		{
+			$parts = explode('@', $news_email);
+			$from =$parts[0] ;
+		}
 		if(is_array($from)){
 		$user=$from['user_id'];
 		$name=$from['post_name']; 
 		}
 		else{
 		$user="#";
-		$name=$news_email; }
+		$name=$from; }
 	?>
 
 		<div class="accordion-group">
@@ -46,7 +56,7 @@ while ($news=mysql_fetch_assoc($result))
 								<div class="span4 offset2">Date:
 								<?php 
 								if(!is_null($date) && $date!="" && $date!=0){
-								echo date('l dS \o\f F h:i A', $date); }
+								echo date('dS \o\f F h:i A', $date); }
 								else{echo "Unknown"; }
 								?>
 								</div>
@@ -65,7 +75,7 @@ $counter++;
 }
 else
 {
-echo "null"; 
+echo 0; 
 }
 ?>
 

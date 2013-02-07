@@ -11,9 +11,9 @@ if (!$share->get_session())
 	
 if (isset($_GET['origin']))
 	{
-		$search = $share->search_cab($_GET['origin'], $_GET['destination'], $_GET['date'], $_GET['numrequired'], $_GET['cabtype']);
+		$search = $share->search_cab($_GET['origin'], $_GET['destination'], $_GET['date'], $_GET['cabtype']);
 		if ($search) 
-			{
+		/*	{
 				while($row=mysql_fetch_assoc($search))
 					{
 						extract($row);
@@ -46,7 +46,14 @@ if (isset($_GET['origin']))
 										</div>
 									</div>";
 					}
-			}
+			}	*/
+			{
+				while($row=mysql_fetch_assoc($search))
+					{
+						extract($row);
+								include"htmlOutput.php";
+					}
+	}
 		die("");
 	}
 
@@ -71,13 +78,7 @@ if (isset($_GET['origin']))
 				<input data-datepicker="datepicker" class="small" type="text" id="date" value="2011-05-01">
 			</div>
 	</div>
-		<div class="control-group">
-		<label class="control-label" for="numrequired">Number of seats required</label>
-			<div class="controls">
-				<input type="text" id="numrequired" placeholder="Number of seats required">
-			</div>
-	</div>
-		<div class="control-group">
+	<div class="control-group">
 		<label class="control-label" for="cabtype">Cab type</label>
 			<div class="controls">
 				<input type="radio" name="cabtype" id="cabtype" value="ac">A/c<br>

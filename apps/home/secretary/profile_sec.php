@@ -14,8 +14,6 @@
   
 	if( $loggedin == 0)
 		die("Please Login to continue");
-	
-	
 
 ?>
 <table>
@@ -54,7 +52,8 @@
 	</tr><tr>
 		<td style="width:100px;"><a href="#">Manifesto</a></td>
 		<td>
-			<a href="files/secretary/<?php echo $manifesto; ?>">Download</a>
+			<?php if(strlen($manifesto) > 8) echo '<a href="files/secretary/'.$manifesto.'">Download</a>';
+				else echo 'Not uploaded'; ?>
 		</td>
 	</tr><tr>
 		<td style="width:100px;"><a href="#">Hobbies</a></td>

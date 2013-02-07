@@ -1,7 +1,4 @@
 <?
-	
+	mail('vineet.1991.483@gmail.com', 'the subject', 'the message', null,'-f test@testmail.com');
+       echo "Done";
 
-
-
-
-//mail('g.prasanthsai@gmail.com', 'the subject', 'the message', null,'-f noreply@students2.iitm.ac.in');

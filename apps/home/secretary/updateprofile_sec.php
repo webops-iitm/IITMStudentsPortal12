@@ -1,6 +1,5 @@
 <?php
 	include("../../../db.php");
-	
 
 	session_start();
 	
@@ -11,11 +10,7 @@
 	
 	if($loggedin == 0)		
 		die("Please Login to continue");
-
-
 ?>
-
-
 <div style="float:left; margin-left:10px; height:340px; width:1070px;" class="widget-contentsec" id="inner_body_sec">
 
 <form id="form" style="float:left;margin-left:10px;" name="regform" action="apps/home/secretary/updateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
@@ -115,9 +110,8 @@
 			</td>
 		</tr><tr>
 			<td colspan='2' style="text-align:center;"><input style="margin-top:20px;" class="btn btn-warning btn-large" type="submit" value="Update" name="update_dpic" /></td>
-		</tr>	
+		</tr>
 	</table>
 </form>
 <hr style="position:absolute; bottom:10px;">
 </div>
-

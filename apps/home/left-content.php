@@ -56,9 +56,24 @@ LoadNews(Page);
 
 </script>
 <?
-	if(isset($_GET['message'])){
+	if(isset($_GET['message'])) {
+		if($_GET['message'] == 'ocs_y'){
 ?>
-	<div class="span8 offset1" style="padding:5px; border:solid 1px red; background:rgba(8, 8, 8, 0.5); width:300px; color:#fff;">
-		<? echo $_GET['message']; ?>
-	</div>
-<? } ?>
+			<div class="span8 offset1" style="padding:5px; border:solid 1px green; background:rgba(8, 8, 8, 0.5); width:300px; color:#fff;">
+				Successfully sent message. Please wait for a response
+			</div>
+<?		} 
+		else if($_GET['message'] == 'ocs_n'){
+?>
+			<div class="span8 offset1" style="padding:5px; border:solid 1px red; background:rgba(8, 8, 8, 0.5); width:300px; color:#fff;">
+				Error : Failed to send message. Please notify webops.iitm@gmail.com
+			</div>
+<? 		}
+		else { 
+?>
+			<div class="span8 offset1" style="padding:5px; border:solid 1px red; background:rgba(8, 8, 8, 0.5); width:300px; color:#fff;">
+				<?php echo $_GET['message']; ?>
+			</div>
+<? 		}
+	}
+?>

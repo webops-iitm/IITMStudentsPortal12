@@ -74,7 +74,7 @@ Enter 'Name' or 'Nick' or 'Roll number' or 'Room number' or 'Hostel' or 'Course'
 </form>
 
 
-<div style="position:relative" ><img src="img/loadingsymb.gif" id="loadinggif" style = "position:relative;display:none; left:50%" /><div id = "seres"  >  </div></div>
+<div style="position:relative" ><img src="apps/students-search/loading.gif" id="loadinggif" style = "position:relative;display:none; left:50%" /><div id = "seres"  >  </div></div>
 
 
 

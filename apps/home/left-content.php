@@ -61,13 +61,15 @@ secr=0;
 $('.dropdown-menu li a').live ("click" , function(){
 name=$(this).html();
 email=$(this).attr("email");
+secr=email;
+End=0;
+Page=1;
 $('#info').html(name);
 sort(email);
 });
 function sort(secretory){
 
 $('#accordion2').html("Loading please wait...");
-secr=secretory;
 LoadNews(1,secretory);
 return false;
 }
@@ -99,9 +101,12 @@ return false;
 };
 LoadNews(1);
 Page=1;
-End=0;    
+End=0;   
+
 $("#widget-content").scroll(function () {
+
 if($("#widget-content").scrollTop() + $("#widget-content").height() > $("#accordion2").height()) {
+
 if(End==0)
 {
 Page++;
@@ -110,6 +115,7 @@ if(secr==0)
 }
 else{
 LoadNews(Page,secr);
+//alert(secr);
 }
 
 

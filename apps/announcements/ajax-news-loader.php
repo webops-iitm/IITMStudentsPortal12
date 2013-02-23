@@ -8,11 +8,22 @@ function getSubstring($string,$start,$end){
 }
 include("../../secretaries.php");
 $page=$_POST['page'];
+if(isset($_POST['secretory']))
+{
+$sec=$_POST['secretory'];
+}
 $noOfAnn=$_POST['annno'];
 $start=($page-1)*$noOfAnn;
 $end=$start+$noOfAnn;
-
+if(!isset($sec))
+{
 $query = "SELECT * FROM news ORDER BY id DESC LIMIT $noOfAnn OFFSET $start";
+}
+else{
+$query = "SELECT * FROM news WHERE email LIKE '%".$sec."%' ORDER BY id DESC LIMIT $noOfAnn OFFSET $start";
+
+}
+
 $result=mysql_query($query)or die ("Error in query: $query " . mysql_error()); 
 $check = mysql_num_rows($result);
 if($check)

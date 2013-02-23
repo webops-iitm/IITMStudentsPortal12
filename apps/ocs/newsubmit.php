@@ -1,13 +1,13 @@
 <?php
+
 	
 	session_start();
 	
 	include ('../../db.php');
 	include ('../../config.php');
-	
+die("haha");
 	error_reporting(E_ALL);
 	ini_set("display_errors",1);
-
 	$uname = $_SESSION['uname'];
 	$uname = strtolower($uname);
 	$user = $uname;
@@ -23,7 +23,7 @@
 	$sql = "INSERT INTO ocs_complaints (user_id,user_contact,user_email,complaint_sub,complaint_cat,complaint_desc) VALUES ($id,$comp_contact,$comp_email,$comp_cat,$comp_subj,$comp_desc)";
 	mysql_query($sql) or die("DIED:".mysql_error($con));
 	
-	header('Location: ../../index.php?message="Sucessfully registered complaint"');
-	
 	mysql_close($con);	
+	header('Location: ../../index.php?message=ocs_y');
+	
 ?>

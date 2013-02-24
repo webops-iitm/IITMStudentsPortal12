@@ -5,7 +5,7 @@
 	
 	include ('../../db.php');
 	include ('../../config.php');
-die("haha");
+//die("haha");
 	error_reporting(E_ALL);
 	ini_set("display_errors",1);
 	$uname = $_SESSION['uname'];
@@ -20,7 +20,7 @@ die("haha");
 	$comp_subj = $_POST['subj'];
 	$comp_desc = $_POST['desc'];
 	
-	$sql = "INSERT INTO ocs_complaints (user_id,user_contact,user_email,complaint_sub,complaint_cat,complaint_desc) VALUES ($id,$comp_contact,$comp_email,$comp_cat,$comp_subj,$comp_desc)";
+	$sql = "INSERT INTO ocs_complaints (user_id,user_contact,user_email,complaint_sub,complaint_cat,complaint_desc) VALUES ('$id','$comp_contact','$comp_email','$comp_subj','$comp_cat','$comp_desc')";
 	mysql_query($sql) or die("DIED:".mysql_error($con));
 	
 	mysql_close($con);	

@@ -35,7 +35,7 @@
 			    document.getElementById(target).innerHTML=xmlhttp.responseText;
 			    }
 			  else{
-				document.getElementById(target).innerHTML = '<img src="img/load.gif"> Loading ...';
+				document.getElementById('widget').innerHTML = '<img src="img/load.gif"> Loading ...';
 				}
 			  }
 			xmlhttp.open("GET",datasource,true);

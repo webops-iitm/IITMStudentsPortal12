@@ -23,7 +23,8 @@ $noOfAnn=7;   //This variable can be changed to obtain variable number of news p
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu">
-    <li><a tabindex="-1" email="sgs@smail.iitm.ac.in"   href="#">General Secretary</a></li>
+	<li><a href="javascript:update('apps/home/left-content.php','leftcontent');">All</a></li>
+    	<li><a tabindex="-1" email="sgs@smail.iitm.ac.in"   href="#">General Secretary</a></li>
 	<li><a tabindex="-1" email="vineet.1991.483@gmail.com" href="#">Institute Web Operations Team</a></li>
 	<li><a tabindex="-1" email="casa@smail.iitm.ac.in" href="#">Cultural Affairs Secretary (Arts)</a></li>
 	<li><a tabindex="-1" email="cas@smail.iitm.ac.in" href="#">Co-curricular Affairs Secretary</a></li>

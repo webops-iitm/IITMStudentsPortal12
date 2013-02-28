@@ -1,6 +1,9 @@
 <div id = "profile" class="row-fluid">
 <?php
-	include("left-content.php");
+
+	echo "<div id = 'leftcontent'>";
+		include("left-content.php");
+	echo "</div>";
 
 	if($loggedin==1)
 	{

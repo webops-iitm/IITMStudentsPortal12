@@ -89,21 +89,21 @@
 										<td style="width:100px;"><a href="#"> Students Election</a></td>
 										<td><select style="width:194px;" id="instielec" name="instielec">
                                         	  
-                                              <option value="Alumni">Insti Alumni Affairs</option>
-                                              <option value="Cocas">Co-CAS</option>
-		   		  							  <option value="Art">Cul-Art</option>
-											  <option value="Lit">Cul-Lit</option>
+                                              <option value="Insti Alumni Affairs">Insti Alumni Affairs</option>
+                                              <option value="Co-CAS">Co-CAS</option>
+		   		  							  <option value="Cul-Art">Cul-Art</option>
+											  <option value="Cul-Lit">Cul-Lit</option>
                                               <option value="HAS">HAS</option>
-						 					  <option value="Sports">Insti Sports-Sec</option>			 					                                         	  <option value="General">Insti Students General</option>	
+						 					  <option value="Insti Sports-Sec">Insti Sports-Sec</option>			 					                                         	  <option value="Insti Students General">Insti Students General</option>	
                                               
                                               <option disabled="disabled">- - - - - - - - - - - - - - - - - - - - - -</option>
-                                              <option value="Alumni">Hostel Alumni-Sec</option>
-                                              <option value="Garden">Hostel Garden-Sec</option>
-		   		  							  <option value="General">Hostel Gen-Sec</option>						 					  											  <option value="Lit">Hostel Lit-Sec</option>
-                                              <option value="Mess">Hostel Mess-Sec</option>
-						 					  <option value="Soc">Hostel Soc-Sec</option>
-                                              <option value="Sports">Hostel Sports-Sec</option>
-                                              <option value="Tech">Hostel TAS</option>							 					  
+                                              <option value="Hostel Alumni-Sec">Hostel Alumni-Sec</option>
+                                              <option value="Hostel Garden-Sec">Hostel Garden-Sec</option>
+		   		  							  <option value="Hostel Gen-Sec">Hostel Gen-Sec</option>						 					  											  <option value="Hostel Lit-Sec">Hostel Lit-Sec</option>
+                                              <option value="Hostel Mess-Sec">Hostel Mess-Sec</option>
+						 					  <option value="Hostel Soc-Sec">Hostel Soc-Sec</option>
+                                              <option value="Hostel Sports-Sec">Hostel Sports-Sec</option>
+                                              <option value="Hostel TAS">Hostel TAS</option>							 					  
 						 				
                                         </select></td>
 									</tr><tr>

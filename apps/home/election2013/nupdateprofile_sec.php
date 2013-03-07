@@ -58,7 +58,7 @@
 			<td style="width:100px;">
 				<a href="#"><p>Manifesto Writeup</p></a>
 			</td><td>
-				<a href="files/Election2013/maifesto/"<p>Download Writeup</p></a>
+				<a href="files/Election2013/manifesto/<?php echo $nwriteup; ?>"><p>Download Writeup</p></a>
 			</td>
 		</tr>
 	</table>

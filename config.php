@@ -35,7 +35,7 @@
 		}
 		
 		// Check if the user is in the student election database
-		$nresult_sec = mysql_query("SELECT * FROM election2013 WHERE username = '$user' ");
+		/*$nresult_sec = mysql_query("SELECT * FROM election2013 WHERE username = '$user' ");
 		$sec_count = mysql_num_rows($nresult_sec);
 		$nsecretary = 0;
 		$ndisp_pic=0;
@@ -49,7 +49,9 @@
 			$nform_email = $nsec_row['form_email'];
 			$ndisp_pic = $nsec_row['pic'];
 			$nmanifesto = $nsec_row['manifesto'];
+		}*/
+		else{
+		$nsecretary = 1;
 		}
-		
 	}
 ?>

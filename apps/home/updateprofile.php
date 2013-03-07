@@ -18,7 +18,13 @@
 	
 		include( "updatesecretary_page.php" );
 	
-	else {
+	else {	
+		if( $nsecretary == 1 )
+	
+		include( "election2013/nupdatesecretary_page.php" );
+		
+		else {
+		
 
 ?>
 <center>
@@ -109,5 +115,7 @@
 </center>
 
 <?php
+		}// end of the if-else to check for nsecretary
+	
 	} // end of the if-else to check for secretary
 ?>

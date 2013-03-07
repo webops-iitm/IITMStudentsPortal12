@@ -109,8 +109,10 @@ if ((($_FILES["manifestow"]["type"] == "application/pdf")
 			if ( ! is_writable("../../../files/Election2013/manifesto/") )
 			{
 				die("Folder is not writable : ../../../files/Election2013/manifesto/");
+			
+			}
 			move_uploaded_file($mani_filew["tmp_name"], "../../../files/Election2013/manifesto/".$manifestow);
-				}
+			
 	} else
 		$mani_filew = 0;
 	}
@@ -119,7 +121,7 @@ if ((($_FILES["manifestow"]["type"] == "application/pdf")
 			} else
 	{
 		die("Only PDF files of size less than 5MB are allowed. Please try again.");
-		$mani_file = 0;
+		$mani_filew = 0;
 	}
 	//writeup end 1 
 		
@@ -176,7 +178,7 @@ if ((($_FILES["manifestow"]["type"] == "application/pdf")
 			echo "<b>Your request 2 has been successfully submitted</b>";
 	}
 	
-	header('Location: ../../../index.php');
+	header('Location: ../../../interactionmsgs.php');
 	
 	mysql_close($con);	
 ?>

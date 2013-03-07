@@ -178,7 +178,7 @@ if ((($_FILES["manifestow"]["type"] == "application/pdf")
 			echo "<b>Your request 2 has been successfully submitted</b>";
 	}
 	
-	header('Location: ../../../interactionmsgs.php');
+	header('Location: ../../../index.php');
 	
 	mysql_close($con);	
 ?>

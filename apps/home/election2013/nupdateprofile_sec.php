@@ -119,7 +119,7 @@
 	<table>
 		<tr>
 			<td style="width:100px;"><a href="#">Display Picture</a></td>
-			<td><img style="margin-left:25px; height:150px; width:150px;" src="../../../files/Election2013/pics/<?php echo $ndisp_pic; ?>"  /></td>
+			<td><img style="margin-left:25px; height:150px; width:150px;" src="files/Election2013/pics/<?php echo $ndisp_pic; ?>"  /></td>
 		</tr>
 		<tr>
 			<td>

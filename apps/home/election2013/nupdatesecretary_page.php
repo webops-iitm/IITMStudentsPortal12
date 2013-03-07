@@ -11,7 +11,7 @@ border-radius: 4px;">
 			<ul class="nav nav-tabs" >
 				<li>
 					<i class="icon-star"></i>
-					<h3 style="width:180px;"><?php if($nick!="") echo $nick."'s"; ?></h3>
+					<h3><?php if($nick!="") echo $nick."'s"; ?></h3>
 				</li>
 				<li class="" id="profile_sec_page"><a style=" text-shadow:none; border:none;" href="javascript:update('apps/home/election2013/nupdateprofile_sec.php', 'inner_body_sec'); ">Profile</a></li>
 				

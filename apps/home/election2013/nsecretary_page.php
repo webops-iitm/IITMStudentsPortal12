@@ -9,7 +9,7 @@
 						<i class="icon-star"></i>
 						<h3><?php if($nick!="") echo $nick."'s"; ?></h3>
 					</li>
-					<li class="nav-pills" id="profile_sec_page"><a style=" text-shadow:none; border:none; position:absolute; left:200px;" href="javascript:update('apps/home/election2013/nprofile_sec.php', 'inner_body_sec'); ">Profile</a></li>
+					<li class="nav-pills" id="profile_sec_page"><a style=" text-shadow:none; border:none;" href="javascript:update('apps/home/election2013/nprofile_sec.php', 'inner_body_sec'); ">Profile</a></li>
 					
 				</ul>
 			</div>

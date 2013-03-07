@@ -6,7 +6,7 @@
 	echo "<div id = 'successmsg'>";
 		include("successmsg.php");
 	echo "</div>";
-	//$_SESSION['submission']=0;
+	$_SESSION['submission']=0;
 	}
 	echo "<div id = 'leftcontent'>";
 		include("left-content.php");

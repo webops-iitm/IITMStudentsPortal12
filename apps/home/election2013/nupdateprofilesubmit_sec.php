@@ -177,7 +177,7 @@ if ((($_FILES["manifestow"]["type"] == "application/pdf")
 		else
 			echo "<b>Your request 2 has been successfully submitted</b>";
 	}
-	
+	$_SESSION['submission']=1;
 	header('Location: ../../../index.php');
 	
 	mysql_close($con);	

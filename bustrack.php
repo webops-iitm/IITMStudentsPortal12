@@ -17,15 +17,22 @@ include("db.php");
 
 
 
+<table style="width:1200px; margin:auto;">
+<tr>
+<td>
+<img src = "img/buslogo.jpg" style="width:100%" />
 
-
-
-
-
-<table style="width:80%; margin:auto;">
-<tr >
-<img src = "img/buslogo.jpg" style="width:79.7%; margin-left:9.9%;border:5px solid #E9E9E9;" />
+</td>
 </tr>
+</table>
+
+
+
+
+
+<table style="width:1200px; margin:auto;">
+
+
 
 
 

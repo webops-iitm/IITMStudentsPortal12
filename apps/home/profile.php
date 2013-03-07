@@ -3,6 +3,11 @@
 	if( $secretary == 1 )
 		include( "secretary_page.php" );
 	else {
+		
+		if( $nsecretary == 1 )
+		include( "election2013/nsecretary_page.php" );
+		
+		else {
 ?>
 <div class="span3 offset1">
 <center>
@@ -47,5 +52,8 @@
 </div>
 
 <?php
+	} // end of if-else to check for nsecretary
+	
 	} // end of if-else to check for secretary
+
 ?>

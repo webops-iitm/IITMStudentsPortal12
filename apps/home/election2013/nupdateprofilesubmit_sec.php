@@ -38,13 +38,13 @@ if ((($_FILES["dpic"]["type"] == "image/gif")
 			//echo substr(sprintf('%o', fileperms("files")), -4) == "0774" ? "true" : "false";
 			//die(fileperms("../../../files"));
 			// upload pic first
-			if ( ! is_writable("../../files/Election2013/pics") )
+			if ( ! is_writable("../../../files/Election2013/pics") )
 			{
-				die("Folder is not writable : ../../files/Election2013/pics/ ");
+				die("Folder is not writable : ../../../files/Election2013/pics/ ");
 				
 				$dpic = 0;
 			}
-			move_uploaded_file($dpic["tmp_name"], "../../files/Election2013/pics/".$disp_pic);			
+			move_uploaded_file($dpic["tmp_name"], "../../../files/Election2013/pics/".$disp_pic);			
 			}			
 		else
 		$dpic = 0;
@@ -73,12 +73,12 @@ if ((($_FILES["manifesto"]["type"] == "application/pdf")
 			//echo substr(sprintf('%o', fileperms("files")), -4) == "0774" ? "true" : "false";
 			//die(fileperms("../../../files"));
 			// upload pic first
-			if ( ! is_writable("../../files/Election2013/manifesto/") )
+			if ( ! is_writable("../../../files/Election2013/manifesto/") )
 			{
-				die("Folder is not writable : ../../files/Election2013/manifesto/");
+				die("Folder is not writable : ../../../files/Election2013/manifesto/");
 				$mani_file = 0;
 		}
-			move_uploaded_file($mani_file["tmp_name"], "../../files/Election2013/manifesto/".$manifesto);
+			move_uploaded_file($mani_file["tmp_name"], "../../../files/Election2013/manifesto/".$manifesto);
 				}
 				else
 		$mani_file = 0;
@@ -106,10 +106,10 @@ if ((($_FILES["manifestow"]["type"] == "application/pdf")
 			//echo substr(sprintf('%o', fileperms("files")), -4) == "0774" ? "true" : "false";
 			//die(fileperms("../../../files"));
 			// upload pic first
-			if ( ! is_writable("../../files/Election2013/manifesto/") )
+			if ( ! is_writable("../../../files/Election2013/manifesto/") )
 			{
-				die("Folder is not writable : ../../files/Election2013/manifesto/");
-			move_uploaded_file($mani_filew["tmp_name"], "../../files/Election2013/manifesto/".$manifestow);
+				die("Folder is not writable : ../../../files/Election2013/manifesto/");
+			move_uploaded_file($mani_filew["tmp_name"], "../../../files/Election2013/manifesto/".$manifestow);
 				}
 	} else
 		$mani_filew = 0;

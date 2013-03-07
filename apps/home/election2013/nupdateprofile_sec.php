@@ -51,14 +51,14 @@
 			<td style="width:100px;">
 				<a href="#"><p>Manifesto</p></a>
 			</td><td>
-				<a href="../../../files/Election2013/manifesto/<?php echo $nmanifesto; ?>"><p>Download Manifesto</p></a>
+				<a href="../../files/Election2013/manifesto/<?php echo $nmanifesto; ?>"><p>Download Manifesto</p></a>
 			</td>
 		</tr>
         <tr>
 			<td style="width:100px;">
 				<a href="#"><p>Manifesto Writeup</p></a>
 			</td><td>
-				<a href="../../../files/Election2013/maifesto/"<p>Download Writeup</p></a>
+				<a href="../../files/Election2013/maifesto/"<p>Download Writeup</p></a>
 			</td>
 		</tr>
 	</table>
@@ -119,7 +119,7 @@
 	<table>
 		<tr>
 			<td style="width:100px;"><a href="#">Display Picture</a></td>
-			<td><img style="margin-left:25px; height:150px; width:150px;" src="../../../files/Election2013/pics/<?php echo $ndisp_pic; ?>"  /></td>
+			<td><img style="margin-left:25px; height:150px; width:150px;" src="../../files/Election2013/pics/<?php echo $ndisp_pic; ?>"  /></td>
 		</tr>
 		<tr>
 			<td>

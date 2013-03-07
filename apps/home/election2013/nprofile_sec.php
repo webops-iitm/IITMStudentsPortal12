@@ -20,7 +20,7 @@
 	<tr>
 		<td style="width:100px;"><a href="#">Display Picture</a></td>
 		<td>
-			<img style="height:150px; width:150px;" src="../../../files/Election2013/pics/<?php echo $ndisp_pic; ?>"/>
+			<img style="height:150px; width:150px;" src="../../files/Election2013/pics/<?php echo $ndisp_pic; ?>"/>
 		</td>
 	</tr><tr>
 		<td style="width:100px;"><a href="#">Name</a></td>
@@ -49,14 +49,14 @@
 	</tr><tr>
 		<td style="width:100px;"><a href="#">Manifesto</a></td>
 		<td>
-			<?php if(strlen($nmanifesto) > 8) echo '<a href="../../../files/Election2013/manifesto/'.$nmanifesto.'">Download Manifesto</a>';
+			<?php if(strlen($nmanifesto) > 8) echo '<a href="../../files/Election2013/manifesto/'.$nmanifesto.'">Download Manifesto</a>';
 				else echo 'Not uploaded '; ?>
 		</td>
 	</tr>
     <tr>
 		<td style="width:100px;"><a href="#">Writeup</a></td>
 		<td>
-			<?php if(strlen($nwriteup) > 8) echo '<a href="../../../files/Election2013/manifesto/'.$nwriteup.'">Download Write-up</a>';
+			<?php if(strlen($nwriteup) > 8) echo '<a href="../../files/Election2013/manifesto/'.$nwriteup.'">Download Write-up</a>';
 				else echo 'Not uploaded'; ?>
 		</td>
 	</tr>

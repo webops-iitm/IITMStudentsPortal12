@@ -79,6 +79,14 @@
 			<td style="width:100px;"><a href="#" style="color: rgb(0, 136, 204);">Subject</a></td>
 			<td><input id="subj" style="width:240px;" type="text" name="subj" value="" maxlength="255" /></td>
 		</tr><tr>
+			<td style="width:100px;"><a href="#" style="color: rgb(0, 136, 204);">Time</a></td>
+			<td><select style="width:240px;" id="ftime" name="ftime">
+				<option value="9 Am - 11 Am">9 Am - 11 Am</option>
+				<option value="11 Am - 1 Pm">11 Am - 1 Pm</option>
+				<option value="2 Pm - 3 Pm">2 Pm - 3 Pm</option>
+				<option value="3 Pm - 5 Pm">3 Pm - 5 Pm</option>
+			    </select></td>
+		</tr><tr>
 			<td style="width:100px;"><a href="#" style="color: rgb(0, 136, 204);">Description</a></td>
 			<td><textarea name="desc" style="width:240px;" id="desc" rows="9" cols="60"></textarea></td>
 		</tr>

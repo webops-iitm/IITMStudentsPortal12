@@ -19,12 +19,16 @@
 	
 	
 	// Pic Restriction
-	$allowedExts = array("jpg", "jpeg", "gif", "png", "");
+	$allowedExts = array("jpg", "jpeg", "gif", "png", "JPG", "JPEG", "GIF", "PNG", "");
 $extension = end(explode(".", $_FILES["dpic"]["name"]));
 if ((($_FILES["dpic"]["type"] == "image/gif")
 || ($_FILES["dpic"]["type"] == "image/jpeg")
+|| ($_FILES["dpic"]["type"] == "image/GIF")
+|| ($_FILES["dpic"]["type"] == "image/JPEG")
 || ($_FILES["dpic"]["type"] == "")
 || ($_FILES["dpic"]["type"] == "image/png")
+|| ($_FILES["dpic"]["type"] == "image/PNG")
+|| ($_FILES["dpic"]["type"] == "image/PJPEG")
 || ($_FILES["dpic"]["type"] == "image/pjpeg"))
 && ($_FILES["dpic"]["size"] < 5000000)
 && in_array($extension, $allowedExts))
@@ -61,6 +65,7 @@ if ((($_FILES["dpic"]["type"] == "image/gif")
 	$allowedExts = array("pdf", "");
 $extension = end(explode(".", $_FILES["manifesto"]["name"]));
 if ((($_FILES["manifesto"]["type"] == "application/pdf")
+|| ($_FILES["manifesto"]["type"] == "application/PDF")
 || ($_FILES["manifesto"]["type"] == ""))
 && ($_FILES["manifesto"]["size"] < 5000000)
 && in_array($extension, $allowedExts))
@@ -94,7 +99,8 @@ if ((($_FILES["manifesto"]["type"] == "application/pdf")
 	$allowedExts = array("pdf", "");
 $extension = end(explode(".", $_FILES["manifestow"]["name"]));
 if ((($_FILES["manifestow"]["type"] == "application/pdf")
-|| ($_FILES["manifestow"]["type"] == ""))
+|| ($_FILES["manifestow"]["type"] == "")
+|| ($_FILES["manifesto"]["type"] == "application/PDF"))
 && ($_FILES["manifestow"]["size"] < 5000000)
 && in_array($extension, $allowedExts))
   {

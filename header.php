@@ -18,6 +18,16 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
         <script>
+		function qualichange()
+		{
+			var quali = document.getElementById('Qualifications').value;
+			document.getElementById("Qualidisplay").textContent = quali;
+			document.getElementById("QualiOthers").value = quali;
+			document.getElementById("QualiOthers").style.color = '#000';
+			if(quali == "Others")document.getElementById("QualiOthers").readonly = false;	//Edit this later
+			
+			document.getElementById("eduform").style.display = 'block';
+		}
 		function update(datasource, target)
 		{
 			if (window.XMLHttpRequest)

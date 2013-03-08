@@ -1,6 +1,5 @@
 <?php
 	include("../../../db.php");
-	
 
 	session_start();
 	
@@ -11,9 +10,6 @@
 	
 	if($loggedin == 0)		
 		die("Please Login to continue");
-
-  
-
 ?>
 	<table>
 		<tr>

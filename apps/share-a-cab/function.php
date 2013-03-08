@@ -11,7 +11,7 @@ class ShareACab
 	
 	public function get_session() 
 		{
-			return $_SESSION['uname'];
+			return true;//$_SESSION['uname'];
 		}
 	function add_new($bookedby, $origin, $destination, $date, $time, $numseats, $numvacancy, $cabtype, $comment)
 		{
@@ -26,17 +26,17 @@ class ShareACab
 					if(!empty($_GET['destination'])){}
 				}
 		}
-	function search_cab($origin, $destination, $date, $numrequired, $cabtype)
+	function search_cab($origin, $destination, $date, $cabtype)
 		{
 			$query = "SELECT * FROM share_a_cab WHERE origin = '$origin' AND destination = '$destination' AND date = '$date' ORDER BY time DESC";
-			$result = mysql_query($query) or die("Couldnt process your request");
+			$result = mysql_query($query) or die("Couldnt process your request1");
 			return $result;
 		}
 		
 	function scheduled()
 		{
 			$query = "SELECT * FROM share_a_cab ORDER BY date DESC";
-			$result = mysql_query($query) or die("Couldnt process your request");
+			$result = mysql_query($query) or die("Couldnt process your request2");
 			return $result;
 		}
 	function select_cab($rid)
@@ -45,10 +45,10 @@ class ShareACab
 			$result = mysql_query($query) or die("Couldnt process your request");
 			return $result;
 		}
-	function add_request($rid, $numrequired, $requestby, $comment)
+	function add_request($rid, $comment)
 		{
-			$query = "INSERT INTO share_a_cab_requests (rid, numrequired, requestby, comment) VALUES ('$rid', '$numrequired', '$requestby', '$comment')";
-			$result = mysql_query($query) or die("Couldnt process your request");
+			$query = "INSERT INTO share_a_cab_requests (rid, requestby, comment) VALUES ('$rid', 'prasanth', '$comment')";
+			$result = mysql_query($query) or die("Couldnt process your request4");
 			return $result;
 		}
 	function my_bookings($uname)

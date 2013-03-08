@@ -1,22 +1,28 @@
 <?php
 
-  if(file_exists("db.php"))  include("db.php");
+  if(file_exists("db.php")) {
+	  include("db.php");
+	  //die("root");
+  }
+
   if(file_exists("../../../db.php"))  {
     include("../../../db.php"); // hack : passing var as GET into config_show doesn't work for some reason ...
+	//die("sec");
     //session_start();
-    $var = $_GET['userid'];
+  }
+    $var = $_GET['userd'];
     $query = "select * from users where username = \"$var\" order by fullname";
-    $numresults=mysql_query($query);
+    $numresults = mysql_query($query);
   
     $row = mysql_fetch_array($numresults);
-    $show_name=$row['fullname'];
-    $show_nick=$row['nick'];
-    $show_user=$row['username'];
-    $show_hostel=$row['hostel'];
-    $show_room=$row['room'];
-    $show_email=$row['email'];
-    $show_contact=$row['contact'];
-    $show_bgroup=$row['bgroup'];
+    $show_name = $row['fullname'];
+    $show_nick = $row['nick'];
+    $show_user = $row['username'];
+    $show_hostel = $row['hostel'];
+    $show_room = $row['room'];
+    $show_email = $row['email'];
+    $show_contact = $row['contact'];
+    $show_bgroup = $row['bgroup'];
     
     // Check if the user is in the student secretary database
     $result_sec = mysql_query("SELECT * FROM stu_sec WHERE upper(username) like \"%$var%\" ");
@@ -31,13 +37,14 @@
       $show_hobbies = $sec_row['hobbies'];
       $show_form_email = $sec_row['form_email'];
       $show_disp_pic = $sec_row['pic'];
-    }
-	}
+	  $show_manifesto = $sec_row['manifesto'];
+  }
+
 	//if(file_exists("../../../config.php"))  include("../../../config.php");
   
   if (isset($_COOKIE["user"]))
     $_SESSION['uname'] = $_COOKIE["user"];
- 
+  
 ?>
 <style>
 .table2 th, .table td
@@ -67,8 +74,13 @@
 		<th><?php echo $show_name; ?></th>
 	</tr>
 	<tr>
-		<td style="width:90px; height:20px; border-top:none "></td>
-		<td style="border-top:none"></td>
+		<td style="width:90px; height:20px; border-top:none ">
+			<a href="#">Manifesto</a>
+		</td>
+		<td style="border-top:none">
+			<?php if(strlen($show_manifesto) > 8) echo '<a href="files/secretary/'.$show_manifesto.'">Download</a>';
+				else echo 'Not uploaded'; ?>
+		</td>
 	</tr>
 	</thead>
 	<tbody>

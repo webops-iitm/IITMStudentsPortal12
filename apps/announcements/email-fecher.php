@@ -2,7 +2,13 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 include_once("/var/sites/IITMStudentsPortal12/test/db.php");
-
+function getSubstring($string,$start,$end){
+    $startPos = strpos($string,$start);
+    $endPos = strpos($string,$end);
+    $len = $endPos - $startPos;
+    return isset($string[1]) ? substr($string, $startPos+1, $len-1): '';
+}
+include("../../secretaries.php");
 // configure your imap mailboxes
 $mailbox = array(
 		'label' 	=> 'Gmail',
@@ -40,6 +46,8 @@ function ReplaceImap($txt) {
 							
 							$subject=$mail_header->subject;
 							$from=$mail_header->fromaddress;
+							$from= getSubstring($from_email,'<','>');
+							$from=trim($from);
 							$date=strtotime($mail_header->date);
 							$body=nl2br($text);
 							

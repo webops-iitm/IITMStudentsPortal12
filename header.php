@@ -35,7 +35,7 @@
 			    document.getElementById(target).innerHTML=xmlhttp.responseText;
 			    }
 			  else{
-				document.getElementById(target).innerHTML = '<img src="img/load.gif"> Loading ...';
+				document.getElementById('widget').innerHTML = '<img src="img/load.gif"> Loading ...';
 				}
 			  }
 			xmlhttp.open("GET",datasource,true);
@@ -113,8 +113,8 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>			
-			<a class="brand " href="http://students2.iitm.ac.in/">
-				Students Portal
+			<a class="brand " href="index.php">
+				Students Portal 2012
 			</a>					
 			<div class="nav-collapse">
 			<ul class="nav ">
@@ -176,6 +176,7 @@
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="student-search.php">Student Search</a></li>
+							<li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>
 						</ul>
 				</li>
 				<li ><a href="javascript:update('apps/home/contactinfo.php','widget');"><i class="icon-envelope "></i> Contact us</a></li>

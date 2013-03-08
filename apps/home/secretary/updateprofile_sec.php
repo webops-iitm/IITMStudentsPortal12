@@ -1,6 +1,5 @@
 <?php
 	include("../../../db.php");
-	
 
 	session_start();
 	
@@ -11,11 +10,7 @@
 	
 	if($loggedin == 0)		
 		die("Please Login to continue");
-
-
 ?>
-
-
 <div style="float:left; margin-left:10px; height:340px; width:1070px;" class="widget-contentsec" id="inner_body_sec">
 
 <form id="form" style="float:left;margin-left:10px;" name="regform" action="apps/home/secretary/updateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
@@ -52,6 +47,12 @@
 		   		  	<option <?php if($hostel == "Mahanadhi") echo "selected=\"selected\"" ?> value="Mahanadhi">Mahanadhi</option>
 				</select>
 			</td>
+		</tr><tr>
+			<td style="width:100px;">
+				<a href="#">Manifesto</a>
+			</td><td>
+				<a href="files/secretary/<?php echo $manifesto; ?>">Download</a>
+			</td>
 		</tr>
 	</table>
 </form>
@@ -83,6 +84,7 @@
 		</tr><tr>
 			<center>
 				<td colspan="2"><a href="#"><input style="margin-top:20px;" class="btn btn-warning btn-large" type="submit" value="Update" name="update_profile" /></a></td>
+				
 			</center>
 		</tr>
 	</table>
@@ -90,24 +92,26 @@
 
 <form id="form" style="float:left; margin-left:60px;" name="regform" action="apps/home/secretary/updateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
 	<table>
-			<tr>
-				<td style="width:100px;"><a href="#">Display Picture</a></td>
-				<td><img style="margin-left:25px;" src="files/secretary/<?php echo $disp_pic; ?>" width="150" height="150" /></td>
-			</tr>
-			<tr>
-			<td></td>
+		<tr>
+			<td style="width:100px;"><a href="#">Display Picture</a></td>
+			<td><img style="margin-left:25px;" src="files/secretary/<?php echo $disp_pic; ?>" width="150" height="150" /></td>
+		</tr>
+		<tr>
 			<td>
+			</td><td>
 				<input type="hidden" name="MAX_FILE_SIZE" value="50000" />
 				<input class="btn btn-info btn-small" style="width:180px;" type="file" name="dpic" id="dpic" />
 			</td>
-			</tr>
-			<tr>
-				<td colspan='2' style="text-align:center;"><input style="margin-top:20px;" class="btn btn-warning btn-large" type="submit" value="Update" name="update_dpic" /></td>
-			</tr>
-			
-			
+		</tr><tr>
+			<td style="width:100px;">
+				<a href="#">Manifesto</a>
+			</td><td>
+				<input class="btn btn-info btn-small" style="width:180px;" type="file" name="manifesto" id="manifesto" />
+			</td>
+		</tr><tr>
+			<td colspan='2' style="text-align:center;"><input style="margin-top:20px;" class="btn btn-warning btn-large" type="submit" value="Update" name="update_dpic" /></td>
+		</tr>
 	</table>
 </form>
 <hr style="position:absolute; bottom:10px;">
 </div>
-

@@ -1,8 +1,7 @@
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-35171022-1']);
-  _gaq.push(['_setDomainName', 'gloomlabs.com']);
+  _gaq.push(['_setAccount', 'UA-37876313-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {

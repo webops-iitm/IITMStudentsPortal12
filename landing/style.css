@@ -1,0 +1,261 @@
+@charset "utf-8";
+/* CSS Document */
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: 101%;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+#toprow
+{
+	height:120px;
+	
+	position:absolute;
+	top:0px;
+	left:0px;
+	
+}
+#studentsportal
+{
+	
+	width:400px;	
+	position:relative;
+	left:72px;
+	top:48px;
+	font-family:'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+	float:left;
+}
+#loginarea
+{
+	margin-left:10px;
+	position:relative;
+	left:410px;
+	top:65px;
+	font-family:'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+	float:left;
+}
+#signin
+{
+	margin-left:10px;
+	position:relative;
+	top:64px;
+	height:30px;
+	width:70px;
+	background-image:url(images/Students-Portal-UI_signin.gif);
+	float:left;
+	left:410px;
+}
+
+#midrow
+{
+	height:480px;
+	
+	position:absolute;
+	left:0px;
+	top:120px;
+	
+	
+}
+#squareicons
+{
+	position:relative;
+	left:66px;
+}
+
+.squareicon
+{
+	margin:5px;
+}
+.squareicon:hover
+{
+	position:relative;
+	opacity:0.7;
+}
+
+#column1
+{
+	position:relative;
+	width:320px;
+}
+#workflow
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_03.gif);
+	float:left;
+}
+#academics
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_05.gif);
+	float:left;
+}
+#thoughtcloud
+{
+	height:150px;
+	width:310px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_21.gif);
+	float:left;
+}
+#placements
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_34.gif);
+	float:left;
+}
+#t5e
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_36.gif);
+	float:left;
+}
+#column2
+{
+	position:absolute;
+	width:340px;
+	left:330px;
+	top:0px;
+}
+#shaastra
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_03.gif);
+	float:left;
+	
+}
+#saarang
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_09.gif);
+	float:left;
+}
+#cfi
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_22.gif);
+	float:left;
+}
+#ctides
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_23.gif);
+	float:left;
+}
+#departmentfests
+{
+	height:150px;
+	width:310px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_38.gif);
+	float:left;
+}
+
+#column3
+{
+	position:absolute;
+	width:340px;
+	left:660px;
+	top:0px;
+}
+#messregisteration
+{
+	height:150px;
+	width:310px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_11.gif);
+	float:left;
+}
+#studentsearch
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_24.gif);
+	float:left;
+}
+#sac
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_26.gif);
+	float:left;
+}
+#executivewing
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_39.gif);
+	float:left;
+}
+#downloads
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_40.gif);
+	float:left;
+}
+#column4
+{
+	position:absolute;
+	width:160px;
+	left:990px;
+	top:0px;
+}
+#techsoc
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_13.gif);
+	float:left;
+}
+#litsoc
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_27.gif);
+	float:left;
+}
+#schroeter
+{
+	height:150px;
+	width:150px;
+	position:relative;
+	background-image:url(images/Students-Portal-UI_42.gif);
+	float:left;
+}
+#bottomrow
+{
+	position:absolute;
+}

@@ -56,7 +56,6 @@ div.option{
     cursor: default;
     font-size: 80%;
 }
-
 div.option:hover{
     background-color: #E5FFE5;
 }
@@ -70,7 +69,6 @@ div.option:hover{
     cursor: default;
     font-size: 80%;
 }
-
 #ender:hover{
     background-color: #E5FFE5;
 }
@@ -124,8 +122,6 @@ div.option:hover{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.31);
     border-radius: 5px;
     background-color: white;
-    background-position: top;
-    background-repeat: repeat-x;
 }
 
 #tableSettingsHeader{
@@ -341,4 +337,14 @@ p.inputOverLay{
     color: #c3c3c3;
     overflow: hidden;
     cursor: text;
+}
+
+#editorOpt{
+    background-image: url('../resources/websiteImgs/optGradient.PNG');
+    background-repeat: repeat-y;
+}
+
+#editorOpt:hover{
+    border-left: none;
+    padding-left: 20px;
 }

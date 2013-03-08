@@ -114,7 +114,7 @@
 				<span class="icon-bar"></span>
 			</a>			
 			<a class="brand " href="http://students2.iitm.ac.in/">
-				Students Portal 2012
+				Students Portal
 			</a>					
 			<div class="nav-collapse">
 			<ul class="nav ">

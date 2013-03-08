@@ -199,7 +199,10 @@
 						<b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu ">
-						<li><a href="javascript:update('apps/home/updateprofile.php','profile');">Edit profile</a></li>			<!--[Datasourse::apps/home/updateprofile.php][Target::profile]-->
+						<li><a href="javascript:update('apps/home/updateprofile.php','profile');">Edit profile</a></li>			
+                        
+                        <li><a href="javascript:update('apps/profileplus/studentform.php','profile');">Student profile</a></li>		
+                        <!--[Datasourse::apps/home/updateprofile.php][Target::profile]-->
 					<!--	<li><a href="javascript:;">change pasword</a></li>
 						<li><a href="javascript:;">Help</a></li> -->
 					</ul>
@@ -221,7 +224,9 @@
 								echo "<li>Name</li><li>RollNo</li>";
 							}
 							?>
-						<li><center><a href="logout.php">Logout</a></center></li></ul>						
+						    <li><center><a href="javascript:update('apps/profileplus/profileplus.php','profile');">Profile+</a></center></li>
+						
+                        <li><center><a href="logout.php">Logout</a></center></li></ul>						
 				</li>
 					
 			</ul>	

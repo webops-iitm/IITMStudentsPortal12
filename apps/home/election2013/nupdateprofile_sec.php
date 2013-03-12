@@ -10,10 +10,16 @@
 	
 	if($loggedin == 0)		
 		die("Please Login to continue");
-?>
-<div style="float:left; margin-left:10px; height:350px; width:1070px;" class="widget-contentsec" id="inner_body_sec">
 
-<form id="form" style="float:left;margin-left:10px;" name="regform" action="apps\home\election2013\nupdateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
+	$query_ele= "SELECT * FROM election2013 WHERE username like '{$_SESSION['uname']}'";
+	$result_ele = mysql_query($query_ele);
+	if ( $row = mysql_fetch_assoc($result_ele) ) $post = $row['instielec'];
+	else $post = "0";
+
+?>
+<div style="float:left; margin-left:10px; height:380px; width:1070px;" class="widget-contentsec" id="inner_body_sec">
+
+<form id="form" style="float:left;margin-left:10px;" name="regform" action="apps/home/election2013/nupdateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
 	<table>
 		<tr>
 			<td style="width:100px;"><a href="#">FullName</a></td>
@@ -65,13 +71,12 @@
 </form>
 
 
-<form id="form" style="float:left; margin-left:60px;" name="regform" action="apps\home\election2013\nupdateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
+<form id="form" style="float:left; margin-left:60px;" name="regform" action="apps/home/election2013/nupdateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
 	<table>
 		<tr>
 			<td style="width:110px;"><a href="#">Nickname</a></td>
 			<td><input id="nick" type="text" name="nick" value="<?php echo $nick; ?>" /></td>
-		</tr>  
-        <tr>
+		</tr><tr>
 			<td style="width:100px;"><a href="#">Contact No.</a></td>
 			<td><input id="contact" type="text" name="contact" value="<?php echo $contact; ?>" maxlength="10" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();"/></td>
 		</tr><tr>
@@ -80,42 +85,41 @@
 		</tr><tr>
 			<td style="width:100px;"><a href="#">Blood Group</a></td>
 			<td><input id="bgroup" type="text" name="bgroup" value="<?php echo $bgroup; ?>"/></td>
-		</tr>
-        <tr>
-        <td></td><td><p>Post Contesting for:</p>        </td>
-        </tr>      
-        
-        <tr>
-										<td style="width:100px;"><a href="#"> Students Election</a></td>
-										<td><select style="width:194px;" id="instielec" name="instielec">
-                                        	  
-                                              <option value="Insti Alumni Affairs">Insti Alumni Affairs</option>
-                                              <option value="Co-CAS">Co-CAS</option>
-		   		  							  <option value="Cul-Art">Cul-Art</option>
-											  <option value="Cul-Lit">Cul-Lit</option>
-                                              <option value="HAS">HAS</option>
-						 					  <option value="Insti Sports-Sec">Insti Sports-Sec</option>			 					                                         	  <option value="Insti Students General">Insti Students General</option>	
-                                              
-                                              <option disabled="disabled">- - - - - - - - - - - - - - - - - - - - - -</option>
-                                              <option value="Hostel Alumni-Sec">Hostel Alumni-Sec</option>
-                                              <option value="Hostel Garden-Sec">Hostel Garden-Sec</option>
-		   		  							  <option value="Hostel Gen-Sec">Hostel Gen-Sec</option>						 					  											  <option value="Hostel Lit-Sec">Hostel Lit-Sec</option>
-                                              <option value="Hostel Mess-Sec">Hostel Mess-Sec</option>
-						 					  <option value="Hostel Soc-Sec">Hostel Soc-Sec</option>
-                                              <option value="Hostel Sports-Sec">Hostel Sports-Sec</option>
-                                              <option value="Hostel TAS">Hostel TAS</option>							 					  
-						 				
-                                        </select></td>
-									</tr><tr>
+		</tr><tr>
+        		<td></td><td><p>Post Contesting for:</p></td>
+       		</tr><tr>
+			<td style="width:100px;"><a href="#"> Students Election</a></td>
+			<td><select style="width:194px;" id="instielec" name="instielec">
+                            	<option value="0" 			<?php if ($post == "0") 			echo"selected"; ?> > Choose</option>                                              
+				<option value="Insti Alumni Affairs"  	<?php if ($post == "Insti Alumni Affairs") 	echo"selected"; ?> >Insti Alumni Affairs</option>
+                                <option value="Co-CAS"   		<?php if ($post == "Co-CAS") 			echo"selected"; ?> >Co-CAS</option>
+				<option value="Cul-Art"   		<?php if ($post == "Cul-Art") 			echo"selected"; ?> >Cul-Art</option>
+				<option value="Cul-Lit"   		<?php if ($post == "Cul-Lit") 			echo"selected"; ?> >Cul-Lit</option>
+                                <option value="HAS"   			<?php if ($post == "HAS") 			echo"selected"; ?> >HAS</option>
+				<option value="Insti Sports-Sec"   	<?php if ($post == "Insti Sports-Sec") 		echo"selected"; ?> >Insti Sports-Sec</option>			 					                                         	  <option value="Insti Students General"   <?php if ($post == "Insti Students General") echo"selected"; ?> >Insti Gen-Sec</option>
+				<option value="AAS"   			<?php if ($post == "AAS") 			echo"selected"; ?> >Insti AAS</option>
+                                <option disabled="disabled">- - - - - - - - - - - - - - - - - - - - - -</option>
+                                <option value="Hostel Alumni-Sec"   	<?php if ($post == "Hostel Alumni-Sec") 	echo"selected"; ?> >Hostel Alumni-Sec</option>
+                                <option value="Hostel Garden-Sec"   	<?php if ($post == "Hostel Garden-Sec") 	echo"selected"; ?> >Hostel Garden-Sec</option>
+		   		<option value="Hostel Gen-Sec"   	<?php if ($post == "Hostel Gen-Sec") 		echo"selected"; ?> >Hostel Gen-Sec</option>						 					  											  <option value="Hostel Lit-Sec"   <?php if ($post == "Hostel Lit-Sec") echo"selected"; ?> >Hostel Lit-Sec</option>
+                                <option value="Hostel Mess-Sec"   	<?php if ($post == "Hostel Mess-Sec") 		echo"selected"; ?> >Hostel Mess-Sec</option>
+				<option value="Hostel Soc-Sec"   	<?php if ($post == "Hostel Soc-Sec") 		echo"selected"; ?> >Hostel Soc-Sec</option>
+                                <option value="Hostel Sports-Sec"   	<?php if ($post == "Hostel Sports-Sec") 	echo"selected"; ?> >Hostel Sports-Sec</option>
+                                <option value="Hostel TAS"   		<?php if ($post == "Hostel TAS") 		echo"selected"; ?> >Hostel TAS</option>
+				<option disabled="disabled">- - - - - - - - - - - - - - - - - - - - - -</option>
+				<option value="councillor"   		<?php if ($post == "councillor") 		echo"selected"; ?> >Councillor</option>
+				<option value="Others"   		<?php if ($post == "Others") 			echo"selected"; ?> >Others</option>						 					  
+			  </select>
+			</td>
+		</tr><tr>
 			<center>
 				<td colspan="2"><a href="#"><input style="margin-top:20px;" class="btn btn-warning btn-large" type="submit" value="Update" name="update_elec" /></a></td>
-				
 			</center>
 		</tr>
 	</table>
 </form>
 
-<form id="form" style="float:left; margin-left:60px;" name="regform" action="apps\home\election2013\nupdateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
+<form id="form" style="float:left; margin-left:60px;" name="regform" action="apps/home/election2013/nupdateprofilesubmit_sec.php" enctype="multipart/form-data" method="post">
 	<table>
 		<tr>
 			<td style="width:100px;"><a href="#">Display Picture</a></td>
@@ -125,27 +129,35 @@
 			<td>
 			</td><td>
 				<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
-				<input class="btn btn-info btn-small" style="width:180px; margin-bottom:15px;" type="file" name="dpic" id="dpic" />
+				<input class="btn btn-info btn-small" style="width:180px; margin-bottom:15px; height:16px; line-height:16px;" type="file" name="dpic" id="dpic" />
 			</td>
 		</tr><tr>
 			<td style="width:100px; ">
 				<a  href="#">Upload Manifesto</a>
 			</td><td>
-				<input class="btn btn-info btn-small" style="width:180px ;margin-top:5px; margin-bottom:5px;" type="file" name="manifesto" id="manifesto" />
+				<input class="btn btn-info btn-small" style="width:180px ;margin-top:5px; margin-bottom:5px; height:16px; line-height:16px;" type="file" name="manifesto" id="manifesto" />
 			</td>
 		</tr>
         <tr>
 			<td style="width:100px; ">
-				<a  href="#">Upload Manifesto Writeup</a>
+				<a  href="#">Upload Manifesto Writeup/Timeline</a>
 			</td><td>
-				<input class="btn btn-info btn-small" style="width:180px;" type="file" name="manifestow" id="manifestow" />
+				<input class="btn btn-info btn-small" style="width:180px;  height:16px; line-height:16px;" type="file" name="manifestow" id="manifestow" />
 			</td>
 		</tr>
+
         
         <tr>
 			<td colspan='2' style="text-align:center;"><input style="margin-top:20px;" class="btn btn-warning btn-large" type="submit" value="Update" name="update_dpic" /></td>
 		</tr>
 	</table>
 </form>
+		
+<p style="text-align:center; font-size:16px;"><strong>Note:</strong>Write-ups are for institute elections, timelines are for hostel elections.<br>
+In case you are unable to upload any of the files, you can mail them to webops.iitm@gmail.com specifying your details.<br><br></p>
+
 <hr style="position:absolute; bottom:10px;">
+
 </div>
+
+

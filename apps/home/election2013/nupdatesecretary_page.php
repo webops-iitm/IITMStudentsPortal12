@@ -21,7 +21,7 @@ border-radius: 4px;">
 		</div> <!-- /widget-header -->
 
 		</div><!-- /widget -->	
-		<div class="widget" style="float:left;height:390px; width:1400px;" id="inner_body_sec">
+		<div class="widget" style="float:left;height:420px; width:1400px;" id="inner_body_sec">
 
 			<?php include("nupdateprofile_sec.php"); ?>
 			

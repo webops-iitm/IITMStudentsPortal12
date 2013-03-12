@@ -3,8 +3,8 @@
 //header('Content-type: application/json');
 
 session_start();
+include("../../db.php");
 
-include("db.php");
 
 $content = "" ;
 

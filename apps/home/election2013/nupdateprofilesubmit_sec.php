@@ -112,12 +112,12 @@ if ((($_FILES["manifestow"]["type"] == "application/pdf")
 			//echo substr(sprintf('%o', fileperms("files")), -4) == "0774" ? "true" : "false";
 			//die(fileperms("../../../files"));
 			// upload pic first
-			if ( ! is_writable("../../../files/Election2013/manifesto/") )
+			if ( ! is_writable("../../../files/Election2013/manifestowriteup/") )
 			{
-				die("Folder is not writable : ../../../files/Election2013/manifesto/");
+				die("Folder is not writable : ../../../files/Election2013/manifestowriteup/");
 			
 			}
-			move_uploaded_file($mani_filew["tmp_name"], "../../../files/Election2013/manifesto/".$manifestow);
+			move_uploaded_file($mani_filew["tmp_name"], "../../../files/Election2013/manifestowriteup/".$manifestow);
 			
 	} else
 		$mani_filew = 0;

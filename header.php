@@ -18,6 +18,16 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
         <script>
+		function qualichange()
+		{
+			var quali = document.getElementById('Qualifications').value;
+			document.getElementById("Qualidisplay").textContent = quali;
+			document.getElementById("QualiOthers").value = quali;
+			document.getElementById("QualiOthers").style.color = '#000';
+			if(quali == "Others")document.getElementById("QualiOthers").readonly = false;	//Edit this later
+			
+			document.getElementById("eduform").style.display = 'block';
+		}
 		function update(datasource, target)
 		{
 			if (window.XMLHttpRequest)
@@ -101,6 +111,16 @@
 			fac_url = "apps/facilities_rating/facvote.php?amnt=" + amnt + "&fac=" + fac;
 			update(fac_url,'widget');
 		}
+
+
+
+		function changeFunc() {
+			var selectBox = document.getElementById("elechostel");
+			var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+			elec2013_url = "apps/home/election2013/listall.php?hostel="+ selectedValue;
+			update(elec2013_url, 'widget');
+		}
+
 		</script>
 	</head>
 <body>
@@ -177,6 +197,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="student-search.php">Student Search</a></li>
 							<li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>
+							<li><a href="javascript:update('apps/home/election2013/listall.php','widget');">Manifesto 2013</a></li>
 						</ul>
 				</li>
 				<li ><a href="javascript:update('apps/home/contactinfo.php','widget');"><i class="icon-envelope "></i> Contact us</a></li>
@@ -189,7 +210,10 @@
 						<b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu ">
-						<li><a href="javascript:update('apps/home/updateprofile.php','profile');">Edit profile</a></li>			<!--[Datasourse::apps/home/updateprofile.php][Target::profile]-->
+						<li><a href="javascript:update('apps/home/updateprofile.php','profile');">Edit profile</a></li>			
+                        
+                        <li><a href="javascript:update('apps/profileplus/studentform.php','profile');">Student profile</a></li>		
+                        <!--[Datasourse::apps/home/updateprofile.php][Target::profile]-->
 					<!--	<li><a href="javascript:;">change pasword</a></li>
 						<li><a href="javascript:;">Help</a></li> -->
 					</ul>
@@ -211,7 +235,9 @@
 								echo "<li>Name</li><li>RollNo</li>";
 							}
 							?>
-						<li><center><a href="logout.php">Logout</a></center></li></ul>						
+						    <li><center><a href="javascript:update('apps/profileplus/profileplus.php','profile');">Profile+</a></center></li>
+						
+                        <li><center><a href="logout.php">Logout</a></center></li></ul>						
 				</li>
 					
 			</ul>	

@@ -11,7 +11,7 @@ ini_set('display_errors', 'On');
 
 ?>
     <center>
-				<div class="widget"  style="width:415px; margin:10px;">
+				<div class="widget" id="widget"  style="width:415px; margin:10px;">
           <div class="widget-header">
 						<i class="icon-star"></i>
 						<h3><?php if($show_nick!="") echo $show_nick."'s"; ?>Profile</h3>

@@ -3,7 +3,7 @@
 
 <?php
 
-include "../../../../db.php";
+include "../../../db.php";
 
 
 $hostel = '0';

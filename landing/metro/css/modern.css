@@ -602,6 +602,16 @@ License:	Arbitrary -- http://www.alessioatzeni.com/meteocons/#about
 Icon Set:	IcoMoon - Free -- http://keyamoon.com/icomoon/
 License:	CC BY-SA 3.0 -- http://creativecommons.org/licenses/by-sa/3.0/
 */
+@font-face{
+  font-family:'FontAwesome';
+  src:url('../font/fontawesome-webfont.eot?v=3.0.1');
+  src:url('../font/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+  url('../font/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+  url('../font/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+  font-weight:normal;
+  font-style:normal }
+
+/*
 @font-face {
   font-family: 'iconFont';
   src: url('../fonts/iconFont.eot');
@@ -609,7 +619,9 @@ License:	CC BY-SA 3.0 -- http://creativecommons.org/licenses/by-sa/3.0/
   font-weight: normal;
   font-style: normal;
 }
+*/
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
+
 [data-icon]:before {
   font-family: 'iconFont';
   content: attr(data-icon);
@@ -622,6 +634,7 @@ License:	CC BY-SA 3.0 -- http://creativecommons.org/licenses/by-sa/3.0/
   border: 1px transparent solid;
 }
 /* Use the following CSS code if you want to have a class per icon */
+/*
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: 'iconFont';
@@ -1740,6 +1753,7 @@ li .icon-large:before {
 .icon-chart-alt:before {
   content: "\e168";
 }
+*/
 /*
  * Metro UI CSS
  * Copyright 2012 Sergey Pimenov

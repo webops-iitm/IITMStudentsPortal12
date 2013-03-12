@@ -111,6 +111,16 @@
 			fac_url = "apps/facilities_rating/facvote.php?amnt=" + amnt + "&fac=" + fac;
 			update(fac_url,'widget');
 		}
+
+
+
+		function changeFunc() {
+			var selectBox = document.getElementById("elechostel");
+			var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+			elec2013_url = "apps/home/election2013/listall.php?hostel="+ selectedValue;
+			update(elec2013_url, 'widget');
+		}
+
 		</script>
 	</head>
 <body>

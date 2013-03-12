@@ -187,6 +187,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="student-search.php">Student Search</a></li>
 							<li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>
+							<li><a href="javascript:update('apps/home/election2013/listall.php','widget');">Manifesto 2013</a></li>
 						</ul>
 				</li>
 				<li ><a href="javascript:update('apps/home/contactinfo.php','widget');"><i class="icon-envelope "></i> Contact us</a></li>

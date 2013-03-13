@@ -1,7 +1,8 @@
 <?php
 	include("../../db.php");
 	session_start();
-	$uname = "Username";
+	$uname = $_SESSION['uname'];
+/*	$uname = "Username";
 	$uname = "username";
 	$user = "user";
 	$name = "name";
@@ -11,7 +12,7 @@
 	$contact = "contact";
 	$email = "email";
         $bgroup = "bgroup";
-		
+*/		
 	$CatTable = "categories";
 	$SubCatTable = "sub_categories";
 ?>

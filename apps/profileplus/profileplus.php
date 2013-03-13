@@ -1,7 +1,8 @@
 <?php 
 	include("../../db.php");
 	session_start();
-	$uname = "Username";
+	$uname = $_SESSION['uname'];
+/*	$uname = "Username";
 	$uname = "username";
 	$user = "user";
 	$name = "name";
@@ -12,6 +13,7 @@
 	$email = "email";
     $bgroup = "bgroup";
 	$secretary = 0;
+*/
 	if( $secretary == 1 )
 		include( "secretary_page.php" );
 	else {

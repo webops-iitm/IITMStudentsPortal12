@@ -21,10 +21,9 @@
 		$sqledudel = "DELETE FROM stu_education WHERE username='$uname' AND `desc` = '$qualidesc' AND head = '$qualihead' AND dept = '$qualidept' AND score = '$qualiscore'";
 		echo $sqledudel;
 		mysql_query($sqledudel);
-		
+		header('Location: ../../index.php?delete=2');		
 	}
 	
-//	header('Location: ../../index.php');
 	
 
 ?>

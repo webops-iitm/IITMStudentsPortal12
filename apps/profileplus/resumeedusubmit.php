@@ -2,26 +2,10 @@
 	session_start();
 	
 	include ('../../db.php');
-//	$user = 'name';
+//	$uname = 'name';
 	$uname = $_SESSION['uname'];
 	$uname = strtolower($uname);
-/*	
-	$user = $uname;
-	$name = $_POST['name'];
-	$nick = $_POST['nick'];
-	$room = $_POST['room'];
-	$hostel = $_POST['hostel'];
-	$contact = $_POST['contact'];
-	$email = $_POST['email'];
-    $bgroup = $_POST['bgroup'];
-	
-	echo $uname;
-	echo "<br>";
-	
-	$sqlprof = "UPDATE users SET nick='$nick', contact = '$contact', email = '$email', bgroup = '$bgroup' WHERE username='$uname'";
-	
-	mysql_query($sqlprof) or die(mysql_error($con));
-*/	
+
 	$edudone=0;
 	
 	if(isset($_POST['eduform'])){
@@ -67,8 +51,11 @@
 		//sql query to submit into stu_profile including $category
 		echo $qualihead.$qualidesc.$qualiscore;
 	}
-	
-//	header('Location: ../../index.php');
+
+	if($edudone==1)	
+	header('Location: ../../index.php?edit=2');
+	else
+	header('Location: ../../index.php?edit=1');
 	
 	mysql_close($con);	
 ?>

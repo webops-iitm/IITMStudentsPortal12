@@ -30,7 +30,7 @@
 						<h3>Update Resume</h3>
 					</div> <!-- /widget-header -->		
 					<div class="widget-content">
-								<form id="form" class="form-horizontal" name="normalprof" action="apps/profileplus/resumesubmit.php" method="post">
+								<form id="form" class="form-horizontal" name="normalprof" action="apps/profileplus/resumeprofilesubmit.php" method="post">
 								<table>
                                     <tr>
 										<td style="width:100px;"><a href="#">FullName</a></td>

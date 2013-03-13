@@ -1,6 +1,7 @@
 <?php
 	include("../../db.php");
 	session_start();
+	include("../../config.php");
 	$uname = $_SESSION['uname'];
 /*	$uname = "Username";
 	$uname = "username";

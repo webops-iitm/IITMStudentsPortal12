@@ -1,5 +1,5 @@
 <?php
-$edureadyresult = mysql_query("SELECT * FROM stu_education WHERE username = 'name'");
+$edureadyresult = mysql_query("SELECT * FROM stu_education WHERE username = '$uname'");
 ?>
 <div>
 	<div>

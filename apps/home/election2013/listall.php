@@ -52,7 +52,7 @@ while( $row = mysql_fetch_assoc($resque) ){
 	$irow = mysql_fetch_assoc($resque2);
 
 	if ( !$hostel){
-		if ( preg_match('/^Insti/' , $row['instielec']) or $row['instielec'] == 'HAS' or $row['instielec'] == 'Cul-Art' or $row['instielec'] == 'councillor' or $row['instielec'] == 'Co-CAS' or $row['instielec'] == 'AAS')
+		if ( preg_match('/^Insti/' , $row['instielec']) or $row['instielec'] == 'HAS' or $row['instielec'] == 'Cul-Art' or $row['instielec'] == 'Cul-Lit' or $row['instielec'] == 'councillor' or $row['instielec'] == 'Co-CAS' or $row['instielec'] == 'AAS')
 			echo"<tr>
 		<td><a href ='student-search.php?userd={$row['username']}'>{$row['username']}</a></td>
 		<td>{$irow['fullname']}</td>

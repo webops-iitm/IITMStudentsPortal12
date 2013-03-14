@@ -1,5 +1,10 @@
 <center>
-  Education	<a id="eduaddbutton" onClick="document.getElementById('eduadd').style.display='block';document.getElementById('eduaddbutton').style.visibility='hidden'" class="btn btn-success btn-small">Add</a>
+  Education	<a id="eduaddbutton" onClick=
+  "document.getElementById('eduadd').style.display='block';
+  document.getElementById('eduaddbutton').style.visibility='hidden';
+  document.getElementById('qualiselect').style.display='block';
+  document.getElementById('eduform').action='apps/profileplus/resumeedusubmit.php';
+  " class="btn btn-success btn-small">Add</a>
 </center>
 <div class="" id="eddready">
 	<?php include 'eduready.php'; ?>
@@ -19,7 +24,10 @@
                 					<option>Others</option>  
               					</select>  
             				</div>  
-          				</div><a onClick="document.getElementById('eduadd').style.display='none';document.getElementById('eduaddbutton').style.visibility='visible'" class="btn btn-success btn-small">Cancel</a>
+          				</div><a onClick=
+                        "document.getElementById('eduadd').style.display='none';
+                        document.getElementById('eduaddbutton').style.visibility='visible';
+                        document.getElementById('qualiselect').style.display='none';" class="btn btn-success btn-small">Cancel</a>
                 
                 <!-- Javascript Work is left here  -->
                   <form class="form-horizontal" id="eduform" style="display:none;" action="apps/profileplus/resumeedusubmit.php" method="post">  

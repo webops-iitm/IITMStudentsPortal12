@@ -21,12 +21,74 @@
 		function qualichange()
 		{
 			var quali = document.getElementById('Qualifications').value;
+			if(quali == "")alert("Please select any valid Qualification");
+			else
+			{
 			document.getElementById("Qualidisplay").textContent = quali;
 			document.getElementById("QualiOthers").value = quali;
 			document.getElementById("QualiOthers").style.color = '#000';
-			if(quali == "Others")document.getElementById("QualiOthers").readonly = false;	//Edit this later
 			
+			document.getElementById("Qualidesc").readOnly = false;
+			document.getElementById("Qualiscore").readOnly = false;
+
+			if(quali == "Others")document.getElementById("QualiOthers").readOnly = false; 
+			else document.getElementById("QualiOthers").readOnly = true;
+			if(quali == "10th")document.getElementById("QualiDept").readOnly = true ;	//Edit this later
+			else document.getElementById("QualiDept").readOnly = false ;
 			document.getElementById("eduform").style.display = 'block';
+			
+			document.getElementById('eduform').action="apps/profileplus/resumeedusubmit.php";
+			}
+		}
+		function eduedit(head, desc, dept, score)
+		{
+			var quali = head;
+			document.getElementById("Qualidisplay").textContent = "Form for Editing - "+quali;
+			document.getElementById("eduform").style.display = 'block';
+			document.getElementById("QualiOthers").value = quali;
+			document.getElementById("Qualidesc").value = desc;
+			document.getElementById("QualiDept").value = dept;
+			document.getElementById("Qualiscore").value = score;
+			
+			document.getElementById("QualiOthers").readOnly = true;
+			document.getElementById("Qualidesc").readOnly = false;
+			document.getElementById("QualiDept").readOnly = false;
+			document.getElementById("Qualiscore").readOnly = false;
+			
+			document.getElementById("QualiOthers").style.color = '#000';
+			document.getElementById("QualiDept").style.color = '#000';
+			document.getElementById("Qualidesc").style.color = '#000';
+			document.getElementById("Qualiscore").style.color = '#000';
+			
+			if(quali == "10th")document.getElementById("QualiDept").readOnly = true ;	//Edit this later
+			else document.getElementById("QualiDept").readOnly = false ;
+			document.getElementById('eduadd').style.display='block';
+            document.getElementById('qualiselect').style.display='none';
+			document.getElementById('eduform').action="apps/profileplus/resumeedusubmiit.php";
+		}
+		function edudel(head, desc, dept, score)
+		{
+			var quali = head;
+			document.getElementById("Qualidisplay").textContent = "Click Submit to Delete - "+quali;
+			document.getElementById("eduform").style.display = 'block';
+			document.getElementById("QualiOthers").value = quali;
+			document.getElementById("Qualidesc").value = desc;
+			document.getElementById("QualiDept").value = dept;
+			document.getElementById("Qualiscore").value = score;
+			
+			document.getElementById("QualiOthers").readOnly = true;
+			document.getElementById("Qualidesc").readOnly = true;
+			document.getElementById("QualiDept").readOnly = true;
+			document.getElementById("Qualiscore").readOnly = true;
+			
+			document.getElementById("QualiOthers").style.color = '#000';
+			document.getElementById("QualiDept").style.color = '#000';
+			document.getElementById("Qualidesc").style.color = '#000';
+			document.getElementById("Qualiscore").style.color = '#000';
+			
+			document.getElementById('eduadd').style.display='block';
+            document.getElementById('qualiselect').style.display='none';
+			document.getElementById('eduform').action="apps/profileplus/resumeedudelete.php";
 		}
 		function update(datasource, target)
 		{
@@ -45,7 +107,7 @@
 			    document.getElementById(target).innerHTML=xmlhttp.responseText;
 			    }
 			  else{
-				document.getElementById('widget').innerHTML = '<img src="img/load.gif"> Loading ...';
+				document.getElementById(target).innerHTML = '<img src="img/load.gif"> Loading ...';
 				}
 			  }
 			xmlhttp.open("GET",datasource,true);
@@ -111,16 +173,6 @@
 			fac_url = "apps/facilities_rating/facvote.php?amnt=" + amnt + "&fac=" + fac;
 			update(fac_url,'widget');
 		}
-
-
-
-		function changeFunc() {
-			var selectBox = document.getElementById("elechostel");
-			var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-			elec2013_url = "apps/home/election2013/listall.php?hostel="+ selectedValue;
-			update(elec2013_url, 'widget');
-		}
-
 		</script>
 	</head>
 <body>
@@ -133,8 +185,8 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>			
-			<a class="brand " href="index.php">
-				Students Portal 2012
+			<a class="brand " href="http://students2.iitm.ac.in/">
+				Students Portal
 			</a>					
 			<div class="nav-collapse">
 			<ul class="nav ">
@@ -196,8 +248,6 @@
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="student-search.php">Student Search</a></li>
-							<li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>
-							<li><a href="javascript:update('apps/home/election2013/listall.php','widget');">Manifesto 2013</a></li>
 						</ul>
 				</li>
 				<li ><a href="javascript:update('apps/home/contactinfo.php','widget');"><i class="icon-envelope "></i> Contact us</a></li>
@@ -210,10 +260,8 @@
 						<b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu ">
-						<li><a href="javascript:update('apps/home/updateprofile.php','profile');">Edit profile</a></li>			
-                        
-                        <li><a href="javascript:update('apps/profileplus/studentform.php','profile');">Student profile</a></li>		
-                        <!--[Datasourse::apps/home/updateprofile.php][Target::profile]-->
+						<li><a href="javascript:update('apps/home/updateprofile.php','profile');">Edit profile</a></li>
+                        <li><a href="javascript:update('apps/profileplus/studentform.php','profile');">Student profile</a></li>			<!--[Datasourse::apps/home/updateprofile.php][Target::profile]-->
 					<!--	<li><a href="javascript:;">change pasword</a></li>
 						<li><a href="javascript:;">Help</a></li> -->
 					</ul>
@@ -235,9 +283,8 @@
 								echo "<li>Name</li><li>RollNo</li>";
 							}
 							?>
-						    <li><center><a href="javascript:update('apps/profileplus/profileplus.php','profile');">Profile+</a></center></li>
-						
-                        <li><center><a href="logout.php">Logout</a></center></li></ul>						
+                            <li><center><a href="javascript:update('apps/profileplus/profileplus.php','profile');">Profile+</a></center></li>
+						<li><center><a href="logout.php">Logout</a></center></li></ul>						
 				</li>
 					
 			</ul>	

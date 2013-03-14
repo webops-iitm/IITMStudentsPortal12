@@ -1,6 +1,9 @@
 <?php
 	include("../../db.php");
 	session_start();
+	include("../../config.php");
+	$uname = "name";
+/*	$uname = $_SESSION['uname'];
 	$uname = "Username";
 	$uname = "username";
 	$user = "user";
@@ -11,7 +14,7 @@
 	$contact = "contact";
 	$email = "email";
         $bgroup = "bgroup";
-		
+*/		
 	$CatTable = "categories";
 	$SubCatTable = "sub_categories";
 ?>
@@ -30,7 +33,7 @@
 						<h3>Update Resume</h3>
 					</div> <!-- /widget-header -->		
 					<div class="widget-content">
-								<form id="form" class="form-horizontal" name="normalprof" action="apps/profileplus/resumesubmit.php" method="post">
+								<form id="form" class="form-horizontal" name="normalprof" action="apps/profileplus/resumeprofilesubmit.php" method="post">
 								<table>
                                     <tr>
 										<td style="width:100px;"><a href="#">FullName</a></td>
@@ -93,7 +96,6 @@
 									<tr><center><td colspan="2"><a href="#"><input class="btn btn-warning" type="submit" value="Update" name="Update" /></a></td></center></tr>
 								</table>
 							</form>
-<div class="accordion" id="accordioncat">  
 <?php
 include("education.php");
 
@@ -112,7 +114,6 @@ while($catrow = mysql_fetch_array($catresult))
 
 ?>
               
-            </div>  
  
 				</div> <!-- /widget-content -->
 						

@@ -5,7 +5,7 @@ $edureadyresult = mysql_query("SELECT * FROM stu_education WHERE username = '$un
 	<div>
 		<?php
 		
-echo "<table border='1'>
+echo "<center><table class='table-striped' style=\"width:90%\">
 <tr>
 <th>Title</th>
 <th>Description</th>
@@ -29,7 +29,7 @@ while($edureadyrow = mysql_fetch_array($edureadyresult))
   echo "<td><a onclick=\"javascript:edudel('".$edureadyrow['head']."','".$edureadyrow['desc']."','".$edureadyrow['dept']."','".$edureadyrow['score']."');\" class=\"edudelbutton \"btn btn-success btn-small\">Delete</a></td>";
   echo "</tr>";
   }
-echo "</table>";
+echo "</table></center>";
 
 		?>    
     </div>

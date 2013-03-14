@@ -51,4 +51,17 @@ if($_GET['edit']==2)
 		</div>
 		</div>
 		</div>";
+	else if($_GET['resumep']==2)
+		echo "<div class=\"span8\" >
+	<div id=\"widget\" class=\"widget\" style=\"width:800px; margin:10px; position:relative; top:0px; right:0px; left:20px;\">
+		<div class=\"widget-header\">
+			<i class=\"icon-comment\"></i>
+			<h3 id=\"header\">Success!!</h3>
+
+		</div>
+				<div class=\"widget-content\" id=\"widget-content\">
+				Successfully Updated your profile. For further changes <a href=\"javascript:update('apps/profileplus/studentform.php','profile');\">click here</a>. To view your profile, <a href=\"javascript:update('apps/profileplus/profileplus.php','profile');\">click here</a>
+		</div>
+		</div>
+		</div>";
 ?>

@@ -2,8 +2,8 @@
 	session_start();
 	
 	include ('../../db.php');
-//	$uname = 'name';
-	$uname = $_SESSION['uname'];
+	$uname = 'name';
+//	$uname = $_SESSION['uname'];
 	$uname = strtolower($uname);
 
 	$edudone=0;

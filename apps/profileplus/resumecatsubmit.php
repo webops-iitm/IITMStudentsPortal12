@@ -16,7 +16,7 @@
 	
 	$catdone=0;
 		echo $postform;
-	if(isset($_POST[$postform])){
+	if(isset($_POST['{$postform}'])){
 		echo "working";
 		$qualicat = $_POST[$postcat];
 		$qualisubcat = strtoupper($_POST[$postsubcat]);

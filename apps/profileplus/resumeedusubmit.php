@@ -52,10 +52,10 @@
 		echo $qualihead.$qualidesc.$qualiscore;
 	}
 
-	if($edudone==1)	
+/*	if($edudone==1)	
 	header('Location: ../../index.php?edit=2');
 	else
 	header('Location: ../../index.php?edit=1');
 	
-	mysql_close($con);	
+	mysql_close($con);	*/
 ?>

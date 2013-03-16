@@ -173,6 +173,14 @@
 			fac_url = "apps/facilities_rating/facvote.php?amnt=" + amnt + "&fac=" + fac;
 			update(fac_url,'widget');
 		}
+
+
+		function changeFunc() {
+			var selectBox = document.getElementById("elechostel");
+			var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+			elec2013_url = "apps/home/election2013/listall.php?hostel="+ selectedValue;
+			update(elec2013_url, 'widget');
+		}
 		</script>
 	</head>
 <body>
@@ -239,6 +247,8 @@
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="student-search.php">Student Search</a></li>
+							<!--<li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>-->
+					              	<li><a href="javascript:update('apps/home/election2013/listall.php','widget');">Manifesto 2013</a></li>
 						</ul>
 				</li>
 				

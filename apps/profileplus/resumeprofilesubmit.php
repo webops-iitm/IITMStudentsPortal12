@@ -19,5 +19,6 @@
 	
 	$sqlprof = "UPDATE users SET nick='$nick', contact = '$contact', email = '$email', bgroup = '$bgroup' WHERE username='$uname'";
 	
-	mysql_query($sqlprof) or die(mysql_error($con));	
+	mysql_query($sqlprof) or die(mysql_error($con));
+	header('Location: ../../index.php?resumep=2');
 ?>

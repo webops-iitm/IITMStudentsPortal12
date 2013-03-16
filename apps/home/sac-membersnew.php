@@ -195,25 +195,25 @@ $sacmem = array( array( roll => "CS12M032",
 	</tr>
 <?php
 	include("../../db.php");
-	for($i=0;$i<59;$i++)
-	{
-	$name = "Vacant";
-	$secroll=$sacmem[$i][roll];
-	 $qcontact = "SELECT fullname, contact FROM $tbl_name WHERE 	username='$secroll'";
-	  $qres=mysql_query($qcontact);
-	while($qrow = mysql_fetch_array($qres))
-	  {
-		if($qrow['contact']!=0)$contact = $qrow['contact'];
-		if($sacmem[$i][roll]!="Vacant")$name = $qrow['fullname'];
-		if($name=="")$name = $sacmem[$i][roll];
-	}
+	for($i=0;$i<59;$i++){
+		$name = "Vacant";
+		$secroll=$sacmem[$i][roll];
+	 	$qcontact = "SELECT fullname, contact FROM $tbl_name WHERE 	username='$secroll'";
+	  	$qres=mysql_query($qcontact);
+		while($qrow = mysql_fetch_array($qres)){
+			if($qrow['contact'])$contact = $qrow['contact'];
+			else $contact = "---";
+			if($sacmem[$i][roll]!="Vacant")$name = $qrow['fullname'];
+			if($name=="")$name = $sacmem[$i][roll];
+		}
 
-	echo "<tr>
-		<td>".(1+$i)."</td>
-		<td><a href=\"student-search.php?userd=".$sacmem[$i][roll]."\">".$name."</a></td>
-		<td>".$sacmem[$i][post]."</td>
-		<td>".$contact."</td>
-	</tr>";
+		echo "<tr>
+			<td>".(1+$i)."</td>
+			<td><a href=\"student-search.php?userd=".$sacmem[$i][roll]."\">".$name."</a></td>
+			<td>".$sacmem[$i][post]."</td>
+			<td>".$contact."</td>
+		</tr>";
+		$contact = "---";
 	}
 ?>
 </div> <!-- /widget-content -->

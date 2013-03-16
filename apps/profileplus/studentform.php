@@ -2,8 +2,9 @@
 	include("../../db.php");
 	session_start();
 	include("../../config.php");
-	$uname = $_SESSION['uname'];
-/*	$uname = "Username";
+	$uname = "name";
+/*	$uname = $_SESSION['uname'];
+	$uname = "Username";
 	$uname = "username";
 	$user = "user";
 	$name = "name";
@@ -95,7 +96,6 @@
 									<tr><center><td colspan="2"><a href="#"><input class="btn btn-warning" type="submit" value="Update" name="Update" /></a></td></center></tr>
 								</table>
 							</form>
-<div class="accordion" id="accordioncat">  
 <?php
 include("education.php");
 
@@ -114,7 +114,6 @@ while($catrow = mysql_fetch_array($catresult))
 
 ?>
               
-            </div>  
  
 				</div> <!-- /widget-content -->
 						

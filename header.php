@@ -173,14 +173,6 @@
 			fac_url = "apps/facilities_rating/facvote.php?amnt=" + amnt + "&fac=" + fac;
 			update(fac_url,'widget');
 		}
-
-
-		function changeFunc() {
-			var selectBox = document.getElementById("elechostel");
-			var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-			elec2013_url = "apps/home/election2013/listall.php?hostel="+ selectedValue;
-			update(elec2013_url, 'widget');
-		}
 		</script>
 	</head>
 <body>
@@ -247,8 +239,6 @@
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="student-search.php">Student Search</a></li>
-							<!--<li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>-->
-					              	<li><a href="javascript:update('apps/home/election2013/listall.php','widget');">Manifesto 2013</a></li>
 						</ul>
 				</li>
 				
@@ -272,7 +262,7 @@
 						<i class="icon-user"></i> profile
 						<b class="caret"></b>
 					</a>
-					<ul class="dropdown-menu" style="border:4px; border-style:solid; border-color:#FFF;">
+					<ul class="dropdown-menu" style="border:4px; border-style:solid; color:#FFF; border-color:#757c82;">
 					<?php	if(isset($_SESSION['uname']))
 							{
 								if($nick!="")
@@ -288,16 +278,17 @@
 								<center><input class='input span2' placeholder='Username' name='uname' type='text' style='margin-top:20px;'></input></center>
 								<center><input class='input span2' placeholder='Password' name='pass' type='password'></input></center>
 							
-								<center><button class='btn btn-success' type='submit' >Log In</button></button>
+								<center><button class='btn btn-success' type='submit' >Log In</button></center>
 								</form>";
 							}
 							
 							?>
                             
 												
-				</li>
+				</ul>
 					
-			</ul>	
+			</li>	
+         </ul>   
 			</div><!--/.nav-collapse -->		
 		</div> <!-- /container -->		
 	</div> <!-- /navbar-inner -->	

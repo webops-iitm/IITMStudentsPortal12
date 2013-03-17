@@ -1,10 +1,5 @@
 <center>
-  Education	<a id="eduaddbutton" onClick=
-  "document.getElementById('eduadd').style.display='block';
-  document.getElementById('eduaddbutton').style.visibility='hidden';
-  document.getElementById('qualiselect').style.display='block';
-  document.getElementById('eduform').action='apps/profileplus/resumeedusubmit.php';
-  " class="btn btn-success btn-small">Add</a>
+  Education	<a id="eduaddbutton" onClick="eduadd()" class="btn btn-success btn-small">Add</a>
 </center>
 <div class="" id="eddready">
 	<?php include 'eduready.php'; ?>

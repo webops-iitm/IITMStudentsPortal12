@@ -12,84 +12,14 @@
 		<link href="css/bootstrap.css" rel="stylesheet"><script src="js/bootstrap.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery-1.js"></script>
+		<script src="apps/profileplus/profileplus.js"></script>
 		<link href="img/glyphicons-halfings.png"> <link href="img/glyphicons-halfings-white.png">    
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
         <script>
-		function qualichange()
-		{
-			var quali = document.getElementById('Qualifications').value;
-			if(quali == "")alert("Please select any valid Qualification");
-			else
-			{
-			document.getElementById("Qualidisplay").textContent = quali;
-			document.getElementById("QualiOthers").value = quali;
-			document.getElementById("QualiOthers").style.color = '#000';
-			
-			document.getElementById("Qualidesc").readOnly = false;
-			document.getElementById("Qualiscore").readOnly = false;
 
-			if(quali == "Others")document.getElementById("QualiOthers").readOnly = false; 
-			else document.getElementById("QualiOthers").readOnly = true;
-			if(quali == "10th")document.getElementById("QualiDept").readOnly = true ;	//Edit this later
-			else document.getElementById("QualiDept").readOnly = false ;
-			document.getElementById("eduform").style.display = 'block';
-			
-			document.getElementById('eduform').action="apps/profileplus/resumeedusubmit.php";
-			}
-		}
-		function eduedit(head, desc, dept, score)
-		{
-			var quali = head;
-			document.getElementById("Qualidisplay").textContent = "Form for Editing - "+quali;
-			document.getElementById("eduform").style.display = 'block';
-			document.getElementById("QualiOthers").value = quali;
-			document.getElementById("Qualidesc").value = desc;
-			document.getElementById("QualiDept").value = dept;
-			document.getElementById("Qualiscore").value = score;
-			
-			document.getElementById("QualiOthers").readOnly = true;
-			document.getElementById("Qualidesc").readOnly = false;
-			document.getElementById("QualiDept").readOnly = false;
-			document.getElementById("Qualiscore").readOnly = false;
-			
-			document.getElementById("QualiOthers").style.color = '#000';
-			document.getElementById("QualiDept").style.color = '#000';
-			document.getElementById("Qualidesc").style.color = '#000';
-			document.getElementById("Qualiscore").style.color = '#000';
-			
-			if(quali == "10th")document.getElementById("QualiDept").readOnly = true ;	//Edit this later
-			else document.getElementById("QualiDept").readOnly = false ;
-			document.getElementById('eduadd').style.display='block';
-            document.getElementById('qualiselect').style.display='none';
-			document.getElementById('eduform').action="apps/profileplus/resumeedusubmiit.php";
-		}
-		function edudel(head, desc, dept, score)
-		{
-			var quali = head;
-			document.getElementById("Qualidisplay").textContent = "Click Submit to Delete - "+quali;
-			document.getElementById("eduform").style.display = 'block';
-			document.getElementById("QualiOthers").value = quali;
-			document.getElementById("Qualidesc").value = desc;
-			document.getElementById("QualiDept").value = dept;
-			document.getElementById("Qualiscore").value = score;
-			
-			document.getElementById("QualiOthers").readOnly = true;
-			document.getElementById("Qualidesc").readOnly = true;
-			document.getElementById("QualiDept").readOnly = true;
-			document.getElementById("Qualiscore").readOnly = true;
-			
-			document.getElementById("QualiOthers").style.color = '#000';
-			document.getElementById("QualiDept").style.color = '#000';
-			document.getElementById("Qualidesc").style.color = '#000';
-			document.getElementById("Qualiscore").style.color = '#000';
-			
-			document.getElementById('eduadd').style.display='block';
-            document.getElementById('qualiselect').style.display='none';
-			document.getElementById('eduform').action="apps/profileplus/resumeedudelete.php";
-		}
 		function update(datasource, target)
 		{
 			if (window.XMLHttpRequest)

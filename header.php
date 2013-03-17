@@ -103,14 +103,6 @@
 			fac_url = "apps/facilities_rating/facvote.php?amnt=" + amnt + "&fac=" + fac;
 			update(fac_url,'widget');
 		}
-
-
-		function changeFunc() {
-			var selectBox = document.getElementById("elechostel");
-			var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-			elec2013_url = "apps/home/election2013/listall.php?hostel="+ selectedValue;
-			update(elec2013_url, 'widget');
-		}
 		</script>
 	</head>
 <body>
@@ -128,16 +120,7 @@
 			</a>					
 			<div class="nav-collapse">
 			<ul class="nav ">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						Home
-						<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-														<li><a href="index.php">Students Portal</a></li>
-														<!--<li><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');">Mess rating</a></li>-->
-														<!--<li><a href="javascript:;">forums</a></li>-->
-						</ul>
-				</li>	
+					
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						Mess Operations
@@ -186,11 +169,9 @@
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="student-search.php">Student Search</a></li>
-							<!--<li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>-->
-					              	<li><a href="javascript:update('apps/home/election2013/listall.php','widget');">Manifesto 2013</a></li>
 						</ul>
 				</li>
-				<li ><a href="javascript:update('apps/home/contactinfo.php','widget');"><i class="icon-envelope "></i> Contact us</a></li>
+				
 			</ul>
 			<ul class="nav pull-right">					
 				<li class="dropdown ">
@@ -211,23 +192,33 @@
 						<i class="icon-user"></i> profile
 						<b class="caret"></b>
 					</a>
-					<ul class="dropdown-menu">
+					<ul class="dropdown-menu" style="border:4px; border-style:solid; color:#FFF; border-color:#757c82;">
 					<?php	if(isset($_SESSION['uname']))
 							{
 								if($nick!="")
-								echo "<li><center>".$nick."</center></li>";
-								echo "<li><center>".$_SESSION['uname']."</center></li>";
+								echo "<table class='table table-bordered'><tr><td><center>".$nick."</center></td></tr>";
+								echo "<tr class=''><td><center>".$_SESSION['uname']."</center></td></tr></table>
+								
+								<li><center><a href=\"javascript:update('apps/profileplus/profileplus.php','profile');\"><button class='btn btn-large'>Profile+</button></a></center></li>
+								<li><center><a href='logout.php'><button class='btn btn-danger'>Logout</button></a></center></li></ul>";
 							}
 							else
-							{
-								echo "<li>Name</li><li>RollNo</li>";
+							{	
+								echo"<form action='submit.php' method='POST'>
+								<center><input class='input span2' placeholder='Username' name='uname' type='text' style='margin-top:20px;'></input></center>
+								<center><input class='input span2' placeholder='Password' name='pass' type='password'></input></center>
+							
+								<center><button class='btn btn-success' type='submit' >Log In</button></center>
+								</form>";
 							}
+							
 							?>
-                            <li><center><a href="javascript:update('apps/profileplus/profileplus.php','profile');">Profile+</a></center></li>
-						<li><center><a href="logout.php">Logout</a></center></li></ul>						
-				</li>
+                            
+												
+				</ul>
 					
-			</ul>	
+			</li>	
+         </ul>   
 			</div><!--/.nav-collapse -->		
 		</div> <!-- /container -->		
 	</div> <!-- /navbar-inner -->	

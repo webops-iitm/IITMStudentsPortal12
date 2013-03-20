@@ -16,6 +16,7 @@
 
 		if($qualihead=="" || $qualidesc=="" || $qualidept=="")
 		{
+			die("I won't do! Do Whatever You want!!!!! :P");
 			header('Location: ../../index.php?edit=1');	
 		}
 		

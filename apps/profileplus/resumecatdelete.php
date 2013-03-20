@@ -30,6 +30,10 @@
 		header('Location: ../../index.php?delete=2');	
 		
 	}
+	else
+	{
+		header('Location: ../../index.php?delete=1');	
+	}
 	
 	
 

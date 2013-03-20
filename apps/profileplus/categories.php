@@ -38,7 +38,7 @@
               					<input type="text" class="input-xlarge" value="" name="QualiTitle_Old_Id_<?php echo $catID;?>" id="QualiTitle_Old_Id_<?php echo $catID;?>">
             				</div> 
           				</div>
-                        <div class="control-group">  
+                        <div class="control-group" style="display:none">  
             			        <label class="control-label" for="QualiSubcat_<?php echo $catID;?>">Sub Category</label>  
             				<div class="controls">  
               					<input type="text" class="input-xlarge" name="qualisubcat_<?php echo $catID;?>" id="QualiSubcat_<?php echo $catID;?>">

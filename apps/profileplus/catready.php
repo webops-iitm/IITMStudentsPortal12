@@ -31,7 +31,7 @@ echo "<table class='table-striped' style=\"width:90%\">
   echo "<td>" . $catreadyrow['desc'] . "</td>";
   echo "<td>" . $catreadyrow['timeline'] . "</td>";
   echo "<td>" . $status . "</td>";
-  echo "<td><a onclick=\"javascript:catedit('".$catreadyrow['cat_id']."','".$catreadyrow['subcat_name']."','".$catreadyrow['title']."','".$catreadyrow['desc']."','".$catreadyrow['timeline']."');\" class=\"cateditbutton \"btn btn-success btn-small\">Edit</a></td>";
+  echo "<td><a onclick=\"javascript:catedit('".$catreadyrow['cat_id']."','".$catreadyrow['subcat_name']."','".$catreadyrow['title']."','".$catreadyrow['desc']."','".$catreadyrow['timeline']."','".$catreadyrow['id']."');\" class=\"cateditbutton \"btn btn-success btn-small\">Edit</a></td>";
   echo "<td><a onclick=\"javascript:catdel('".$catreadyrow['cat_id']."','".$catreadyrow['subcat_name']."','".$catreadyrow['title']."','".$catreadyrow['desc']."','".$catreadyrow['timeline']."');\" class=\"catdelbutton \"btn btn-success btn-small\">Delete</a></td>";
   echo "</tr>";
   }

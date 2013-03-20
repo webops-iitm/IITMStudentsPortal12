@@ -1,3 +1,7 @@
+		function picload()
+		{
+			alert("working");
+		}
 		function qualichange()
 		{
 			var quali = document.getElementById('Qualifications').value;
@@ -103,7 +107,7 @@
 			document.getElementById(cattimeline).readOnly = false;
 		}
 		
-		function catedit(cat_id, subcat_name, title, desc, timeline)
+		function catedit(cat_id, subcat_name, title, desc, timeline, id)
 		{
 			var catdisplay = "Qualidisplay_"+cat_id;
 			var catform = "form_"+cat_id;
@@ -114,7 +118,7 @@
 			var cataddbutton = "addbutton_"+cat_id;
 			var catadd = "add_"+cat_id;
 			var catformuse = "QualiFormUse_"+cat_id;
-			var catoldtitle = "QualiTitle_Old_Id_"+cat_id;
+			var catoldtitleid = "QualiTitle_Old_Id_"+cat_id;
 			
 			document.getElementById(catformuse).value="edit";
 			
@@ -122,7 +126,7 @@
 			document.getElementById(catform).style.display = 'block';
 			document.getElementById(catsubcat).value = subcat_name;
 			document.getElementById(cattitle).value = title;
-			document.getElementById(catoldtitle).value = title;
+			document.getElementById(catoldtitleid).value = id;
 			document.getElementById(catdesc).value = desc;
 			document.getElementById(cattimeline).value = timeline;
 			

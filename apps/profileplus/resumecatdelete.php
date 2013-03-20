@@ -6,7 +6,7 @@
 	$uname = $_SESSION['uname'];
 	$uname = strtolower($uname);
 	
-	$postcat = $_POST['qualicat_id'];
+	$postcat = mysql_real_escape_string(stripslashes($_POST['qualicat_id']));
 	$postsubcat = "qualisubcat_".$postcat;
 	$posttitle = "qualititle_".$postcat;
 	$postdesc = "qualidesc_".$postcat;
@@ -17,11 +17,11 @@
 	if(isset($_POST[$postform])){
 		
 
-		$qualicat = $postcat;
-		$qualisubcat = strtoupper($_POST[$postsubcat]);
-	    $qualititle = $_POST[$posttitle];
-	    $qualidesc = $_POST[$postdesc];
-		$qualitimeline = $_POST[$posttimeline];
+		$qualicat = mysql_real_escape_string(stripslashes($postcat));
+		$qualisubcat = mysql_real_escape_string(stripslashes(strtoupper($_POST[$postsubcat])));
+	    $qualititle = mysql_real_escape_string(stripslashes($_POST[$posttitle]));
+	    $qualidesc = mysql_real_escape_string(stripslashes($_POST[$postdesc]));
+		$qualitimeline = mysql_real_escape_string(stripslashes($_POST[$posttimeline]));
 		
 		// sql query to check the subcategory number in the category in stu_profil
 		$sqlcatdel = "DELETE FROM student_profile WHERE username='$uname' AND `desc` = '$qualidesc' AND title = '$qualititle' AND cat_id = '$qualicat' AND subcat_name = '$qualisubcat'";

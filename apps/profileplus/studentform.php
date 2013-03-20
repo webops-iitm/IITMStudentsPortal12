@@ -2,8 +2,8 @@
 	include("../../db.php");
 	session_start();
 	include("../../config.php");
-//	$uname = "name";
-	$uname = $_SESSION['uname'];
+	$uname = "name";
+//	$uname = $_SESSION['uname'];
 /*	$uname = "Username";
 	$uname = "username";
 	$user = "user";
@@ -30,11 +30,11 @@
 				<div class="widget"  style="float:right;width:1000px; margin:10px;">
 					<div class="widget-header">
 						<i class="icon-star"></i>
-						<h3>Update Resume</h3>
+						<h3>Update Profile</h3>
 					</div> <!-- /widget-header -->		
-					<div class="widget-content">
-								<form id="form" class="form-horizontal" name="normalprof" action="apps/profileplus/resumeprofilesubmit.php" method="post">
-								<table>
+					<div class="widget-content"><center>
+								<form id="form" class="form-horizontal span12" name="normalprof" action="apps/profileplus/resumeprofilesubmit.php" method="post">
+								<table style="float:left;">
                                     <tr>
 										<td style="width:100px;"><a href="#">FullName</a></td>
 										<td><input style="color:#fff;" id="name" type="text" name="name" value="<?php echo $name; ?>" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td>
@@ -93,9 +93,26 @@
 										<td style="width:100px;"><a href="#">E-Mail ID</a></td>
 										<td><input id="email" type="text" name="email" value="<?php echo $email; ?>" /></td>
 									</tr>									
-									<tr><center><td colspan="2"><a href="#"><input class="btn btn-warning" type="submit" value="Update" name="Update" /></a></td></center></tr>
+									
 								</table>
-							</form>
+							
+	<table style="float:right;">
+		<tr>
+			<td style="width:100px;"><a href="#">Display Picture</a></td>
+			<td><img style="margin-left:25px;" src="files/profilepics/<?php echo $disp_pic; ?>" width="150" height="150" /></td>
+		</tr>
+		<tr>
+			<td>
+			</td><td>
+				<input type="hidden" name="MAX_FILE_SIZE" value="50000" />
+				<input class="btn btn-info btn-small" style="width:180px;" type="file" onchange="picload();" name="dpic" id="dpic" />
+			</td>
+		</tr><tr>
+			<td colspan='2' style="text-align:center;"><input style="margin-top:20px;" class="btn btn-warning btn-large" type="submit" value="Update" name="update_dpic" /></td>
+		</tr>
+	</table>
+</form>                </center> 
+                            
 <?php
 include("education.php");
 
@@ -113,8 +130,7 @@ while($catrow = mysql_fetch_array($catresult))
   }
 
 ?>
-              
- 
+       
 				</div> <!-- /widget-content -->
 						
 				</div> <!-- /widget -->	

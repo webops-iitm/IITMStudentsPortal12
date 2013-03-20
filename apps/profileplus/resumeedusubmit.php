@@ -9,10 +9,15 @@
 	$edudone=0;
 	
 	if(isset($_POST['eduform'])){
-		$qualihead = $_POST['qualiothers'];
-		$qualidesc = $_POST['qualidesc'];
-	    $qualiscore = $_POST['qualiscore'];
-	    $qualidept = $_POST['qualidept'];
+		$qualihead = mysql_real_escape_string(stripslashes($_POST['qualiothers']));
+		$qualidesc = mysql_real_escape_string(stripslashes($_POST['qualidesc']));
+	    $qualiscore = mysql_real_escape_string(stripslashes($_POST['qualiscore']));
+	    $qualidept = mysql_real_escape_string(stripslashes($_POST['qualidept']));
+
+		if($qualihead="" || $qualidesc="" || $qualidept="")
+		{
+			header('Location: ../../index.php?edit=1');	
+		}
 		
 		$category = 1;
 		$subcategory = 1;
@@ -49,10 +54,10 @@
 		}
 	}
 
-/*	if($edudone==1)	
+	if($edudone==1)	
 	header('Location: ../../index.php?edit=2');
 	else
 	header('Location: ../../index.php?edit=1');
 	
-	mysql_close($con);	*/
+	mysql_close($con);	
 ?>

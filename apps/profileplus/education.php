@@ -1,6 +1,6 @@
-<center>
+<center class="span12"><h4>
   Education	<a id="eduaddbutton" onClick="eduadd()" class="btn btn-success btn-small">Add</a>
-</center>
+</h4></center>
 <div class="" id="eddready">
 	<?php include 'eduready.php'; ?>
 </div>

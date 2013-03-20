@@ -6,7 +6,7 @@
 	$uname = $_SESSION['uname'];
 	$uname = strtolower($uname);
 
-	$postcat = $_POST['qualicat_id'];
+	$postcat = mysql_real_escape_string(stripslashes($_POST['qualicat_id']));
 	$postsubcat = "qualisubcat_".$postcat;
 	$posttitle = "qualititle_".$postcat;
 	$postdesc = "qualidesc_".$postcat;
@@ -20,14 +20,20 @@
 		
 	if(isset($_POST[$postform])){
 		echo "working";
-		$qualicat = $postcat;
-		$qualisubcat = strtoupper($_POST[$postsubcat]);
-	    $qualititle = $_POST[$posttitle];
-	    $qualidesc = $_POST[$postdesc];
-		$qualitimeline = $_POST[$posttimeline];
-		$qualiform = $_POST[$postform];
-		$qualiaction = $_POST[$postaction];
-		$qualioldtitle = $_POST[$postoldtitle];
+		$qualicat = mysql_real_escape_string(stripslashes($postcat));
+		$qualisubcat = mysql_real_escape_string(stripslashes(strtoupper($_POST[$postsubcat])));
+	    $qualititle = mysql_real_escape_string(stripslashes($_POST[$posttitle]));
+	    $qualidesc = mysql_real_escape_string(stripslashes($_POST[$postdesc]));
+		$qualitimeline = mysql_real_escape_string(stripslashes($_POST[$posttimeline]));
+		$qualiform = mysql_real_escape_string(stripslashes($_POST[$postform]));
+		$qualiaction = mysql_real_escape_string(stripslashes($_POST[$postaction]));
+		$qualioldtitle = mysql_real_escape_string(stripslashes($_POST[$postoldtitle]));
+
+		if($qualicat="" || $qualititle="" || $qualidesc="" || $qualidept="")
+		{
+			header('Location: ../../index.php?edit=1');	
+		}
+			
 		
 		
 		$subcatid = 1;

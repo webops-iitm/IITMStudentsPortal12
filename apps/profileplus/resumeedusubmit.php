@@ -14,7 +14,7 @@
 	    $qualiscore = mysql_real_escape_string(stripslashes($_POST['qualiscore']));
 	    $qualidept = mysql_real_escape_string(stripslashes($_POST['qualidept']));
 
-		if($qualihead="" || $qualidesc="" || $qualidept="")
+		if($qualihead=="" || $qualidesc=="" || $qualidept=="")
 		{
 			header('Location: ../../index.php?edit=1');	
 		}

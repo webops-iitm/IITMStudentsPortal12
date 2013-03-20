@@ -2,8 +2,8 @@
 	session_start();
 	
 	include ('../../db.php');
-//	$uname = 'name';
-	$uname = $_SESSION['uname'];
+	$uname = 'name';
+//	$uname = $_SESSION['uname'];
 	$uname = strtolower($uname);
 
 	$postcat = mysql_real_escape_string(stripslashes($_POST['qualicat_id']));
@@ -29,7 +29,7 @@
 		$qualiaction = mysql_real_escape_string(stripslashes($_POST[$postaction]));
 		$qualioldtitle = mysql_real_escape_string(stripslashes($_POST[$postoldtitle]));
 
-		if($qualicat="" || $qualititle="" || $qualidesc="" || $qualidept="")
+		if($qualicat=="" || $qualititle=="" || $qualidesc=="" || $qualidept=="")
 		{
 			header('Location: ../../index.php?edit=1');	
 		}
@@ -85,16 +85,17 @@
 		if($catdone!=1)
 		{
 			$sqladdsub="INSERT INTO student_profile (`cat_id`, `subcat_id`, `subcat_name`, `title`, `title_id`, `timeline`, `desc`, `username`, `status`) VALUES ($qualicat, $subcatid, '$qualisubcat', '$qualititle', '$titleid', '$qualitimeline', '$qualidesc', '$uname', 2)";
+			echo "-->".$sqladdsub;
 			mysql_query($sqladdsub);
 			$catdone = 1;
 		}
 		//sql query to submit into stu_profile including $category
 	}
 
-	if($catdone==1)	
-	header('Location: ../../index.php?edit=2');
-	else
-	header('Location: ../../index.php?edit=1');
+//	if($catdone==1)	
+//	header('Location: ../../index.php?edit=2');
+//	else
+//	header('Location: ../../index.php?edit=1');
 	
 	mysql_close($con);	
 ?>

@@ -9,7 +9,6 @@
 			else
 			{
 			document.getElementById("Qualidisplay").textContent = quali;
-			document.getElementById("QualiOthers").value = quali;
 			
 			document.getElementById("Qualidesc").readOnly = false;
 			document.getElementById("Qualiscore").readOnly = false;
@@ -39,7 +38,6 @@
 		}
 		function eduedit(head, desc, dept, score)
 		{
-			$("#myModal_Edu").modal("show");
 			var quali = head;
 			document.getElementById("Qualidisplay").textContent = "Form for Editing - "+quali;
 			document.getElementById("eduform").style.display = 'block';
@@ -107,7 +105,6 @@
 		
 		function catedit(cat_id, subcat_name, title, desc, timeline, id)
 		{
-			$("#myModal_"+cat_id).modal("show");
 			var catdisplay = "Qualidisplay_"+cat_id;
 			var catform = "form_"+cat_id;
 			var catsubcat = "QualiSubcat_"+cat_id;
@@ -144,7 +141,7 @@
 		}
 		function catdel(cat_id, subcat_name, title, desc, timeline)
 		{
-			$("#myModal_"+cat_id).modal("show");
+
 			var catdisplay = "Qualidisplay_"+cat_id;
 			var catform = "form_"+cat_id;
 			var catsubcat = "QualiSubcat_"+cat_id;
@@ -174,7 +171,6 @@
 			document.getElementById(catdesc).style.color = '#000';
 			document.getElementById(cattimeline).style.color = '#000';
 			
-			//document.getElementById(catadd).style.display='block';
-			document.getElementById("mySubmit_"+cat_id).innerHTML = 'Delete';
+			document.getElementById(catadd).style.display='block';
 			document.getElementById(catform).action="apps/profileplus/resumecatdelete.php";
 		}

@@ -20,14 +20,14 @@
 <div id="myModal_Edu" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-header">
 		<button type="button" class="close" style="color:#ffffff;" data-dismiss="modal" aria-hidden="true">×</button>
-		<h3 id="myModalLabel">Education</h3>
+		<h3 id="myModalLabel" style="color : #ffffff;">Education</h3>
 	</div>
 	<div class="modal-body">
 		<?php include("eduadd.php"); ?>
 	</div>
 	<div class="modal-footer">
 		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		<button class="btn btn-primary">Save changes</button>
+		<button class="btn btn-primary" onclick="javascript:document.getElementById('eduform').submit();">Save changes</button>
 	</div>
 </div>
 	

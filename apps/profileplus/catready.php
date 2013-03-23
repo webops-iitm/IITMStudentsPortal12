@@ -26,12 +26,13 @@ $catreadyresult = mysql_query($catreadyquery);
 				<td> <?php echo $catreadyrow['timeline']; ?> </td>
 				<td> <?php echo $status; ?></td>
 				<td> 
-					<a href="#myModal_<?php echo $catID; ?>Edit" role="button" data-toggle="modal" onclick="javascript:catedit('<?php echo $catreadyrow['cat_id']; ?>', '<?php echo $catreadyrow['subcat_name']; ?>', '<?php echo $catreadyrow['title']; ?>', '<?php echo $edureadyrow['desc']; ?>', '<?php echo $edureadyrow['timeline']; ?>', '<?php echo $edureadyrow['id']; ?>');" class="cateditbutton my_button">
+					<!--<a href="#myModal_<?php echo $catID; ?>Edit" role="button" data-toggle="modal" onclick="javascript:catedit('<?php echo $catreadyrow['cat_id']; ?>', '<?php echo $catreadyrow['subcat_name']; ?>', '<?php echo $catreadyrow['title']; ?>', '<?php echo $catreadyrow['desc']; ?>', '<?php echo $catreadyrow['timeline']; ?>', '<?php echo $catreadyrow['id']; ?>');" class="cateditbutton my_button">-->
+					<a href="javascript:catedit('<?php echo $catreadyrow['cat_id']; ?>', '<?php echo $catreadyrow['subcat_name']; ?>', '<?php echo $catreadyrow['title']; ?>', '<?php echo $catreadyrow['desc']; ?>', '<?php echo $catreadyrow['timeline']; ?>', '<?php echo $catreadyrow['id']; ?>');" class="my_button" >
 						Edit
 					</a>
 				</td>
 				<td>
-					<a href="" role="button" onclick="javascript:catdel('<?php echo $catreadyrow['cat_id']; ?>', '<?php echo $catreadyrow['subcat_name']; ?>', '<?php echo $catreadyrow['title']; ?>', '<?php echo $catreadyrow['desc']; ?>', '<?php echo $catreadyrow['timeline']; ?>');" class="catdelbutton my_button">
+					<a href="javascript:catdel('<?php echo $catreadyrow['cat_id']; ?>', '<?php echo $catreadyrow['subcat_name']; ?>', '<?php echo $catreadyrow['title']; ?>', '<?php echo $catreadyrow['desc']; ?>', '<?php echo $catreadyrow['timeline']; ?>', '<?php echo $catreadyrow['id']; ?>');"  class="catdelbutton my_button">
 						Delete
 					</a>
 				</td>

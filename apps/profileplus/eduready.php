@@ -25,7 +25,7 @@
 					<td> <?php echo $edureadyrow['score']; ?> </td>
 					<td> <?php echo $status; ?></td>
 					<td> 
-						<a href="#myModal_EduEdit" role="button" data-toggle="modal" onclick="javascript:eduedit('<?php echo $edureadyrow['head']; ?>', '<?php echo $edureadyrow['desc']; ?>', '<?php echo $edureadyrow['dept']; ?>', '<?php echo $edureadyrow['score']; ?>');" class="edueditbutton my_button">
+						<a href="javascript:eduedit('<?php echo $edureadyrow['head']; ?>', '<?php echo $edureadyrow['desc']; ?>', '<?php echo $edureadyrow['dept']; ?>', '<?php echo $edureadyrow['score']; ?>');" class="edueditbutton my_button">
 							Edit
 						</a>
 					</td>

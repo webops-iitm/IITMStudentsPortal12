@@ -19,13 +19,13 @@
 <div id="myModal_<?php echo $catID; ?>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-header">
 		<button type="button" class="close" style="color:#ffffff;" data-dismiss="modal" aria-hidden="true">×</button>
-		<h3 id="myModalLabel"><?php echo $catname; ?></h3>
+		<h3 id="myModalLabel" style="color : #ffffff;"><?php echo $catname; ?></h3>
 	</div>
 	<div class="modal-body">
 		<?php include("catadd.php"); ?>
 	</div>
 	<div class="modal-footer">
 		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		<button class="btn btn-primary">Save changes</button>
+		<button class="btn btn-primary" id="mySubmit_<?php echo $catID; ?>" " onclick="javascript:document.getElementById('form_<?php echo $catID;?>').submit();">Save changes</button>
 	</div>
 </div>

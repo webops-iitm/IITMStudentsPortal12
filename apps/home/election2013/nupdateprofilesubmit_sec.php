@@ -62,7 +62,7 @@ if ((($_FILES["dpic"]["type"] == "image/gif")
 	}
 	
 	
-	$allowedExts = array("pdf", "");
+	$allowedExts = array("pdf", "PDF", "");
 $extension = end(explode(".", $_FILES["manifesto"]["name"]));
 if ((($_FILES["manifesto"]["type"] == "application/pdf")
 || ($_FILES["manifesto"]["type"] == "application/PDF")
@@ -96,7 +96,7 @@ if ((($_FILES["manifesto"]["type"] == "application/pdf")
 	}
 	
 	//writeup 1	
-	$allowedExts = array("pdf", "");
+	$allowedExts = array("pdf", "PDF", "");
 $extension = end(explode(".", $_FILES["manifestow"]["name"]));
 if ((($_FILES["manifestow"]["type"] == "application/pdf")
 || ($_FILES["manifestow"]["type"] == "")

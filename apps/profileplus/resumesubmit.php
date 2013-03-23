@@ -2,9 +2,9 @@
 	session_start();
 	
 	include ('../../db.php');
-	$uname = "name";
-/*	$uname = $_SESSION['uname'];
-	$uname = strtolower($uname);
+//	$uname = "name";
+	$uname = $_SESSION['uname'];
+/*	$uname = strtolower($uname);
 	
 	$user = $uname;
 	$name = $_POST['name'];

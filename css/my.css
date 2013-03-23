@@ -24,8 +24,7 @@ height: 40px;
 line-height: 40px;border: 1px solid #D5D5D5;
 background: #E9E9E9;
 
-border-top-left-radius: 4px;
-border-top-right-radius: 4px;
+
 -webkit-background-clip: padding-box;
 }
 user agent stylesheetdiv {
@@ -39,9 +38,6 @@ overflow: hidden;}
 padding: 20px 15px 15px;
 background: white;
 border: 1px solid #D5D5D5;
--moz-border-bottom-radius: 5px;
--webkit-border-bottom-right-radius: 5px;
-border-bottom-left-radius: 5px;
 }
 
 .widget-contentsec {
@@ -51,6 +47,12 @@ border: 1px solid #D5D5D5;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 border-radius: 5px;
+}
+.newsbutton
+{
+	width:100px;
+	height:25px;
+	background-color:blue;
 }
 
 

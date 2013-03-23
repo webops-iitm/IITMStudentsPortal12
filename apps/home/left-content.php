@@ -5,57 +5,96 @@ $noOfAnn=7;   //This variable can be changed to obtain variable number of news p
 
 ?>
  
-<div class="span8" >
-<div id="widget" class="widget" style="width:800px; margin:10px; position:relative; top:0px; right:0px; left:20px;">
-		<div class="widget-header">
-		<div class="row">
-		<div class="span2 offset1" >
-			<i class="icon-comment"></i>
-			<h3 id="header">News</h3>
-			</div>
-			<div class="span4" >
-			From: <strong><span id="info">All</span></strong>
-			</div>
-			<div class="span2" >
-			<div class="btn-group">
-  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-   Sort
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu">
-	<li><a href="javascript:update('apps/home/left-content.php','leftcontent');">All</a></li>
-    	<li><a tabindex="-1" email="sgs@smail.iitm.ac.in"   href="#">General Secretary</a></li>
-	<li><a tabindex="-1" email="vineet.1991.483@gmail.com" href="#">Institute Web Operations Team</a></li>
-	<li><a tabindex="-1" email="casa@smail.iitm.ac.in" href="#">Cultural Affairs Secretary (Arts)</a></li>
-	<li><a tabindex="-1" email="cas@smail.iitm.ac.in" href="#">Co-curricular Affairs Secretary</a></li>
-	<li><a tabindex="-1" email="ras@smail.iitm.ac.in" href="#">Research Affairs Secretary</a></li>
-	<li><a tabindex="-1" email="casl@smail.iitm.ac.in" href="#">Cultural Affairs Secretary(Literary)</a></li>
-	<li><a tabindex="-1" email="has@smail.iitm.ac.in" href="#">Hostel Affairs Secretary</a></li>
-	<li><a tabindex="-1" email="ss@smail.iitm.ac.in" href="#">Sports Secretary</a></li>
-	<li><a tabindex="-1" email="aas@smail.iitm.ac.in" href="#">Academic Affairs Secretary</a></li>
-	<li><a tabindex="-1" email="ssac@smail.iitm.ac.in" href="#">Speaker, SAC</a></li>
-  </ul>
-</div>
-		
-          </div> 
+<div class="span12" style=" margin-top:-5px;" >
+<div class="span8">
+	<div id="widget" class="widget" style=" position:relative; top:0px; right:0px; left:20px;">
+			<div class="widget-header" style="background-color:#FFF">
+			<div class="row">
+				<div class="span2 offset1" >
+				<i class="icon-comment"></i>
+				<h3 id="header">News</h3>
+				</div>
+                <div class="span2" style="" >
+					<div class="btn-group">
+					  <a class="dropdown-toggle btn btn-inverse" style="color:#FFF; height:25px; width:75px; line-height:25px;" data-toggle="dropdown" href="#">Sort
+    					<span class="caret"></span>
+  					  </a> 
+  						<ul class="dropdown-menu" style="background-color:#FFF;">
+						<li><a href="javascript:update('apps/home/left-content.php','leftcontent');">All</a></li>
+				    	<li><a tabindex="-1" email="sgs@smail.iitm.ac.in"   href="#">General Secretary</a></li>
+						<li><a tabindex="-1" email="vineet.1991.483@gmail.com" href="#">Institute Web Operations Team</a></li>
+						<li><a tabindex="-1" email="casa@smail.iitm.ac.in" href="#">Cultural Affairs Secretary (Arts)</a></li>
+						<li><a tabindex="-1" email="cas@smail.iitm.ac.in" href="#">Co-curricular Affairs Secretary</a></li>
+						<li><a tabindex="-1" email="ras@smail.iitm.ac.in" href="#">Research Affairs Secretary</a></li>
+						<li><a tabindex="-1" email="casl@smail.iitm.ac.in" href="#">Cultural Affairs Secretary(Literary)</a></li>
+						<li><a tabindex="-1" email="has@smail.iitm.ac.in" href="#">Hostel Affairs Secretary</a></li>
+						<li><a tabindex="-1" email="ss@smail.iitm.ac.in" href="#">Sports Secretary</a></li>
+						<li><a tabindex="-1" email="aas@smail.iitm.ac.in" href="#">Academic Affairs Secretary</a></li>
+						<li><a tabindex="-1" email="ssac@smail.iitm.ac.in" href="#">Speaker, SAC</a></li>
+  						</ul>
+					</div>
+		        </div> <!-- span 2 -->
+				<div class="span4" >
+				From: <strong><span id="info">All</span></strong>
+				</div>
+						  
+			</div> <!-- class row -->
+			</div> <!-- class widgen-header -->
+					<!-- /widget-header -->
+			<div class="widget-content" id="widget-content" style="height:310px;overflow-y:scroll;">	
+			<!-- /collapse -->
+					<div class="accordion" id="accordion2">
 
+					</div>
+       		</div><!-- Widget-content -->
+		</div><!-- id Widget -->
+</div><!-- class Span 8 -->
 
-
-		  
-		</div> 
-		</div> 
-		<!-- /widget-header -->
-		<div class="widget-content" id="widget-content" style="height:280px;overflow-y:scroll;">	
-		<!-- /collapse -->
-		<div class="accordion" id="accordion2">
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+<!-- Right column -->
+<?php	if(isset($_SESSION['uname']))
+{
+?>
+<div class="span4">
+	<div id="widget" class="widget" style="margin-left:-5px; margin-right:-5px;">
+	    	<div class="widget-header" style="background-color:#FFF"><center>
+					<i class="icon-star"></i>
+					<h3><?php if($nick!="") echo $nick."'s"; ?> Profile</h3>	</center>		
+    	    </div><!-- widget-header --><center>
+            <div class="widget-content" style="height:310px;">
+	          			<table class="table"> 
+							<tr>
+								<td style="width:100px;"><a href="#">Name</a></td>
+								<td><?php echo $name; ?></td>
+							</tr><tr>
+								<td style="width:100px;"><a href="#">Nickname</a></td>
+								<td><?php echo $nick; ?></td>
+							</tr><tr>
+								<td style="width:100px;"><a href="#">Roll Number</a></td>
+								<td><?php echo $user; ?></td>
+							</tr><tr>
+								<td style="width:100px;"><a href="#">Room No.</a></td>
+								<td><?php echo $room; ?></td>
+							</tr><tr>
+								<td style="width:100px;"><a href="#">Hostel.</a></td>
+								<td><?php echo $hostel; ?></td>
+							</tr><tr>
+								<td style="width:100px;"><a href="#">Contact No.</a></td>
+								<td><?php if($contact!=0) echo $contact; ?></td>
+							</tr><tr>
+								<td style="width:100px;"><a href="#">E-Mail ID</a></td>
+								<td><?php echo $email; ?></td>
+							</tr><tr>
+								<td style="width:100px;"><a href="#">Blood Group</a></td>
+								<td><?php echo $bgroup; ?></td>
+							</tr>
+						</table>
+				</div> <!-- /widget-content --></center>
+	</div><!-- id widget -->
+</div><!-- class span 3 -->
+<?php
+}
+?>
+</div><!-- class span12 -->
 
 <script type="text/javascript">
 secr=0;
@@ -126,6 +165,7 @@ LoadNews(Page,secr);
 
 
 </script>
+<!--
 <?
 	if(isset($_GET['message'])) {
 		if($_GET['message'] == 'ocs_y'){
@@ -148,3 +188,4 @@ LoadNews(Page,secr);
 <? 		}
 	}
 ?>
+-->

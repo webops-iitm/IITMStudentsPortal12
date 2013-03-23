@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
 
 	if( $secretary == 1 )
@@ -58,3 +59,5 @@
 	} // end of if-else to check for secretary
 
 ?>
+=======
+>>>>>>> 42852fb27db4963ee87d4ad2f4a583d3bd7e7298

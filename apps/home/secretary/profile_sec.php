@@ -61,5 +61,7 @@
 	</tr><tr>
 		<td style="width:100px;"><a href="#">Blood Group</a></td>
 		<td><?php echo $bgroup; ?></td>
-	</tr>									
+	</tr>
+    								
 </table>
+<?php echo '<a href="resumesec.php">Go to Resume App</a><br/>' ; ?>	

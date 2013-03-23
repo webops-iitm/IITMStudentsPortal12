@@ -44,6 +44,7 @@
 								<td style="width:100px;"><a href="#">Blood Group</a></td>
 								<td><?php echo $bgroup; ?></td>
 							</tr>
+                            
 						</table>
 				</div> <!-- /widget-content -->
 						

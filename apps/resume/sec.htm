@@ -1,0 +1,306 @@
+<html>
+<head>
+<script src="jquery.js"></script>
+<script>
+
+function approve(a)
+
+{
+	todo[0][a] = 1 ;
+	todo[1][a] = 0 ;
+	document.getElementById("msg"+a).value = "Approved" ;
+	
+	
+}
+function reject(a)
+
+{
+	todo[0][a] = 0 ;
+	todo[1][a] = 1 ;
+	document.getElementById("msg"+a).value = "Rejected because" ;
+	
+}
+
+function keeppend(a)
+
+{
+	todo[0][a] = 0 ;
+	todo[1][a] = 0 ;
+	document.getElementById("msg"+a).value = "Message" ;
+	
+}
+function showpendreq()
+
+{
+$("#loading_gif").css("display","block");
+    $("#tbhead").css("background-color","rgb(83,156,209)");
+	$("#tbreq").css("border-color","rgb(83,156,209)");
+	$("#subbut").css("background","rgb(83,156,209)");
+	document.getElementById("subbut").innerHTML ='<td><button onClick="subact()">Submit</button></td>' ;
+	document.getElementById("tbhead").innerHTML = "Pending Requests" ;
+	
+	
+	
+	
+	
+	// Change the path here while integrating
+	
+	$.get("apps/resume/getreq.php" ,function(data) {
+		
+		
+		
+		todo = new Array() ;
+todo[0] = new Array() ;
+todo[1] = new Array() ;
+
+		
+		k = eval('(' + data + ')');
+		if (k == null)
+		{
+			k = [] ;
+		}
+		document.getElementById("tbhead").innerHTML = "Pending Requests - Total : "+k.length+" Requests" ;
+		
+		for (var i = 0;i< k.length ; i++)
+		{
+			todo[0][i] = 0 ;
+			todo[1][i] = 0 ;
+			
+		}
+		
+		req = "" ;
+		for (var i = 0; i < k.length ; i++)
+		{
+			req = req + '<table border="1"  style=" border-collapse: separate; border:5px rgb(83,156,209);" ><tr><td style="width:20px;" rowspan="4">'+(i+1)+'</td><td style="width:360px;" colspan="4">'+k[i][4]+' / '+k[i][6]+'</td><td style="width:120px;" valign="top" rowspan="4"><textarea rows="6" cols="20" id="msg'+i+'">Message</textarea></td></tr><tr><td colspan="3">Name:'+k[i][0]+'</td><td rowspan="3" ><input type="radio" onclick="approve('+i+')" name="'+i+'" value="approve"> Approve<br><input type="radio" name="'+i+'" onclick="reject('+i+')" value="reject"> Reject<br><input type="radio" onclick="keeppend('+i+')"  name="'+i+'" value="pending"> Do Nothing</td></tr><tr><td>Roll No: '+k[i][1]+'</td><td colspan="2">'+k[i][2]+'</td></tr><tr><td colspan="3">'+k[i][3]+'</td></tr></table>'
+		}
+			
+        document.getElementById("requests").innerHTML = req ;
+		if (req == "")
+		{
+			 document.getElementById("requests").innerHTML = "No New Requests" ;
+		}
+		
+		});
+	
+	
+	$("#loading_gif").css("display","none");
+	
+		
+	
+}
+function subact()
+{
+	$("#loading_gif").css("display","block");
+	apptodo = new Array() ;
+rejtodo = new Array() ;
+	
+	for (var i=0 ; i < k.length ; i++)
+	{
+		if (todo[0][i] == 1)
+		{
+			apptodo[apptodo.length] = new Array() ;
+			apptodo[(apptodo.length)-1][0] = k[i][1] ;
+			apptodo[(apptodo.length)-1][1] = k[i][5] ;
+			apptodo[(apptodo.length)-1][2] = document.getElementById("msg"+i).value ;
+			apptodo[(apptodo.length)-1][3] = k[i][8] ;
+		}
+		if (todo[1][i] == 1)
+		{
+			rejtodo[rejtodo.length] = new Array() ;
+			rejtodo[(rejtodo.length)-1][0] = k[i][1] ;
+			rejtodo[(rejtodo.length)-1][1] = k[i][5] ;
+			rejtodo[(rejtodo.length)-1][2] = document.getElementById("msg"+i).value ;
+			rejtodo[(rejtodo.length)-1][3] = k[i][8] ;
+		}
+		
+	}
+	
+	var fintodo = new Array() ;
+	fintodo[0] = new Array() ;
+	fintodo[1] = new Array() ;
+	fintodo[0] = apptodo ;
+	fintodo[1] = rejtodo ;
+	myJSONText = JSON.stringify(fintodo);
+	
+	$.post("apps/resume/testt.php" ,"h="+myJSONText,function(data) {
+		hh = data ;
+		$("#loading_gif").css("display","none");
+		showpendreq() ;
+		
+		});
+	
+}
+
+
+
+
+
+
+var k,req,myJSONText,todo,hh ;
+
+
+$(document).ready(function(){
+	showpendreq() ;
+  $("#pendbut").click(function(){
+	  showpendreq() ;
+	
+  });
+  $("#appbut").click(function(){
+	  $("#loading_gif").css("display","block");
+	  document.getElementById("subbut").innerHTML ="<td>&nbsp;</td>" ;
+    $("#tbhead").css("background-color","rgb(92,193,91)");
+	$("#tbreq").css("border-color","rgb(92,193,91)");
+	$("#subbut").css("background","rgb(92,193,91)");
+	document.getElementById("tbhead").innerHTML = "Approved Requests" ;
+	
+	
+	
+	
+	
+	
+	
+	$.get("apps/resume/hist.php?g=app" ,function(data) {
+		
+		
+		
+	
+
+		
+		k = eval('(' + data + ')');
+		if (k == null)
+		{
+			k = [] ;
+		}
+		document.getElementById("tbhead").innerHTML = "Approved Requests - Total : "+k.length+" Requests" ;
+		
+		
+		
+		req = "" ;
+		for (var i = 0; i < k.length ; i++)
+		{
+			if (k[i][5] == "" )
+			{
+				k[i][5] = "(empty)" ;
+			}
+			req = req + '<table border="1" style=" border-collapse: separate; border:5px rgb(92,193,91)");" ><tr><td style="width:20px;" rowspan="4">'+(i+1)+'</td><td style="width:360px;" colspan="4">'+k[i][4]+' / '+k[i][6]+' </td><td style="width:120px;" valign="top" rowspan="4">'+k[i][5]+'</td></tr><tr><td colspan="4">Name:'+k[i][0]+'</td></tr><tr><td colspan="2">Roll No: '+k[i][1]+'</td><td colspan="2">'+k[i][2]+'</td></tr><tr><td colspan="4">'+k[i][3]+'</td></tr></table>' ;
+		}
+			
+        document.getElementById("requests").innerHTML = req ;
+		if (req == "")
+		{
+			 document.getElementById("requests").innerHTML = "No Approved Requests" ;
+		}
+		
+		});
+	
+	
+	
+	
+	$("#loading_gif").css("display","none");
+	
+	
+	
+	
+	
+	
+	
+	
+  });
+  $("#rejbut").click(function(){
+	  $("#loading_gif").css("display","block");
+	 document.getElementById("subbut").innerHTML ="<td>&nbsp;</td>" ;
+    $("#tbhead").css("background-color","rgb(237,96,79)");
+	$("#tbreq").css("border-color","rgb(237,96,79)");
+	$("#subbut").css("background","rgb(237,96,79)");
+	document.getElementById("tbhead").innerHTML = "Rejected Requests" ;
+	
+	
+	
+	
+	
+	
+	
+	
+	$.get("apps/resume/hist.php?g=rej" ,function(data) {
+		
+		
+		
+	
+
+		
+		k = eval('(' + data + ')');
+		if (k == null)
+		{
+			k = [] ;
+		}
+		document.getElementById("tbhead").innerHTML = "Rejected Requests - Total : "+k.length+" Requests" ;
+		
+		
+		
+		req = "" ;
+		for (var i = 0; i < k.length ; i++)
+		{
+			if (k[i][5] == "" )
+			{
+				k[i][5] = "(empty)" ;
+			}
+			req = req + '<table border="1" style=" border-collapse: separate; border:5px rgb(237,96,79);" ><tr><td style="width:20px;" rowspan="4">'+(i+1)+'</td><td style="width:360px;" colspan="4">'+k[i][4]+' / '+k[i][6]+' </td><td style="width:120px;" valign="top" rowspan="4">'+k[i][5]+'</td></tr><tr><td colspan="4">Name:'+k[i][0]+'</td></tr><tr><td colspan="2">Roll No: '+k[i][1]+'</td><td colspan="2">'+k[i][2]+'</td></tr><tr><td colspan="4">'+k[i][3]+'</td></tr></table>' ;
+		}
+			
+        document.getElementById("requests").innerHTML = req ;
+		if (req == "")
+		{
+			 document.getElementById("requests").innerHTML = "No Rejected Requests" ;
+		}
+		
+		});
+	
+	
+	
+	
+	
+	
+	
+	$("#loading_gif").css("display","none");
+	
+	
+	
+	
+  });
+});
+
+
+
+
+
+</script>
+
+</head>
+
+
+<body>
+<table style="margin-left:auto; margin-right:auto">
+<tr valign="top"><td>
+<table cellspacing="10">
+<tr><td id = "pendbut" style="width:130px; cursor:pointer; background:rgb(83,156,209);height:30px;color:white;vertical-align:middle; text-align:center;font-weight:bold;">Pending</td></tr>
+<tr><td id = "appbut" style="width:130px; cursor:pointer; background:rgb(92,193,91);height:30px;color:white;vertical-align:middle; text-align:center;font-weight:bold;">Approved</td></tr>
+<tr><td id= "rejbut" style="width:130px; cursor:pointer; background:rgb(237,96,79);height:30px;color:white;vertical-align:middle; text-align:center;font-weight:bold;">Rejected</td></tr>
+</table>
+</td><td>
+<table id = "tbreq" style="border:2px solid rgb(83,156,209); border-spacing:0px;border-top-left-radius:0.5em;border-top-right-radius:0.5em;color:white;">
+<tr><td id = "tbhead"  style="width:500px;   background:rgb(83,156,209);height:30px;color:white;vertical-align:middle; text-align:center;font-weight:bold;" >Pending Requests</td></tr>
+<tr><td><div id = "requests" style="height:400px;"></div></td></tr>
+<tr id="subbut" style="text-align:center; background:rgb(83,156,209)"><td><button onClick="subact()">Submit</button></td></tr>
+</table>
+</td></tr></table>
+
+
+
+<div id="loading_gif" style="z-index: 2001; background-color: white; height: 100%; width: 100%; position: fixed; top: 0%; opacity: 0.5 ;display:none; left: 0px;"><img src="img/loadingsymb.gif" style="top: 48%;  left: 48%;position: fixed;"></div>
+
+
+
+</body>
+
+
+</html>

@@ -19,120 +19,128 @@
 	$SubCatTable = "sub_categories";
 ?>
 <style>
-.categories
-{
+.categories {
 	font-size:14px;
+}
+.accordion-heading a {
+	color : #333333;
+	text-decoration : none;
+}
+.accordion-heading a h4 {
+	color : #333333;
+	text-decoration : none;
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: 20px;
+	font-weight: bold;
+	-webkit-transition: all .3s linear;
+	   -moz-transition: all .3s linear;
+			transition: all .3s linear;
+}
+.accordion-heading a:hover {
+	color : #000000;
+	text-decoration : none;
+}
+.accordion-heading a h4:hover {
+	color : #000000;
+	text-decoration : none;
+	text-shadow : 0 0 10px rgba(0, 0, 0, 0.90);
+}
+.accordion-inner-info {
+	background-color : #F7F7F7;
+}
+.extra_button_right {
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: 20px;
+	font-weight: bold;
+	border : 1px solid #888888;	
+	border-radius: 10px 10px 10px 10px;
+
+	-webkit-transition: all .3s linear;
+	   -moz-transition: all .3s linear;
+			transition: all .3s linear;
+	color : #444444;
+}
+.extra_button_right:hover {
+	color : #000000;
+	border : 1px solid #000000;
+	text-decoration: none;
+	text-shadow : 0 0 10px rgba(0, 0, 0, 0.90);
+	box-shadow : 0 0 10px rgba(0, 0, 0, 0.90), 
+		0 0 8px rgba(0, 0, 0, 0.5) inset;
+}
+.table, .table td, .table th {
+	text-align : center;
+}
+.my_button {
+	padding-left : 10px;
+	padding-top : 2px;
+	padding-bottom : 2px;
+	padding-right : 10px;
+	font-weight: bold;
+	border : 1px solid #888888;	
+	border-radius: 10px 10px 10px 10px;
+	box-shadow : 0 0 8px rgba(0, 0, 0, 0.5) inset;
+	-webkit-transition: all .3s linear;
+	   -moz-transition: all .3s linear;
+			transition: all .3s linear;
+	color : #000000;
+}
+.my_button:hover {
+	color : #ffffff;
+	border : 1px solid #000000;
+	text-decoration: none;
+	text-shadow : 0 0 10px rgba(0, 0, 0, 0.90);
+	box-shadow : 0 0 10px rgba(0, 0, 0, 0.90), 
+		0 0 8px rgba(0, 0, 0, 0.5) inset;
 }
 </style>
 
 <center>
-<div class="span10">
-				<div class="widget"  style="float:right;width:1000px; margin:10px;">
-					<div class="widget-header">
-						<i class="icon-star"></i>
-						<h3>Update Profile</h3>
-					</div> <!-- /widget-header -->		
-					<div class="widget-content"><center>
-								<form id="form" class="form-horizontal span12" name="normalprof" action="apps/profileplus/resumeprofilesubmit.php" method="post">
-								<table style="float:left;">
-                                    <tr>
-										<td style="width:100px;"><a href="#">FullName</a></td>
-										<td><input style="color:#fff;" id="name" type="text" name="name" value="<?php echo $name; ?>" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td>
-									</tr><tr>
-										<td style="width:100px;"><a href="#">Nickname</a></td>
-										<td><input id="nick" type="text" name="nick" value="<?php echo $nick; ?>" /></td>
-									</tr><tr>
-										<td style="width:100px;"><a href="#">Room No.</a></td>
-										<td><input style="color:#fff;" id="room" type="text" name="room" value="<?php echo $room; ?>" maxlength="4" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td></tr>
-                                        <tr>
-                                        <td style="width:100px;"><a href="#">Hostel.</a></td>
-                                        <td>
-                                        <select id="hostel" name="hostel" style="width:195px; color:#fff;" disabled>
-						 					  <option <?php if($hostel == "Saraswathi") echo "selected=\"selected\"" ?> value="Saraswathi">Saraswathi</option>
-											  <option <?php if($hostel == "Tamiraparani") echo "selected=\"selected\"" ?> value="Tamiraparani">Tamraparani</option>
-											  <option <?php if($hostel == "Ganga") echo "selected=\"selected\"" ?> value="Ganga">Ganga</option>
-											  <option <?php if($hostel == "Tapti") echo "selected=\"selected\"" ?> value="Tapti">Tapti</option>
-                                              <option <?php if($hostel == "Jamuna") echo "selected=\"selected\"" ?> value="Jamuna">Jamuna</option>
-											  <option <?php if($hostel == "Alaknanda") echo "selected=\"selected\"" ?> value="Alaknanda">Alaknanda</option>
-											  <option <?php if($hostel == "Godavari") echo "selected=\"selected\"" ?> value="Godavari">Godavari</option>
-						 					  <option <?php if($hostel == "Narmada") echo "selected=\"selected\"" ?> value="Narmada">Narmada</option>
-                           					  <option <?php if($hostel == "Pampa") echo "selected=\"selected\"" ?> value="Pampa">Pampa</option>
- 						 					  <option <?php if($hostel == "Sindhu") echo "selected=\"selected\"" ?> value="Sindhu">Sindhu</option>
- 						  					  <option <?php if($hostel == "Krishna") echo "selected=\"selected\"" ?> value="Krishna">Krishna</option>
-						  					  <option <?php if($hostel == "Cauvery") echo "selected=\"selected\"" ?> value="Cauvery">Cauvery</option>
-						  				   	  <option <?php if($hostel == "Sharavathi") echo "selected=\"selected\"" ?> value="Sharavathi">Sharavathi</option>
-											  <option <?php if($hostel == "Sarayu") echo "selected=\"selected\"" ?> value="Sarayu">Sarayu</option>
-						  					  <option <?php if($hostel == "Brahmaputra") echo "selected=\"selected\"" ?> value="Brahmaputra">Brahmaputra</option>
-		   		  							  <option <?php if($hostel == "Mandakini") echo "selected=\"selected\"" ?> value="Mandakini">Mandakini</option>
-		   		  							  <option <?php if($hostel == "Mahanadhi") echo "selected=\"selected\"" ?>value="Mahanadhi">Mahanadhi</option>                                        
-                                        </select>
-                                        </td>
-									</tr>
-                                        <tr>
-                                        <td style="width:100px;"><a href="#">Blood Group</a></td>
-                                        <td>
-                                        <select id="bgroup" name="bgroup" style="width:195px;">
-
-
-          <option <?php if($bgroup == "") echo "selected=\"selected\"" ?> value="" >Select</option>
-          <option <?php if($bgroup == "A-") echo "selected=\"selected\"" ?> value="A-">A-</option>
-          <option <?php if($bgroup == "B-") echo "selected=\"selected\"" ?> value="B-">B-</option>
-          <option <?php if($bgroup == "O-") echo "selected=\"selected\"" ?> value="O-">O-</option>
-          <option <?php if($bgroup == "AB-") echo "selected=\"selected\"" ?> value="AB-">AB-</option>
-          <option <?php if($bgroup == "A+") echo "selected=\"selected\"" ?> value="A+">A+</option>
-          <option <?php if($bgroup == "B+") echo "selected=\"selected\"" ?> value="B+">B+</option>
-          <option <?php if($bgroup == "O+") echo "selected=\"selected\"" ?> value="O+">O+</option>
-          <option <?php if($bgroup == "AB+") echo "selected=\"selected\"" ?> value="AB+">AB+</option>
-                                       </select>
-                                        </td>
-									</tr>
-<tr>
-										<td style="width:100px;"><a href="#">Contact No.</a></td>
-										<td><input id="contact" type="text" name="contact" value="<?php echo $contact; ?>" maxlength="10" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();"/></td>
-									</tr><tr>
-										<td style="width:100px;"><a href="#">E-Mail ID</a></td>
-										<td><input id="email" type="text" name="email" value="<?php echo $email; ?>" /></td>
-									</tr>									
+	<div class="span10">
+		<div class="widget"  style="float:right;width:1000px; margin:10px;">
+			<div class="widget-header">
+				<i class="icon-star"></i>
+				<h3>Update Profile</h3>
+			</div> <!-- /widget-header -->		
+			<div class="widget-content">
+	
+				<div class="accordion" id="accordionProfile">
+					
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionProfile" href="#collapse_Info"> 
+								<h4>
+									Basic info
+								</h4>
+							</a>
+						</div>
+						<div id="collapse_Info" class="accordion-body in collapse" >
+							<div class="accordion-inner">
+								<?php include("basicinfo.php"); ?>
+							</div>
+						</div>
+					</div>
 									
-								</table>
-							
-	<table style="float:right;">
-		<tr>
-			<td style="width:100px;"><a href="#">Display Picture</a></td>
-			<td><img style="margin-left:25px;" src="files/profilepics/<?php echo $disp_pic; ?>" width="150" height="150" /></td>
-		</tr>
-		<tr>
-			<td>
-			</td><td>
-				<input type="hidden" name="MAX_FILE_SIZE" value="50000" />
-				<input class="btn btn-info btn-small" style="width:180px;" type="file" onchange="picload();" name="dpic" id="dpic" />
-			</td>
-		</tr><tr>
-			<td colspan='2' style="text-align:center;"><input style="margin-top:20px;" class="btn btn-warning btn-large" type="submit" value="Update" name="update_dpic" /></td>
-		</tr>
-	</table>
-</form>                </center> 
-                            
 <?php
-include("education.php");
-
-
-$catquery = "SELECT * FROM $CatTable";
-$catresult = mysql_query($catquery);
-
-while($catrow = mysql_fetch_array($catresult))
-  {
-	  $catname = $catrow['name'];
-	  $catID = $catrow['id'];
-	  $catdesc = $catrow['description'];
-	  $catadmin = $catrow['admin'];
-	  include("categories.php");
-  }
+		include("education.php");
+		
+		
+		$catquery = "SELECT * FROM $CatTable";
+		$catresult = mysql_query($catquery);
+		
+		while($catrow = mysql_fetch_array($catresult)) {
+			$catname = $catrow['name'];
+			$catID = $catrow['id'];
+			$catdesc = $catrow['description'];
+			$catadmin = $catrow['admin'];
+			include("categories.php");
+		}
 
 ?>
        
-				</div> <!-- /widget-content -->
-						
-				</div> <!-- /widget -->	
-</div>
+			</div> <!-- /widget-content -->					
+		</div> <!-- /widget -->	
+	</div>
 </center>

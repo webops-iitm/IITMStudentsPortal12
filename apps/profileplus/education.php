@@ -1,54 +1,34 @@
-<center class="span12"><h4>
-  Education	<a id="eduaddbutton" onClick="eduadd()" class="btn btn-success btn-small">Add</a>
-</h4></center>
-<div class="" id="eddready">
-	<?php include 'eduready.php'; ?>
+
+<div class="accordion-group">
+	<div class="accordion-heading">
+		<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionProfile" href="#collapse_Edu"> 
+			<h4>
+				Education 
+				<span href="#myModal_Edu" role="button" data-toggle="modal"  class="extra_button_right pull-right">
+					&nbsp; <i style="margin-top: 4px;" class="icon-plus-sign"></i> Add &nbsp;
+				</span>
+			</h4>
+		</a>
+	</div>
+	<div id="collapse_Edu" class="accordion-body collapse" style="height: 0px;">
+		<div class="accordion-inner accordion-inner-info">
+			<?php include 'eduready.php'; ?>
+		</div>
+	</div>
 </div>
-	<div class="" id="eduadd" style="display:none">
-				    <div class="control-group" id="qualiselect">  
-            				<label class="control-label" for="Qualifications">Qualification</label>  
-            				<div class="controls">  
-              					<select onChange="qualichange()" id="Qualifications">
-                                	<option></option>
-                					<option>10th</option>  
-                					<option>12th</option>
-                					<option>B.Tech</option>  
-                					<option>Dual Degree</option>  
-                					<option>M.Tech</option>  
-                					<option>PhD</option>  
-                					<option>Others</option>  
-              					</select>  
-            				</div>  
-          				</div><a onClick=
-                        "document.getElementById('eduadd').style.display='none';
-                        document.getElementById('eduaddbutton').style.visibility='visible';
-                        document.getElementById('qualiselect').style.display='none';" class="btn btn-success btn-small">Cancel</a>
-                
-                <!-- Javascript Work is left here  -->
-                  <form class="form-horizontal" id="eduform" style="display:none;" action="apps/profileplus/resumeedusubmit.php" method="post">  
- 						<fieldset>
-                        <legend name="qualidisplay" id="Qualidisplay">Others</legend>  
-                        <div class="control-group">  
-            			        <label class="control-label" for="QualiOthers">Others</label>  
-            				<div class="controls">  
-              					<input type="text" class="input-xlarge" name="qualiothers" readonly='true' id="QualiOthers">
-                                <input type="text" class="input-xlarge" name="qualidept" id="QualiDept">   
-            				</div> 
-          				</div>
-                        <div class="control-group">  
-            			        <label class="control-label" for="Qualidesc">Description</label>  
-            				<div class="controls">  
-              					<input type="text" class="input-xlarge" name="qualidesc" id="Qualidesc">   
-            				</div> 
-          				</div>
-                        <div class="control-group">  
-            			        <label class="control-label" for="Qualiscore">Score</label>  
-            				<div class="controls">  
-              					<input type="text" class="input-xlarge" name="qualiscore" id="Qualiscore">   
-            				</div> 
-          				</div>
-        	                  <div class="form-actions">  
-      					      <button type="submit" name="eduform" class="btn btn-primary">Submit</button>  
-        					  </div>
-   						</fieldset></form>
-                        </div>
+	
+<div id="myModal_Edu" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" style="color:#ffffff;" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Education</h3>
+	</div>
+	<div class="modal-body">
+		<?php include("eduadd.php"); ?>
+	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		<button class="btn btn-primary">Save changes</button>
+	</div>
+</div>
+	
+					

@@ -64,11 +64,11 @@ $.localScroll();
 	?>
                 <a href="#">
                     <div class="name">
-                        <span class="first-name fg-color-darken">Yash</span>
-                        <span class="last-name fg-color-darken">Murty</span>
+                        <span class="first-name fg-color-darken"><?php echo $nick; ?></span>
+                        <span class="last-name fg-color-darken"><?php echo $user; ?></span>
                     </div>
                     <div class="avatar">
-                        <img src="images/fb3.jpg">
+                        <img src="../../../files/profilepics/<?php echo $profilepic;?>">
                     </div>
                 </a> 
 	<?php

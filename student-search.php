@@ -1,5 +1,5 @@
 <?php
-	include("db.php");
+/*	include("db.php");
 
          session_start();
 	
@@ -10,7 +10,7 @@
 
 	include("header.php");
 	
-	
+	*/
 
 
        if (isset($_GET['userd']))
@@ -26,5 +26,5 @@
     }
 
 
-	include("footer.php");
+//	include("footer.php");
 ?>

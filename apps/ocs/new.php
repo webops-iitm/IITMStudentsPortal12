@@ -32,7 +32,7 @@
 			<h3>Online Complaint System</h3>
 		</div> <!-- /widget-header -->
 		
-<div style="float:left;  height:280px; width:790px; padding-top:0px; " class="widget-content" id="inner_body_sec">
+<div style="float:left;  height:100%; width:100%; padding-top:0px; " class="widget-content" id="inner_body_sec">
 <center>
 <form id="contact_form" name="regform" action="apps/ocs/newsubmit.php" method="post">
 	<table style="float:left; margin-left:30px; margin-top:5px;">
@@ -55,7 +55,7 @@
 			<td style="height:60px;"></td>
 		</tr><tr>
 			<center>
-				<td><a href="#"><input class="btn btn-warning btn-large" type="submit" value="Send" name="Send" /></a></td>
+				<td><a href="#"><input class="btn btn-warning btn-medium" type="submit" value="Send" name="Send" /></a></td>
 			</center>
 		</tr>
 	</table>

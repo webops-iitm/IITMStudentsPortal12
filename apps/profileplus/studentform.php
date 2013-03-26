@@ -99,7 +99,7 @@
 
 <center>
 	<div class="span10">
-		<div class="widget"  style="float:right;width:1000px; margin:10px;">
+		<div id="widget" class="widget"  style="float:right;width:1000px; margin:10px;">
 			<div class="widget-header">
 				<i class="icon-star"></i>
 				<h3>Update Profile</h3>

@@ -57,7 +57,7 @@ $.localScroll();
         	<form action="landingsubmit.php" method="POST">
             <div class="user-login">
     <?php
-	if($loggedin==1)
+	if($loggedin!=1)
 	{
 	
 	

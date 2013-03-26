@@ -63,7 +63,7 @@ $.localScroll();
 	
 	?>
                 
-		<a href='logout.php'><button class="bg-color-red" value="Log Out" name="logout" type="submit">logout</button></a>
+		<a href='logout.php'><button class="bg-color-red" value="Log Out" name="logout">logout</button></a>
 		</div>
 		<div class="user-login">
 		<a href="#">
@@ -82,6 +82,7 @@ $.localScroll();
 	{
 	
 	?>
+
     			<input class="bg-color-red" value="Login" name="login" type="submit" />
               	</div><!-- user-login -->
 			<div class="user-login">	
@@ -98,6 +99,7 @@ $.localScroll();
     <?php
 	}
 	?>        
+    <?php if($_GET['error']==1){ echo "<div id=\"errorlogin\">Wrong Username or Password</div>"; } ?>
             </div><!-- user-login -->
             </form>
 

@@ -63,7 +63,7 @@ $.localScroll();
 	
 	?>
                 
-		<input class="bg-color-red" value="Log Out" name="logout" type="submit" />
+		<a href='logout.php'><input class="bg-color-red" value="Log Out" name="logout" type="submit" /></a>
 		</div>
 		<div class="user-login">
 		<a href="#">

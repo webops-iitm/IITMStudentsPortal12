@@ -63,7 +63,7 @@ $.localScroll();
 	
 	?>
                 
-		<a href='logout.php'><button class="bg-color-red" value="Log Out" name="logout">logout</button></a>
+		<a href='landinglogout.php'><button class="bg-color-red" value="Log Out" name="logout">logout</button></a>
 		</div>
 		<div class="user-login">
 		<a href="#">

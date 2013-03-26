@@ -54,8 +54,7 @@ $.localScroll();
 <div class="page secondary fixed-header" style="width: 5600px;">
     <div class="page-header ">
         <div class="page-header-content">
-        	<form action="landingsubmit.php" method="POST">
-            <div class="user-login">
+
     <?php
 	if($loggedin==1)
 	{
@@ -64,7 +63,6 @@ $.localScroll();
 	?>
                 
 		<a href='logout.php'><input class="bg-color-red" value="Log Out" name="logout" type="submit" /></a>
-		</div>
 		<div class="user-login">
 		<a href="#">
                     <div class="name">
@@ -82,6 +80,9 @@ $.localScroll();
 	{
 	
 	?>
+    
+        	<form action="landingsubmit.php" method="POST">
+            <div class="user-login">
     			<input class="bg-color-red" value="Login" name="login" type="submit" />
               	</div><!-- user-login -->
 			<div class="user-login">	
@@ -95,10 +96,10 @@ $.localScroll();
                 	<input type="text" class="with-helper" placeholder="Username" name="uname" maxlength="8" onchange="if(this.value != 'admin') this.value = this.value.toUpperCase();"/>
                     <button class="icon-search helper"></button>
                 </div>
-            </div><!-- user-login -->
+          
     <?php
 	}
-	?>        
+	?>                <div class="user-login">    
             </form>
 
             <h1 class="fg-color-darken" ">Students <strong>Portal</strong></h1>

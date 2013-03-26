@@ -18,7 +18,7 @@
 	$catdone=0;
 		echo $postform;
 		
-	if(isset($_POST[$postform])){
+	//if(isset($_POST[$postform])){
 		echo "working";
 		$qualicat = mysql_real_escape_string(stripslashes($postcat));
 		$qualisubcat = mysql_real_escape_string(stripslashes(strtoupper($_POST[$postsubcat])));
@@ -91,7 +91,7 @@
 			$catdone = 1;
 		}
 		//sql query to submit into stu_profile including $category
-	}
+	//}
 
 	if($catdone==1)	
 	header('Location: ../../index.php?edit=2');

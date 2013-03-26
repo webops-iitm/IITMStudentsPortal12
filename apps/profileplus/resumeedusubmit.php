@@ -8,7 +8,7 @@
 
 	$edudone=0;
 	
-	if(isset($_POST['eduform'])){
+//	if(isset($_POST['eduform'])){
 		$qualihead = mysql_real_escape_string(stripslashes($_POST['qualiothers']));
 		$qualidesc = mysql_real_escape_string(stripslashes($_POST['qualidesc']));
 	    $qualiscore = mysql_real_escape_string(stripslashes($_POST['qualiscore']));
@@ -53,7 +53,7 @@
 			mysql_query($sqladdsub);
 			$edudone = 1;
 		}
-	}
+//	}
 
 	if($edudone==1)	
 	header('Location: ../../index.php?edit=2');

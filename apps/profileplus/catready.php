@@ -4,39 +4,41 @@ $catreadyresult = mysql_query($catreadyquery);
 ?>
 <div>
 	<div>
-		<?php
+		<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered display" id="tableEdu" width="80%">
+			<tr>
+				<th>Title</th>
+				<th>Description</th>
+				<th>Timeline</th>
+				<th>Status</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+<?php
 		$subc = "";
-while($catreadyrow = mysql_fetch_array($catreadyresult))
-  {
-	  if($subc!=$catreadyrow['subcat_id']){
-		  $subc=$catreadyrow['subcat_id'];
-		  echo $catreadyrow['subcat_name'];
-	  
-		  
-echo "<table class='table-striped' style=\"width:90%\">
-<tr>
-<th>Title</th>
-<th>Description</th>
-<th>Timeline</th>
-<th>Status</th>
-<th>Edit</th>
-<th>Delete</th>
-</tr>";
-	  }
-	  if($catreadyrow['status'] ==1) $status = "Approved";
-	  elseif($catreadyrow['status'] ==2) $status = "Pending";
-	  elseif($catreadyrow['status'] ==3) $status = "Rejected";
-  echo "<tr>";
-  echo "<td>" . $catreadyrow['title'] . "</td>";
-  echo "<td>" . $catreadyrow['desc'] . "</td>";
-  echo "<td>" . $catreadyrow['timeline'] . "</td>";
-  echo "<td>" . $status . "</td>";
-  echo "<td><a onclick=\"javascript:catedit('".$catreadyrow['cat_id']."','".$catreadyrow['subcat_name']."','".$catreadyrow['title']."','".$catreadyrow['desc']."','".$catreadyrow['timeline']."','".$catreadyrow['id']."');\" class=\"cateditbutton \"btn btn-success btn-small\">Edit</a></td>";
-  echo "<td><a onclick=\"javascript:catdel('".$catreadyrow['cat_id']."','".$catreadyrow['subcat_name']."','".$catreadyrow['title']."','".$catreadyrow['desc']."','".$catreadyrow['timeline']."');\" class=\"catdelbutton \"btn btn-success btn-small\">Delete</a></td>";
-  echo "</tr>";
-  }
-echo "</table>";
-
-		?>    
+		while($catreadyrow = mysql_fetch_array($catreadyresult)) {
+			if($catreadyrow['status'] == 1) $status = "<span style='color:#00ff00; font-weight:bold;'>Approved</span>";
+			elseif($catreadyrow['status'] == 2) $status = "<span style='color:#0000ff;'>Pending</span>";
+			elseif($catreadyrow['status'] == 3) $status = "<span style='color:#ff0000;'>Rejected</span>";
+?>
+			<tr>
+				<td> <?php echo $catreadyrow['title']; ?> </td>
+				<td> <?php echo $catreadyrow['desc']; ?> </td>
+				<td> <?php echo $catreadyrow['timeline']; ?> </td>
+				<td> <?php echo $status; ?></td>
+				<td> 
+					<!--<a href="#myModal_<?php echo $catID; ?>Edit" role="button" data-toggle="modal" onclick="javascript:catedit('<?php echo $catreadyrow['cat_id']; ?>', '<?php echo $catreadyrow['subcat_name']; ?>', '<?php echo $catreadyrow['title']; ?>', '<?php echo $catreadyrow['desc']; ?>', '<?php echo $catreadyrow['timeline']; ?>', '<?php echo $catreadyrow['id']; ?>');" class="cateditbutton my_button">-->
+					<a href="javascript:catedit('<?php echo $catreadyrow['cat_id']; ?>', '<?php echo $catreadyrow['subcat_name']; ?>', '<?php echo $catreadyrow['title']; ?>', '<?php echo $catreadyrow['desc']; ?>', '<?php echo $catreadyrow['timeline']; ?>', '<?php echo $catreadyrow['id']; ?>');" class="my_button" >
+						Edit
+					</a>
+				</td>
+				<td>
+					<a href="javascript:catdel('<?php echo $catreadyrow['cat_id']; ?>', '<?php echo $catreadyrow['subcat_name']; ?>', '<?php echo $catreadyrow['title']; ?>', '<?php echo $catreadyrow['desc']; ?>', '<?php echo $catreadyrow['timeline']; ?>', '<?php echo $catreadyrow['id']; ?>');"  class="catdelbutton my_button">
+						Delete
+					</a>
+				</td>
+			</tr>
+<?php	}
+?>
+		</table>
     </div>
 </div>

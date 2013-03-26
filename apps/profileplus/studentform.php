@@ -1,7 +1,19 @@
 <?php
 	include("../../db.php");
 	session_start();
+	if (isset($_COOKIE["user"]))
+	
+		$_SESSION['uname'] = $_COOKIE["user"];
+		
+
 	include("../../config.php");
+		$loggedin = 1;
+	if($loggedin == 0)
+		
+		die("Please Login to continue");
+	else
+	{
+	
 //	$uname = "name";
 	$uname = $_SESSION['uname'];
 /*	$uname = "Username";
@@ -144,3 +156,6 @@
 		</div> <!-- /widget -->	
 	</div>
 </center>
+<?php
+	}
+?>

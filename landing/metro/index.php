@@ -54,7 +54,7 @@ $.localScroll();
 <div class="page secondary fixed-header" style="width: 5600px;">
     <div class="page-header ">
         <div class="page-header-content">
-        	<form>
+        	<form action="landingsubmit.php" method="POST">
             <div class="user-login">
     <?php
 	if($loggedin==1)
@@ -77,7 +77,7 @@ $.localScroll();
 	{
 	
 	?>
-    			<input class="bg-color-red" type="submit" value="submit" />
+    			<input class="bg-color-red" value="Login" name="login" type="submit" />
               	</div><!-- user-login -->
 			<div class="user-login">	
                 <div class="input-control password">

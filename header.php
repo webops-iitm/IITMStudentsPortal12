@@ -231,7 +231,7 @@
 			<ul class="nav nav-pills">
 				<li ><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');"><i class="icon-list "></i> Mess Rating</a></li>
 				
-				<li><a href="student-search.php"><i class="icon-search "></i> Student Search</a></li>
+				<li><a href="javascript:update('student-search.php','widget');"><i class="icon-search "></i> Student Search</a></li>
 				<li><a href="javascript:update('apps/facilities_rating/index.php','widget');"><i class="icon-list "></i> Facilities</a></li>
 				<li><a href="/forum"><i class="icon-comment "></i> Forum</a></li>
 				<li><a href="http://t5e.iitm.ac.in/"><i class="icon-edit "></i> The Fifth Estate</a></li> <li><a href="http://cfi.iitm.ac.in/"><i class="icon-hand-up "></i> CFI</a></li>

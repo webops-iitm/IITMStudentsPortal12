@@ -169,6 +169,7 @@
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="student-search.php">Student Search</a></li>
+                            <li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>
 						</ul>
 				</li>
 				

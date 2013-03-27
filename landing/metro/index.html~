@@ -668,7 +668,7 @@ $.localScroll();
                 <a href="http://www.nss.iitm.ac.in/">
                 <div class="tile icon bg-color-green outline-color-green" style="">
                     <div class="tile-content">
-                        <i class="icon-random"></i>
+                        <i class="icon-cog"></i>
                     </div>
                     <div class="brand">
                         <div class="badge"></div>

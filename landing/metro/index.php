@@ -1,3 +1,15 @@
+<?php
+	include("../../db.php");
+	
+	session_start();
+	
+	if (isset($_COOKIE["user"]))
+		$_SESSION['uname'] = $_COOKIE["user"];
+
+	include("../../config.php");
+	
+	
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!--NoM4D-->
 <head>
@@ -42,32 +54,53 @@ $.localScroll();
 <div class="page secondary fixed-header" style="width: 5600px;">
     <div class="page-header ">
         <div class="page-header-content">
-        	<form>
+        	<form action="landingsubmit.php" method="POST">
             <div class="user-login">
-              <!--  <a href="#">
+    <?php
+	if($loggedin==1)
+	{
+	
+	
+	?>
+                
+		<a href='landinglogout.php' class="bg-color-red" >logout</a>
+		</div>
+		<div class="user-login">
+		<a href="#">
                     <div class="name">
-                        <span class="first-name fg-color-darken">Yash</span>
-                        <span class="last-name fg-color-darken">Murty</span>
+                        <span class="first-name fg-color-darken"><?php echo $nick; ?></span>
+                        <span class="last-name fg-color-darken"><?php echo $user; ?></span>
                     </div>
                     <div class="avatar">
-                        <img src="images/fb3.jpg">
+                        <img src="../../../files/profilepics/<?php echo $profilepic;?>">
                     </div>
-                </a> -->
-				<input class="bg-color-red" type="submit" value="submit" />
+                </a> 
+		
+	<?php
+	}
+	else
+	{
+	
+	?>
+
+    			<input class="bg-color-red" value="Login" name="login" type="submit" />
               	</div><!-- user-login -->
 			<div class="user-login">	
                 <div class="input-control password">
-                	<input type="password" class="with-helper" placeholder="Password" />
+                	<input type="password" class="with-helper" placeholder="Password" name="pass"/>
                     <button class="helper"></button>
                 </div>
             </div><!-- user-login -->
 			<div class="user-login">            
                 <div class="input-control text">
-                	<input type="text" class="with-helper" placeholder="Username" />
+                	<input type="text" class="with-helper" placeholder="Username" name="uname" maxlength="8" onchange="if(this.value != 'admin') this.value = this.value.toUpperCase();"/>
                     <button class="icon-search helper"></button>
                 </div>
+    <?php
+	}
+	?>        
+    <?php if($_GET['error']==1){ echo "<div id=\"errorlogin\">Wrong Username or Password</div>"; } ?>
             </div><!-- user-login -->
-            
             </form>
 
             <h1 class="fg-color-darken" ">Students <strong>Portal</strong></h1>
@@ -292,7 +325,7 @@ $.localScroll();
                     </div>
                 </div>
 		</a		
-                <a href="http://sports.iitm.ac.in/">
+                ><a href="http://sports.iitm.ac.in/">
                 <div class="tile icon bg-color-blueDark outline-color-blueDark" style="">
                 <div class="tile-content">
              	       <i class="icon-flag"></i>

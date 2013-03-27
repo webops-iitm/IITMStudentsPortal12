@@ -12,7 +12,7 @@
 ?>
 <div class="span3 offset1">
 <center>
-				<div class="widget"  style="float:right;width:400px; margin:10px;">
+				<div id="widget" class="widget"  style="float:right;width:400px; margin:10px;">
 					<div class="widget-header">
 						<i class="icon-star"></i>
 						<h3><?php if($nick!="") echo $nick."'s"; ?>Profile</h3>

@@ -1,7 +1,19 @@
 <?php
 	include("../../db.php");
 	session_start();
+	if (isset($_COOKIE["user"]))
+	
+		$_SESSION['uname'] = $_COOKIE["user"];
+		
+
 	include("../../config.php");
+		$loggedin = 1;
+	if($loggedin == 0)
+		
+		die("Please Login to continue");
+	else
+	{
+	
 //	$uname = "name";
 	$uname = $_SESSION['uname'];
 /*	$uname = "Username";
@@ -140,8 +152,13 @@
 
 
 <center>
+<<<<<<< HEAD
 	<div class="span12">
 		<div class="widget"  style="float:right;width:1340px; margin:10px;">
+=======
+	<div class="span10">
+		<div id="widget" class="widget"  style="float:right;width:1000px; margin:10px;">
+>>>>>>> 7f97cb5a047c726dccdf68f3071ca9cc788a9dca
 			<div class="widget-header">
 				<i class="icon-star"></i>
 				<h3>Update Profile</h3>
@@ -254,6 +271,7 @@
 	</div>
 </center>
 <?php
+<<<<<<< HEAD
 	include("education.php");
 	include("categories.php");
 ?>
@@ -262,3 +280,7 @@
 	//$('.carousel').carousel({interval : false});
 	//$(document).on('slide', '.carousel', function() { alert("slide"); } );
 </script>
+=======
+	}
+?>
+>>>>>>> 7f97cb5a047c726dccdf68f3071ca9cc788a9dca

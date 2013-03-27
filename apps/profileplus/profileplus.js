@@ -187,19 +187,39 @@
 			var l = document.getElementsByClassName("profile_carousel_nav");
 			for( var i = 0; i < l.length; i++ ) {
 				l[i].className = "profile_carousel_nav";
-				l[i].style['width'] = "";
+				//l[i].style['width'] = "";
 			}
 			document.getElementById(carousel_name+"_nav").className += " active";
-			var cur_w = parseInt(document.defaultView.getComputedStyle(document.getElementById(carousel_name+'_nav', "")).getPropertyValue('width'))
-			document.getElementById(carousel_name+"_nav").style["width"] = cur_w + 130 + "px";
+			//var cur_w = parseInt(document.defaultView.getComputedStyle(document.getElementById(carousel_name+'_nav', "")).getPropertyValue('width'))
+			//document.getElementById(carousel_name+"_nav").style["width"] = cur_w + 130 + "px";
+		
+			
 			
 			$('#myCarousel').carousel(carousel_name);
 			$('#myCarousel').carousel("pause");
 			onload_carousel();
 			
+			
 		}
-	function onload_carousel() {
+		function onload_carousel() {
 			$(document).on('mouseleave', '#myCarousel', function() { 
 						$(this).carousel('pause');
 			} );
-	};
+		}
+		function next_carousel() { //incomplete
+			var l = document.getElementsByClassName("profile_carousel_nav");
+			var k = -1;
+			for( var i = 0; i < l.length; i++ ) {
+				if(l[i].className.indexOf("active") !== -1) {
+					k = i+1;
+					alert(k);
+				}
+				l[i].className = "profile_carousel_nav";
+				//l[i].style['width'] = "";
+			}
+			document.getElementById(carousel_name+"_nav").className += " active";
+			if(k != -1) setCarousel(k);
+		}
+		function prev_carousel() { // incomplete
+			alert("prev");
+		}

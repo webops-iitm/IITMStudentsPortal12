@@ -4,7 +4,7 @@ $catreadyresult = mysql_query($catreadyquery);
 ?>
 <div>
 	<div>
-		<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered display" id="tableEdu" style="width : 80%;">
+		<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered display" id="tableCat_<?php echo $catid ?>" style="width : 90%;">
 			<tr>
 				<th>Title</th>
 				<th>Description</th>

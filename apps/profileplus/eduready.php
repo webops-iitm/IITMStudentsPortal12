@@ -4,7 +4,7 @@
 <div>
 	<div>
 		<center>
-			<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered display" id="tableEdu" style=" width:80%;">
+			<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered display" id="tableEdu" style=" width:90%;">
 				<tr>
 					<th>Title</th>
 					<th>Description</th>
@@ -38,8 +38,9 @@
 <?php 
 			}
 ?>
+		
 				<tr>
-
+		
 					<td>
 						<h5>
 							<a href="#myModal_Edu" role="button" data-toggle="modal"  class="extra_button_right">

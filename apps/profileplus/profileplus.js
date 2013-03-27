@@ -178,3 +178,28 @@
 			document.getElementById("mySubmit_"+cat_id).innerHTML = 'Delete';
 			document.getElementById(catform).action="apps/profileplus/resumecatdelete.php";
 		}
+		function setCarousel(carousel_name) {
+			/*var l = document.getElementsByClassName("profile_carousel_item");
+			for( var i = 0; i < l.length; i++ ) 
+				l[i].className = "item profile_carousel_item";
+			document.getElementById(carousel_name).className += " active";
+			*/
+			var l = document.getElementsByClassName("profile_carousel_nav");
+			for( var i = 0; i < l.length; i++ ) {
+				l[i].className = "profile_carousel_nav";
+				l[i].style['width'] = "";
+			}
+			document.getElementById(carousel_name+"_nav").className += " active";
+			var cur_w = parseInt(document.defaultView.getComputedStyle(document.getElementById(carousel_name+'_nav', "")).getPropertyValue('width'))
+			document.getElementById(carousel_name+"_nav").style["width"] = cur_w + 130 + "px";
+			
+			$('#myCarousel').carousel(carousel_name);
+			$('#myCarousel').carousel("pause");
+			onload_carousel();
+			
+		}
+	function onload_carousel() {
+			$(document).on('mouseleave', '#myCarousel', function() { 
+						$(this).carousel('pause');
+			} );
+	};

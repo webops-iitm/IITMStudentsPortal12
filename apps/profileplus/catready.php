@@ -4,7 +4,7 @@ $catreadyresult = mysql_query($catreadyquery);
 ?>
 <div>
 	<div>
-		<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered display" id="tableEdu" width="80%">
+		<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered display" id="tableEdu" style="width : 80%;">
 			<tr>
 				<th>Title</th>
 				<th>Description</th>
@@ -39,6 +39,52 @@ $catreadyresult = mysql_query($catreadyquery);
 			</tr>
 <?php	}
 ?>
+				<tr>
+
+					<td>
+						<h5>
+							<a href="#myModal_<?php echo $catID; ?>" role="button" data-toggle="modal"  class="extra_button_right">
+								&nbsp; <i style="margin-top: 2px;" class="icon-plus-sign"></i> Add &nbsp;
+							</a>
+						</h5>
+					</td>
+					<td>
+						<h5>
+							<a href="#myModal_<?php echo $catID; ?>" role="button" data-toggle="modal"  class="extra_button_right">
+								&nbsp; <i style="margin-top: 2px;" class="icon-plus-sign"></i> Add &nbsp;
+							</a>
+						</h5>
+					</td>
+					<td>
+						<h5>
+							<a href="#myModal_<?php echo $catID; ?>" role="button" data-toggle="modal"  class="extra_button_right">
+								&nbsp; <i style="margin-top: 2px;" class="icon-plus-sign"></i> Add &nbsp;
+							</a>
+						</h5>
+					</td>
+					<td>
+						<h5>
+							<a href="#myModal_<?php echo $catID; ?>" role="button" data-toggle="modal"  class="extra_button_right">
+								&nbsp; <i style="margin-top: 2px;" class="icon-plus-sign"></i> Add &nbsp;
+							</a>
+						</h5>
+					</td>
+					<td>
+						<h5>
+							<a href="#myModal_<?php echo $catID; ?>" role="button" data-toggle="modal"  class="extra_button_right">
+								&nbsp; <i style="margin-top: 2px;" class="icon-plus-sign"></i> Add &nbsp;
+							</a>
+						</h5>
+					</td>
+					<td>
+						<h5>
+							<a href="#myModal_<?php echo $catID; ?>" role="button" data-toggle="modal"  class="extra_button_right">
+								&nbsp; <i style="margin-top: 2px;" class="icon-plus-sign"></i> Add &nbsp;
+							</a>
+						</h5>
+					</td>
+					
+				</tr>
 		</table>
     </div>
 </div>

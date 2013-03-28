@@ -10,9 +10,10 @@ include_once("config.php");
 $sso_user = array();
 if ($loggedin) {
    $sso_user['uniqueid'] = $id;
-   $sso_user['name'] = $name;
+   $sso_user['name'] = $name ;
    $sso_user['email'] = $email;
    $sso_user['photourl'] = '';
+   $sso_user['rno'] = strtoupper($user); 
 }
 
 $secure = true; 

@@ -30,19 +30,22 @@
 					setcookie("user", $uname, $expire);
 				$_SESSION['uname'] = $uname;
 				$_SESSION['uid'] = $row['id'];
-				header("location:index.php");
+				if(isset($_POST['tc_key'])) header("location:http://students2.iitm.ac.in/forum/?login=success");
+				else header("location:index.php");
 			
 			}
 		
 			else
 			{
-				header('Location: index.php?error=1');
+				if(isset($_POST['tc_key'])) header("location:http://students2.iitm.ac.in/forum/?err=Username Password Mismatch");
+				else header('Location: index.php?error=1');
 			}
 		}
 		
 		else
 		{
-			header('Location: index.php?error=1');
+				if(isset($_POST['tc_key'])) header("location:http://students2.iitm.ac.in/forum/?err=User Not Found");
+				else header('Location: index.php?error=1');
 		}
 	}
 	else{

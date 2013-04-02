@@ -62,8 +62,11 @@ $.localScroll();
 	
 	
 	?>
-                
-		<a href='landinglogout.php' class="bg-color-red" >logout</a>
+                <div style="width:90px; height:34px; line-height:34px;" class="bg-color-red">
+		<center>
+		<a href='landinglogout.php' class="" style=" color:#FFFFFF;">logout</a>
+		</center>		
+		</div>
 		</div>
 		<div class="user-login">
 		<a href="#">

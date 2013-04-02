@@ -57,13 +57,16 @@ $.localScroll();
         	<form action="landingsubmit.php" method="POST">
             <div class="user-login">
     <?php
-	if($loggedin!=1)
+	if($loggedin==1)
 	{
 	
 	
 	?>
-                
-		<input class="bg-color-red" value="Log Out" name="logout" type="submit" />
+                <div style="width:80px; height:34px; line-height:34px;" class="bg-color-red">
+		<center>
+		<a href='landinglogout.php' class="" style=" color:#FFFFFF;">logout</a>
+		</center>		
+		</div>
 		</div>
 		<div class="user-login">
 		<a href="#">
@@ -82,6 +85,7 @@ $.localScroll();
 	{
 	
 	?>
+
     			<input class="bg-color-red" value="Login" name="login" type="submit" />
               	</div><!-- user-login -->
 			<div class="user-login">	
@@ -95,10 +99,11 @@ $.localScroll();
                 	<input type="text" class="with-helper" placeholder="Username" name="uname" maxlength="8" onchange="if(this.value != 'admin') this.value = this.value.toUpperCase();"/>
                     <button class="icon-search helper"></button>
                 </div>
-            </div><!-- user-login -->
     <?php
 	}
 	?>        
+    <?php if($_GET['error']==1){ echo "<div id=\"errorlogin\">Wrong Username or Password</div>"; } ?>
+            </div><!-- user-login -->
             </form>
 
             <h1 class="fg-color-darken" ">Students <strong>Portal</strong></h1>

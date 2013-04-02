@@ -1,4 +1,4 @@
-
+<!--
 <div class="accordion-group">
 	<div class="accordion-heading">
 		<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionProfile" href="#collapse_Edu"> 
@@ -12,11 +12,13 @@
 	</div>
 	<div id="collapse_Edu" class="accordion-body collapse" style="height: 0px;">
 		<div class="accordion-inner accordion-inner-info">
-			<?php include 'eduready.php'; ?>
+			<?php //include 'eduready.php'; ?>
 		</div>
 	</div>
-</div>
-	
+</div> 
+	-->
+<?php //include "eduready.php" ?>
+<center>
 <div id="myModal_Edu" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-header">
 		<button type="button" class="close" style="color:#ffffff;" data-dismiss="modal" aria-hidden="true">×</button>
@@ -30,5 +32,4 @@
 		<button class="btn btn-primary" onclick="javascript:document.getElementById('eduform').submit();">Save changes</button>
 	</div>
 </div>
-	
-					
+</center>	

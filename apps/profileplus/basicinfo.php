@@ -1,3 +1,5 @@
+<div class="active item profile_carousel_item" id="basicinfo">
+<h3>Basic information</h3>
 <form id="form_basicinfo" class="offset2 span8" name="normalprof" action="apps/profileplus/resumeprofilesubmit.php" method="post">
 	<table style="float:left;">
 		<tr>
@@ -72,3 +74,4 @@
 		</tr>
 	</table>
 </form>                
+</div>

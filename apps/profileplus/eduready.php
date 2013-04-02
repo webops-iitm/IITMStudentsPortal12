@@ -4,7 +4,7 @@
 <div>
 	<div>
 		<center>
-			<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered display" id="tableEdu" width="80%">
+			<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered display" id="tableEdu" style=" width:90%;">
 				<tr>
 					<th>Title</th>
 					<th>Description</th>
@@ -23,7 +23,7 @@
 					<td> <?php echo $edureadyrow['head']; ?> </td>
 					<td> <?php echo $edureadyrow['desc']; ?> </td>
 					<td> <?php echo $edureadyrow['score']; ?> </td>
-					<td> <?php echo $status; ?></td>
+					<td> <?php echo $status; ?> </td>
 					<td> 
 						<a href="javascript:eduedit('<?php echo $edureadyrow['head']; ?>', '<?php echo $edureadyrow['desc']; ?>', '<?php echo $edureadyrow['dept']; ?>', '<?php echo $edureadyrow['score']; ?>');" class="edueditbutton my_button">
 							Edit
@@ -38,6 +38,52 @@
 <?php 
 			}
 ?>
+		
+				<tr>
+		
+					<td>
+						<h5>
+							<a href="#myModal_Edu" role="button" data-toggle="modal"  class="extra_button_right">
+								&nbsp; <i style="margin-top: 2px;" class="icon-plus-sign"></i> Add &nbsp;
+							</a>
+						</h5>
+					</td>
+					<td>
+						<h5>
+							<a href="#myModal_Edu" role="button" data-toggle="modal"  class="extra_button_right">
+								&nbsp; <i style="margin-top: 2px;" class="icon-plus-sign"></i> Add &nbsp;
+							</a>
+						</h5>
+					</td>
+					<td>
+						<h5>
+							<a href="#myModal_Edu" role="button" data-toggle="modal"  class="extra_button_right">
+								&nbsp; <i style="margin-top: 2px;" class="icon-plus-sign"></i> Add &nbsp;
+							</a>
+						</h5>
+					</td>
+					<td>
+						<h5>
+							<a href="#myModal_Edu" role="button" data-toggle="modal"  class="extra_button_right">
+								&nbsp; <i style="margin-top: 2px;" class="icon-plus-sign"></i> Add &nbsp;
+							</a>
+						</h5>
+					</td>
+					<td>
+						<h5>
+							<a href="#myModal_Edu" role="button" data-toggle="modal"  class="extra_button_right">
+								&nbsp; <i style="margin-top: 2px;" class="icon-plus-sign"></i> Add &nbsp;
+							</a>
+						</h5>
+					</td>
+					<td>
+						<h5>
+							<a href="#myModal_Edu" role="button" data-toggle="modal"  class="extra_button_right">
+								&nbsp; <i style="margin-top: 2px;" class="icon-plus-sign"></i> Add &nbsp;
+							</a>
+						</h5>
+					</td>
+				</tr>
 			</table>
 		</center>
 	</div>

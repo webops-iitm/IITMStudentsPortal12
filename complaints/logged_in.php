@@ -159,8 +159,10 @@
 			</div>
 			<div class="modal-body">
 				<p>Status : 
-					<?php if($row['current_status'] == "Completed") { ?>
-						<span class="label label-success"> <?php echo $row['current_status']; ?> </span>
+					<?php if($row['current_status'] == "COMPLETED") { ?>
+						<span class="label label-success"> COMPLETED </span>
+					<?php } else if($row['current_status'] == "IN") { ?>
+						<span class="label label-info"> IN PROCESS </span>
 					<?php } else { ?>
 						<span class="label label-important"> <?php echo $row['current_status']; ?> </span>
 					<?php } ?>
@@ -175,6 +177,7 @@
 				<p><strong>Last Updated on</strong> : <?php if($row['status_update_datetime'] == 0 ) echo "Never"; else echo $row['status_update_datetime']; ?></p>
 				<p><br /></p>
 				<p><strong>Subject</strong> : <?php echo $row['complaint_sub']; ?></p>
+				<p><strong>Prefered Timings</strong> : <?php echo $row['complaint_ftime']; ?></p>
 				<p><strong>Description</strong> : <?php echo $row['complaint_desc']; ?></p>
 			</div>
 			<div class="modal-footer">

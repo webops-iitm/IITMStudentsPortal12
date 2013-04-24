@@ -1,0 +1,62 @@
+/* Yash Murty */
+
+body { font:14px/1.231 georgia, serif; *font-size:small; color:#666;
+ background:#f5f5f5 url("../img/bg-fractal.png") top center no-repeat;
+ background:#f5f5f5 url("../img/bg-fractal.png") top center no-repeat fixed;} 
+
+#toprow
+{
+			background-color: red;				
+			margin: 10px;
+			min-height: 150px;
+}
+#iitlogo
+{
+			position: relative;
+			top: 30px;
+			left: 20px;
+}
+a
+{
+			color:#ffffff;
+			letter-spacing: 1px;
+			
+}
+
+	a:hover
+{
+			text-decoration: none;
+			color: #ffffff;
+			-moz-transition: .35s ease-in-out;-o-transition: .35s ease-in-out;-webkit-transition: .35s ease-in-out;	
+}
+
+#leftcolumn
+{
+			background-color: rgb(0, 173, 239);
+			margin-left: 10px;
+}
+
+#leftcolumn tr:hover 
+{
+	background-color : rgba(139, 221, 253, 0.9);-moz-transition: .35s ease-in-out;-o-transition: .35s ease-in-out;-webkit-transition: .35s ease-in-out;	
+	color: #ffffff;
+			-moz-transition: .35s ease-in-out;-o-transition: .35s ease-in-out;-webkit-transition: .35s ease-in-out;	
+}
+#searchbox
+{position: relative; top: 50px; }
+#middlecolumn
+{
+			margin-left: 30px;
+			margin-right: 0px;
+			padding-top: 10px;	
+}
+#rightcolumn
+{
+	margin-right: 30px;
+	position: absolute;
+	right: 0px;
+}
+.contacts
+{
+			margin-left: 30px;
+}

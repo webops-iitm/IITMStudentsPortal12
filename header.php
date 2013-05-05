@@ -312,7 +312,9 @@
 				<li><a href="student-search.php"><i class="icon-search "></i> Student Search</a></li>
 				<li><a href="javascript:update('apps/facilities_rating/index.php','widget');"><i class="icon-list "></i> Facilities</a></li>
 				<li><a href="/forum"><i class="icon-comment "></i> Forum</a></li>
-				<li><a href="http://t5e.iitm.ac.in/"><i class="icon-edit "></i> The Fifth Estate</a></li> <li><a href="http://cfi.iitm.ac.in/"><i class="icon-hand-up "></i> CFI</a></li>
+				<li><a href="http://t5e.iitm.ac.in/"><i class="icon-edit "></i> The Fifth Estate</a></li>
+				<li><a href="http://cfi.iitm.ac.in/"><i class="icon-hand-up "></i> CFI</a></li>
+				<!--<li ><a href="javascript:update('apps/LostnFound/LostnFound.php', 'widget');"><i class="icon-list "></i> Lost n Found</a></li>-->
 			</ul>
 			<form class="navbar-search pull-right">
 					<input class="search-query " placeholder="Search entire site..." type="text">

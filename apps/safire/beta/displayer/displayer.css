@@ -69,16 +69,14 @@ tr.dataRow{
 #rBlock{
     padding: 10px;
     padding-left: 20px;
-    padding-right: 20px;
-    border-left: #d8d9d8 solid 1px;
+    padding-right: 0px;
     margin-left: 350px;
     height: 200px;
 }
 
 #lBlock{
-    padding: 30px;
     float: left;
-    width: 300px;
+    width: 360px;
 }
 
 #couInf{
@@ -158,6 +156,7 @@ p.locationSlot{
 #latestNoticeCont{
     position: relative;
     margin-top: 30px;
+    margin-left: 20px;
     border: #d8d9d8 solid 1px;
     border-radius: 5px;
     overflow: auto;
@@ -170,7 +169,8 @@ p.locationSlot{
 #noticeHead{
     position: absolute;
     top: 442px;
-    left: 420px;
+    left: 445px;
+    height: 20px;
     padding: 5px;
     margin: 0px;
     font-size: 97%;
@@ -190,7 +190,7 @@ div.noticeDisplayer{
 #noticeControl{
     position: absolute;
     top: 432px;
-    right: 80px;
+    right: 60px;
     border: #d8d9d8 solid 1px;
     border-bottom: none;
     border-radius: 5px 5px 0px 0px;
@@ -615,6 +615,71 @@ p.bigOptTime{
     padding: 10px;
 }
 #noticesLoading img{
+    display: block;
+    width: 40px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#padHead{
+    position: absolute;
+    top: 442px;
+    left: 45px;
+    height: 20px;
+    padding: 5px;
+    margin: 0px;
+    font-size: 97%;
+    font-weight: bold;
+    border: #d8d9d8 solid 1px;
+    border-bottom: none;
+    border-radius: 5px 5px 0px 0px;
+}
+#noteSaving{
+    display: none;
+    position: absolute;
+    top: 440px;
+    left: 300px;
+    font-size: 70%;
+    color: #999999;
+}
+#scratchPad{
+    margin-top: 40px;
+    padding: 20px;
+    width: 320px;
+    border: #d8d9d8 solid 1px;
+    border-radius: 5px;
+    font: inherit;
+    font-size: 70%;
+    line-height: 20px;
+    overflow: auto;
+    outline: none;
+    resize: none;
+    background-color: white;
+}
+#scratchPadNotice{
+    display: none;
+    margin-top: 7px;
+    font-size: 70%;
+    color: #999999;
+}
+#sPadInstr{
+    display: none;
+    position: absolute;
+    top: 480px;
+    left: 47px;
+    color: #b8b7b7;
+    font-size: 150%;
+    font-weight: bold;
+}
+#loadingInfo1{
+    position: absolute;
+    top: 480px;
+    left: 147px;
+    text-align: center;
+    font-size: 70%;
+    padding: 10px;
+}
+#loadingInfo1 img{
     display: block;
     width: 40px;
     margin: auto;

@@ -1,5 +1,20 @@
 <?php
-include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php'; session_start(); if(!isset($_SESSION['createUser'])){ header('Location: ../'); exit(); } else{ unset($_SESSION['createUser']); } ?>
+include_once '../resources/nDBfunct.php';
+include_once '../resources/DBfunct.php';
+///////////// end of file includes
+
+session_start();
+///////////started the session
+
+if(!isset($_SESSION['createUser'])){
+    header('Location: ../');
+    exit();
+}
+else{
+    unset($_SESSION['createUser']);
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +25,9 @@ include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php
     </head>
     <body>
         <?php
- include_once "../resources/googleAnalytics.php"; pageInit(); ?>
+        include_once "../resources/googleAnalytics.php"; 
+        pageInit(); 
+        ?>
         <div id="mainPage">
             <h1>User Enrollment</h1>
             <p>Hi, looks like you've not used Safire before. Please complete the form below to start using Safire. You don't have to enter your email address if you would like to stick with your institutional email.</p>

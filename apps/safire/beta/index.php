@@ -1,5 +1,42 @@
 <?php
-include_once 'resources/DBfunct.php'; include_once 'resources/nDBfunct.php'; session_start(); if (trueUserLoggedIn()) { header('Location: displayer/displayer.php'); exit();} if (isset($_COOKIE["user"])) { $_SESSION['uname'] = $_COOKIE["user"]; } if (isset($_SESSION['uname'])) { $_SESSION['membInfo'] = retrieveMembInfo($_SESSION['uname']); if (!$_SESSION['membInfo']) { unset($_SESSION['membInfo']); $_SESSION['createUser'] = $_SESSION['uname']; header('Location: registerUser/registerUser.php'); exit(); } else { if(isset($_SESSION['redirLoc'])){ header('Location: ' . $_SESSION['redirLoc']); unset($_SESSION['redirLoc']); } else{ header('Location: displayer/displayer.php'); } exit(); } } ?>
+include_once 'resources/DBfunct.php';
+include_once 'resources/nDBfunct.php';
+///////////// end of file includes
+
+session_start();
+///////////started the session
+
+if (trueUserLoggedIn()) {//this code is here only to ensure that a user who already has the membinfo sess cookies doesn't have to get them all over again
+    header('Location: displayer/displayer.php');
+    exit();//because of this exit, don't have to add 'else'
+}
+
+//incase the student has clicked on 'keep me logged in' and returns to safire directly
+if (isset($_COOKIE["user"])) {
+    $_SESSION['uname'] = $_COOKIE["user"];
+}
+//incase the student has logged on the the portal and then to safire directly
+if (isset($_SESSION['uname'])) {
+    $_SESSION['membInfo'] = retrieveMembInfo($_SESSION['uname']);
+    if (!$_SESSION['membInfo']) {
+        unset($_SESSION['membInfo']);
+        $_SESSION['createUser'] = $_SESSION['uname'];
+        header('Location: registerUser/registerUser.php');
+        exit();
+    } else {
+        if(isset($_SESSION['redirLoc'])){
+            header('Location: ' . $_SESSION['redirLoc']);
+            unset($_SESSION['redirLoc']);
+        }
+        else{
+            header('Location: displayer/displayer.php');
+        }
+        exit();
+    }
+}
+
+//in all the previous if stmts, you can't bring the session[membInfo] part out, since that will lead to a security loop-hole, the membInfo session var isn't deleted by the other parts of the portal.
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +47,9 @@ include_once 'resources/DBfunct.php'; include_once 'resources/nDBfunct.php'; ses
     </head>
     <body>
         <?php
- include_once "resources/googleAnalytics.php"; pageInit(); ?>
+        include_once "resources/googleAnalytics.php";
+        pageInit();
+        ?>
         <div id="mainPage">
             <div id="content">
                 <img id="frontLogo" alt="" src="resources/websiteImgs/frontLogo1.png"><br>

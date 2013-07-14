@@ -11,8 +11,7 @@
 	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!--NoM4D-->
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><!--NoM4D--><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Metro Landing</title>
 
@@ -27,32 +26,51 @@
 <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
 <![endif]-->
 <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script> 
-
-
 <script src="js/jquery.localscroll-1.2.7-min.js" type="text/javascript"></script> 
 <script src="js/jquery.scrollTo-1.4.3.1-min.js" type="text/javascript"></script> 
-
+<script src="js/jquery.mousewheel.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function() {
   $('#nav').localScroll({duration:800});
 });
-
-
 </script>
 
-<script text/javascript&quot;>
+<script type="text/javascript" >
 $(document).ready(function () {
 $.localScroll.defaults.axis = 'x';
 $.localScroll();
 });
 </script>
+
+<script type="text/javascript">
+	$(function(){
+		$("#page-wrap").wrapInner("<table cellspacing='30'><tr>");
+		$(".post").wrap("<td></td>");
+		$("body").mousewheel(function(event, delta) {
+			this.scrollLeft -= (delta * 100);
+			event.preventDefault();
+		});   
+	});
+</script>
+
+<script type="text/javascript">
+$(window).scroll(function() {
+    if ($(window).scrollLeft() > 200) {
+       		$("#homebackbutton").fadeIn("slow");	// > 100px from Left - show div
+		    }
+    else {
+        	$("#homebackbutton").fadeOut("slow");	// <= 100px from Left - hide div
+    		}
+});
+</script>
 </head>
 
-<body class="metrouicss">
+<body class="metrouicss" style="">
 <img src="images/bgimage.png" class="bg">
 
 <div class="page secondary fixed-header" style="width: 5600px;">
-    <div class="page-header ">
+
+    <div class="page-header"><!-- This is TOP Row. Login boxes are in this DIV -->
         <div class="page-header-content">
         	<form action="landingsubmit.php" method="POST">
             <div class="user-login">
@@ -105,14 +123,21 @@ $.localScroll();
     <?php if($_GET['error']==1){ echo "<div id=\"errorlogin\">Wrong Username or Password</div>"; } ?>
             </div><!-- user-login -->
             </form>
-
+            <div id="homebackbutton" style="display:none;">
+			<a href="#homefirstbox" class="back-button big" style="position:relative; top:50px;" ></a>
+            </div>
             <h1 class="fg-color-darken" ">Students <strong>Portal</strong></h1>
+            
         </div>
+        
     </div><!-- Header Ends -->
+    
+    
     
     <div class="page-region">
         <div class="page-region-content tiles" style="width: 5600px;"  >
             <div class="tile-group tile-drag" style="width: auto; max-width: 170px; margin-left:-150px; padding-left:150px;" id="nav">
+            <a id="homefirstbox">
 		<a href="http://students2.iitm.ac.in/">
                 <div class="tile icon bg-color-red outline-color-red" style="">
                     <div class="tile-content">
@@ -154,6 +179,7 @@ $.localScroll();
                         <i class="icon-magic"></i>
                     </div>
                     <div class="brand">
+                    	<div class="badge"> <i class="icon-double-angle-right"></i></div>
                         <span class="name">Department Fests</span>
                         
                     </div>
@@ -258,7 +284,7 @@ $.localScroll();
                     </div>
                 </div>
 		</a>
-		<a href="http://students.iitm.ac.in/thefifthestate/">
+		<a href="http://t5e.iitm.ac.in/">
                 <div class="tile icon bg-color-purple outline-color-purple" style="">
                     <div class="tile-content">
                         <i class="icon-rss"></i>
@@ -278,11 +304,12 @@ $.localScroll();
                         <div class="name">Mess Registeration</div>
                     </div>
                 </div>
-		</a>
+				</a>
+                
                 </div><!-- Column 3 ends here-->
     
     
-	<div class="tile-group tile-drag" style="width: auto; max-width: 320px;">
+				<div class="tile-group tile-drag" style="width: auto; max-width: 320px;">
                 
                 <a href="http://students2.iitm.ac.in/student-search.php">
                 <div class="tile icon bg-color-green outline-color-green" style="">
@@ -294,9 +321,9 @@ $.localScroll();
                         <div class="name">Student Search</div>
                     </div>
                 </div>
-		</a>
-		<a href="#">
-                <div class="tile icon bg-color-blue outline-color-blue" style="">
+				</a>
+				<a href="#">
+               <div class="tile icon bg-color-blue outline-color-blue" style="">
                     <div class="tile-content">
                         <i class="icon-bullhorn"></i>
                     </div>
@@ -436,7 +463,7 @@ $.localScroll();
                     </div>
                 </div>
                 </a>
-		<a href="#">
+				<a href="#">
                 <div class="tile icon bg-color-pink outline-color-pink" style="">
                     <div class="tile-content">
                         <i class="icon-barcode"></i>
@@ -446,8 +473,8 @@ $.localScroll();
                         <div class="name">Lit-Soc</div>
                     </div>
                 </div>
-		</a>
-		<a href="#">
+				</a>
+				<a href="http://www.sports.iitm.ac.in/">
                 <div class="tile icon bg-color-green outline-color-green" style="">
                     <div class="tile-content">
                         <i class="icon-trophy"></i>
@@ -457,14 +484,14 @@ $.localScroll();
                         <div class="name">Schroeter</div>
                     </div>
                 </div>
-		</a>
+				</a>
                 </div>
                <!-- Column 6 ends here-->
             
             	
                 <div class="tile-group tile-drag" style="width: auto; max-width: 1020px; margin-left:0px; padding-left:100px;">
                 <a id="departments">
-		<a href="http://www.ae.iitm.ac.in/index.htm">
+				<a href="http://www.ae.iitm.ac.in/index.htm">
                 <div class="tile icon bg-color-blueDark outline-color-blueDark" style="">
                     <div class="tile-content">
                         <i class="icon-fighter-jet"></i>
@@ -474,7 +501,7 @@ $.localScroll();
                         <div class="name">Aerospace</div>
                     </div>
                 </div></a>
-		</a>
+				</a>
                 <a href="http://apm.iitm.ac.in/">	
                 <div class="tile icon bg-color-blueDark outline-color-blueDark" style="">
                     <div class="tile-content">
@@ -756,7 +783,7 @@ $.localScroll();
                         <div class="name">Amalgam</div>
                     </div>
                 </div></a></a>
-                <a href="">	
+                <a href="http://www.biofest.in/">	
                 <div class="tile icon bg-color-blue outline-color-blue" style="">
                     <div class="tile-content">
                         <i class="icon-leaf"></i>
@@ -766,7 +793,7 @@ $.localScroll();
                         <div class="name">BioFest</div>
                     </div>
                 </div></a>
-                <a href="">
+                <a href="http://ceaiitm.org/">
                 <div class="tile icon bg-color-blue outline-color-blue" style="">
                     <div class="tile-content">
                         <i class="icon-building"></i>
@@ -776,7 +803,7 @@ $.localScroll();
                         <div class="name">CEA Fest</div>
                     </div>
                 </div>	</a>
-                <a href="">
+                <a href="http://exebit.in/">
                 <div class="tile icon bg-color-blue outline-color-blue" style="">
                     <div class="tile-content">
                         <i class="icon-laptop"></i>
@@ -796,7 +823,7 @@ $.localScroll();
                         <div class="name">Genesis | C-Tides</div>
                     </div>
                 </div>	</a>
-                <a href="">
+                <a href="http://www.chemclave.org/">
                 <div class="tile icon bg-color-blue outline-color-blue" style="">
                     <div class="tile-content">
                         <i class="icon-beaker"></i>
@@ -816,7 +843,7 @@ $.localScroll();
                         <div class="name">Samanvay</div>
                     </div>
                 </div>	</a>
-                <a href="http://wavez.iitm.ac.in/2012/index.html">
+                <a href="http://wavez.iitm.ac.in/2013/">
                 <div class="tile icon bg-color-blue outline-color-blue" style="">
                     <div class="tile-content">
                         <i class="icon-cog"></i>
@@ -827,7 +854,7 @@ $.localScroll();
                     </div>
                 </div>	</a>
                 
-                <a href="">
+                <a href="http://www.oir.iitm.ac.in/news/international-day-nov-04-2012/">
                 <div class="tile icon bg-color-blue outline-color-blue" style="">
                     <div class="tile-content">
                         <i class="icon-globe"></i>

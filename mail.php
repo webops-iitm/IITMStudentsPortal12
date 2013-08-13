@@ -1,6 +1,6 @@
 <?
 
-	mail('vineet.1991.483@gmail.com', 'the subject', 'the message', null,'-f test@testmail.com');
+	mail('g.prasanthsai@gmail.com', 'the subject', 'the message', null,'-f test@students.iitm.ac.in');
        echo "Done";
 
 

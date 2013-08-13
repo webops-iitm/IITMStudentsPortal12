@@ -226,7 +226,7 @@
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="javascript:update('apps/mess_complaints/complainting.php', 'widget');">Mess Grievances Portal</a></li>
-							<li><a href="http://students2.iitm.ac.in:3000">Mess Registration</a></li>
+							<!--<li><a href="http://students2.iitm.ac.in:3000">Mess Registration</a></li>-->
 							<li><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');">Mess Rating</a></li>
 							<li><a href="javascript:;">Feedback</a></li>
 							<li><a href="javascript:update('cardform.php','widget-content');changestyle('card');">New Extras Cards</a></li>

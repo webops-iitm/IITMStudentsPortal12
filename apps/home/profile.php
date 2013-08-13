@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-<?php 
 
+<?php 
+/*
 	if( $secretary == 1 )
 		include( "secretary_page.php" );
 	else {
@@ -21,7 +21,7 @@
 					<div class="widget-content">
 	          			<table>
 							<tr>
-								<td style="width:100px;"><a href="#">Name</a></td>
+								<td style="width:100px;"><a href="#">Name1</a></td>
 								<td><?php echo $name; ?></td>
 							</tr><tr>
 								<td style="width:100px;"><a href="#">Nickname</a></td>
@@ -57,7 +57,6 @@
 	} // end of if-else to check for nsecretary
 	
 	} // end of if-else to check for secretary
-
+ */
 ?>
-=======
->>>>>>> 42852fb27db4963ee87d4ad2f4a583d3bd7e7298
+

@@ -6,9 +6,9 @@
 					<div class="span2">    				
 						<h4>Contact Us</h4>    				
 						<ul>
-							<li><a href="mailto:#">webops.iitm@gmail.com</a></li>
-							<li><a href="#">Vineet - 9445505731</a></li>
-							
+							<li><a href="mailto:#">webops@smail.iitm.ac.in</a></li>
+							<li><a href="#">Prasanth - 7418000630</a></li>
+							<li><a href="#">Yash - 7299637445</a></li>
 						</ul>    				
 					</div> <!-- /span3 -->    			
 			<!--		<div class="span2 offset2">    				

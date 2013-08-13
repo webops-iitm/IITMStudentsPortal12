@@ -126,7 +126,7 @@
 						Mess Operations
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="javascript:;">Mess Registration</a></li>
+							<!--<li><a href="javascript:;">Mess Registration</a></li>-->
 							<li><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');">Mess Rating</a></li>
 							<li><a href="javascript:;">Feedback</a></li>
 							<li><a href="javascript:update('cardform.php','widget-content');changestyle('card');">New Extras Cards</a></li>
@@ -169,7 +169,8 @@
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="student-search.php">Student Search</a></li>
-                            <li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>
+<!--                            <li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>-->
+
 						</ul>
 				</li>
 				
@@ -200,7 +201,8 @@
 								echo "<table class='table table-bordered'><tr><td><center>".$nick."</center></td></tr>";
 								echo "<tr class=''><td><center>".$_SESSION['uname']."</center></td></tr></table>
 								
-								<li><center><a href=\"javascript:update('apps/profileplus/profileplus.php','profile');\"><button class='btn btn-large'>Profile+</button></a></center></li>
+
+								<!--<li><center><a href=\"javascript:update('apps/profileplus/profileplus.php','profile');\"><button class='btn btn-large'>Profile+</button></a></center></li>-->
 								<li><center><a href='logout.php'><button class='btn btn-danger'>Logout</button></a></center></li></ul>";
 							}
 							else
@@ -214,7 +216,6 @@
 							}
 							
 							?>
-                            
 												
 				</ul>
 					

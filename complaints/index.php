@@ -55,6 +55,12 @@
         margin-bottom: 15px;
         padding: 7px 9px;
       }
+      
+      .alert {
+		width : 80%;
+		margin-left : 10%;  
+		  
+	  }
 
     </style>
     <link href="../css/bootstrap-responsive.css" rel="stylesheet">
@@ -96,7 +102,7 @@
 			    document.getElementById(target).innerHTML=xmlhttp.responseText;
 			    }
 			  else{
-				document.getElementById(target).innerHTML = '<img src="img/load.gif"> Loading ...';
+				document.getElementById(target).innerHTML = '<img src="../img/load.gif"> Loading ...';
 				}
 			  }
 			xmlhttp.open("GET",datasource,true);
@@ -166,7 +172,7 @@
 				// debug: echo "PASSWORD ENTERED IS WRONG";
 ?>
         <div class="alert alert-error">
-			<span class="label label-inverse">Success</span>
+			<span class="label label-inverse">Error</span>
 			<button type="button" class="close" data-dismiss="alert">&times;</button>
 			This password doesn't match the username entered.
         </div>

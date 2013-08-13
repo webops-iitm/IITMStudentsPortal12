@@ -1,6 +1,9 @@
 <!-- Basic Navigation Bar -- always showing -->
     <!-- Navbar ================================================== -->
 		<script type="text/javascript" charset="utf-8">
+			var q1="SUCCESS";
+			var q2="IN PROCESS";
+			var q3="COMPLETED";
 			$(document).ready(function() {
 				$('#example').dataTable( {
 					"bJQueryUI" : true
@@ -13,6 +16,7 @@
 			$(window).bind('resize', function () {
 				oTable.fnAdjustColumnSizing();
 			} );
+			
 		</script>
 		<style>
 			a:hover {
@@ -86,6 +90,7 @@
 			<th>Room</th>
 			<th>Date Updated</th>
 			<th>Status</th>
+			<th style="display:none;"></th>
 			<th>Subj</th>
 		</tr>
 	</thead>
@@ -106,22 +111,31 @@
 			<td><?php echo $usr_row['room'] ?></td>
 			<td><?php if( $row['status_update_datetime'] == 0 ) echo $row['regn_datetime']; else echo $row['status_update_datetime']; ?></td>
 			<td width="20px" class="<?php echo $row['current_status'] ?>">
-				<select width="20px" onChange="javascript:update('change_status.php?id=<?php echo $row['id'] ?>&stat='+this.options[this.selectedIndex].innerHTML, 'attention');">
+				<span style="display:none;"><?php if($row['current_status'] == "PENDING") echo "PENDING"; 
+				      else if($row['current_status'] == "IN") echo "IN PROCESS";
+				      else if($row['current_status'] == "COMPLETED") echo "COMPLETED"; ?>
+				</span>
+				<select width="20px" onChange="javascript:update('change_status.php?id=<?php echo $row['id'] ?>&stat=' + this.options[this.selectedIndex].innerHTML.replace(/ /g,''), 'attention');">
 					<option 
 						<?php if($row['current_status'] == "PENDING") echo "selected='selected'"; ?>
 						>
-						PENDING
+						P E N D I N G
 					</option><option 
-						<?php if($row['current_status'] == "IN PROCESS") echo "selected='selected'"; ?>
+						<?php if($row['current_status'] == "IN") echo "selected='selected'"; ?>
 						>
-						IN PROCESS
+						I N &nbsp;&nbsp; P R O C E S S
 					</option>
 					<option 
 						<?php if($row['current_status'] == "COMPLETED") echo "selected='selected'"; ?>
 						>
-						COMPLETED
+						C O M P L E T E D
 					</option>
 				</select>
+			</td>
+			<td style="display:none;" class="<?php echo $row['current_status'] ?>_duplicate">
+				<?php if($row['current_status'] == "PENDING") echo "PENDING"; 
+				      else if($row['current_status'] == "INPROCESS") echo "IN PROCESS";
+				      else if($row['current_status'] == "COMPLETED") echo "COMPLETED"; ?>
 			</td>
 			<td>
 				<a href="#modal_comp_<?php echo $row['id']; ?>" rel="tooltip" 
@@ -145,8 +159,10 @@
 			</div>
 			<div class="modal-body">
 				<p>Status : 
-					<?php if($row['current_status'] == "Completed") { ?>
-						<span class="label label-success"> <?php echo $row['current_status']; ?> </span>
+					<?php if($row['current_status'] == "COMPLETED") { ?>
+						<span class="label label-success"> COMPLETED </span>
+					<?php } else if($row['current_status'] == "IN") { ?>
+						<span class="label label-info"> IN PROCESS </span>
 					<?php } else { ?>
 						<span class="label label-important"> <?php echo $row['current_status']; ?> </span>
 					<?php } ?>
@@ -161,6 +177,7 @@
 				<p><strong>Last Updated on</strong> : <?php if($row['status_update_datetime'] == 0 ) echo "Never"; else echo $row['status_update_datetime']; ?></p>
 				<p><br /></p>
 				<p><strong>Subject</strong> : <?php echo $row['complaint_sub']; ?></p>
+				<p><strong>Prefered Timings</strong> : <?php echo $row['complaint_ftime']; ?></p>
 				<p><strong>Description</strong> : <?php echo $row['complaint_desc']; ?></p>
 			</div>
 			<div class="modal-footer">

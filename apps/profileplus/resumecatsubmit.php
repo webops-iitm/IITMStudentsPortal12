@@ -2,27 +2,40 @@
 	session_start();
 	
 	include ('../../db.php');
-	$uname = 'name';
-//	$uname = $_SESSION['uname'];
+//	$uname = 'name';
+	$uname = $_SESSION['uname'];
 	$uname = strtolower($uname);
 
-	$qualicatname = $_POST['qualicatname'];	
-	$postcat = $qualicatname."qualicat";
-	$postsubcat = $qualicatname."qualisubcat";
-	$posttitle = $qualicatname."qualititle";
-	$postdesc = $qualicatname."qualidesc";
-	$posttimeline = $qualicatname."qualitimeline";
-	$postform = $qualicatname."form";
+	$postcat = mysql_real_escape_string(stripslashes($_POST['qualicat_id']));
+	$postsubcat = "qualisubcat_".$postcat;
+	$posttitle = "qualititle_".$postcat;
+	$postdesc = "qualidesc_".$postcat;
+	$posttimeline = "qualitimeline_".$postcat;
+	$postform = "form_".$postcat;
+	$postaction = "qualiformuse_".$postcat;
+	$postoldid = "QualiTitle_Old_Id_".$postcat;
 	
 	$catdone=0;
 		echo $postform;
-	if(isset($_POST[$postform])){
+		
+	//if(isset($_POST[$postform])){
 		echo "working";
-		$qualicat = $_POST[$postcat];
-		$qualisubcat = strtoupper($_POST[$postsubcat]);
-	    $qualititle = $_POST[$posttitle];
-	    $qualidesc = $_POST[$postdesc];
-		$qualitimeline = $_POST[$posttimeline];
+		$qualicat = mysql_real_escape_string(stripslashes($postcat));
+		$qualisubcat = mysql_real_escape_string(stripslashes(strtoupper($_POST[$postsubcat])));
+	    $qualititle = mysql_real_escape_string(stripslashes($_POST[$posttitle]));
+	    $qualidesc = mysql_real_escape_string(stripslashes($_POST[$postdesc]));
+		$qualitimeline = mysql_real_escape_string(stripslashes($_POST[$posttimeline]));
+		$qualiform = mysql_real_escape_string(stripslashes($_POST[$postform]));
+		$qualiaction = mysql_real_escape_string(stripslashes($_POST[$postaction]));
+		$qualioldid = mysql_real_escape_string(stripslashes($_POST[$postoldid]));
+
+		if($qualicat=="" || $qualititle=="" || $qualidesc=="" || $qualitimeline=="")
+		{
+			die("I won't do! Do Whatever You want!!!!! :P");
+			header('Location: ../../index.php?edit=1');	
+		}
+			
+		
 		
 		$subcatid = 1;
 		$titleid = 1;
@@ -32,29 +45,36 @@
 		$checksubsresult = mysql_query($sqlchecksubs);
 		while($checksubsrow = mysql_fetch_array($checksubsresult))
   		{
-			if($subcategory<=$checksubsrow['subcat_id'])$subcategory+=1;
-			if($qualisubcat == $checksubrow['subcat_name']){$subcategory=$checksubrow['subcat_id'];$subfound=1;break;}
+			if($subcatid<=$checksubsrow['subcat_id'])$subcatid+=1;
+			if($qualisubcat == $checksubsrow['subcat_name']){$subcatid=$checksubsrow['subcat_id'];$subfound=1;break;}
   		}
-		echo $subcategory;
+		echo $subfound;
 		if($subfound==1);
 		{
-			$sqlchecksubs = "SELECT title_id, status FROM student_profile WHERE username='$uname' AND cat_id='$qualicat' AND subcat_id='$subcatid'";
+			$sqlchecksubs = "SELECT id, title, title_id, status FROM student_profile WHERE username='$uname' AND cat_id='$qualicat' AND subcat_id='$subcatid'";
 		
 			$checksubsresult = mysql_query($sqlchecksubs);
 			while($checksubsrow = mysql_fetch_array($checksubsresult))
   			{
 				if($titleid<=$checksubsrow['title_id'])$titleid+=1;
+				if($checksubsrow['id']==$qualioldid)$titleoldid=$checksubsrow['id'];
 			}
-		
-		
+			$checksubsresult = mysql_query($sqlchecksubs);
+		echo $qualiaction;
+		if($qualiaction=="edit")
+		{
+			$sqladdsub="UPDATE student_profile SET title='$qualititle', `desc` = '$qualidesc', timeline = '$qualitimeline', status = 2 WHERE username = '$uname' AND cat_id='$qualicat' AND subcat_id='$subcatid' AND id='$titleoldid'";			
+					echo $sqladdsub;
+					mysql_query($sqladdsub);
+					$catdone = 1;
+		}
 		while($checksubsrow = mysql_fetch_array($checksubsresult))
   		{
-			echo $subcategory.$checksubsrow['subcat_id']."-->";
-			if($checksubsrow['title_id']==$subcategory-1)
+			if($checksubsrow['title']==$qualititle)
 			{
 				if($checksubsrow['status']==2)//2 stands for pending
 				{
-					$sqladdsub="UPDATE student_profile SET `title` = '$qualititle', `desc` = '$qualidesc', timeline = '$qualitimeline' WHERE username = '$uname' AND cat_id='$qualicat' AND subcat_id='$subcatid' AND title_id='$titleid'";			
+					$sqladdsub="UPDATE student_profile SET `desc` = '$qualidesc', timeline = '$qualitimeline' WHERE username = '$uname' AND cat_id='$qualicat' AND subcat_id='$subcatid' AND title='$qualititle'";			
 					echo $sqladdsub;
 					mysql_query($sqladdsub);
 					$catdone = 1;
@@ -66,16 +86,17 @@
 		if($catdone!=1)
 		{
 			$sqladdsub="INSERT INTO student_profile (`cat_id`, `subcat_id`, `subcat_name`, `title`, `title_id`, `timeline`, `desc`, `username`, `status`) VALUES ($qualicat, $subcatid, '$qualisubcat', '$qualititle', '$titleid', '$qualitimeline', '$qualidesc', '$uname', 2)";
+			echo "-->".$sqladdsub;
 			mysql_query($sqladdsub);
 			$catdone = 1;
 		}
 		//sql query to submit into stu_profile including $category
-	}
+	//}
 
-/*	if($catdone==1)	
-	header('Location: ../../index.php?cat=2');
+	if($catdone==1)	
+	header('Location: ../../index.php?edit=2');
 	else
-	header('Location: ../../index.php?cat=1');
-*/	
+	header('Location: ../../index.php?edit=1');
+	
 	mysql_close($con);	
 ?>

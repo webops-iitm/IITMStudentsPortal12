@@ -1,5 +1,6 @@
-<?php 
 
+<?php 
+/*
 	if( $secretary == 1 )
 		include( "secretary_page.php" );
 	else {
@@ -11,7 +12,7 @@
 ?>
 <div class="span3 offset1">
 <center>
-				<div class="widget"  style="float:right;width:400px; margin:10px;">
+				<div id="widget" class="widget"  style="float:right;width:400px; margin:10px;">
 					<div class="widget-header">
 						<i class="icon-star"></i>
 						<h3><?php if($nick!="") echo $nick."'s"; ?>Profile</h3>
@@ -20,7 +21,7 @@
 					<div class="widget-content">
 	          			<table>
 							<tr>
-								<td style="width:100px;"><a href="#">Name</a></td>
+								<td style="width:100px;"><a href="#">Name1</a></td>
 								<td><?php echo $name; ?></td>
 							</tr><tr>
 								<td style="width:100px;"><a href="#">Nickname</a></td>
@@ -44,6 +45,7 @@
 								<td style="width:100px;"><a href="#">Blood Group</a></td>
 								<td><?php echo $bgroup; ?></td>
 							</tr>
+                            
 						</table>
 				</div> <!-- /widget-content -->
 						
@@ -55,5 +57,6 @@
 	} // end of if-else to check for nsecretary
 	
 	} // end of if-else to check for secretary
-
+ */
 ?>
+

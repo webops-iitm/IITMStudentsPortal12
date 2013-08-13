@@ -4,11 +4,11 @@
 			<div class="container ">
 				<div class="row">				
 					<div class="span2">    				
-						<h4>IITM</h4>    				
+						<h4>Contact Us</h4>    				
 						<ul>
-							<li><a href="http://iitm.ac.in">IIT Madras</a></li>
-							<li><a href="http://ccw.iitm.ac.in/">Chairman council of wardens</a></li>
-							<li><a href="http://ccw.iitm.ac.in/?q=IITMHostels/hinfo">Hostel Information</a></li>
+							<li><a href="mailto:#">webops@smail.iitm.ac.in</a></li>
+							<li><a href="#">Prasanth - 7418000630</a></li>
+							<li><a href="#">Yash - 7299637445</a></li>
 						</ul>    				
 					</div> <!-- /span3 -->    			
 			<!--		<div class="span2 offset2">    				

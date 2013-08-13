@@ -1,61 +1,35 @@
-<p><center>
- <h4> <?php echo $catname;?></h4>	<a id="<?php echo $catname;?>addbutton" onClick=
-  "document.getElementById('<?php echo $catname;?>add').style.display='block';
-  document.getElementById('<?php echo $catname;?>addbutton').style.visibility='hidden';
-  document.getElementById('<?php echo $catname;?>form').action='apps/profileplus/resumecatsubmit.php';
-  " class="btn btn-success btn-small">Add</a>
-</center>
-<div class="" id="<?php echo $catname;?>ready">
-	<?php include 'catready.php'; ?>
+<!--
+<div class="accordion-group">
+	<div class="accordion-heading">
+		<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionProfile" href="#collapse_<?php echo $catID; ?>"> 
+			<h4>
+				<?php //echo $catname;?> 
+				<span href="#myModal_<?php //echo $catID; ?>" role="button" data-toggle="modal" class="extra_button_right pull-right">
+					&nbsp; <i style="margin-top: 4px;" class="icon-plus-sign"></i> Add &nbsp;
+				</span>
+			</h4>	
+		</a>
+	</div>
+	<div id="collapse_<?php //echo $catID; ?>" class="accordion-body collapse" style="height: 0px;">
+		<div class="accordion-inner accordion-inner-info">
+			<?php //include 'catready.php'; ?>
+		</div>
+	</div>
 </div>
-	<div class="" id="<?php echo $catname;?>add" style="display:none"> 	<!-- Change Displays to none -->
-          				<a onClick=
-                        "document.getElementById('<?php echo $catname;?>add').style.display='none';
-                        document.getElementById('<?php echo $catname;?>addbutton').style.visibility='visible';
-                        " class="btn btn-success btn-small">Cancel</a>
-                
-                <!-- Javascript Work is left here  -->
-                  <form class="form-horizontal" id="<?php echo $catname;?>form" style="display:block;" action="apps/profileplus/resumecatsubmit.php" method="post">  
- 						<fieldset>
-                        <legend name="<?php echo $catname;?>qualidisplay" id="<?php echo $catname;?>Qualidisplay">Add</legend>
-                        <div class="control-group">  
-            			        <label class="control-label" for="<?php echo $catname;?>QualiCat">CategoryID</label>  
-            				<div class="controls">  
-              					<input type="text" class="input-xlarge" value="<?php echo $catID;?>" name="<?php echo $catname;?>qualicat" id="<?php echo $catname;?>QualiCat">
-            				</div> 
-          				</div>
-                        <div class="control-group">  
-            			        <label class="control-label" for="QualiCatname">Category</label>  
-            				<div class="controls">  
-              					<input type="text" class="input-xlarge" value="<?php echo $catname;?>" name="qualicatname" id="QualiCatname">
-            				</div> 
-          				</div>
-                        <div class="control-group">  
-            			        <label class="control-label" for="<?php echo $catname;?>QualiSubcat">Sub Category</label>  
-            				<div class="controls">  
-              					<input type="text" class="input-xlarge" name="<?php echo $catname;?>qualisubcat" id="<?php echo $catname;?>QualiSubcat">
-            				</div> 
-          				</div>
-                        <div class="control-group">  
-            			        <label class="control-label" for="<?php echo $catname;?>QualiTitle">Title</label>  
-            				<div class="controls">  
-          				    	<input type="text" class="input-xlarge" name="<?php echo $catname;?>qualititle" id="<?php echo $catname;?>QualiTitle">
-                            </div> 
-          				</div>
-                        <div class="control-group">  
-            			        <label class="control-label" for="<?php echo $catname;?>Qualidesc">Description</label>  
-            				<div class="controls">  
-              					<input type="text" class="input-xlarge" name="<?php echo $catname;?>qualidesc" id="<?php echo $catname;?>Qualidesc">   
-            				</div> 
-          				</div>
-                        <div class="control-group">  
-            			        <label class="control-label" for="<?php echo $catname;?>Qualitimeline">Timeline</label>  
-            				<div class="controls">  
-              					<input type="text" class="input-xlarge" name="<?php echo $catname;?>qualitimeline" id="<?php echo $catname;?>Qualitimeline">   
-            				</div> 
-          				</div>
-        	                  <div class="form-actions">  
-      					      <button type="submit" name="<?php echo $catname;?>form" class="btn btn-primary">Submit</button>  
-        					  </div>
-   						</fieldset></form>
-                        </div>
+-->
+<?php //include "catready.php" ?>
+<center>
+<div id="myModal_<?php echo $catID; ?>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" style="color:#ffffff;" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel" style="color : #ffffff;"><?php echo $catname; ?></h3>
+	</div>
+	<div class="modal-body">
+		<?php include("catadd.php"); ?>
+	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		<button class="btn btn-primary" id="mySubmit_<?php echo $catID; ?>" onclick="javascript:document.getElementById('form_<?php echo $catID;?>').submit();">Save changes</button>
+	</div>
+</div>
+</center>

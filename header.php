@@ -12,84 +12,14 @@
 		<link href="css/bootstrap.css" rel="stylesheet"><script src="js/bootstrap.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery-1.js"></script>
+		<script src="apps/profileplus/profileplus.js"></script>
 		<link href="img/glyphicons-halfings.png"> <link href="img/glyphicons-halfings-white.png">    
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
         <script>
-		function qualichange()
-		{
-			var quali = document.getElementById('Qualifications').value;
-			if(quali == "")alert("Please select any valid Qualification");
-			else
-			{
-			document.getElementById("Qualidisplay").textContent = quali;
-			document.getElementById("QualiOthers").value = quali;
-			document.getElementById("QualiOthers").style.color = '#000';
-			
-			document.getElementById("Qualidesc").readOnly = false;
-			document.getElementById("Qualiscore").readOnly = false;
 
-			if(quali == "Others")document.getElementById("QualiOthers").readOnly = false; 
-			else document.getElementById("QualiOthers").readOnly = true;
-			if(quali == "10th")document.getElementById("QualiDept").readOnly = true ;	//Edit this later
-			else document.getElementById("QualiDept").readOnly = false ;
-			document.getElementById("eduform").style.display = 'block';
-			
-			document.getElementById('eduform').action="apps/profileplus/resumeedusubmit.php";
-			}
-		}
-		function eduedit(head, desc, dept, score)
-		{
-			var quali = head;
-			document.getElementById("Qualidisplay").textContent = "Form for Editing - "+quali;
-			document.getElementById("eduform").style.display = 'block';
-			document.getElementById("QualiOthers").value = quali;
-			document.getElementById("Qualidesc").value = desc;
-			document.getElementById("QualiDept").value = dept;
-			document.getElementById("Qualiscore").value = score;
-			
-			document.getElementById("QualiOthers").readOnly = true;
-			document.getElementById("Qualidesc").readOnly = false;
-			document.getElementById("QualiDept").readOnly = false;
-			document.getElementById("Qualiscore").readOnly = false;
-			
-			document.getElementById("QualiOthers").style.color = '#000';
-			document.getElementById("QualiDept").style.color = '#000';
-			document.getElementById("Qualidesc").style.color = '#000';
-			document.getElementById("Qualiscore").style.color = '#000';
-			
-			if(quali == "10th")document.getElementById("QualiDept").readOnly = true ;	//Edit this later
-			else document.getElementById("QualiDept").readOnly = false ;
-			document.getElementById('eduadd').style.display='block';
-            document.getElementById('qualiselect').style.display='none';
-			document.getElementById('eduform').action="apps/profileplus/resumeedusubmiit.php";
-		}
-		function edudel(head, desc, dept, score)
-		{
-			var quali = head;
-			document.getElementById("Qualidisplay").textContent = "Click Submit to Delete - "+quali;
-			document.getElementById("eduform").style.display = 'block';
-			document.getElementById("QualiOthers").value = quali;
-			document.getElementById("Qualidesc").value = desc;
-			document.getElementById("QualiDept").value = dept;
-			document.getElementById("Qualiscore").value = score;
-			
-			document.getElementById("QualiOthers").readOnly = true;
-			document.getElementById("Qualidesc").readOnly = true;
-			document.getElementById("QualiDept").readOnly = true;
-			document.getElementById("Qualiscore").readOnly = true;
-			
-			document.getElementById("QualiOthers").style.color = '#000';
-			document.getElementById("QualiDept").style.color = '#000';
-			document.getElementById("Qualidesc").style.color = '#000';
-			document.getElementById("Qualiscore").style.color = '#000';
-			
-			document.getElementById('eduadd').style.display='block';
-            document.getElementById('qualiselect').style.display='none';
-			document.getElementById('eduform').action="apps/profileplus/resumeedudelete.php";
-		}
 		function update(datasource, target)
 		{
 			if (window.XMLHttpRequest)
@@ -220,6 +150,7 @@
 														<!--<li><a href="javascript:;">forums</a></li>-->
 						</ul>
 				</li>	
+					
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						Mess Operations
@@ -269,11 +200,11 @@
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="student-search.php">Student Search</a></li>
-							<!--<li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>-->
-					              	<li><a href="javascript:update('apps/home/election2013/listall.php','widget');">Manifesto 2013</a></li>
+<!--                            <li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>-->
+
 						</ul>
 				</li>
-				<li ><a href="javascript:update('apps/home/contactinfo.php','widget');"><i class="icon-envelope "></i> Contact us</a></li>
+				
 			</ul>
 			<ul class="nav pull-right">					
 				<li class="dropdown ">
@@ -294,23 +225,33 @@
 						<i class="icon-user"></i> profile
 						<b class="caret"></b>
 					</a>
-					<ul class="dropdown-menu">
+					<ul class="dropdown-menu" style="border:4px; border-style:solid; color:#FFF; border-color:#757c82;">
 					<?php	if(isset($_SESSION['uname']))
 							{
 								if($nick!="")
-								echo "<li><center>".$nick."</center></li>";
-								echo "<li><center>".$_SESSION['uname']."</center></li>";
+								echo "<table class='table table-bordered'><tr><td><center>".$nick."</center></td></tr>";
+								echo "<tr class=''><td><center>".$_SESSION['uname']."</center></td></tr></table>
+								
+
+								<!--<li><center><a href=\"javascript:update('apps/profileplus/profileplus.php','profile');\"><button class='btn btn-large'>Profile+</button></a></center></li>-->
+								<li><center><a href='logout.php'><button class='btn btn-danger'>Logout</button></a></center></li></ul>";
 							}
 							else
-							{
-								echo "<li>Name</li><li>RollNo</li>";
+							{	
+								echo"<form action='submit.php' method='POST'>
+								<center><input class='input span2' placeholder='Username' name='uname' type='text' style='margin-top:20px;'></input></center>
+								<center><input class='input span2' placeholder='Password' name='pass' type='password'></input></center>
+							
+								<center><button class='btn btn-success' type='submit' >Log In</button></center>
+								</form>";
 							}
+							
 							?>
-                            <li><center><a href="javascript:update('apps/profileplus/profileplus.php','profile');">Profile+</a></center></li>
-						<li><center><a href="logout.php">Logout</a></center></li></ul>						
-				</li>
+												
+				</ul>
 					
-			</ul>	
+			</li>	
+         </ul>   
 			</div><!--/.nav-collapse -->		
 		</div> <!-- /container -->		
 	</div> <!-- /navbar-inner -->	
@@ -322,7 +263,7 @@
 			<ul class="nav nav-pills">
 				<li ><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');"><i class="icon-list "></i> Mess Rating</a></li>
 				
-				<li><a href="student-search.php"><i class="icon-search "></i> Student Search</a></li>
+				<li><a href="javascript:update('student-search.php','widget');"><i class="icon-search "></i> Student Search</a></li>
 				<li><a href="javascript:update('apps/facilities_rating/index.php','widget');"><i class="icon-list "></i> Facilities</a></li>
 				<li><a href="/forum"><i class="icon-comment "></i> Forum</a></li>
 				<li><a href="http://t5e.iitm.ac.in/"><i class="icon-edit "></i> The Fifth Estate</a></li>

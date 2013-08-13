@@ -3,6 +3,7 @@
 	session_start();
 	
 	include("../../config.php");
+//	$uname = "name";
 	$uname = $_SESSION['uname'];
 /*	$uname = "Username";
 	$uname = "username";

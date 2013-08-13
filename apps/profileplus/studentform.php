@@ -1,10 +1,20 @@
 <?php
+	//error_reporting(E_ALL);
 	include("../../db.php");
 	session_start();
+	if (isset($_COOKIE["user"]))
+	
+		$_SESSION['uname'] = $_COOKIE["user"];
+		
+
 	include("../../config.php");
-	$uname = "name";
-/*	$uname = $_SESSION['uname'];
-	$uname = "Username";
+		$loggedin = 1;
+	if($loggedin == 0)	
+		die("Please Login to continue");
+	
+//	$uname = "name";
+	$uname = $_SESSION['uname'];
+/*	$uname = "Username";
 	$uname = "username";
 	$user = "user";
 	$name = "name";
@@ -19,104 +29,286 @@
 	$SubCatTable = "sub_categories";
 ?>
 <style>
-.categories
-{
+.categories {
 	font-size:14px;
+}
+.accordion-heading a {
+	color : #333333;
+	text-decoration : none;
+}
+.accordion-heading a h4 {
+	color : #333333;
+	text-decoration : none;
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: 20px;
+	font-weight: bold;
+	-webkit-transition: all .3s linear;
+	   -moz-transition: all .3s linear;
+			transition: all .3s linear;
+}
+.accordion-heading a:hover {
+	color : #000000;
+	text-decoration : none;
+}
+.accordion-heading a h4:hover {
+	color : #000000;
+	text-decoration : none;
+	text-shadow : 0 0 10px rgba(0, 0, 0, 0.90);
+}
+.accordion-item-inner item {
+	background-color : #F7F7F7;
+}
+.extra_button_right {
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: 20px;
+	font-weight: bold;
+	border : 1px solid #888888;	
+	border-radius: 10px 10px 10px 10px;
+	text-decoration : none;
+	-webkit-transition: all .3s linear;
+	   -moz-transition: all .3s linear;
+			transition: all .3s linear;
+	color : #444444;
+}
+.extra_button_right:hover {
+	color : #000000;
+	border : 1px solid #000000;
+	text-decoration: none;
+	text-shadow : 0 0 10px rgba(0, 0, 0, 0.90);
+	box-shadow : 0 0 10px rgba(0, 0, 0, 0.90), 
+		0 0 8px rgba(0, 0, 0, 0.5) inset;
+}
+.table, .table td, .table th {
+	text-align : center;
+}
+.my_button {
+	padding-left : 10px;
+	padding-top : 2px;
+	padding-bottom : 2px;
+	padding-right : 10px;
+	font-weight: bold;
+	border : 1px solid #888888;	
+	border-radius: 10px 10px 10px 10px;
+	box-shadow : 0 0 8px rgba(0, 0, 0, 0.5) inset;
+	-webkit-transition: all .3s linear;
+	   -moz-transition: all .3s linear;
+			transition: all .3s linear;
+	color : #000000;
+}
+.my_button:hover {
+	color : #ffffff;
+	border : 1px solid #000000;
+	text-decoration: none;
+	text-shadow : 0 0 10px rgba(0, 0, 0, 0.90);
+	box-shadow : 0 0 10px rgba(0, 0, 0, 0.90), 
+		0 0 8px rgba(0, 0, 0, 0.5) inset;
+}
+#myCarousel {
+	width : 99%;
+	margin-left : 1px;
+}
+.my_carousel_inner {
+	box-shadow : 0 0 10px rgba(0, 0, 0, 0.90), 
+		0 0 8px rgba(0, 0, 0, 0.5) inset;
+	width : 88%;
+}
+.profile_carousel_item {
+	height : 400px;
+	<!--overflow-y : scroll;-->	
+}
+.navbar-profile {
+	padding-top : 20px;
+	padding-bottom : 20px;
+	margin-top : -10px;
+	margin-bottom : 20px;
+	box-shadow : 0 0 8px rgba(0, 0, 0, 0.5) inset;	
+}
+.nav-profile {
+	list-style-type : none;
+	margin : 0;
+	padding : 0;
+}
+.nav-profile li {
+	display : inline;
+}
+.nav-profile li a {
+	font-weight : bold;
+	color : #FFFFFF;
+	background-color : #888888;
+	background-image : linear-gradient(280deg, rgb(125, 125, 125), rgb(100, 100, 100));
+	text-align : center;
+	padding : 6px;
+	margin-left : 2px;
+	margin-right : 2px;
+	text-decoration : none;
+	text-transform : uppercase;
+}.nav-profile li a:hover {
+	font-weight : bold;
+	color : #FFFFFF;
+	background-color : #888888;
+	background-image : linear-gradient(280deg, rgb(150, 150, 150), rgb(100, 100, 100));
+	text-align : center;
+	padding : 6px;
+	text-decoration : none;
+	text-transform : uppercase;
+}
+.nav-profile li.active a {
+	font-weight:bold;
+	background-color :	#cccccc;
+	background-image : linear-gradient(280deg, rgb(250, 250, 250), rgb(200, 200, 200));
+	border : 1px solid #888888;
+	font-size : 15px;
+	margin-top : 5px;
+	margin-bottom : 5px;
+	margin-left : 10px;
+	margin-right : 10px;
+	color : #000000;
+	
+}
+.nav-profile li.active a:hover {
+	background-color : #cccccc;
+	background-image : linear-gradient(280deg, rgb(200, 200, 200), rgb(100, 100, 100));
+	box-shadow : 0 0 8px rgba(0, 0, 0, 0.5) inset;
+	color : #FFFFFF;
 }
 </style>
 
+
+
 <center>
-<div class="span10">
-				<div class="widget"  style="float:right;width:1000px; margin:10px;">
-					<div class="widget-header">
-						<i class="icon-star"></i>
-						<h3>Update Resume</h3>
-					</div> <!-- /widget-header -->		
-					<div class="widget-content">
-								<form id="form" class="form-horizontal" name="normalprof" action="apps/profileplus/resumeprofilesubmit.php" method="post">
-								<table>
-                                    <tr>
-										<td style="width:100px;"><a href="#">FullName</a></td>
-										<td><input style="color:#fff;" id="name" type="text" name="name" value="<?php echo $name; ?>" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td>
-									</tr><tr>
-										<td style="width:100px;"><a href="#">Nickname</a></td>
-										<td><input id="nick" type="text" name="nick" value="<?php echo $nick; ?>" /></td>
-									</tr><tr>
-										<td style="width:100px;"><a href="#">Room No.</a></td>
-										<td><input style="color:#fff;" id="room" type="text" name="room" value="<?php echo $room; ?>" maxlength="4" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td></tr>
-                                        <tr>
-                                        <td style="width:100px;"><a href="#">Hostel.</a></td>
-                                        <td>
-                                        <select id="hostel" name="hostel" style="width:195px; color:#fff;" disabled>
-						 					  <option <?php if($hostel == "Saraswathi") echo "selected=\"selected\"" ?> value="Saraswathi">Saraswathi</option>
-											  <option <?php if($hostel == "Tamiraparani") echo "selected=\"selected\"" ?> value="Tamiraparani">Tamraparani</option>
-											  <option <?php if($hostel == "Ganga") echo "selected=\"selected\"" ?> value="Ganga">Ganga</option>
-											  <option <?php if($hostel == "Tapti") echo "selected=\"selected\"" ?> value="Tapti">Tapti</option>
-                                              <option <?php if($hostel == "Jamuna") echo "selected=\"selected\"" ?> value="Jamuna">Jamuna</option>
-											  <option <?php if($hostel == "Alaknanda") echo "selected=\"selected\"" ?> value="Alaknanda">Alaknanda</option>
-											  <option <?php if($hostel == "Godavari") echo "selected=\"selected\"" ?> value="Godavari">Godavari</option>
-						 					  <option <?php if($hostel == "Narmada") echo "selected=\"selected\"" ?> value="Narmada">Narmada</option>
-                           					  <option <?php if($hostel == "Pampa") echo "selected=\"selected\"" ?> value="Pampa">Pampa</option>
- 						 					  <option <?php if($hostel == "Sindhu") echo "selected=\"selected\"" ?> value="Sindhu">Sindhu</option>
- 						  					  <option <?php if($hostel == "Krishna") echo "selected=\"selected\"" ?> value="Krishna">Krishna</option>
-						  					  <option <?php if($hostel == "Cauvery") echo "selected=\"selected\"" ?> value="Cauvery">Cauvery</option>
-						  				   	  <option <?php if($hostel == "Sharavathi") echo "selected=\"selected\"" ?> value="Sharavathi">Sharavathi</option>
-											  <option <?php if($hostel == "Sarayu") echo "selected=\"selected\"" ?> value="Sarayu">Sarayu</option>
-						  					  <option <?php if($hostel == "Brahmaputra") echo "selected=\"selected\"" ?> value="Brahmaputra">Brahmaputra</option>
-		   		  							  <option <?php if($hostel == "Mandakini") echo "selected=\"selected\"" ?> value="Mandakini">Mandakini</option>
-		   		  							  <option <?php if($hostel == "Mahanadhi") echo "selected=\"selected\"" ?>value="Mahanadhi">Mahanadhi</option>                                        
-                                        </select>
-                                        </td>
-									</tr>
-                                        <tr>
-                                        <td style="width:100px;"><a href="#">Blood Group</a></td>
-                                        <td>
-                                        <select id="bgroup" name="bgroup" style="width:195px;">
-
-
-          <option <?php if($bgroup == "") echo "selected=\"selected\"" ?> value="" >Select</option>
-          <option <?php if($bgroup == "A-") echo "selected=\"selected\"" ?> value="A-">A-</option>
-          <option <?php if($bgroup == "B-") echo "selected=\"selected\"" ?> value="B-">B-</option>
-          <option <?php if($bgroup == "O-") echo "selected=\"selected\"" ?> value="O-">O-</option>
-          <option <?php if($bgroup == "AB-") echo "selected=\"selected\"" ?> value="AB-">AB-</option>
-          <option <?php if($bgroup == "A+") echo "selected=\"selected\"" ?> value="A+">A+</option>
-          <option <?php if($bgroup == "B+") echo "selected=\"selected\"" ?> value="B+">B+</option>
-          <option <?php if($bgroup == "O+") echo "selected=\"selected\"" ?> value="O+">O+</option>
-          <option <?php if($bgroup == "AB+") echo "selected=\"selected\"" ?> value="AB+">AB+</option>
-                                       </select>
-                                        </td>
-									</tr>
-<tr>
-										<td style="width:100px;"><a href="#">Contact No.</a></td>
-										<td><input id="contact" type="text" name="contact" value="<?php echo $contact; ?>" maxlength="10" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();"/></td>
-									</tr><tr>
-										<td style="width:100px;"><a href="#">E-Mail ID</a></td>
-										<td><input id="email" type="text" name="email" value="<?php echo $email; ?>" /></td>
-									</tr>									
-									<tr><center><td colspan="2"><a href="#"><input class="btn btn-warning" type="submit" value="Update" name="Update" /></a></td></center></tr>
-								</table>
-							</form>
+<head
+	<div class="span12">
+		<div class="widget"  style="float:right; width:1340px; margin:10px;">
+			<div class="widget-header">
+				<i class="icon-star"></i>
+				<h3>Update Profile</h3>
+			</div> <!-- /widget-header -->		
+			<div class="widget-content">
+		
+				<div class="navbar-profile">
+					<div class="navbar-inner-profile">
+						<ul class="nav-profile" id="profile_nav_id">
+							<li class="active profile_carousel_nav" id="0_nav"><a href="javascript:setCarousel(0);">Basic info</a></a></li>
+							<li class="profile_carousel_nav" id="1_nav"><a href="javascript:setCarousel(1);">Education</a></li>
 <?php
-include("education.php");
-
-
-$catquery = "SELECT * FROM $CatTable";
-$catresult = mysql_query($catquery);
-
-while($catrow = mysql_fetch_array($catresult))
-  {
-	  $catname = $catrow['name'];
-	  $catID = $catrow['id'];
-	  $catdesc = $catrow['description'];
-	  $catadmin = $catrow['admin'];
-	  include("categories.php");
-  }
-
+				$catquery = "SELECT * FROM $CatTable";
+				$catresult = mysql_query($catquery);
+				$i = 1;
+				while($catrow = mysql_fetch_array($catresult)) {
+					$i += 1;
+					$catname = $catrow['name'];
+					$catID = $catrow['id'];
+					$catdesc = $catrow['description'];
+					$catadmin = $catrow['admin'];
 ?>
-              
- 
-				</div> <!-- /widget-content -->
-						
-				</div> <!-- /widget -->	
-</div>
+							<li class="profile_carousel_nav" id="<?php echo $i ?>_nav"><a href="javascript:setCarousel(<?php echo $i ?>);"><?php echo $catname;?></a></li>
+<?php
+				}
+?>
+						</ul>
+					</div>
+				</div>
+				
+				<div id="myCarousel" class="row carousel slide" >
+				<!-- Carousel items -->
+					<div class="carousel-inner my_carousel_inner">
+						<div class="active item profile_carousel_item" id="basicinfo">
+							<h3>Basic information</h3>
+							<?php include("basicinfo.php"); ?>
+						</div>
+						<div class="item profile_carousel_item" id="education">
+							<h3>
+								Education 
+							<!--	<span href="#myModal_Edu" role="button" data-toggle="modal"  class="extra_button_right pull-right">
+									&nbsp; <i style="margin-top: 4px;" class="icon-plus-sign"></i> Add &nbsp;
+								</span>-->
+							</h3>
+							<?php include 'eduready.php'; ?>
+						</div>
+<?php
+				$catquery = "SELECT * FROM $CatTable";
+				$catresult = mysql_query($catquery);
+		
+				while($catrow = mysql_fetch_array($catresult)) {
+					$catname = $catrow['name'];
+					$catID = $catrow['id'];
+					$catdesc = $catrow['description'];
+					$catadmin = $catrow['admin'];
+?>
+						<div class="item profile_carousel_item" id="<?php echo $catname;?>">
+							<h3>
+								<?php echo $catname;?> 
+							</h3>
+							<?php include 'catready.php'; ?>
+						</div>
+<?php
+				}
+?>
+					</div>
+					<!-- Carousel nav 
+					<a class="carousel-control left" href="#myCarousel" data-slide="prev" onclick="next_carousel();">&lsaquo;</a>
+					<a class="carousel-control right" href="#myCarousel" data-slide="next" onclick="prev_carousel()">&rsaquo;</a>-->
+				</div>
+	
+	
+<!--
+				<div class="accordion" id="accordionProfile">
+					
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionProfile" href="#collapse_Info"> 
+								<h4>
+									Basic info
+								</h4>
+							</a>
+						</div>
+						<div id="collapse_Info" class="accordion-body in collapse" >
+							<div class="accordion-inner">
+								<?php //include("basicinfo.php"); ?>
+							</div>
+						</div>
+					</div>
+									
+<?php
+	/*	include("education.php");
+		
+		
+		$catquery = "SELECT * FROM $CatTable";
+		$catresult = mysql_query($catquery);
+		
+		while($catrow = mysql_fetch_array($catresult)) {
+			$catname = $catrow['name'];
+			$catID = $catrow['id'];
+			$catdesc = $catrow['description'];
+			$catadmin = $catrow['admin'];
+			include("categories.php");
+		}
+	*/
+?>
+				</div> <!-- /accordion -->				
+			</div> <!-- /widget-content -->					
+		</div> <!-- /widget -->	
+	</div>
 </center>
+<?php
+
+	include("education.php");
+				$catquery = "SELECT * FROM $CatTable";
+				$catresult = mysql_query($catquery);
+		
+				while($catrow = mysql_fetch_array($catresult)) {
+					$catname = $catrow['name'];
+					$catID = $catrow['id'];
+					$catdesc = $catrow['description'];
+					$catadmin = $catrow['admin'];
+					include 'categories.php'; 
+				}
+?>
+<script>
+	// disable auto rotating of carousel
+	//$('.carousel').carousel({interval : false});
+	//$(document).on('slide', '.carousel', function() { alert("slide"); } );
+</script>
+

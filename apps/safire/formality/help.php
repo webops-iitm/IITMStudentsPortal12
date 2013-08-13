@@ -1,5 +1,13 @@
 <?php
-include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php'; session_start(); ?>
+include_once '../resources/nDBfunct.php';
+include_once '../resources/DBfunct.php';
+///////////// end of file includes
+
+session_start();
+///////////started the session
+
+authUserIllegal();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +18,9 @@ include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php
     </head>
     <body>
         <?php
- include_once "../resources/googleAnalytics.php"; pageInit(); ?>
+        include_once "../resources/googleAnalytics.php";
+        pageInit();
+        ?>
         <div id="mainPage">
             <div id="helpContent">
                 <h2>The Displayer</h2>
@@ -22,6 +32,9 @@ include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php
                         </tr>
                         <tr>
                             <td class="red">(2) -</td><td>This is a minimized form of the notice board that will display the 5 latest notices you have.</td>
+                        </tr>
+                        <tr>
+                            <td class="red">(3) -</td><td>The Scratch Pad is a place where you can save short notes carrying a maximum of 700 characters. The note will be auto saved, and will also be saved when you click a region outside the Scratch Pad.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -55,10 +68,13 @@ include_once '../resources/nDBfunct.php'; include_once '../resources/DBfunct.php
                         <tr>
                             <td class="red">(3) - </td><td>Click on an already created course to edit it's details. Once clicked, the slots occupied by this course on the table will get a green decoration. Click a slot without the decoration to make the course occupy that slot. Clicking a slot with the decoration will convert that slot into a free slot.</td>
                         </tr>
+                        <tr>
+                            <td class="red">(4) - </td><td>If somehow you're table has been corrupted, if something's wrong with it, you can perform a master reset here.</td>
+                        </tr>
                     </tbody>
                 </table>
                 <h2>Miscellaneous</h2>
-                Safire works best in the latest versions of FireFox, Safari and Chrome and Internet Explorer 9. It doesn't work in Internet Explorer 8.
+                Safire works best in the latest versions of FireFox, Safari, Chrome and Internet Explorer. It doesn't work in Internet Explorer 8.
             </div>
         </div>
     </body>

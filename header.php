@@ -215,19 +215,20 @@
 					</a>
 					<ul class="dropdown-menu ">
 						<li><a href="javascript:update('apps/home/updateprofile.php','profile');">Edit profile</a></li>
-                        <li><a href="javascript:update('apps/profileplus/studentform.php','profile');">Student profile</a></li>			<!--[Datasourse::apps/home/updateprofile.php][Target::profile]-->
+                        <!--<li><a href="javascript:update('apps/profileplus/studentform.php','profile');">Student profile</a></li>-->			<!--[Datasourse::apps/home/updateprofile.php][Target::profile]-->
 					<!--	<li><a href="javascript:;">change pasword</a></li>
 						<li><a href="javascript:;">Help</a></li> -->
 					</ul>
 				</li>					
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">						
-						<i class="icon-user"></i> profile
-						<b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu" style="border:4px; border-style:solid; color:#FFF; border-color:#757c82;">
 					<?php	if(isset($_SESSION['uname']))
 							{
+							
+							echo "<a href='#' class='dropdown-toggle' data-toggle='dropdown'>
+								<i class='icon-user'></i> Profile
+								<b class='caret'></b>
+								</a>
+								<ul class='dropdown-menu' style='border:4px; border-style:solid; color:#FFF; border-color:#757c82;'>";
 								if($nick!="")
 								echo "<table class='table table-bordered'><tr><td><center>".$nick."</center></td></tr>";
 								echo "<tr class=''><td><center>".$_SESSION['uname']."</center></td></tr></table>
@@ -238,6 +239,12 @@
 							}
 							else
 							{	
+								echo "<a href='#' class='dropdown-toggle' data-toggle='dropdown'>
+								<i class='icon-user'></i> Sign in
+								<b class='caret'></b>
+								</a>
+								<ul class='dropdown-menu' style='border:4px; border-style:solid; color:#FFF; border-color:#757c82;'>";
+	
 								echo"<form action='submit.php' method='POST'>
 								<center><input class='input span2' placeholder='Username' name='uname' type='text' style='margin-top:20px;'></input></center>
 								<center><input class='input span2' placeholder='Password' name='pass' type='password'></input></center>

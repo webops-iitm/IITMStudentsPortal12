@@ -105,11 +105,11 @@
 		}
 
 		function mess_complaint_url() {
-			var pre_mess = document.getElementById('pre_mess').value;
-			var alloted_mess = document.getElementById('alloted_mess').value;
+			var hostel = document.getElementById('hostel').value;
+			var room = document.getElementById('room').value;
 			var desired_mess = document.getElementById('desired_mess').value;
 			var reason = document.getElementById('reason').value;
-			complaint_url = "apps/mess_complaints/complaint.php?pre=" + pre_mess + "&alloted=" + alloted_mess + "&desired=" + desired_mess + "&reason=" + reason;
+			complaint_url = "apps/mess_complaints/complaint.php?hostel=" + hostel + "&room=" + room + "&desired=" + desired_mess + "&reason=" + reason;
 			update(complaint_url, 'widget');
 		}
 
@@ -156,7 +156,7 @@
 						Mess Operations
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="javascript:update('apps/mess_complaints/complainting.php', 'widget');">Mess Grievances Portal</a></li>
+							<li><a href="javascript:update('apps/mess_complaints/complainting.php', 'widget');">iKollege complaints portal</a></li>
 							<!--<li><a href="http://students2.iitm.ac.in:3000">Mess Registration</a></li>-->
 							<li><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');">Mess Rating</a></li>
 							<li><a href="javascript:;">Feedback</a></li>

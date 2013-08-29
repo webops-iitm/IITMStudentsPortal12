@@ -4,15 +4,15 @@
 	
 	if(isset($_SESSION['uname']))
 	{
-		if(isset($_GET['pre']) AND isset($_GET['alloted']) AND isset($_GET['desired']) AND isset($_GET['reason']) )
+		if(isset($_GET['hostel']) AND isset($_GET['room']) AND isset($_GET['desired']) AND isset($_GET['reason']) )
 			{
-				$pre_mess = $_GET['pre'];
-				$alloted_mess = $_GET['alloted'];
+				$hostel = $_GET['hostel'];
+				$room = $_GET['room'];
 				$desired_mess = $_GET['desired'];
 				$reason = $_GET['reason'];
-				$uid = $_SESSION['uid'];
+				$uname = $_SESSION['uname'];
 
-				$q = "SELECT * FROM mess_complaints WHERE user_id = '$uid'";
+				$q = "SELECT * FROM mess_complaints WHERE roll_no like '$uname'";
 				$res = mysql_query($q);
 			
 				if(mysql_num_rows($res))
@@ -22,9 +22,9 @@
 					}
 				else
 					{
-						if( !empty($pre_mess) && !empty($alloted_mess) && !empty($desired_mess) && !empty($reason) )
+						if( !empty($hostel) && !empty($room) && !empty($desired_mess) && !empty($reason) )
 							{
-								$query = "INSERT INTO mess_complaints(user_id, pre_mess, alloted_mess, desired_mess, reason ) VALUES ('$uid', '$pre_mess', '$alloted_mess', '$desired_mess', '$reason')";
+								$query = "INSERT INTO mess_complaints(roll_no, hostel, room, desired_mess, reason ) VALUES ('$uname', '$hostel', '$room', '$desired_mess', '$reason')";
 								$result = mysql_query($query);
 								$error = "Successfully submitted your request";
 								header('Location: complainting.php?mess_complaint='.$error);

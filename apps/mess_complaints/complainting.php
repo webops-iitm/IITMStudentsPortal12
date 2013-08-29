@@ -9,7 +9,7 @@
 		
 			$loggedin=1;
 			
-			$query="SELECT * FROM mess_complaints WHERE user_id='{$_SESSION['uid']}'";
+			$query="SELECT * FROM mess_complaints WHERE roll_no like '{$_SESSION['uname']}'";
 			$result = @mysql_query($query);
 		
 			$count = @mysql_num_rows($result);
@@ -20,8 +20,8 @@
 					
 					$complaint = 1;
 				
-					$pre_mess = $row['pre_mess'];
-					$alloted_mess = $row['alloted_mess'];
+					$hostel = $row['hostel'];
+					$room = $row['room'];
 					$desired_mess = $row['desired_mess'];
 					$reason = $row['reason'];
 				}

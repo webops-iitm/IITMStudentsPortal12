@@ -7,18 +7,18 @@
 						 
 						<tr>
 							<td>
-								Previous mess
+								Hostel
 							</td>
 							<td>
-								&nbsp; <input type='text' name = 'pre_mess' id = 'pre_mess'>
+								&nbsp; <input type='text' name = 'hostel' id = 'hostel'>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								Newly Allocated mess
+								Room Number
 							</td>
 							<td>
-								 &nbsp; <input type='text' name = 'alloted_mess' id = 'alloted_mess'>
+								 &nbsp; <input type='text' name = 'room' id = 'room'>
 							</td>
 						</tr>
 						<tr>
@@ -47,8 +47,8 @@
 		<?php } else { ?>
 					Your request has been accepted and is under processing<br><br>
 					<b><?php echo $_SESSION['uname']; ?></b><br>
-					&emsp;Previous mess  - <?php echo $pre_mess; ?><br>
-					&emsp;Newly alloted mess - <?php echo $alloted_mess; ?><br>
+					&emsp;Hostel  - <?php echo $hostel; ?><br>
+					&emsp;Room Number - <?php echo $room; ?><br>
 					&emsp;Desired mess  - <?php echo $desired_mess; ?><br>
 					&emsp;Reason  - <?php echo $reason; ?><br>
 		<?php } ?>

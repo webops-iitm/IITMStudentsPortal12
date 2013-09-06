@@ -88,7 +88,7 @@ $(window).scroll(function() {
 		</div>
 		</div>
 		<div class="user-login">
-		<a href="#">
+		<a href="editprofile.php">
                     <div class="name">
                         <span class="first-name fg-color-darken"><?php echo $nick; ?></span>
                         <span class="last-name fg-color-darken"><?php echo $user; ?></span>
@@ -542,6 +542,16 @@ $(window).scroll(function() {
                     <div class="brand">
                         <div class="badge"></div>
                         <div class="name">Civil</div>
+                    </div>
+                </div></a>
+		<a href="http://www.cse.iitm.ac.in/">
+                <div class="tile icon bg-color-blueDark outline-color-blueDark" style="">
+                    <div class="tile-content">
+                       	<i class="icon-laptop"></i>
+                    </div>
+                    <div class="brand">
+                        <div class="badge"></div>
+                        <div class="name">Computer Science</div>
                     </div>
                 </div></a>
                            	

@@ -245,7 +245,7 @@
 								</a>
 								<ul class='dropdown-menu' style='border:4px; border-style:solid; color:#FFF; border-color:#757c82;'>";
 	
-								echo"<form action='submit.php' method='POST'>
+								echo"<form action='submit.php?TargetHome=home' method='POST'>
 								<center><input class='input span2' placeholder='Username' name='uname' type='text' style='margin-top:20px;'></input></center>
 								<center><input class='input span2' placeholder='Password' name='pass' type='password'></input></center>
 							

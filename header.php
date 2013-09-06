@@ -135,7 +135,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>			
-			<a class="brand " href="http://students2.iitm.ac.in/">
+			<a class="brand " href="http://students.iitm.ac.in/">
 				Students Portal
 			</a>					
 			<div class="nav-collapse">
@@ -145,7 +145,7 @@
 						Home
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-														<li><a href="index.php">Students Portal</a></li>
+														<li><a href="home.php">Students Portal</a></li>
 														<!--<li><a href="javascript:update('apps/mess_complaints/complainting.php', 'widget');">Mess</a></li>-->
 														<!--<li><a href="javascript:;">forums</a></li>-->
 						</ul>
@@ -194,16 +194,16 @@
 														<li><a href="javascript:;">Film club</a></li>
 						</ul>
 				</li>
-				<li class="dropdown">
+				<!--<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						Applications
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="student-search.php">Student Search</a></li>
-<!--                            <li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>-->
+                           <li><a href="javascript:update('apps/ocs/content.php','widget');">Online Complaint System</a></li>
 
 						</ul>
-				</li>
+				</li>-->
 				
 			</ul>
 			<ul class="nav pull-right">					
@@ -270,7 +270,7 @@
 			<ul class="nav nav-pills">
 				<li ><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');"><i class="icon-list "></i> Mess Rating</a></li>
 				
-				<li><a href="javascript:update('student-search.php','widget');"><i class="icon-search "></i> Student Search</a></li>
+				<!--<li><a href="javascript:update('student-search.php','widget');"><i class="icon-search "></i> Student Search</a></li>-->
 				<li><a href="javascript:update('apps/facilities_rating/index.php','widget');"><i class="icon-list "></i> Facilities</a></li>
 				<li><a href="/forum"><i class="icon-comment "></i> Forum</a></li>
 				<li><a href="http://t5e.iitm.ac.in/"><i class="icon-edit "></i> The Fifth Estate</a></li>

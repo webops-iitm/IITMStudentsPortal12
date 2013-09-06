@@ -139,7 +139,7 @@ $(window).scroll(function() {
         <div class="page-region-content tiles" style="width: 5600px;"  >
             <div class="tile-group tile-drag" style="width: auto; max-width: 170px; margin-left:-150px; padding-left:150px;" id="nav">
             <a id="homefirstbox">
-		<a href="http://students2.iitm.ac.in/home.php">
+		<a href="http://students.iitm.ac.in/home.php">
                 <div class="tile icon bg-color-red outline-color-red" style="">
                     <div class="tile-content">
                         <i class="icon-home"></i>
@@ -213,7 +213,7 @@ $(window).scroll(function() {
                     </div>
                 </div>
                 </a>
-		<a href="http://students2.iitm.ac.in/forum/">
+		<a href="http://students.iitm.ac.in/forum/">
                 <div class="tile double icon bg-color-pink outline-color-pink" style="">
                     <div class="tile-content">
                         <i class="icon-cloud"></i>
@@ -296,7 +296,7 @@ $(window).scroll(function() {
                     </div>
                 </div>
                 </a>
-		<a href="http://students2.iitm.ac.in:3000/">
+		<a href="http://students2.iitm.ac.in/">
                 <div class="tile double icon bg-color-green outline-color-green" style="">
                     <div class="tile-content">
                         <i class="icon-food"></i>
@@ -312,7 +312,7 @@ $(window).scroll(function() {
     
 				<div class="tile-group tile-drag" style="width: auto; max-width: 320px;">
                 
-                <a href="http://students2.iitm.ac.in/student-search.php">
+                <a href="http://students.iitm.ac.in/student-search.php">
                 <div class="tile icon bg-color-green outline-color-green" style="">
                     <div class="tile-content">
                         <i class="icon-search"></i>

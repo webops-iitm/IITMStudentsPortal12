@@ -52,6 +52,6 @@
 		$sql="SELECT * FROM $tbl_name WHERE username='$uname'";
 		$login = mysql_query($sql);	
 		$row = mysql_fetch_array($login);
-		include("ldaplogin.php");
+		include"ldaplogin.php";
 	}
 ?>

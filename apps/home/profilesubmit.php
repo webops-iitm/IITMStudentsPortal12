@@ -19,13 +19,13 @@
 	echo $uname;
 	echo "<br>";
 	
-	$sql = "UPDATE users SET nick='$nick', contact = '$contact', email = '$email', bgroup = '$bgroup' WHERE username='$uname'";
+	$sql = "UPDATE users SET nick='$nick', contact = '$contact', email = '$email', bgroup = '$bgroup', hostel= '$hostel', room= '$room' WHERE username='$uname'";
 	
 	mysql_query($sql) or die(mysql_error($con));
 	
 	// echo $sql
 	
-	header('Location: ../../index.php');
+	header('Location: ../../home.php');
 	
 	mysql_close($con);	
 ?>

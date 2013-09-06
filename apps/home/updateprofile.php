@@ -10,20 +10,19 @@
 		
 	include("../../config.php");
 	
-	if($loggedin == 0)
+	if($loggedin == 1){
 		
-		die("Please Login to continue");
 		
-	if( $secretary == 1 )
+		if( $secretary == 2 )
 	
-		include( "updatesecretary_page.php" );
+			include( "updatesecretary_page.php" );
 	
-	else {	
-		if( $nsecretary == 1 )
+		else {	
+			if( $nsecretary == 2 )
 	
-		include( "election2013/nupdatesecretary_page.php" );
+			include( "election2013/nupdatesecretary_page.php" );
 		
-		else {
+			else {
 		
 
 ?>
@@ -46,28 +45,31 @@
 										<td><input id="nick" type="text" name="nick" value="<?php echo $nick; ?>" /></td>
 									</tr><tr>
 										<td style="width:100px;"><a href="#">Room No.</a></td>
-										<td><input style="color:#fff;" id="room" type="text" name="room" value="<?php echo $room; ?>" maxlength="4" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" disabled/></td></tr>
+										<td><input id="room" type="text" name="room" value="<?php echo $room; ?>" maxlength="4" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" /></td></tr>
                                         <tr>
                                         <td style="width:100px;"><a href="#">Hostel.</a></td>
                                         <td>
-                                        <select id="hostel" name="hostel" style="width:195px; color:#fff;" disabled>
-						 					  <option <?php if($hostel == "Saraswathi") echo "selected=\"selected\"" ?> value="Saraswathi">Saraswathi</option>
-											  <option <?php if($hostel == "Tamiraparani") echo "selected=\"selected\"" ?> value="Tamiraparani">Tamraparani</option>
-											  <option <?php if($hostel == "Ganga") echo "selected=\"selected\"" ?> value="Ganga">Ganga</option>
-											  <option <?php if($hostel == "Tapti") echo "selected=\"selected\"" ?> value="Tapti">Tapti</option>
-                                              <option <?php if($hostel == "Jamuna") echo "selected=\"selected\"" ?> value="Jamuna">Jamuna</option>
-											  <option <?php if($hostel == "Alaknanda") echo "selected=\"selected\"" ?> value="Alaknanda">Alaknanda</option>
-											  <option <?php if($hostel == "Godavari") echo "selected=\"selected\"" ?> value="Godavari">Godavari</option>
-						 					  <option <?php if($hostel == "Narmada") echo "selected=\"selected\"" ?> value="Narmada">Narmada</option>
-                           					  <option <?php if($hostel == "Pampa") echo "selected=\"selected\"" ?> value="Pampa">Pampa</option>
- 						 					  <option <?php if($hostel == "Sindhu") echo "selected=\"selected\"" ?> value="Sindhu">Sindhu</option>
- 						  					  <option <?php if($hostel == "Krishna") echo "selected=\"selected\"" ?> value="Krishna">Krishna</option>
-						  					  <option <?php if($hostel == "Cauvery") echo "selected=\"selected\"" ?> value="Cauvery">Cauvery</option>
-						  				   	  <option <?php if($hostel == "Sharavathi") echo "selected=\"selected\"" ?> value="Sharavathi">Sharavathi</option>
-											  <option <?php if($hostel == "Sarayu") echo "selected=\"selected\"" ?> value="Sarayu">Sarayu</option>
-						  					  <option <?php if($hostel == "Brahmaputra") echo "selected=\"selected\"" ?> value="Brahmaputra">Brahmaputra</option>
-		   		  							  <option <?php if($hostel == "Mandakini") echo "selected=\"selected\"" ?> value="Mandakini">Mandakini</option>
-		   		  							  <option <?php if($hostel == "Mahanadhi") echo "selected=\"selected\"" ?>value="Mahanadhi">Mahanadhi</option>                                        
+                                        <select id="hostel" name="hostel" style="width:195px;" >
+						 					  <option <?php if($hostel == "ALAKANANDA") echo "selected=\"selected\"" ?> value="ALAKANANDA">ALAKANANDA</option>
+											  <option <?php if($hostel == "BRAHMAPUTRA") echo "selected=\"selected\"" ?> value="BRAHMAPUTRA">BRAHMAPUTRA</option>
+											  <option <?php if($hostel == "CAUVERY") echo "selected=\"selected\"" ?> value="CAUVERY">CAUVERY</option>
+											  <option <?php if($hostel == "GANGA") echo "selected=\"selected\"" ?> value="GANGA">GANGA</option>
+                                              						  <option <?php if($hostel == "GODAVARI") echo "selected=\"selected\"" ?> value="GODAVARI">GODAVARI</option>
+											  <option <?php if($hostel == "JAMUNA") echo "selected=\"selected\"" ?> value="JAMUNA">JAMUNA</option>
+											  <option <?php if($hostel == "KRISHNA") echo "selected=\"selected\"" ?> value="KRISHNA">KRISHNA</option>
+						 					  <option <?php if($hostel == "MAHANADHI") echo "selected=\"selected\"" ?> value="MAHANADHI">MAHANADHI</option>
+                           					   			  <option <?php if($hostel == "MANDAKINI") echo "selected=\"selected\"" ?> value="MANDAKINI">MANDAKINI</option>
+ 						 					  <option <?php if($hostel == "NARMADA") echo "selected=\"selected\"" ?> value="NARMADA">NARMADA</option>
+ 						  					  <option <?php if($hostel == "PAMPA") echo "selected=\"selected\"" ?> value="PAMPA">PAMPA</option>
+						  					  <option <?php if($hostel == "SARASWATHI") echo "selected=\"selected\"" ?> value="SARASWATHI">SARASWATHI</option>
+						  				   	  <option <?php if($hostel == "SARAYU") echo "selected=\"selected\"" ?> value="SARAYU">SARAYU</option>
+											  <option <?php if($hostel == "SARAYU C2-3") echo "selected=\"selected\"" ?> value="SARAYU C2-3">SARAYU C2-3</option>
+						  					  <option <?php if($hostel == "SARAYU-G5") echo "selected=\"selected\"" ?> value="SARAYU-G5">SARAYU-G5</option>
+		   		  							  <option <?php if($hostel == "SARAYU-G6") echo "selected=\"selected\"" ?> value="SARAYU-G6">SARAYU-G6</option>
+		   		  							  <option <?php if($hostel == "SHARAVATHI") echo "selected=\"selected\"" ?>value="SHARAVATHI">SHARAVATHI</option>
+		   		  							  <option <?php if($hostel == "SINDHU") echo "selected=\"selected\"" ?>value="SINDHU">SINDHU</option>
+		   		  							  <option <?php if($hostel == "TAMIRAPARANI") echo "selected=\"selected\"" ?>value="TAMIRAPARANI">TAMIRAPARANI</option>
+		   		  							  <option <?php if($hostel == "TAPTI") echo "selected=\"selected\"" ?>value="TAPTI">TAPTI</option>
                                         </select>
                                         </td>
 									</tr>
@@ -118,4 +120,6 @@
 		}// end of the if-else to check for nsecretary
 	
 	} // end of the if-else to check for secretary
+} // end of log in check
+else echo"Please log in to continue";
 ?>

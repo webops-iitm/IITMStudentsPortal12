@@ -59,9 +59,9 @@ $noOfAnn=7;   //This variable can be changed to obtain variable number of news p
 	    	<div class="widget-header" style="background-color:#FFF"><center>
 					<i class="icon-star"></i>
 					<h3><?php if($nick!="") echo $nick."'s"; ?> Profile</h3>	</center>		
-    	    </div><!-- widget-header --><center>
+    	    </div><!-- widget-header -->
             <div class="widget-content" style="height:310px;">
-	          			<table class="table"> 
+	          			<center><table class="table"> 
 							<tr>
 								<td style="width:100px;"><a href="#">Name</a></td>
 								<td><?php echo $name; ?></td>
@@ -87,8 +87,11 @@ $noOfAnn=7;   //This variable can be changed to obtain variable number of news p
 								<td style="width:100px;"><a href="#">Blood Group</a></td>
 								<td><?php echo $bgroup; ?></td>
 							</tr>
-						</table>
-				</div> <!-- /widget-content --></center>
+						</table></center>
+                                                <div align="right">
+                                                <a href="/editprofile.php" >Edit Profile</a></div>
+				</div> <!-- /widget-content -->
+
 	</div><!-- id widget -->
 </div><!-- class span 3 -->
 <?php

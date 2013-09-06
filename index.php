@@ -88,7 +88,7 @@ $(window).scroll(function() {
 		</div>
 		</div>
 		<div class="user-login">
-		<a href="#">
+		<a href="editprofile.php">
                     <div class="name">
                         <span class="first-name fg-color-darken"><?php echo $nick; ?></span>
                         <span class="last-name fg-color-darken"><?php echo $user; ?></span>

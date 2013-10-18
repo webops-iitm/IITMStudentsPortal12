@@ -121,7 +121,8 @@ $(window).scroll(function() {
     <?php
 	}
 	?>        
-    <?php if($_GET['error']==1){ echo "<div id=\"errorlogin\">Wrong Username or Password</div>"; } ?>
+    <?php if($_GET['error']==1){ echo "<div id=\"errorlogin\">Wrong Username or Password</div>"; }
+	  else if($_GET['error']==2){ echo "<div id=\"errorlogin\">Please check back later</div>"; } ?>
             </div><!-- user-login -->
             </form>
             <div id="homebackbutton" style="display:none;">

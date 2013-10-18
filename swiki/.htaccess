@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteBase /swiki/
+RewriteCond %{HTTP_HOST} ^students\.iitm\.ac\.in$ [NC]
+RewriteRule ^swiki(.*) /var/sites/IITMStudentsPortal12/swiki [QSA,NE,L]
+
+RewriteCond %{REQUEST_URI}  !^/swiki/includes/.*
+
+RewriteRule .* index.php [NE,QSA,L]
+
+Options -Indexes

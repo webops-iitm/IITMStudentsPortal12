@@ -15,34 +15,48 @@
 								<select name="cat" id="cat" style="width:110px;">
 									<option value="-1" selected>Select</option>
 									<option value="1">HM Cauvery</option>
-									<option value="2">HM Krishna</option>
-									<option value="5">Vindhya M1</option>
-									<option value="6">Vindhya M2</option>
-									<option value="8">Himalaya RR</option>
-									<option value="9">Himalaya SK</option>
-									<option value="10">Himalaya ISS(Mess)</option>
+									<option value="2">Krishna ISS</option>
+									<option value="3">Vindhya Ground Floor VTH M1 ( North Indian Menu )</option>
+									<option value="4">Vindhya Ground Floor VTH M2 ( South Indian Menu )</option>
+									<option value="5">Vindhya First Floor VTH M1 ( North Indian Menu )</option>
+									<option value="6">Krishna Jain Food ISS M1/M2 ( Jain Food )</option>
+									<option value="7">Sarayu Extn VC M1 ( North Indian Menu )</option>
+<option value="8">Sarayu Extn VC M2 ( South Indian Menu )</option>
+<option value="10">Himalaya SK M1 ( North Indian Menu )</option>
+<option value="11">Himalaya SK M2 ( South Indian Menu ) </option>
+<option value="13">Himalaya RR M2 ( South Indian Menu ) </option>
+<option value="14">Himalaya SGR M1 ( North Indian Menu ) </option>
+<option value="15">Himalaya SGR M2 ( South Indian Menu ) </option>
 								</select>
 							</td>
 							<td>
 								<select name="hyg" id="hyg" style="width:110px;">
 									<option value="-1" selected>Select</option>
+									<option value="10">10</option>
+									<option value="9">9</option>
+									<option value="8">8</option>
+									<option value="7">7</option>
+									<option value="6">6</option>
 									<option value="5">5</option>
 									<option value="4">4</option>
 									<option value="3">3</option>
 									<option value="2">2</option>
 									<option value="1">1</option>
-									<option value="0">0</option>
 								</select>
 							</td>
 							<td>
 								<select name="qtn" id="qtn" style="width:110px;">
 									<option value="-1" selected>Select</option>
+									<option value="10">10</option>
+									<option value="9">9</option>
+									<option value="8">8</option>
+									<option value="7">7</option>
+									<option value="6">6</option>
 									<option value="5">5</option>
 									<option value="4">4</option>
 									<option value="3">3</option>
 									<option value="2">2</option>
 									<option value="1">1</option>
-									<option value="0">0</option>
 								</select>
 							</td>
 							<td>
@@ -58,22 +72,26 @@
 									<option value="3">3</option>
 									<option value="2">2</option>
 									<option value="1">1</option>
-									<option value="0">0</option>
 								</select>
 							</td>
 							<td>
 								<select name="csm" id="csm" style="width:110px;">
 									<option value="-1" selected>Select</option>
+									<option value="10">10</option>
+									<option value="9">9</option>
+									<option value="8">8</option>
+									<option value="7">7</option>
+									<option value="6">6</option>
 									<option value="5">5</option>
 									<option value="4">4</option>
 									<option value="3">3</option>
 									<option value="2">2</option>
 									<option value="1">1</option>
-									<option value="0">0</option>
 								</select>
 							</td>
 							</tr>
-							<tr><td colspan="5"><strong>Points Scale</strong><br>Excellent - 5 Points, Very Good - 4 Points, Good - 3 Points, Average - 2 Points, Poor - 1 Point, Very Poor - 0 Point</td></tr>
+							<tr><td colspan="5"><strong>Points Scale</strong><br>Extremely Unsatisfactory - 1 Points, Excellent - 10 Points</td></tr>
+							<tr><td colspan="5"><strong>Remarks </strong><input type='text' style='width:100%;' name='remark' id='remark'></input></td></tr>
 					</table>
 						<?php if(isset($_GET['mess_rating'])) echo "<br> {$_GET['mess_rating']} </br>";  ?>
 						
@@ -87,4 +105,5 @@
 					&emsp;Quantity - <?php echo $qtn; ?><br>
 					&emsp;Quality  - <?php echo $qlt; ?><br>
 					&emsp;Service & Mgmt.  - <?php echo $csm; ?><br>
+					&emsp;Remarks.  - <?php echo $remark; ?><br>
 		<?php } ?>

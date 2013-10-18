@@ -18,7 +18,19 @@
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			if(window.location.href.indexOf("mess_allocation") > -1) {
+				update('apps/mess_allocation/mess_allocated.php', 'widget');
+			}
+		});
+	</script>
+
+
+
         <script>
+
 
 		function update(datasource, target)
 		{
@@ -85,6 +97,10 @@
 		if(type=="card"){
 			$("#widget .widget-header h3").html("Request New Mess Extras Card");		
 		};
+		if(type=="mess_allocation"){
+			$("#widget .widget-header h3").html("Mess allotment");		
+		};
+
 		if(type=="pin"){
 			$("#widget .widget-header h3").html("Request New Pin for you Mess Extras Card");
 		};
@@ -96,7 +112,8 @@
 				var qtn = document.getElementById('qtn').value;
 				var qlt = document.getElementById('qlt').value;
 				var csm = document.getElementById('csm').value;
-				mess_url = "apps/caterer_rating/rate.php?cat=" + cat + "&hyg=" + hyg + "&qtn=" + qtn + "&qlt=" + qlt + "&csm=" + csm;
+				var remark = document.getElementById('remark').value;
+				mess_url = "apps/caterer_rating/rate.php?cat=" + cat + "&hyg=" + hyg + "&qtn=" + qtn + "&qlt=" + qlt + "&csm=" + csm + "&remark=" + remark;
 				update(mess_url, 'widget');
 			}
 		function facvote(amnt, fac){
@@ -156,10 +173,11 @@
 						Mess Operations
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
+							<li><a href="javascript:update('apps/mess_allocation/mess_allocated.php', 'widget');">Check your alloted mess</a></li>
 							<li><a href="javascript:update('apps/mess_complaints/complainting.php', 'widget');">iKollege complaints portal</a></li>
 							<!--<li><a href="http://students2.iitm.ac.in:3000">Mess Registration</a></li>-->
-							<li><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');">Mess Rating</a></li>
-							<li><a href="javascript:;">Feedback</a></li>
+							<li><a href="javascript:update('apps/caterer_rating/rating.php', 'widget');">Feedback</a></li>
+							<!--<li><a href="javascript:;">Feedback</a></li>-->
 							<li><a href="javascript:update('cardform.php','widget-content');changestyle('card');">New Extras Cards</a></li>
 							<li><a href="javascript:update('pinform.php','widget-content');changestyle('pin')">New Pin Request</a></li>
 						</ul>

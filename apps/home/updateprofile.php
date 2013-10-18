@@ -45,11 +45,11 @@
 										<td><input id="nick" type="text" name="nick" value="<?php echo $nick; ?>" /></td>
 									</tr><tr>
 										<td style="width:100px;"><a href="#">Room No.</a></td>
-										<td><input id="room" type="text" name="room" value="<?php echo $room; ?>" maxlength="4" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" /></td></tr>
+										<td><input id="room" type="text" name="room" value="<?php echo $room; ?>" maxlength="4" onChange="if(this.value != 'admin') this.value = this.value.toUpperCase();" style=" color:#fff;" disabled/></td></tr>
                                         <tr>
                                         <td style="width:100px;"><a href="#">Hostel.</a></td>
                                         <td>
-                                        <select id="hostel" name="hostel" style="width:195px;" >
+                                        <select id="hostel" name="hostel" style="width:195px; color:#fff;" disabled>
 						 					  <option <?php if($hostel == "ALAKANANDA") echo "selected=\"selected\"" ?> value="ALAKANANDA">ALAKANANDA</option>
 											  <option <?php if($hostel == "BRAHMAPUTRA") echo "selected=\"selected\"" ?> value="BRAHMAPUTRA">BRAHMAPUTRA</option>
 											  <option <?php if($hostel == "CAUVERY") echo "selected=\"selected\"" ?> value="CAUVERY">CAUVERY</option>
@@ -66,6 +66,7 @@
 											  <option <?php if($hostel == "SARAYU C2-3") echo "selected=\"selected\"" ?> value="SARAYU C2-3">SARAYU C2-3</option>
 						  					  <option <?php if($hostel == "SARAYU-G5") echo "selected=\"selected\"" ?> value="SARAYU-G5">SARAYU-G5</option>
 		   		  							  <option <?php if($hostel == "SARAYU-G6") echo "selected=\"selected\"" ?> value="SARAYU-G6">SARAYU-G6</option>
+                                                                                          <option <?php if($hostel == "SARAYU-G7") echo "selected=\"selected\"" ?> value="SARAYU-G7">TAPTI</option>
 		   		  							  <option <?php if($hostel == "SHARAVATHI") echo "selected=\"selected\"" ?>value="SHARAVATHI">SHARAVATHI</option>
 		   		  							  <option <?php if($hostel == "SINDHU") echo "selected=\"selected\"" ?>value="SINDHU">SINDHU</option>
 		   		  							  <option <?php if($hostel == "TAMIRAPARANI") echo "selected=\"selected\"" ?>value="TAMIRAPARANI">TAMIRAPARANI</option>

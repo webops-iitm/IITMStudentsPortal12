@@ -27,6 +27,7 @@
 					$qtn = $row['qtn'];
 					$qlt = $row['qlt'];
 					$csm = $row['csm'];
+					$remark = $row['remark'];
 				}
 				else
 				

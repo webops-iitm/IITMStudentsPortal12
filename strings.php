@@ -7,4 +7,5 @@ function getSubstring($string,$start,$end){
     return isset($string[1]) ? substr($string, $startPos+1, $len-1): '';
 }
 
+
 ?>

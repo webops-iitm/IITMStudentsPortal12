@@ -13,6 +13,7 @@
 				$qtn = $_GET['qtn'];
 				$qlt = $_GET['qlt'];
 				$csm = $_GET['csm'];
+				$remark = $_GET['remark'];
 				$uid = $_SESSION['uid'];
 
 				$q = "SELECT * FROM mess_rating WHERE user_id = '$uid' AND date='$date'";
@@ -27,7 +28,7 @@
 					{
 						if($cat!='-1' && $hyg!='-1' && $qtn!='-1' && $qlt!='-1' && $csm != '-1')
 							{
-								$query = "INSERT INTO mess_rating(user_id, caterer, hyg, qtn, qlt, csm, date) VALUES ('$uid', '$cat', '$hyg', '$qtn', '$qlt', '$csm', '$date')";
+								$query = "INSERT INTO mess_rating(user_id, caterer, hyg, qtn, qlt, csm, remark, date) VALUES ('$uid', '$cat', '$hyg', '$qtn', '$qlt', '$csm', '$remark', '$date')";
 								$result = mysql_query($query);
 								$error = "Successfully submitted your rating";
 								header('Location: rating.php?mess_rating='.$error);
